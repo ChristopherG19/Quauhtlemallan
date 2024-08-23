@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">804234475679</string>
+    <string name="google_api_key" translatable="false">AIzaSyA64V9Ev1k8C4Pzs02IscoNnpqdUvU9MKo</string>
+    <string name="google_app_id" translatable="false">1:804234475679:android:2f522354e86a1f94b10aaa</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA64V9Ev1k8C4Pzs02IscoNnpqdUvU9MKo</string>
+    <string name="google_storage_bucket" translatable="false">quauhtlemallan-d86d0.appspot.com</string>
+    <string name="project_id" translatable="false">quauhtlemallan-d86d0</string>
+</resources>

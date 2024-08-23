@@ -12,6 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.app.quauhtlemallan.ui.theme.QuauhtlemallanTheme
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +24,7 @@ class MainActivity : ComponentActivity() {
             QuauhtlemallanTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
+                        name = "Chris",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -29,6 +32,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+private lateinit var database: DatabaseReference
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
