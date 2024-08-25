@@ -18,13 +18,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Merge master into dev
+      - name: Merge master back to dev
         run: |
-          git fetch origin
-          git checkout dev
-          git merge origin/master
+            git fetch --unshallow
+            git checkout dev
+            git pull
+            git merge --no-ff master -m "Auto-merge master back to dev"
+            git push
 
       - name: Push changes to dev
-        run: git push origin dev
+        run: |
+          git push origin dev
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
