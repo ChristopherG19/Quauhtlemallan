@@ -1,0 +1,30 @@
+name: Update Dev with Master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update-dev:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Merge master into dev
+        run: |
+          git fetch origin
+          git checkout dev
+          git merge origin/master
+
+      - name: Push changes to dev
+        run: git push origin dev
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
