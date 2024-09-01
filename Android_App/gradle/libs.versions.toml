@@ -1,8 +1,9 @@
 [versions]
-agp = "8.5.0"
-firebaseBom = "33.1.2"
-firebaseBomVersion = "32.8.0"
-googleFirebaseBom = "32.3.1"
+agp = "8.5.2"
+facebookAndroidSdkVersion = "latest.release"
+firebaseBom = "33.2.0"
+firebaseBomVersion = "33.2.0"
+googleFirebaseBom = "33.2.0"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -10,7 +11,7 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.4"
 activityCompose = "1.9.1"
-composeBom = "2024.04.01"
+composeBom = "2024.08.00"
 googleGmsGoogleServices = "4.4.2"
 firebaseDatabase = "21.0.0"
 constraintlayout = "2.1.4"
@@ -21,6 +22,7 @@ playServicesAuth = "21.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+facebook-android-sdk-vlatestrelease = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookAndroidSdkVersion" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }

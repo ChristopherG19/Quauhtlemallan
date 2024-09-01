@@ -9,11 +9,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.facebook.login.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 
 enum class ProviderType{
     BASIC,
-    GOOGLE
+    GOOGLE,
+    FACEBOOK
 }
 
 class HomeActivity : AppCompatActivity() {
@@ -49,6 +51,10 @@ class HomeActivity : AppCompatActivity() {
             val prefs:SharedPreferences.Editor = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
             prefs.clear()
             prefs.apply()
+
+            if (provider ==ProviderType.FACEBOOK.name) {
+                LoginManager.getInstance().logOut()
+            }
 
             FirebaseAuth.getInstance().signOut()
             onBackPressed()

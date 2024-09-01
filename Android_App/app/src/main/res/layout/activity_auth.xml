@@ -71,5 +71,12 @@
             android:layout_height="wrap_content"
             android:text="Google"
             android:textColor="#000000" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/facebook_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
