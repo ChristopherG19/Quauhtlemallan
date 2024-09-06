@@ -2254,3 +2254,370 @@
 {"text": "### Human: Grande en Awakateka'### Assistant: Grande en Awakateka se dice Maq, nim"}
 {"text": "### Human: ¿Cómo se dice Igual, similar en Awakateka?### Assistant: Igual, similar en Awakateka se dice Niky'nintu', ni'ku'n"}
 {"text": "### Human: Igual, similar en Awakateka'### Assistant: Igual, similar en Awakateka se dice Niky'nintu', ni'ku'n"}
+{"text": "### Human: ¿Cómo se dice Lapicero en Itza'?### Assistant: Lapicero en Itza' se dice B'oniltz'iib'"}
+{"text": "### Human: Lapicero en Itza'### Assistant: Lapicero en Itza' se dice B'oniltz'iib'"}
+{"text": "### Human: ¿Cómo se dice Regla en Itza'?### Assistant: Regla en Itza' se dice Chawakp'iis"}
+{"text": "### Human: Regla en Itza'### Assistant: Regla en Itza' se dice Chawakp'iis"}
+{"text": "### Human: ¿Cómo se dice Crayón de madera en Itza'?### Assistant: Crayón de madera en Itza' se dice Che'b'onil"}
+{"text": "### Human: Crayón de madera en Itza'### Assistant: Crayón de madera en Itza' se dice Che'b'onil"}
+{"text": "### Human: ¿Cómo se dice Lápiz en Itza'?### Assistant: Lápiz en Itza' se dice Che'iltz'iib'"}
+{"text": "### Human: Lápiz en Itza'### Assistant: Lápiz en Itza' se dice Che'iltz'iib'"}
+{"text": "### Human: ¿Cómo se dice Sacapuntas en Itza'?### Assistant: Sacapuntas en Itza' se dice Jok'säni'"}
+{"text": "### Human: Sacapuntas en Itza'### Assistant: Sacapuntas en Itza' se dice Jok'säni'"}
+{"text": "### Human: ¿Cómo se dice Cuaderno en Itza'?### Assistant: Cuaderno en Itza' se dice Ju'umiltz'iib'"}
+{"text": "### Human: Cuaderno en Itza'### Assistant: Cuaderno en Itza' se dice Ju'umiltz'iib'"}
+{"text": "### Human: ¿Cómo se dice Libro en Itza'?### Assistant: Libro en Itza' se dice Ju'umilxok"}
+{"text": "### Human: Libro en Itza'### Assistant: Libro en Itza' se dice Ju'umilxok"}
+{"text": "### Human: ¿Cómo se dice Crayón de cera en Itza'?### Assistant: Crayón de cera en Itza' se dice Kib'b'onil"}
+{"text": "### Human: Crayón de cera en Itza'### Assistant: Crayón de cera en Itza' se dice Kib'b'onil"}
+{"text": "### Human: ¿Cómo se dice Pupitre en Itza'?### Assistant: Pupitre en Itza' se dice Kuuchtz'iib'"}
+{"text": "### Human: Pupitre en Itza'### Assistant: Pupitre en Itza' se dice Kuuchtz'iib'"}
+{"text": "### Human: ¿Cómo se dice Juego de geometría en Itza'?### Assistant: Juego de geometría en Itza' se dice Muuch'p'iis"}
+{"text": "### Human: Juego de geometría en Itza'### Assistant: Juego de geometría en Itza' se dice Muuch'p'iis"}
+{"text": "### Human: ¿Cómo se dice Fólder en Itza'?### Assistant: Fólder en Itza' se dice Pixju'um"}
+{"text": "### Human: Fólder en Itza'### Assistant: Fólder en Itza' se dice Pixju'um"}
+{"text": "### Human: ¿Cómo se dice Folder en Itza'?### Assistant: Folder en Itza' se dice Pixju'um"}
+{"text": "### Human: Folder en Itza'### Assistant: Folder en Itza' se dice Pixju'um"}
+{"text": "### Human: ¿Cómo se dice Corrector en Itza'?### Assistant: Corrector en Itza' se dice Pixtz'iib'/muktz'iib'"}
+{"text": "### Human: Corrector en Itza'### Assistant: Corrector en Itza' se dice Pixtz'iib'/muktz'iib'"}
+{"text": "### Human: ¿Cómo se dice Bolsón en Itza'?### Assistant: Bolsón en Itza' se dice Sab'ukan"}
+{"text": "### Human: Bolsón en Itza'### Assistant: Bolsón en Itza' se dice Sab'ukan"}
+{"text": "### Human: ¿Cómo se dice Borrador en Itza'?### Assistant: Borrador en Itza' se dice Tuptz'iib'"}
+{"text": "### Human: Borrador en Itza'### Assistant: Borrador en Itza' se dice Tuptz'iib'"}
+{"text": "### Human: ¿Cómo se dice Hoja de papel en Itza'?### Assistant: Hoja de papel en Itza' se dice Waalju'um"}
+{"text": "### Human: Hoja de papel en Itza'### Assistant: Hoja de papel en Itza' se dice Waalju'um"}
+{"text": "### Human: ¿Cómo se dice Compás en Itza'?### Assistant: Compás en Itza' se dice Woloktz'iib'"}
+{"text": "### Human: Compás en Itza'### Assistant: Compás en Itza' se dice Woloktz'iib'"}
+{"text": "### Human: ¿Cómo se dice Tijera en Itza'?### Assistant: Tijera en Itza' se dice Xot'nok'"}
+{"text": "### Human: Tijera en Itza'### Assistant: Tijera en Itza' se dice Xot'nok'"}
+{"text": "### Human: ¿Cómo se dice Mitad en Itza'?### Assistant: Mitad en Itza' se dice B'uuj (solo para fruta)"}
+{"text": "### Human: Mitad en Itza'### Assistant: Mitad en Itza' se dice B'uuj (solo para fruta)"}
+{"text": "### Human: ¿Cómo se dice Bocado en Itza'?### Assistant: Bocado en Itza' se dice Chaach"}
+{"text": "### Human: Bocado en Itza'### Assistant: Bocado en Itza' se dice Chaach"}
+{"text": "### Human: ¿Cómo se dice Manojo en Itza'?### Assistant: Manojo en Itza' se dice Chaach"}
+{"text": "### Human: Manojo en Itza'### Assistant: Manojo en Itza' se dice Chaach"}
+{"text": "### Human: ¿Cómo se dice ramo en Itza'?### Assistant: ramo en Itza' se dice Chaach"}
+{"text": "### Human: ramo en Itza'### Assistant: ramo en Itza' se dice Chaach"}
+{"text": "### Human: ¿Cómo se dice Cuartillo (de almud) en Itza'?### Assistant: Cuartillo en Itza' se dice Junwuutz'"}
+{"text": "### Human: Cuartillo (de almud) en Itza'### Assistant: Cuartillo en Itza' se dice Junwuutz'"}
+{"text": "### Human: ¿Cómo se dice Mano en Itza'?### Assistant: Mano en Itza' se dice K'ab'"}
+{"text": "### Human: Mano en Itza'### Assistant: Mano en Itza' se dice K'ab'"}
+{"text": "### Human: ¿Cómo se dice Carga  en Itza'?### Assistant: Carga en Itza' se dice Kuch"}
+{"text": "### Human: Carga en Itza'### Assistant: Carga en Itza' se dice Kuch"}
+{"text": "### Human: ¿Cómo se dice bulto en Itza'?### Assistant: bulto en Itza' se dice Kuch"}
+{"text": "### Human: bulto en Itza'### Assistant: bulto en Itza' se dice Kuch"}
+{"text": "### Human: ¿Cómo se dice tercio en Itza'?### Assistant: tercio en Itza' se dice Kuch"}
+{"text": "### Human: tercio en Itza'### Assistant: tercio en Itza' se dice Kuch"}
+{"text": "### Human: ¿Cómo se dice Puño en Itza'?### Assistant: Puño en Itza' se dice Loch'k'ä'"}
+{"text": "### Human: Puño en Itza'### Assistant: Puño en Itza' se dice Loch'k'ä'"}
+{"text": "### Human: ¿Cómo se dice Cuarta en Itza'?### Assistant: Cuarta en Itza' se dice Naab'"}
+{"text": "### Human: Cuarta en Itza'### Assistant: Cuarta en Itza' se dice Naab'"}
+{"text": "### Human: ¿Cómo se dice Brazada en Itza'?### Assistant: Brazada en Itza' se dice Saap"}
+{"text": "### Human: Brazada en Itza'### Assistant: Brazada en Itza' se dice Saap"}
+{"text": "### Human: ¿Cómo se dice Bocado (madera) en Itza'?### Assistant: Bocado (madera) en Itza' se dice Se'es"}
+{"text": "### Human: Bocado en Itza'### Assistant: Bocado en Itza' se dice Se'es"}
+{"text": "### Human: ¿Cómo se dice Cuerda de tierra en Itza'?### Assistant: Cuerda de tierra en Itza' se dice Sumlu'um"}
+{"text": "### Human: Cuerda de tierra en Itza'### Assistant: Cuerda de tierra en Itza' se dice Sumlu'um"}
+{"text": "### Human: ¿Cómo se dice Tajada en Itza'?### Assistant: Tajada en Itza' se dice Taaj"}
+{"text": "### Human: Tajada en Itza'### Assistant: Tajada en Itza' se dice Taaj"}
+{"text": "### Human: ¿Cómo se dice Manzana de tierra en Itza'?### Assistant: Manzana de tierra en Itza' se dice Waklajp'eel sumlu'um"}
+{"text": "### Human: Manzana de tierra en Itza'### Assistant: Manzana de tierra en Itza' se dice Waklajp'eel sumlu'um"}
+{"text": "### Human: ¿Cómo se dice Pedazo en Itza'?### Assistant: Pedazo en Itza' se dice Xeet'"}
+{"text": "### Human: Pedazo en Itza'### Assistant: Pedazo en Itza' se dice Xeet'"}
+{"text": "### Human: ¿Cómo se dice Gramo en Itza'?### Assistant: Gramo en Itza' se dice xeet'ka'ch'uyp'iis"}
+{"text": "### Human: Gramo en Itza'### Assistant: Gramo en Itza' se dice xeet'ka'ch'uyp'iis"}
+{"text": "### Human: ¿Cómo se dice Onza en Itza'?### Assistant: Onza en Itza' se dice xelp'iis (yucateco)"}
+{"text": "### Human: Onza en Itza'### Assistant: Onza en Itza' se dice xelp'iis (yucateco)"}
+{"text": "### Human: ¿Cómo se dice Libra en Itza'?### Assistant: Libra en Itza' se dice ch'uyp'iis"}
+{"text": "### Human: Libra en Itza'### Assistant: Libra en Itza' se dice ch'uyp'iis"}
+{"text": "### Human: ¿Cómo se dice Kilogramo en Itza'?### Assistant: Kilogramo en Itza' se dice ka'ch'uyp'iis"}
+{"text": "### Human: Kilogramo en Itza'### Assistant: Kilogramo en Itza' se dice ka'ch'uyp'iis"}
+{"text": "### Human: ¿Cómo se dice Almud en Itza'?### Assistant: Almud en Itza' se dice mut"}
+{"text": "### Human: Almud en Itza'### Assistant: Almud en Itza' se dice mut"}
+{"text": "### Human: ¿Cómo se dice Arroba en Itza'?### Assistant: Arroba en Itza' se dice jo'junk'al ch'uyp'iis"}
+{"text": "### Human: Arroba en Itza'### Assistant: Arroba en Itza' se dice jo'junk'al ch'uyp'iis"}
+{"text": "### Human: ¿Cómo se dice Quintal en Itza'?### Assistant: Quintal en Itza' se dice jo'k'al ch'uyp'iis"}
+{"text": "### Human: Quintal en Itza'### Assistant: Quintal en Itza' se dice jo'k'al ch'uyp'iis"}
+{"text": "### Human: ¿Cómo se dice Tonelada en Itza'?### Assistant: Tonelada en Itza' se dice junk'alp'eel jo'k'al chuyp'iis"}
+{"text": "### Human: Tonelada en Itza'### Assistant: Tonelada en Itza' se dice junk'alp'eel jo'k'al chuyp'iis"}
+{"text": "### Human: ¿Cómo se dice Milímetro en Itza'?### Assistant: Milímetro en Itza' se dice jirit'p'iis"}
+{"text": "### Human: Milímetro en Itza'### Assistant: Milímetro en Itza' se dice jirit'p'iis"}
+{"text": "### Human: ¿Cómo se dice Centímetro en Itza'?### Assistant: Centímetro en Itza' se dice lajjirit'p'iis"}
+{"text": "### Human: Centímetro en Itza'### Assistant: Centímetro en Itza' se dice lajjirit'p'iis"}
+{"text": "### Human: ¿Cómo se dice Pulgada en Itza'?### Assistant: Pulgada en Itza' se dice junmookp'iis"}
+{"text": "### Human: Pulgada en Itza'### Assistant: Pulgada en Itza' se dice junmookp'iis"}
+{"text": "### Human: ¿Cómo se dice Pie en Itza'?### Assistant: Pie en Itza' se dice okp'iis"}
+{"text": "### Human: Pie en Itza'### Assistant: Pie en Itza' se dice okp'iis"}
+{"text": "### Human: ¿Cómo se dice Vara en Itza'?### Assistant: Vara en Itza' se dice b'ek'ech che'p'iis"}
+{"text": "### Human: Vara en Itza'### Assistant: Vara en Itza' se dice b'ek'ech che'p'iis"}
+{"text": "### Human: ¿Cómo se dice Yarda en Itza'?### Assistant: Yarda en Itza' se dice p'iissaap"}
+{"text": "### Human: Yarda en Itza'### Assistant: Yarda en Itza' se dice p'iissaap"}
+{"text": "### Human: ¿Cómo se dice Metro en Itza'?### Assistant: Metro en Itza' se dice tojp'iis"}
+{"text": "### Human: Metro en Itza'### Assistant: Metro en Itza' se dice tojp'iis"}
+{"text": "### Human: ¿Cómo se dice Kilómetro en Itza'?### Assistant: Kilómetro en Itza' se dice ka'b'ak'lajk'al tojp'iis"}
+{"text": "### Human: Kilómetro en Itza'### Assistant: Kilómetro en Itza' se dice ka'b'ak'lajk'al tojp'iis"}
+{"text": "### Human: ¿Cómo se dice Milla en Itza'?### Assistant: Milla en Itza' se dice jun awat"}
+{"text": "### Human: Milla en Itza'### Assistant: Milla en Itza' se dice jun awat"}
+{"text": "### Human: ¿Cómo se dice Legua en Itza'?### Assistant: Legua en Itza' se dice luub'"}
+{"text": "### Human: Legua en Itza'### Assistant: Legua en Itza' se dice luub'"}
+{"text": "### Human: ¿Cómo se dice Vaso en Itza'?### Assistant: Vaso en Itza' se dice luchp'iis"}
+{"text": "### Human: Vaso en Itza'### Assistant: Vaso en Itza' se dice luchp'iis"}
+{"text": "### Human: ¿Cómo se dice Botella en Itza'?### Assistant: Botella en Itza' se dice oxluch p'iis"}
+{"text": "### Human: Botella en Itza'### Assistant: Botella en Itza' se dice oxluch p'iis"}
+{"text": "### Human: ¿Cómo se dice Litro en Itza'?### Assistant: Litro en Itza' se dice känluch p'iis"}
+{"text": "### Human: Litro en Itza'### Assistant: Litro en Itza' se dice känluch p'iis"}
+{"text": "### Human: ¿Cómo se dice Galón en Itza'?### Assistant: Galón en Itza' se dice kuchja' p'iis"}
+{"text": "### Human: Galón en Itza'### Assistant: Galón en Itza' se dice kuchja' p'iis"}
+{"text": "### Human: ¿Cómo se dice Juegos escolares en Itza'?### Assistant: Juegos escolares en Itza' se dice B'axäl känb'alil"}
+{"text": "### Human: Juegos escolares en Itza'### Assistant: Juegos escolares en Itza' se dice B'axäl känb'alil"}
+{"text": "### Human: ¿Cómo se dice Lotería en Itza'?### Assistant: Lotería en Itza' se dice B'axälnaal"}
+{"text": "### Human: Lotería en Itza'### Assistant: Lotería en Itza' se dice B'axälnaal"}
+{"text": "### Human: ¿Cómo se dice Juego de palabras en Itza'?### Assistant: Juego de palabras en Itza' se dice B'axält'an"}
+{"text": "### Human: Juego de palabras en Itza'### Assistant: Juego de palabras en Itza' se dice B'axält'an"}
+{"text": "### Human: ¿Cómo se dice Escritorio en Itza'?### Assistant: Escritorio en Itza' se dice Ch'akche'tz'iib'"}
+{"text": "### Human: Escritorio en Itza'### Assistant: Escritorio en Itza' se dice Ch'akche'tz'iib'"}
+{"text": "### Human: ¿Cómo se dice Tiras didácticas en Itza'?### Assistant: Tiras didácticas en Itza' se dice Chawakju'um ka'ansajil"}
+{"text": "### Human: Tiras didácticas en Itza'### Assistant: Tiras didácticas en Itza' se dice Chawakju'um ka'ansajil"}
+{"text": "### Human: ¿Cómo se dice Clip en Itza'?### Assistant: Clip en Itza' se dice Jekju'um"}
+{"text": "### Human: Clip en Itza'### Assistant: Clip en Itza' se dice Jekju'um"}
+{"text": "### Human: ¿Cómo se dice Perforadora en Itza'?### Assistant: Perforadora en Itza' se dice Jolju'um"}
+{"text": "### Human: Perforadora en Itza'### Assistant: Perforadora en Itza' se dice Jolju'um"}
+{"text": "### Human: ¿Cómo se dice Afiches en Itza'?### Assistant: Afiches en Itza' se dice Ju'um pektzil"}
+{"text": "### Human: Afiches en Itza'### Assistant: Afiches en Itza' se dice Ju'um pektzil"}
+{"text": "### Human: ¿Cómo se dice Hilo en Itza'?### Assistant: Hilo en Itza' se dice K'uch"}
+{"text": "### Human: Hilo en Itza'### Assistant: Hilo en Itza' se dice K'uch"}
+{"text": "### Human: ¿Cómo se dice Engrapadora en Itza'?### Assistant: Engrapadora en Itza' se dice Lechju'um"}
+{"text": "### Human: Engrapadora en Itza'### Assistant: Engrapadora en Itza' se dice Lechju'um"}
+{"text": "### Human: ¿Cómo se dice Faster en Itza'?### Assistant: Faster en Itza' se dice Lechju'um"}
+{"text": "### Human: Faster en Itza'### Assistant: Faster en Itza' se dice Lechju'um"}
+{"text": "### Human: ¿Cómo se dice Maquetas en Itza'?### Assistant: Maquetas en Itza' se dice Mejenb'a'ax"}
+{"text": "### Human: Maquetas en Itza'### Assistant: Maquetas en Itza' se dice Mejenb'a'ax"}
+{"text": "### Human: ¿Cómo se dice Marcador en Itza'?### Assistant: Marcador en Itza' se dice Nojb'ontz'iib'"}
+{"text": "### Human: Marcador en Itza'### Assistant: Marcador en Itza' se dice Nojb'ontz'iib'"}
+{"text": "### Human: ¿Cómo se dice Cartulina en Itza'?### Assistant: Cartulina en Itza' se dice Nojpimju'um"}
+{"text": "### Human: Cartulina en Itza'### Assistant: Cartulina en Itza' se dice Nojpimju'um"}
+{"text": "### Human: ¿Cómo se dice Rótulos en Itza'?### Assistant: Rótulos en Itza' se dice Pektzilk'ab'a'"}
+{"text": "### Human: Rótulos en Itza'### Assistant: Rótulos en Itza' se dice Pektzilk'ab'a'"}
+{"text": "### Human: ¿Cómo se dice Cartón en Itza'?### Assistant: Cartón en Itza' se dice Pimju'um"}
+{"text": "### Human: Cartón en Itza'### Assistant: Cartón en Itza' se dice Pimju'um"}
+{"text": "### Human: ¿Cómo se dice Prensa en Itza'?### Assistant: Prensa en Itza' se dice T'oxpektzil"}
+{"text": "### Human: Prensa en Itza'### Assistant: Prensa en Itza' se dice T'oxpektzil"}
+{"text": "### Human: ¿Cómo se dice Pegamento en Itza'?### Assistant: Pegamento en Itza' se dice Täk'"}
+{"text": "### Human: Pegamento en Itza'### Assistant: Pegamento en Itza' se dice Täk'"}
+{"text": "### Human: ¿Cómo se dice Maskintape en Itza'?### Assistant: Maskintape en Itza' se dice Täk'ju'um"}
+{"text": "### Human: Maskintape en Itza'### Assistant: Maskintape en Itza' se dice Täk'ju'um"}
+{"text": "### Human: ¿Cómo se dice Yeso en Itza'?### Assistant: Yeso en Itza' se dice Tunichiltz'iib'"}
+{"text": "### Human: Yeso en Itza'### Assistant: Yeso en Itza' se dice Tunichiltz'iib'"}
+{"text": "### Human: ¿Cómo se dice Almohadilla en Itza'?### Assistant: Almohadilla en Itza' se dice Tuptz'iib'"}
+{"text": "### Human: Almohadilla en Itza'### Assistant: Almohadilla en Itza' se dice Tuptz'iib'"}
+{"text": "### Human: ¿Cómo se dice Impresora en Itza'?### Assistant: Impresora en Itza' se dice Unu'ukuljok'tz'iib'"}
+{"text": "### Human: Impresora en Itza'### Assistant: Impresora en Itza' se dice Unu'ukuljok'tz'iib'"}
+{"text": "### Human: ¿Cómo se dice Computadora en Itza'?### Assistant: Computadora en Itza' se dice Unu'ukultz'iib'"}
+{"text": "### Human: Computadora en Itza'### Assistant: Computadora en Itza' se dice Unu'ukultz'iib'"}
+{"text": "### Human: ¿Cómo se dice Pizarra en Itza'?### Assistant: Pizarra en Itza' se dice Unu'ukultz'iib'"}
+{"text": "### Human: Pizarra en Itza'### Assistant: Pizarra en Itza' se dice Unu'ukultz'iib'"}
+{"text": "### Human: ¿Cómo se dice Cartel en Itza'?### Assistant: Cartel en Itza' se dice Ut'anju'um"}
+{"text": "### Human: Cartel en Itza'### Assistant: Cartel en Itza' se dice Ut'anju'um"}
+{"text": "### Human: ¿Cómo se dice Pelota en Itza'?### Assistant: Pelota en Itza' se dice Wool"}
+{"text": "### Human: Pelota en Itza'### Assistant: Pelota en Itza' se dice Wool"}
+{"text": "### Human: ¿Cómo se dice Calendario en Itza'?### Assistant: Calendario en Itza' se dice Xokalk'in"}
+{"text": "### Human: Calendario en Itza'### Assistant: Calendario en Itza' se dice Xokalk'in"}
+{"text": "### Human: ¿Cómo se dice Negro en Itza'?### Assistant: Negro en Itza' se dice B'ox"}
+{"text": "### Human: Negro en Itza'### Assistant: Negro en Itza' se dice B'ox"}
+{"text": "### Human: ¿Cómo se dice Rojo en Itza'?### Assistant: Rojo en Itza' se dice Chäk"}
+{"text": "### Human: Rojo en Itza'### Assistant: Rojo en Itza' se dice Chäk"}
+{"text": "### Human: ¿Cómo se dice Rosado en Itza'?### Assistant: Rosado en Itza' se dice Chäksäk"}
+{"text": "### Human: Rosado en Itza'### Assistant: Rosado en Itza' se dice Chäksäk"}
+{"text": "### Human: ¿Cómo se dice Amarillo en Itza'?### Assistant: Amarillo en Itza' se dice K'än"}
+{"text": "### Human: Amarillo en Itza'### Assistant: Amarillo en Itza' se dice K'än"}
+{"text": "### Human: ¿Cómo se dice Café en Itza'?### Assistant: Café en Itza' se dice K'änb'ox"}
+{"text": "### Human: Café en Itza'### Assistant: Café en Itza' se dice K'änb'ox"}
+{"text": "### Human: ¿Cómo se dice Naranja en Itza'?### Assistant: Naranja en Itza' se dice K'änchäkil"}
+{"text": "### Human: Naranja en Itza'### Assistant: Naranja en Itza' se dice K'änchäkil"}
+{"text": "### Human: ¿Cómo se dice Dorado en Itza'?### Assistant: Dorado en Itza' se dice K'änletz'"}
+{"text": "### Human: Dorado en Itza'### Assistant: Dorado en Itza' se dice K'änletz'"}
+{"text": "### Human: ¿Cómo se dice Blanco en Itza'?### Assistant: Blanco en Itza' se dice Säk"}
+{"text": "### Human: Blanco en Itza'### Assistant: Blanco en Itza' se dice Säk"}
+{"text": "### Human: ¿Cómo se dice Gris en Itza'?### Assistant: Gris en Itza' se dice Säkb'ox/ta'ampuse'en"}
+{"text": "### Human: Gris en Itza'### Assistant: Gris en Itza' se dice Säkb'ox/ta'ampuse'en"}
+{"text": "### Human: ¿Cómo se dice Plateado en Itza'?### Assistant: Plateado en Itza' se dice Säkletz'"}
+{"text": "### Human: Plateado en Itza'### Assistant: Plateado en Itza' se dice Säkletz'"}
+{"text": "### Human: ¿Cómo se dice Verde en Itza'?### Assistant: Verde en Itza' se dice Ya'ax"}
+{"text": "### Human: Verde en Itza'### Assistant: Verde en Itza' se dice Ya'ax"}
+{"text": "### Human: ¿Cómo se dice Azul en Itza'?### Assistant: Azul en Itza' se dice Ya'ax ele'en"}
+{"text": "### Human: Azul en Itza'### Assistant: Azul en Itza' se dice Ya'ax ele'en"}
+{"text": "### Human: ¿Cómo se dice Morado en Itza'?### Assistant: Morado en Itza' se dice Ya'ax k'ole'en"}
+{"text": "### Human: Morado en Itza'### Assistant: Morado en Itza' se dice Ya'ax k'ole'en"}
+{"text": "### Human: ¿Cómo se dice El Quetzal en Itza'?### Assistant: El Quetzal en Itza' se dice Ajya'ax k'uk'um/ajya'ax ch'iich'"}
+{"text": "### Human: El Quetzal en Itza'### Assistant: El Quetzal en Itza' se dice Ajya'ax k'uk'um/ajya'ax ch'iich'"}
+{"text": "### Human: ¿Cómo se dice Mapas geográficos en Itza'?### Assistant: Mapas geográficos en Itza' se dice B'o'oyilu'um"}
+{"text": "### Human: Mapas geográficos en Itza'### Assistant: Mapas geográficos en Itza' se dice B'o'oyilu'um"}
+{"text": "### Human: ¿Cómo se dice Rectángulo en Itza'?### Assistant: Rectángulo en Itza' se dice Chawakkänmoy"}
+{"text": "### Human: Rectángulo en Itza'### Assistant: Rectángulo en Itza' se dice Chawakkänmoy"}
+{"text": "### Human: ¿Cómo se dice Himno Nacional en Itza'?### Assistant: Himno Nacional en Itza' se dice K'ay tikilu'umil"}
+{"text": "### Human: Himno Nacional en Itza'### Assistant: Himno Nacional en Itza' se dice K'ay tikilu'umil"}
+{"text": "### Human: ¿Cómo se dice Cuadrado en Itza'?### Assistant: Cuadrado en Itza' se dice Känmoy"}
+{"text": "### Human: Cuadrado en Itza'### Assistant: Cuadrado en Itza' se dice Känmoy"}
+{"text": "### Human: ¿Cómo se dice Triángulo en Itza'?### Assistant: Triángulo en Itza' se dice Oxp'eel moy"}
+{"text": "### Human: Triángulo en Itza'### Assistant: Triángulo en Itza' se dice Oxp'eel moy"}
+{"text": "### Human: ¿Cómo se dice La Bandera en Itza'?### Assistant: La Bandera en Itza' se dice Pan"}
+{"text": "### Human: La Bandera en Itza'### Assistant: La Bandera en Itza' se dice Pan"}
+{"text": "### Human: ¿Cómo se dice Bandera escolar en Itza'?### Assistant: Bandera escolar en Itza' se dice Pan najilkänb'al"}
+{"text": "### Human: Bandera escolar en Itza'### Assistant: Bandera escolar en Itza' se dice Pan najilkänb'al"}
+{"text": "### Human: ¿Cómo se dice La Marimba en Itza'?### Assistant: La Marimba en Itza' se dice Pax"}
+{"text": "### Human: La Marimba en Itza'### Assistant: La Marimba en Itza' se dice Pax"}
+{"text": "### Human: ¿Cómo se dice La Monja blanca en Itza'?### Assistant: La Monja blanca en Itza' se dice Top' tikilu'umil"}
+{"text": "### Human: La Monja blanca en Itza'### Assistant: La Monja blanca en Itza' se dice Top' tikilu'umil"}
+{"text": "### Human: ¿Cómo se dice Emblema en Itza'?### Assistant: Emblema en Itza' se dice Ub'o'oyk'ab'a'"}
+{"text": "### Human: Emblema en Itza'### Assistant: Emblema en Itza' se dice Ub'o'oyk'ab'a'"}
+{"text": "### Human: ¿Cómo se dice Escudo Nacional en Itza'?### Assistant: Escudo Nacional en Itza' se dice Ub'o'oyk'ab'a' nojkaj"}
+{"text": "### Human: Escudo Nacional en Itza'### Assistant: Escudo Nacional en Itza' se dice Ub'o'oyk'ab'a' nojkaj"}
+{"text": "### Human: ¿Cómo se dice Himno escolar en Itza'?### Assistant: Himno escolar en Itza' se dice Uk'ay najilkänb'al"}
+{"text": "### Human: Himno escolar en Itza'### Assistant: Himno escolar en Itza' se dice Uk'ay najilkänb'al"}
+{"text": "### Human: ¿Cómo se dice Alfabeto en Itza'?### Assistant: Alfabeto en Itza' se dice Woojtz'iib'"}
+{"text": "### Human: Alfabeto en Itza'### Assistant: Alfabeto en Itza' se dice Woojtz'iib'"}
+{"text": "### Human: ¿Cómo se dice Círculo en Itza'?### Assistant: Círculo en Itza' se dice Woolis"}
+{"text": "### Human: Círculo en Itza'### Assistant: Círculo en Itza' se dice Woolis"}
+{"text": "### Human: ¿Cómo se dice La Ceiba en Itza'?### Assistant: La Ceiba en Itza' se dice Ya'axche'"}
+{"text": "### Human: La Ceiba en Itza'### Assistant: La Ceiba en Itza' se dice Ya'axche'"}
+{"text": "### Human: ¿Cómo se dice Laboratorio en Itza'?### Assistant: Laboratorio en Itza' se dice Käxanpektzilnaj"}
+{"text": "### Human: Laboratorio en Itza'### Assistant: Laboratorio en Itza' se dice Käxanpektzilnaj"}
+{"text": "### Human: ¿Cómo se dice Baño en Itza'?### Assistant: Baño en Itza' se dice Komon"}
+{"text": "### Human: Baño en Itza'### Assistant: Baño en Itza' se dice Komon"}
+{"text": "### Human: ¿Cómo se dice Sala de Computación en Itza'?### Assistant: Sala de Computación en Itza' se dice Kuuchil unu'ukultz'iib'"}
+{"text": "### Human: Sala de Computación en Itza'### Assistant: Sala de Computación en Itza' se dice Kuuchil unu'ukultz'iib'"}
+{"text": "### Human: ¿Cómo se dice Cocina en Itza'?### Assistant: Cocina en Itza' se dice Kuuchil chäkal"}
+{"text": "### Human: Cocina en Itza'### Assistant: Cocina en Itza' se dice Kuuchil chäkal"}
+{"text": "### Human: ¿Cómo se dice Biblioteca en Itza'?### Assistant: Biblioteca en Itza' se dice Kuuchil ju'umilxok"}
+{"text": "### Human: Biblioteca en Itza'### Assistant: Biblioteca en Itza' se dice Kuuchil ju'umilxok"}
+{"text": "### Human: ¿Cómo se dice Salón multiusos en Itza'?### Assistant: Salón multiusos en Itza' se dice Kuuchil peksb'ajil"}
+{"text": "### Human: Salón multiusos en Itza'### Assistant: Salón multiusos en Itza' se dice Kuuchil peksb'ajil"}
+{"text": "### Human: ¿Cómo se dice Jardín en Itza'?### Assistant: Jardín en Itza' se dice Kuuchil top'il"}
+{"text": "### Human: Jardín en Itza'### Assistant: Jardín en Itza' se dice Kuuchil top'il"}
+{"text": "### Human: ¿Cómo se dice Cancha polideportiva en Itza'?### Assistant: Cancha polideportiva en Itza' se dice Kuuchil yaab' b'axäl"}
+{"text": "### Human: Cancha polideportiva en Itza'### Assistant: Cancha polideportiva en Itza' se dice Kuuchil yaab' b'axäl"}
+{"text": "### Human: ¿Cómo se dice Enfermería en Itza'?### Assistant: Enfermería en Itza' se dice Kuuchilmeyaj tz'äkyaj"}
+{"text": "### Human: Enfermería en Itza'### Assistant: Enfermería en Itza' se dice Kuuchilmeyaj tz'äkyaj"}
+{"text": "### Human: ¿Cómo se dice Huerto en Itza'?### Assistant: Huerto en Itza' se dice Päk'aalil"}
+{"text": "### Human: Huerto en Itza'### Assistant: Huerto en Itza' se dice Päk'aalil"}
+{"text": "### Human: ¿Cómo se dice Aulas en Itza'?### Assistant: Aulas en Itza' se dice Tab'alnajilkänb'al"}
+{"text": "### Human: Aulas en Itza'### Assistant: Aulas en Itza' se dice Tab'alnajilkänb'al"}
+{"text": "### Human: ¿Cómo se dice Dirección en Itza'?### Assistant: Dirección en Itza' se dice Tojil"}
+{"text": "### Human: Dirección en Itza'### Assistant: Dirección en Itza' se dice Tojil"}
+{"text": "### Human: ¿Cómo se dice Corredor en Itza'?### Assistant: Corredor en Itza' se dice Ujaalnaj"}
+{"text": "### Human: Corredor en Itza'### Assistant: Corredor en Itza' se dice Ujaalnaj"}
+{"text": "### Human: ¿Cómo se dice Secretaría en Itza'?### Assistant: Secretaría en Itza' se dice Ukuuchil tz'iib'"}
+{"text": "### Human: Secretaría en Itza'### Assistant: Secretaría en Itza' se dice Ukuuchil tz'iib'"}
+{"text": "### Human: ¿Cómo se dice Conserjería en Itza'?### Assistant: Conserjería en Itza' se dice Ukuuchil xukna'an"}
+{"text": "### Human: Conserjería en Itza'### Assistant: Conserjería en Itza' se dice Ukuuchil xukna'an"}
+{"text": "### Human: ¿Cómo se dice Cepillo de dientes en Itza'?### Assistant: Cepillo de dientes en Itza' se dice Joch'koj"}
+{"text": "### Human: Cepillo de dientes en Itza'### Assistant: Cepillo de dientes en Itza' se dice Joch'koj"}
+{"text": "### Human: ¿Cómo se dice Papel de baño en Itza'?### Assistant: Papel de baño en Itza' se dice Ju'umkomon"}
+{"text": "### Human: Papel de baño en Itza'### Assistant: Papel de baño en Itza' se dice Ju'umkomon"}
+{"text": "### Human: ¿Cómo se dice Cepillero en Itza'?### Assistant: Cepillero en Itza' se dice Kuuchil joch'koj"}
+{"text": "### Human: Cepillero en Itza'### Assistant: Cepillero en Itza' se dice Kuuchil joch'koj"}
+{"text": "### Human: ¿Cómo se dice Vaso en Itza'?### Assistant: Vaso en Itza' se dice Luch"}
+{"text": "### Human: Vaso en Itza'### Assistant: Vaso en Itza' se dice Luch"}
+{"text": "### Human: ¿Cómo se dice Toalla en Itza'?### Assistant: Toalla en Itza' se dice Nok'säp'ja'"}
+{"text": "### Human: Toalla en Itza'### Assistant: Toalla en Itza' se dice Nok'säp'ja'"}
+{"text": "### Human: ¿Cómo se dice Pasta dental en Itza'?### Assistant: Pasta dental en Itza' se dice Noy joch'koj"}
+{"text": "### Human: Pasta dental en Itza'### Assistant: Pasta dental en Itza' se dice Noy joch'koj"}
+{"text": "### Human: ¿Cómo se dice Jabón en Itza'?### Assistant: Jabón en Itza' se dice Noyp'o'"}
+{"text": "### Human: Jabón en Itza'### Assistant: Jabón en Itza' se dice Noyp'o'"}
+{"text": "### Human: ¿Cómo se dice Licuadora en Itza'?### Assistant: Licuadora en Itza' se dice B'ook'"}
+{"text": "### Human: Licuadora en Itza'### Assistant: Licuadora en Itza' se dice B'ook'"}
+{"text": "### Human: ¿Cómo se dice Mesa en Itza'?### Assistant: Mesa en Itza' se dice Ch'akche'"}
+{"text": "### Human: Mesa en Itza'### Assistant: Mesa en Itza' se dice Ch'akche'"}
+{"text": "### Human: ¿Cómo se dice Cubeta/balde en Itza'?### Assistant: Cubeta/balde en Itza' se dice Ch'uy"}
+{"text": "### Human: Cubeta/balde en Itza'### Assistant: Cubeta/balde en Itza' se dice Ch'uy"}
+{"text": "### Human: ¿Cómo se dice Cernidor en Itza'?### Assistant: Cernidor en Itza' se dice Chach"}
+{"text": "### Human: Cernidor en Itza'### Assistant: Cernidor en Itza' se dice Chach"}
+{"text": "### Human: ¿Cómo se dice Sartén en Itza'?### Assistant: Sartén en Itza' se dice Ixb'oxjay / ixt'ech"}
+{"text": "### Human: Sartén en Itza'### Assistant: Sartén en Itza' se dice Ixb'oxjay / ixt'ech"}
+{"text": "### Human: ¿Cómo se dice Fósforo en Itza'?### Assistant: Fósforo en Itza' se dice K'irich jop"}
+{"text": "### Human: Fósforo en Itza'### Assistant: Fósforo en Itza' se dice K'irich jop"}
+{"text": "### Human: ¿Cómo se dice Fogón en Itza'?### Assistant: Fogón en Itza' se dice K'ob'e'en"}
+{"text": "### Human: Fogón en Itza'### Assistant: Fogón en Itza' se dice K'ob'e'en"}
+{"text": "### Human: ¿Cómo se dice Piedra de moler en Itza'?### Assistant: Piedra de moler en Itza' se dice Ka'"}
+{"text": "### Human: Piedra de moler en Itza'### Assistant: Piedra de moler en Itza' se dice Ka'"}
+{"text": "### Human: ¿Cómo se dice Cuchara/tenedor en Itza'?### Assistant: Cuchara/tenedor en Itza' se dice Ka'luch"}
+{"text": "### Human: Cuchara/tenedor en Itza'### Assistant: Cuchara/tenedor en Itza' se dice Ka'luch"}
+{"text": "### Human: ¿Cómo se dice Olla en Itza'?### Assistant: Olla en Itza' se dice Kum"}
+{"text": "### Human: Olla en Itza'### Assistant: Olla en Itza' se dice Kum"}
+{"text": "### Human: ¿Cómo se dice Ocote en Itza'?### Assistant: Ocote en Itza' se dice Laajte'"}
+{"text": "### Human: Ocote en Itza'### Assistant: Ocote en Itza' se dice Laajte'"}
+{"text": "### Human: ¿Cómo se dice Plato en Itza'?### Assistant: Plato en Itza' se dice Lak"}
+{"text": "### Human: Plato en Itza'### Assistant: Plato en Itza' se dice Lak"}
+{"text": "### Human: ¿Cómo se dice Paleta en Itza'?### Assistant: Paleta en Itza' se dice Mo'nok b'a'te'"}
+{"text": "### Human: Paleta en Itza'### Assistant: Paleta en Itza' se dice Mo'nok b'a'te'"}
+{"text": "### Human: ¿Cómo se dice Cuchillo en Itza'?### Assistant: Cuchillo en Itza' se dice Mo'nok maskab'"}
+{"text": "### Human: Cuchillo en Itza'### Assistant: Cuchillo en Itza' se dice Mo'nok maskab'"}
+{"text": "### Human: ¿Cómo se dice Cucharón en Itza'?### Assistant: Cucharón en Itza' se dice Nojka'luch"}
+{"text": "### Human: Cucharón en Itza'### Assistant: Cucharón en Itza' se dice Nojka'luch"}
+{"text": "### Human: ¿Cómo se dice Paila en Itza'?### Assistant: Paila en Itza' se dice Nojkum"}
+{"text": "### Human: Paila en Itza'### Assistant: Paila en Itza' se dice Nojkum"}
+{"text": "### Human: ¿Cómo se dice Mantel en Itza'?### Assistant: Mantel en Itza' se dice Nok'ch'akche'"}
+{"text": "### Human: Mantel en Itza'### Assistant: Mantel en Itza' se dice Nok'ch'akche'"}
+{"text": "### Human: ¿Cómo se dice Pichel/tinaja en Itza'?### Assistant: Pichel/tinaja en Itza' se dice P'uul"}
+{"text": "### Human: Pichel/tinaja en Itza'### Assistant: Pichel/tinaja en Itza' se dice P'uul"}
+{"text": "### Human: ¿Cómo se dice Tabla de picar en Itza'?### Assistant: Tabla de picar en Itza' se dice Pechekche'"}
+{"text": "### Human: Tabla de picar en Itza'### Assistant: Tabla de picar en Itza' se dice Pechekche'"}
+{"text": "### Human: ¿Cómo se dice Delantal en Itza'?### Assistant: Delantal en Itza' se dice Pix taan"}
+{"text": "### Human: Delantal en Itza'### Assistant: Delantal en Itza' se dice Pix taan"}
+{"text": "### Human: ¿Cómo se dice Leña en Itza'?### Assistant: Leña en Itza' se dice Si'"}
+{"text": "### Human: Leña en Itza'### Assistant: Leña en Itza' se dice Si'"}
+{"text": "### Human: ¿Cómo se dice Estufa en Itza'?### Assistant: Estufa en Itza' se dice Unu'ukul k'aak'"}
+{"text": "### Human: Estufa en Itza'### Assistant: Estufa en Itza' se dice Unu'ukul k'aak'"}
+{"text": "### Human: ¿Cómo se dice Congelador en Itza'?### Assistant: Congelador en Itza' se dice Unu'ukul siis"}
+{"text": "### Human: Congelador en Itza'### Assistant: Congelador en Itza' se dice Unu'ukul siis"}
+{"text": "### Human: ¿Cómo se dice Canasta en Itza'?### Assistant: Canasta en Itza' se dice Xak"}
+{"text": "### Human: Canasta en Itza'### Assistant: Canasta en Itza' se dice Xak"}
+{"text": "### Human: ¿Cómo se dice Comal en Itza'?### Assistant: Comal en Itza' se dice Xämäch"}
+{"text": "### Human: Comal en Itza'### Assistant: Comal en Itza' se dice Xämäch"}
+{"text": "### Human: ¿Cómo se dice Bollo de frijol en Itza'?### Assistant: Bollo de frijol en Itza' se dice Ak'xaak'"}
+{"text": "### Human: Bollo de frijol en Itza'### Assistant: Bollo de frijol en Itza' se dice Ak'xaak'"}
+{"text": "### Human: ¿Cómo se dice Galleta en Itza'?### Assistant: Galleta en Itza' se dice Ch'uukwaj"}
+{"text": "### Human: Galleta en Itza'### Assistant: Galleta en Itza' se dice Ch'uukwaj"}
+{"text": "### Human: ¿Cómo se dice Fruta en Itza'?### Assistant: Fruta en Itza' se dice Ich"}
+{"text": "### Human: Fruta en Itza'### Assistant: Fruta en Itza' se dice Ich"}
+{"text": "### Human: ¿Cómo se dice Bollo de chaya en Itza'?### Assistant: Bollo de chaya en Itza' se dice Onb'iwaj ti chay"}
+{"text": "### Human: Bollo de chaya en Itza'### Assistant: Bollo de chaya en Itza' se dice Onb'iwaj ti chay"}
+{"text": "### Human: ¿Cómo se dice Tostada en Itza'?### Assistant: Tostada en Itza' se dice Op'"}
+{"text": "### Human: Tostada en Itza'### Assistant: Tostada en Itza' se dice Op'"}
+{"text": "### Human: ¿Cómo se dice Pan en Itza'?### Assistant: Pan en Itza' se dice Pench'uukwaj"}
+{"text": "### Human: Pan en Itza'### Assistant: Pan en Itza' se dice Pench'uukwaj"}
+{"text": "### Human: ¿Cómo se dice Atol en Itza'?### Assistant: Atol en Itza' se dice Säkänsa'"}
+{"text": "### Human: Atol en Itza'### Assistant: Atol en Itza' se dice Säkänsa'"}
+{"text": "### Human: ¿Cómo se dice Atol de elote en Itza'?### Assistant: Atol de elote en Itza' se dice Säkänsa' kuxunäl"}
+{"text": "### Human: Atol de elote en Itza'### Assistant: Atol de elote en Itza' se dice Säkänsa' kuxunäl"}
+{"text": "### Human: ¿Cómo se dice Atol de masa en Itza'?### Assistant: Atol de masa en Itza' se dice Säkänsa' säkan"}
+{"text": "### Human: Atol de masa en Itza'### Assistant: Atol de masa en Itza' se dice Säkänsa' säkan"}
+{"text": "### Human: ¿Cómo se dice Refresco en Itza'?### Assistant: Refresco en Itza' se dice Siisja'"}
+{"text": "### Human: Refresco en Itza'### Assistant: Refresco en Itza' se dice Siisja'"}
+{"text": "### Human: ¿Cómo se dice Tamal en Itza'?### Assistant: Tamal en Itza' se dice To'wajb'äk'"}
+{"text": "### Human: Tamal en Itza'### Assistant: Tamal en Itza' se dice To'wajb'äk'"}
+{"text": "### Human: ¿Cómo se dice Leche en Itza'?### Assistant: Leche en Itza' se dice Uka'yim"}
+{"text": "### Human: Leche en Itza'### Assistant: Leche en Itza' se dice Uka'yim"}
+{"text": "### Human: ¿Cómo se dice Tenis en Itza'?### Assistant: Tenis en Itza' se dice B'axälxana'"}
+{"text": "### Human: Tenis en Itza'### Assistant: Tenis en Itza' se dice B'axälxana'"}
+{"text": "### Human: ¿Cómo se dice Cinturón en Itza'?### Assistant: Cinturón en Itza' se dice K'axi'/t'un/k'äxnäk'"}
+{"text": "### Human: Cinturón en Itza'### Assistant: Cinturón en Itza' se dice K'axi'/t'un/k'äxnäk'"}
+{"text": "### Human: ¿Cómo se dice Calzoneta en Itza'?### Assistant: Calzoneta en Itza' se dice Koom wex"}
+{"text": "### Human: Calzoneta en Itza'### Assistant: Calzoneta en Itza' se dice Koom wex"}
+{"text": "### Human: ¿Cómo se dice Camisa en Itza'?### Assistant: Camisa en Itza' se dice Koton"}
+{"text": "### Human: Camisa en Itza'### Assistant: Camisa en Itza' se dice Koton"}
+{"text": "### Human: ¿Cómo se dice Falda en Itza'?### Assistant: Falda en Itza' se dice Pik"}
+{"text": "### Human: Falda en Itza'### Assistant: Falda en Itza' se dice Pik"}
+{"text": "### Human: ¿Cómo se dice Calcetín o calceta en Itza'?### Assistant: Calcetín o calceta en Itza' se dice Pix ok"}
+{"text": "### Human: Calcetín o calceta en Itza'### Assistant: Calcetín o calceta en Itza' se dice Pix ok"}
+{"text": "### Human: ¿Cómo se dice Pantalón en Itza'?### Assistant: Pantalón en Itza' se dice Wex"}
+{"text": "### Human: Pantalón en Itza'### Assistant: Pantalón en Itza' se dice Wex"}
+{"text": "### Human: ¿Cómo se dice Pans en Itza'?### Assistant: Pans en Itza' se dice Wexpekes"}
+{"text": "### Human: Pans en Itza'### Assistant: Pans en Itza' se dice Wexpekes"}
+{"text": "### Human: ¿Cómo se dice Blusa en Itza'?### Assistant: Blusa en Itza' se dice Wipil"}
+{"text": "### Human: Blusa en Itza'### Assistant: Blusa en Itza' se dice Wipil"}
+{"text": "### Human: ¿Cómo se dice Zapato en Itza'?### Assistant: Zapato en Itza' se dice Xana'"}
+{"text": "### Human: Zapato en Itza'### Assistant: Zapato en Itza' se dice Xana'"}
+{"text": "### Human: ¿Cómo se dice Playera en Itza'?### Assistant: Playera en Itza' se dice Xikawpil"}
+{"text": "### Human: Playera en Itza'### Assistant: Playera en Itza' se dice Xikawpil"}
+
