@@ -4958,3 +4958,299 @@
 {"text": "### Human: Manzana en Kaqchikel### Assistant: Manzana en Kaqchikel se dice Nimamik'u"}
 {"text": "### Human: ¿Cómo se dice plátano en Kaqchikel?### Assistant: Plátano en Kaqchikel se dice Nimsaaqu'l"}
 {"text": "### Human: Plátano en Kaqchikel### Assistant: Plátano en Kaqchikel se dice Nimsaaqu'l"}
+{"text": "### Human: ¿Cómo se dice posesivo, segunda persona sin en K'iche'?### Assistant: Posesivo, segunda persona sin en K'iche' se dice A-"}
+{"text": "### Human: Posesivo, segunda persona sin en K'iche'### Assistant: Posesivo, segunda persona sin en K'iche' se dice A-"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Je'lik, we akej que en español significa Es lindo tu caballo."}
+{"text": "### Human: Frase en K'iche'### Assistant: Je'lik, we akej que en español significa Es lindo tu caballo."}
+{"text": "### Human: ¿Cómo se dice pierna en K'iche'?### Assistant: Pierna en K'iche' se dice A'"}
+{"text": "### Human: Pierna en K'iche'### Assistant: Pierna en K'iche' se dice A'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Kq'axow ri awa' que en español significa Te duele la pierna."}
+{"text": "### Human: Frase en K'iche'### Assistant: Kq'axow ri awa' que en español significa Te duele la pierna."}
+{"text": "### Human: ¿Cómo se dice hamaca en K'iche'?### Assistant: Hamaca en K'iche' se dice Ab'"}
+{"text": "### Human: Hamaca en K'iche'### Assistant: Hamaca en K'iche' se dice Ab'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: K'ak' ri ab' que en español significa La hamaca es nueva."}
+{"text": "### Human: Frase en K'iche'### Assistant: K'ak' ri ab' que en español significa La hamaca es nueva."}
+{"text": "### Human: ¿Cómo se dice año en K'iche'?### Assistant: Año en K'iche' se dice Ab'"}
+{"text": "### Human: Año en K'iche'### Assistant: Año en K'iche' se dice Ab'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Xq'ax ri nimaq'ij rech ri junab' que en español significa Pasó la fiesta del año."}
+{"text": "### Human: Frase en K'iche'### Assistant: Xq'ax ri nimaq'ij rech ri junab' que en español significa Pasó la fiesta del año."}
+{"text": "### Human: ¿Cómo se dice hollín en K'iche'?### Assistant: Hollín en K'iche' se dice Ab'a'q"}
+{"text": "### Human: Hollín en K'iche'### Assistant: Hollín en K'iche' se dice Ab'a'q"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Nojinaq ri ja chi rech ri ab'a'q que en español significa La casa está llena de hollín."}
+{"text": "### Human: Frase en K'iche'### Assistant: Nojinaq ri ja chi rech ri ab'a'q que en español significa La casa está llena de hollín."}
+{"text": "### Human: ¿Cómo se dice piedra en K'iche'?### Assistant: Piedra en K'iche' se dice Ab'aj"}
+{"text": "### Human: Piedra en K'iche'### Assistant: Piedra en K'iche' se dice Ab'aj"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Sib'alaj nim ri ab'aj que en español significa La piedra es muy grande."}
+{"text": "### Human: Frase en K'iche'### Assistant: Sib'alaj nim ri ab'aj que en español significa La piedra es muy grande."}
+{"text": "### Human: ¿Cómo se dice endurecer en K'iche'?### Assistant: Endurecer en K'iche' se dice Ab'ajirik"}
+{"text": "### Human: Endurecer en K'iche'### Assistant: Endurecer en K'iche' se dice Ab'ajirik"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri saqtew xab'ajirik que en español significa El hielo se endureció."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri saqtew xab'ajirik que en español significa El hielo se endureció."}
+{"text": "### Human: ¿Cómo se dice empañado en K'iche'?### Assistant: Empañado en K'iche' se dice Ab'anix"}
+{"text": "### Human: Empañado en K'iche'### Assistant: Empañado en K'iche' se dice Ab'anix"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Xab'anix ri uchi' ja que en español significa La puerta se empañó."}
+{"text": "### Human: Frase en K'iche'### Assistant: Xab'anix ri uchi' ja que en español significa La puerta se empañó."}
+{"text": "### Human: ¿Cómo se dice alentador, dador de aliento en K'iche'?### Assistant: Alentador, dador de aliento en K'iche' se dice Ab'anel"}
+{"text": "### Human: Alentador, dador de aliento en K'iche'### Assistant: Alentador, dador de aliento en K'iche' se dice Ab'anel"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri Ajaw are ab'anel rech we qak'aslemal que en español significa Dios es dador de aliento a nuestra vida."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri Ajaw are ab'anel rech we qak'aslemal que en español significa Dios es dador de aliento a nuestra vida."}
+{"text": "### Human: ¿Cómo se dice milpa en K'iche'?### Assistant: Milpa en K'iche' se dice Ab'ix"}
+{"text": "### Human: Milpa en K'iche'### Assistant: Milpa en K'iche' se dice Ab'ix"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: K'o reqa'n ri ab'ix que en español significa Está cargada la milpa."}
+{"text": "### Human: Frase en K'iche'### Assistant: K'o reqa'n ri ab'ix que en español significa Está cargada la milpa."}
+{"text": "### Human: ¿Cómo se dice sembrado de maíz en K'iche'?### Assistant: Sembrado de maíz en K'iche' se dice Ab'ixb'al"}
+{"text": "### Human: Sembrado de maíz en K'iche'### Assistant: Sembrado de maíz en K'iche' se dice Ab'ixb'al"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Sib'alaj klik'ik' ri ab'ixb'al que en español significa El sembrado de maíz es muy extenso."}
+{"text": "### Human: Frase en K'iche'### Assistant: Sib'alaj klik'ik' ri ab'ixb'al que en español significa El sembrado de maíz es muy extenso."}
+{"text": "### Human: ¿Cómo se dice Latinoamérica en K'iche'?### Assistant: Latinoamérica en K'iche' se dice Ab'ya Yala"}
+{"text": "### Human: Latinoamérica en K'iche'### Assistant: Latinoamérica en K'iche' se dice Ab'ya Yala"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri kulewal ri aj ab'ya yala que en español significa El territorio de los mesoamericanos."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri kulewal ri aj ab'ya yala que en español significa El territorio de los mesoamericanos."}
+{"text": "### Human: ¿Cómo se dice parientes en K'iche'?### Assistant: Parientes en K'iche' se dice Achalaxik"}
+{"text": "### Human: Parientes en K'iche'### Assistant: Parientes en K'iche' se dice Achalaxik"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: E petinaq pa b'e le rachalaxik que en español significa Sus parientes vienen en camino."}
+{"text": "### Human: Frase en K'iche'### Assistant: E petinaq pa b'e le rachalaxik que en español significa Sus parientes vienen en camino."}
+{"text": "### Human: ¿Cómo se dice hombre en K'iche'?### Assistant: Hombre en K'iche' se dice Achi"}
+{"text": "### Human: Hombre en K'iche'### Assistant: Hombre en K'iche' se dice Achi"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajchak ri achi que en español significa El hombre es trabajador."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajchak ri achi que en español significa El hombre es trabajador."}
+{"text": "### Human: ¿Cómo se dice compañero en K'iche'?### Assistant: Compañero en K'iche' se dice Achi'l"}
+{"text": "### Human: Compañero en K'iche'### Assistant: Compañero en K'iche' se dice Achi'l"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Jun nimalaj achi'l ri ak'al que en español significa El niño es gran compañero."}
+{"text": "### Human: Frase en K'iche'### Assistant: Jun nimalaj achi'l ri ak'al que en español significa El niño es gran compañero."}
+{"text": "### Human: ¿Cómo se dice compañero (en otro contexto) en K'iche'?### Assistant: Compañero en otro contexto en K'iche' se dice Achi'l"}
+{"text": "### Human: Compañero (en otro contexto) en K'iche'### Assistant: Compañero en otro contexto en K'iche' se dice Achi'l"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri rachi'l xkanaj kanoq chi uchi ri cho que en español significa Su compañero se quedó en la orilla del lago."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri rachi'l xkanaj kanoq chi uchi ri cho que en español significa Su compañero se quedó en la orilla del lago."}
+{"text": "### Human: ¿Cómo se dice compañía en K'iche'?### Assistant: Compañía en K'iche' se dice Achi'l"}
+{"text": "### Human: Compañía en K'iche'### Assistant: Compañía en K'iche' se dice Achi'l"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: K'o chi wachi'l chanim que en español significa Ahora ya tengo compañía."}
+{"text": "### Human: Frase en K'iche'### Assistant: K'o chi wachi'l chanim que en español significa Ahora ya tengo compañía."}
+{"text": "### Human: ¿Cómo se dice inflexible en K'iche'?### Assistant: Inflexible en K'iche' se dice Ach'i'y"}
+{"text": "### Human: Inflexible en K'iche'### Assistant: Inflexible en K'iche' se dice Ach'i'y"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Sib'alaj ach'i'y ri b'aqit que en español significa El encino es muy inflexible."}
+{"text": "### Human: Frase en K'iche'### Assistant: Sib'alaj ach'i'y ri b'aqit que en español significa El encino es muy inflexible."}
+{"text": "### Human: ¿Cómo se dice concuña en K'iche'?### Assistant: Concuña en K'iche' se dice Achalka'n"}
+{"text": "### Human: Concuña en K'iche'### Assistant: Concuña en K'iche' se dice Achalka'n"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajtaqal tzij ri wachalka'n que en español significa Mi concuña es respetuosa."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajtaqal tzij ri wachalka'n que en español significa Mi concuña es respetuosa."}
+{"text": "### Human: ¿Cómo se dice esposo en K'iche'?### Assistant: Esposo en K'iche' se dice Achijil"}
+{"text": "### Human: Esposo en K'iche'### Assistant: Esposo en K'iche' se dice Achijil"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Utzilaj achijil que en español significa Buen esposo."}
+{"text": "### Human: Frase en K'iche'### Assistant: Utzilaj achijil que en español significa Buen esposo."}
+{"text": "### Human: ¿Cómo se dice sueño en K'iche'?### Assistant: Sueño en K'iche' se dice Achik'"}
+{"text": "### Human: Sueño en K'iche'### Assistant: Sueño en K'iche' se dice Achik'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Xinachik'nik que en español significa Soñé."}
+{"text": "### Human: Frase en K'iche'### Assistant: Xinachik'nik que en español significa Soñé."}
+{"text": "### Human: ¿Cómo se dice casa en K'iche'?### Assistant: Casa en K'iche' se dice Achoch"}
+{"text": "### Human: Casa en K'iche'### Assistant: Casa en K'iche' se dice Achoch"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Naj k'o wi ri qachoch que en español significa Nuestra casa está lejos."}
+{"text": "### Human: Frase en K'iche'### Assistant: Naj k'o wi ri qachoch que en español significa Nuestra casa está lejos."}
+{"text": "### Human: ¿Cómo se dice casa (en otro contexto) en K'iche'?### Assistant: Casa en otro contexto en K'iche' se dice Achoch"}
+{"text": "### Human: Casa (en otro contexto) en K'iche'### Assistant: Casa en otro contexto en K'iche' se dice Achoch"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Xtzaq ri rachoch rumal ri jab' que en español significa Su casa se cayó por la lluvia."}
+{"text": "### Human: Frase en K'iche'### Assistant: Xtzaq ri rachoch rumal ri jab' que en español significa Su casa se cayó por la lluvia."}
+{"text": "### Human: ¿Cómo se dice caña de carrizo en K'iche'?### Assistant: Caña de carrizo en K'iche' se dice Aj"}
+{"text": "### Human: Caña de carrizo en K'iche'### Assistant: Caña de carrizo en K'iche' se dice Aj"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Utz ri ulew che utikik ri aj que en español significa La tierra es buena para cultivar la caña de carrizo."}
+{"text": "### Human: Frase en K'iche'### Assistant: Utz ri ulew che utikik ri aj que en español significa La tierra es buena para cultivar la caña de carrizo."}
+{"text": "### Human: ¿Cómo se dice día maya en K'iche'?### Assistant: Día maya en K'iche' se dice Aj"}
+{"text": "### Human: Día maya en K'iche'### Assistant: Día maya en K'iche' se dice Aj"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Xinalaxik chi upam ri cholb'al q'ij keb' Aj que en español significa Nací en el día dos Aj del calendario maya."}
+{"text": "### Human: Frase en K'iche'### Assistant: Xinalaxik chi upam ri cholb'al q'ij keb' Aj que en español significa Nací en el día dos Aj del calendario maya."}
+{"text": "### Human: ¿Cómo se dice prefijo que indica profesión o gentilicio en K'iche'?### Assistant: Prefijo que indica profesión o gentilicio en K'iche' se dice Aj"}
+{"text": "### Human: Prefijo que indica profesión o gentilicio en K'iche'### Assistant: Prefijo que indica profesión o gentilicio en K'iche' se dice Aj"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajkem ri a Xwan que en español significa Juan es tejedor."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajkem ri a Xwan que en español significa Juan es tejedor."}
+{"text": "### Human: ¿Cómo se dice Totonicapense en K'iche'?### Assistant: Totonicapense en K'iche' se dice Aj chi uwi' miq'in ja'"}
+{"text": "### Human: Totonicapense en K'iche'### Assistant: Totonicapense en K'iche' se dice Aj chi uwi' miq'in ja'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Aj chi uwi' miq'in ja' ri Lu' que en español significa Pedro es Totonicapense."}
+{"text": "### Human: Frase en K'iche'### Assistant: Aj chi uwi' miq'in ja' ri Lu' que en español significa Pedro es Totonicapense."}
+{"text": "### Human: ¿Cómo se dice Quichelense en K'iche'?### Assistant: Quichelense en K'iche' se dice Ajk'iche'"}
+{"text": "### Human: Quichelense en K'iche'### Assistant: Quichelense en K'iche' se dice Ajk'iche'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajk'iche' ri ali To'n que en español significa La señorita Antonia es quichelense."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajk'iche' ri ali To'n que en español significa La señorita Antonia es quichelense."}
+{"text": "### Human: ¿Cómo se dice preso en K'iche'?### Assistant: Preso en K'iche' se dice Ajpache'"}
+{"text": "### Human: Preso en K'iche'### Assistant: Preso en K'iche' se dice Ajpache'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajpache' ri a Max que en español significa Tomás está encarcelado."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajpache' ri a Max que en español significa Tomás está encarcelado."}
+{"text": "### Human: ¿Cómo se dice quetzalteco en K'iche'?### Assistant: Quetzalteco en K'iche' se dice Ajxe'lajuj No'j"}
+{"text": "### Human: Quetzalteco en K'iche'### Assistant: Quetzalteco en K'iche' se dice Ajxe'lajuj No'j"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajxe'lajuj No'j ajk'ayel rech ichaj que en español significa La vendedora de verduras es de Quetzaltenango."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajxe'lajuj No'j ajk'ayel rech ichaj que en español significa La vendedora de verduras es de Quetzaltenango."}
+{"text": "### Human: ¿Cómo se dice joyabateco en K'iche'?### Assistant: Joyabateco en K'iche' se dice Ajxo'y, Ajxo'l ab'aj"}
+{"text": "### Human: Joyabateco en K'iche'### Assistant: Joyabateco en K'iche' se dice Ajxo'y, Ajxo'l ab'aj"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajxo'y ri wikan que en español significa Mi tío es joyabateco."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajxo'y ri wikan que en español significa Mi tío es joyabateco."}
+{"text": "### Human: ¿Cómo se dice palo de matasanos en K'iche'?### Assistant: Palo de matasanos en K'iche' se dice Ajache'"}
+{"text": "### Human: Palo de matasanos en K'iche'### Assistant: Palo de matasanos en K'iche' se dice Ajache'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Kuk'ayij uwach ajache' ri ak'al que en español significa El niño vende frutas de matasanos."}
+{"text": "### Human: Frase en K'iche'### Assistant: Kuk'ayij uwach ajache' ri ak'al que en español significa El niño vende frutas de matasanos."}
+{"text": "### Human: ¿Cómo se dice ser superior o Dios en K'iche'?### Assistant: Ser superior o Dios en K'iche' se dice Ajaw"}
+{"text": "### Human: Ser superior o Dios en K'iche'### Assistant: Ser superior o Dios en K'iche' se dice Ajaw"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri Ajaw are' xwokow ri uwach kaj ulew que en español significa Dios es el formador del cielo y de la tierra."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri Ajaw are' xwokow ri uwach kaj ulew que en español significa Dios es el formador del cielo y de la tierra."}
+{"text": "### Human: ¿Cómo se dice día del calendario maya en K'iche'?### Assistant: Día del calendario maya en K'iche' se dice Ajaw Kan"}
+{"text": "### Human: Día del calendario maya en K'iche'### Assistant: Día del calendario maya en K'iche' se dice Ajaw Kan"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Sib'alaj utz kechakun ri ajq'ijab' alaxinaq pa ri Ajaw Kan que en español significa Trabaja muy bien el guía espiritual nacido en el día Ajaw Kan."}
+{"text": "### Human: Frase en K'iche'### Assistant: Sib'alaj utz kechakun ri ajq'ijab' alaxinaq pa ri Ajaw Kan que en español significa Trabaja muy bien el guía espiritual nacido en el día Ajaw Kan."}
+{"text": "### Human: ¿Cómo se dice aceptación recíproca en K'iche'?### Assistant: Aceptación recíproca en K'iche' se dice Ajawan ib'"}
+{"text": "### Human: Aceptación recíproca en K'iche'### Assistant: Aceptación recíproca en K'iche' se dice Ajawan ib'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Kiwaj iwib' ruk' ajawan ib' que en español significa Se quieren recíprocamente."}
+{"text": "### Human: Frase en K'iche'### Assistant: Kiwaj iwib' ruk' ajawan ib' que en español significa Se quieren recíprocamente."}
+{"text": "### Human: ¿Cómo se dice rey o señorío en K'iche'?### Assistant: Rey o señorío en K'iche' se dice Ajawanel"}
+{"text": "### Human: Rey o señorío en K'iche'### Assistant: Rey o señorío en K'iche' se dice Ajawanel"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ojer taq q'ij xkamasax ri qajawanel que en español significa Hace tiempo mataron a nuestro rey."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ojer taq q'ij xkamasax ri qajawanel que en español significa Hace tiempo mataron a nuestro rey."}
+{"text": "### Human: ¿Cómo se dice cantor en K'iche'?### Assistant: Cantor en K'iche' se dice Ajb'ix"}
+{"text": "### Human: Cantor en K'iche'### Assistant: Cantor en K'iche' se dice Ajb'ix"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajb'ix ri ali, Xwa'n que en español significa La señorita Juana, es cantadora."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajb'ix ri ali, Xwa'n que en español significa La señorita Juana, es cantadora."}
+{"text": "### Human: ¿Cómo se dice reclamador en K'iche'?### Assistant: Reclamador en K'iche' se dice Ajch'a'oj"}
+{"text": "### Human: Reclamador en K'iche'### Assistant: Reclamador en K'iche' se dice Ajch'a'oj"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajch'a'oj ri jun achi que en español significa El hombre es un reclamador."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajch'a'oj ri jun achi que en español significa El hombre es un reclamador."}
+{"text": "### Human: ¿Cómo se dice alguacil o alcalde en K'iche'?### Assistant: Alguacil o alcalde en K'iche' se dice Ajch'ami'y"}
+{"text": "### Human: Alguacil o alcalde en K'iche'### Assistant: Alguacil o alcalde en K'iche' se dice Ajch'ami'y"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Katusik'ij ri ajch'ami'y que en español significa El alguacil te llama."}
+{"text": "### Human: Frase en K'iche'### Assistant: Katusik'ij ri ajch'ami'y que en español significa El alguacil te llama."}
+{"text": "### Human: ¿Cómo se dice extranjero en K'iche'?### Assistant: Extranjero en K'iche' se dice Ajch'aqap ja'"}
+{"text": "### Human: Extranjero en K'iche'### Assistant: Extranjero en K'iche' se dice Ajch'aqap ja'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Xepe k'i ajch'aqap ja' pa ri nimaq'ij que en español significa Vinieron muchos extranjeros en la fiesta."}
+{"text": "### Human: Frase en K'iche'### Assistant: Xepe k'i ajch'aqap ja' pa ri nimaq'ij que en español significa Vinieron muchos extranjeros en la fiesta."}
+{"text": "### Human: ¿Cómo se dice peleador en K'iche'?### Assistant: Peleador en K'iche' se dice Ajch'o'j"}
+{"text": "### Human: Peleador en K'iche'### Assistant: Peleador en K'iche' se dice Ajch'o'j"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: ¿Jas che at ajch'o'j? que en español significa ¿Porqué eres peleador?"}
+{"text": "### Human: Frase en K'iche'### Assistant: ¿Jas che at ajch'o'j? que en español significa ¿Porqué eres peleador?"}
+{"text": "### Human: ¿Cómo se dice guerreros o pleitistas en K'iche'?### Assistant: Guerreros o pleitistas en K'iche' se dice Ajch'o'jab'"}
+{"text": "### Human: Guerreros o pleitistas en K'iche'### Assistant: Guerreros o pleitistas en K'iche' se dice Ajch'o'jab'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Kch'ob'otaj kiwach ri ajch'o'jab' que en español significa Son conocidos los peleadores."}
+{"text": "### Human: Frase en K'iche'### Assistant: Kch'ob'otaj kiwach ri ajch'o'jab' que en español significa Son conocidos los peleadores."}
+{"text": "### Human: ¿Cómo se dice trabajador en K'iche'?### Assistant: Trabajador en K'iche' se dice Ajchak"}
+{"text": "### Human: Trabajador en K'iche'### Assistant: Trabajador en K'iche' se dice Ajchak"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Utzalaj ajchak, ri Wel que en español significa Manuel, es un buen trabajador."}
+{"text": "### Human: Frase en K'iche'### Assistant: Utzalaj ajchak, ri Wel que en español significa Manuel, es un buen trabajador."}
+{"text": "### Human: ¿Cómo se dice empleado público en K'iche'?### Assistant: Empleado público en K'iche' se dice Ajchak chiwachil"}
+{"text": "### Human: Empleado público en K'iche'### Assistant: Empleado público en K'iche' se dice Ajchak chiwachil"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajchak chiwachil ri Xwan, pa taq ri nimaq'ij man kchukun taj que en español significa Juan es un empleado público, en los días festivos no trabaja."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajchak chiwachil ri Xwan, pa taq ri nimaq'ij man kchukun taj que en español significa Juan es un empleado público, en los días festivos no trabaja."}
+{"text": "### Human: ¿Cómo se dice el dueño en K'iche'?### Assistant: El dueño en K'iche' se dice Ajchaq'e"}
+{"text": "### Human: El dueño en K'iche'### Assistant: El dueño en K'iche' se dice Ajchaq'e"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri oj k'o ajchaq'e que en español significa El aguacate tiene dueño."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri oj k'o ajchaq'e que en español significa El aguacate tiene dueño."}
+{"text": "### Human: ¿Cómo se dice de aquí, de este lugar en K'iche'?### Assistant: De aquí, de este lugar en K'iche' se dice Ajchi'"}
+{"text": "### Human: De aquí, de este lugar en K'iche'### Assistant: De aquí, de este lugar en K'iche' se dice Ajchi'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajchi' ri a Te'k que en español significa Diego es de aquí."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajchi' ri a Te'k que en español significa Diego es de aquí."}
+{"text": "### Human: ¿Cómo se dice jornalero en K'iche'?### Assistant: Jornalero en K'iche' se dice Ajchiq'ij"}
+{"text": "### Human: Jornalero en K'iche'### Assistant: Jornalero en K'iche' se dice Ajchiq'ij"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Chiq'ij kchukun ri Lu' ruk' ratz que en español significa Pedro trabaja de jornalero con su hermano."}
+{"text": "### Human: Frase en K'iche'### Assistant: Chiq'ij kchukun ri Lu' ruk' ratz que en español significa Pedro trabaja de jornalero con su hermano."}
+{"text": "### Human: ¿Cómo se dice bomberos voluntarios en K'iche'?### Assistant: Bomberos voluntarios en K'iche' se dice Ajchupul q'aq'"}
+{"text": "### Human: Bomberos voluntarios en K'iche'### Assistant: Bomberos voluntarios en K'iche' se dice Ajchupul q'aq'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajchupul q'aq' ri Xwan que en español significa Juan es bombero voluntario."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajchupul q'aq' ri Xwan que en español significa Juan es bombero voluntario."}
+{"text": "### Human: ¿Cómo se dice su suegro o tu yerno en K'iche'?### Assistant: Su suegro o tu yerno en K'iche' se dice Aji'"}
+{"text": "### Human: Su suegro o tu yerno en K'iche'### Assistant: Su suegro o tu yerno en K'iche' se dice Aji'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Kinwilo chi utz ri aji' que en español significa Veo que tu suegro es bueno."}
+{"text": "### Human: Frase en K'iche'### Assistant: Kinwilo chi utz ri aji' que en español significa Veo que tu suegro es bueno."}
+{"text": "### Human: ¿Cómo se dice caña de azúcar en K'iche'?### Assistant: Caña de azúcar en K'iche' se dice Ajij"}
+{"text": "### Human: Caña de azúcar en K'iche'### Assistant: Caña de azúcar en K'iche' se dice Ajij"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Kutz'ub' ajij ri numi'al que en español significa Mi hija chupa la caña de azúcar."}
+{"text": "### Human: Frase en K'iche'### Assistant: Kutz'ub' ajij ri numi'al que en español significa Mi hija chupa la caña de azúcar."}
+{"text": "### Human: ¿Cómo se dice prójimo en K'iche'?### Assistant: Prójimo en K'iche' se dice Ajil tz'aqat"}
+{"text": "### Human: Prójimo en K'iche'### Assistant: Prójimo en K'iche' se dice Ajil tz'aqat"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Kuya nuna'oj ri wajil nutz'aqat que en español significa Mi prójimo me aconseja."}
+{"text": "### Human: Frase en K'iche'### Assistant: Kuya nuna'oj ri wajil nutz'aqat que en español significa Mi prójimo me aconseja."}
+{"text": "### Human: ¿Cómo se dice número en K'iche'?### Assistant: Número en K'iche' se dice Ajilab'al"}
+{"text": "### Human: Número en K'iche'### Assistant: Número en K'iche' se dice Ajilab'al"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: ¿Jumpa' ajilab'al xab'ij chi wech? que en español significa ¿Cuántos números me dijiste?"}
+{"text": "### Human: Frase en K'iche'### Assistant: ¿Jumpa' ajilab'al xab'ij chi wech? que en español significa ¿Cuántos números me dijiste?"}
+{"text": "### Human: ¿Cómo se dice calculadora en K'iche'?### Assistant: Calculadora en K'iche' se dice Ajilab'al"}
+{"text": "### Human: Calculadora en K'iche'### Assistant: Calculadora en K'iche' se dice Ajilab'al"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Man katkowin taj katchakunik, we man k'o ta ri ajilab'al que en español significa No puedes trabajar sin la calculadora."}
+{"text": "### Human: Frase en K'iche'### Assistant: Man katkowin taj katchakunik, we man k'o ta ri ajilab'al que en español significa No puedes trabajar sin la calculadora."}
+{"text": "### Human: ¿Cómo se dice fecha en K'iche'?### Assistant: Fecha en K'iche' se dice Ajilab'al q'ij"}
+{"text": "### Human: Fecha en K'iche'### Assistant: Fecha en K'iche' se dice Ajilab'al q'ij"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Chanim keb' no´j pa ri mayab' ajilab'al q'ij que en español significa La fecha de hoy es dos No´j del calendario maya."}
+{"text": "### Human: Frase en K'iche'### Assistant: Chanim keb' no´j pa ri mayab' ajilab'al q'ij que en español significa La fecha de hoy es dos No´j del calendario maya."}
+{"text": "### Human: ¿Cómo se dice numeración en K'iche'?### Assistant: Numeración en K'iche' se dice Ajilab'alil"}
+{"text": "### Human: Numeración en K'iche'### Assistant: Numeración en K'iche' se dice Ajilab'alil"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Man k' o taj uk'isik ri mayab' ajlab'alil que en español significa El conteo de la numeración maya es infinito."}
+{"text": "### Human: Frase en K'iche'### Assistant: Man k' o taj uk'isik ri mayab' ajlab'alil que en español significa El conteo de la numeración maya es infinito."}
+{"text": "### Human: ¿Cómo se dice contador en K'iche'?### Assistant: Contador en K'iche' se dice Ajilanel"}
+{"text": "### Human: Contador en K'iche'### Assistant: Contador en K'iche' se dice Ajilanel"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajilanel uchak are' que en español significa El oficio de él es contador."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajilanel uchak are' que en español significa El oficio de él es contador."}
+{"text": "### Human: ¿Cómo se dice contar en K'iche'?### Assistant: Contar en K'iche' se dice Ajilanik"}
+{"text": "### Human: Contar en K'iche'### Assistant: Contar en K'iche' se dice Ajilanik"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Tajin kinajilan chi' xulik que en español significa Estoy contando cuando llegó."}
+{"text": "### Human: Frase en K'iche'### Assistant: Tajin kinajilan chi' xulik que en español significa Estoy contando cuando llegó."}
+{"text": "### Human: ¿Cómo se dice escrutinio en K'iche'?### Assistant: Escrutinio en K'iche' se dice Ajilanwach"}
+{"text": "### Human: Escrutinio en K'iche'### Assistant: Escrutinio en K'iche' se dice Ajilanwach"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Karil ri ajilanwach ri ajtz'ib' que en español significa El secretario revisa el escrutinio."}
+{"text": "### Human: Frase en K'iche'### Assistant: Karil ri ajilanwach ri ajtz'ib' que en español significa El secretario revisa el escrutinio."}
+{"text": "### Human: ¿Cómo se dice conjunto finito en K'iche'?### Assistant: Conjunto finito en K'iche' se dice Ajilab'alil molaj"}
+{"text": "### Human: Conjunto finito en K'iche'### Assistant: Conjunto finito en K'iche' se dice Ajilab'alil molaj"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Chi upam ri tijonik kiltaj wi ri ajlab'alil molaj que en español significa El conjunto finito se ve dentro de los estudios."}
+{"text": "### Human: Frase en K'iche'### Assistant: Chi upam ri tijonik kiltaj wi ri ajlab'alil molaj que en español significa El conjunto finito se ve dentro de los estudios."}
+{"text": "### Human: ¿Cómo se dice empacho en K'iche'?### Assistant: Empacho en K'iche' se dice Ajito"}
+{"text": "### Human: Empacho en K'iche'### Assistant: Empacho en K'iche' se dice Ajito"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajito ri ak'al que en español significa El niño se empachó."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajito ri ak'al que en español significa El niño se empachó."}
+{"text": "### Human: ¿Cómo se dice brujo o hechicero en K'iche'?### Assistant: Brujo o hechicero en K'iche' se dice Ajitz"}
+{"text": "### Human: Brujo o hechicero en K'iche'### Assistant: Brujo o hechicero en K'iche' se dice Ajitz"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri nuk'ul ja ajitz que en español significa Mi vecino es hechicero."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri nuk'ul ja ajitz que en español significa Mi vecino es hechicero."}
+{"text": "### Human: ¿Cómo se dice plantas acuáticas en K'iche'?### Assistant: Plantas acuáticas en K'iche' se dice Ajja' q'ayes"}
+{"text": "### Human: Plantas acuáticas en K'iche'### Assistant: Plantas acuáticas en K'iche' se dice Ajja' q'ayes"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Xintik oxib' ajja' q'ayes que en español significa Sembré tres plantas acuáticas."}
+{"text": "### Human: Frase en K'iche'### Assistant: Xintik oxib' ajja' q'ayes que en español significa Sembré tres plantas acuáticas."}
+{"text": "### Human: ¿Cómo se dice comerciante en K'iche'?### Assistant: Comerciante en K'iche' se dice Ajk'ay"}
+{"text": "### Human: Comerciante en K'iche'### Assistant: Comerciante en K'iche' se dice Ajk'ay"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Are' ajk'ay rech taq ichaj que en español significa Ella es comerciante de hierbas."}
+{"text": "### Human: Frase en K'iche'### Assistant: Are' ajk'ay rech taq ichaj que en español significa Ella es comerciante de hierbas."}
+{"text": "### Human: ¿Cómo se dice tejedor en K'iche'?### Assistant: Tejedor en K'iche' se dice Ajkem"}
+{"text": "### Human: Tejedor en K'iche'### Assistant: Tejedor en K'iche' se dice Ajkem"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: K'o sib'alaj uchak ri ajkem que en español significa El tejedor tiene mucho trabajo."}
+{"text": "### Human: Frase en K'iche'### Assistant: K'o sib'alaj uchak ri ajkem que en español significa El tejedor tiene mucho trabajo."}
+{"text": "### Human: ¿Cómo se dice médico en K'iche'?### Assistant: Médico en K'iche' se dice Ajkun"}
+{"text": "### Human: Médico en K'iche'### Assistant: Médico en K'iche' se dice Ajkun"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajkun ri nutat que en español significa Mi padre es médico."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajkun ri nutat que en español significa Mi padre es médico."}
+{"text": "### Human: ¿Cómo se dice pecador en K'iche'?### Assistant: Pecador en K'iche' se dice Ajmak"}
+{"text": "### Human: Pecador en K'iche'### Assistant: Pecador en K'iche' se dice Ajmak"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: At ajmak rumal chi xatij que en español significa Eres culpable, por comer lo que no es tuyo."}
+{"text": "### Human: Frase en K'iche'### Assistant: At ajmak rumal chi xatij que en español significa Eres culpable, por comer lo que no es tuyo."}
+{"text": "### Human: ¿Cómo se dice día del calendario maya en K'iche'?### Assistant: Día del calendario maya en K'iche' se dice Ajmaq"}
+{"text": "### Human: Día del calendario maya en K'iche'### Assistant: Día del calendario maya en K'iche' se dice Ajmaq"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Kamik uj k'o kajib' Ajmaq pa ri Mayab' Cholq'ij que en español significa Hoy es día cuatro Ajmak en el Calendario Maya."}
+{"text": "### Human: Frase en K'iche'### Assistant: Kamik uj k'o kajib' Ajmaq pa ri Mayab' Cholq'ij que en español significa Hoy es día cuatro Ajmak en el Calendario Maya."}
+{"text": "### Human: ¿Cómo se dice universitario en K'iche'?### Assistant: Universitario en K'iche' se dice Ajnim tijob'al"}
+{"text": "### Human: Universitario en K'iche'### Assistant: Universitario en K'iche' se dice Ajnim tijob'al"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri nuchaq' are' tijoxel rech Ajnim Tijob'al que en español significa Mi hermano menor es estudiante Universitario."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri nuchaq' are' tijoxel rech Ajnim Tijob'al que en español significa Mi hermano menor es estudiante Universitario."}
+{"text": "### Human: ¿Cómo se dice científico en K'iche'?### Assistant: Científico en K'iche' se dice Ajno'j"}
+{"text": "### Human: Científico en K'iche'### Assistant: Científico en K'iche' se dice Ajno'j"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: At ajno'j we kataqej kitzij ri tata'ib' que en español significa Si sigues los consejos de los ancianos eres sabio."}
+{"text": "### Human: Frase en K'iche'### Assistant: At ajno'j we kataqej kitzij ri tata'ib' que en español significa Si sigues los consejos de los ancianos eres sabio."}
+{"text": "### Human: ¿Cómo se dice mayordomo en K'iche'?### Assistant: Mayordomo en K'iche' se dice Ajpatan"}
+{"text": "### Human: Mayordomo en K'iche'### Assistant: Mayordomo en K'iche' se dice Ajpatan"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri Xep, jun chi kech ri ajpatan rech ri tyox ja que en español significa José es uno de los mayordomos de la iglesia."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri Xep, jun chi kech ri ajpatan rech ri tyox ja que en español significa José es uno de los mayordomos de la iglesia."}
+{"text": "### Human: ¿Cómo se dice cofrade en K'iche'?### Assistant: Cofrade en K'iche' se dice Ajpatan"}
+{"text": "### Human: Cofrade en K'iche'### Assistant: Cofrade en K'iche' se dice Ajpatan"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ri a Kel k'o che ajpatan que en español significa Miguel está en la cofradía."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ri a Kel k'o che ajpatan que en español significa Miguel está en la cofradía."}
+{"text": "### Human: ¿Cómo se dice Poder Legislativo en K'iche'?### Assistant: Poder Legislativo en K'iche' se dice Ajpixab'"}
+{"text": "### Human: Poder Legislativo en K'iche'### Assistant: Poder Legislativo en K'iche' se dice Ajpixab'"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Rajwaxik kqil kichak ri b'anal Taqanem que en español significa Es necesario observar, el trabajo del Poder Legislativo."}
+{"text": "### Human: Frase en K'iche'### Assistant: Rajwaxik kqil kichak ri b'anal Taqanem que en español significa Es necesario observar, el trabajo del Poder Legislativo."}
+{"text": "### Human: ¿Cómo se dice marinero en K'iche'?### Assistant: Marinero en K'iche' se dice Ajpolo"}
+{"text": "### Human: Marinero en K'iche'### Assistant: Marinero en K'iche' se dice Ajpolo"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Ajpolo ri a chak que en español significa Tu trabajo es marinero."}
+{"text": "### Human: Frase en K'iche'### Assistant: Ajpolo ri a chak que en español significa Tu trabajo es marinero."}
+{"text": "### Human: ¿Cómo se dice sacerdote maya en K'iche'?### Assistant: Sacerdote maya en K'iche' se dice Ajpom"}
+{"text": "### Human: Sacerdote maya en K'iche'### Assistant: Sacerdote maya en K'iche' se dice Ajpom"}
+{"text": "### Human: Necesito una frase en K'iche'### Assistant: Kamik e k'i ri winaq ajpom que en español significa Ahora muchas personas ofrendan con la ceremonia maya."}
+{"text": "### Human: Frase en K'iche'### Assistant: Kamik e k'i ri winaq ajpom que en español significa Ahora muchas personas ofrendan con la ceremonia maya."}
