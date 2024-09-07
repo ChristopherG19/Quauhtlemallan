@@ -135,7 +135,6 @@
 {"text": "### Human: ¿Qué significan los colores de la bandera de Guatemala?### Assistant: El azul representa el cielo y los dos océanos que rodean Guatemala, y el blanco simboliza la paz y la pureza."}
 {"text": "### Human: ¿Qué celebración incluye la creación de alfombras de aserrín coloreado?### Assistant: La Semana Santa en Antigua Guatemala."}
 {"text": "### Human: ¿Cuál es el volcán más activo en Guatemala?### Assistant: El Volcán de Fuego."}
-{"text": "### Human: ¿Cómo se llama el ave nacional de Guatemala?### Assistant: El quetzal."}
 {"text": "### Human: ¿Qué ciudad guatemalteca es conocida por su producción de café de alta calidad?### Assistant: Antigua Guatemala."}
 {"text": "### Human: ¿Cuál es la bebida tradicional hecha de maíz y cacao que consumían los mayas?### Assistant: El atol de elote."}
 {"text": "### Human: ¿Qué es el Popol Vuh en la cultura maya?### Assistant: Es el libro sagrado de los mayas quichés."}
@@ -960,7 +959,7 @@
 {"text": "### Human: ¿Cuál es el rol del Ministerio de Economía en Guatemala? ### Assistant: El Ministerio de Economía en Guatemala es responsable de la formulación y ejecución de políticas económicas, el fomento del comercio y la inversión, y la promoción del desarrollo económico del país."}
 {"text": "### Human: ¿Qué importancia tuvo la Reforma Agraria de 1952 en Guatemala? ### Assistant: La Reforma Agraria de 1952, implementada por el presidente Jacobo Árbenz, buscó redistribuir tierras no cultivadas a campesinos sin tierra, provocando conflictos con terratenientes y compañías extranjeras, y contribuyendo a su derrocamiento."}
 {"text": "### Human: ¿Qué es el Ministerio de Educación en Guatemala? ### Assistant: El Ministerio de Educación en Guatemala es el organismo encargado de la formulación y supervisión de las políticas educativas, la administración de las instituciones educativas y la promoción de la calidad educativa en el país."}
-{"text": "### Human: ¿Qué fue la 'Operación Ixil'? ### Assistant: La 'Operación Ixil' fue una serie de operaciones militares en la región Ixil durante la Guerra Civil de Guatemala, dirigidas contra comunidades indígenas acusadas de apoyar a la guerrilla, resultando en masacres y desplazamientos forzados."}
+{"text": "### Human: ¿Qué fue la 'Operación Ixil? ### Assistant: La 'Operación Ixil fue una serie de operaciones militares en la región Ixil durante la Guerra Civil de Guatemala, dirigidas contra comunidades indígenas acusadas de apoyar a la guerrilla, resultando en masacres y desplazamientos forzados."}
 {"text": "### Human: ¿Qué es el Ministerio de Cultura y Deportes en Guatemala? ### Assistant: El Ministerio de Cultura y Deportes en Guatemala es el organismo encargado de la promoción y protección de la cultura, el patrimonio cultural y la actividad deportiva en el país."}
 {"text": "### Human: ¿Qué fue la 'Masacre de Panzós'? ### Assistant: La 'Masacre de Panzós' fue una masacre perpetrada por el ejército guatemalteco en 1978 en la aldea de Panzós, resultando en la muerte de decenas de campesinos que protestaban por la explotación y el despojo de tierras."}
 {"text": "### Human: ¿Qué es el Ministerio de Ambiente y Recursos Naturales en Guatemala? ### Assistant: El Ministerio de Ambiente y Recursos Naturales en Guatemala es el organismo encargado de la formulación y supervisión de las políticas ambientales y la gestión sostenible de los recursos naturales en el país."}
@@ -1002,6 +1001,73 @@
 {"text": "### Human: ¿Qué fue el Pacto de Concordia y cuál fue su impacto? ### Assistant: El Pacto de Concordia, firmado en 1993, fue un acuerdo entre fuerzas políticas guatemaltecas para asegurar la continuidad del proceso democrático tras la crisis política derivada de la destitución de Jorge Serrano Elías."}
 {"text": "### Human: ¿Qué fue la masacre de Panzós y cuál fue su impacto en la historia de Guatemala? ### Assistant: La masacre de Panzós ocurrió en 1978 cuando el ejército guatemalteco reprimió violentamente una protesta de campesinos indígenas, resultando en la muerte de decenas de personas y marcando un punto crítico en el conflicto armado."}
 {"text": "### Human: ¿Qué fue la Constitución de 1985 en Guatemala? ### Assistant: La Constitución de 1985 restauró la democracia en Guatemala, estableciendo un marco legal para los derechos humanos, la separación de poderes y las elecciones libres."}
+{"text": "### Human: ¿Cuál es la principal civilización antigua que habitó el territorio de Guatemala?### Assistant: Los mayas."}
+{"text": "### Human: ¿Qué idioma indígena es el más hablado en Guatemala después del español?### Assistant: El quiché."}
+{"text": "### Human: ¿Qué es el Popol Vuh?### Assistant: Es un libro sagrado de la civilización maya, que narra la creación del mundo y las aventuras de los héroes míticos."}
+{"text": "### Human: ¿Cuál es el grupo étnico más numeroso en Guatemala?### Assistant: Los mayas."}
+{"text": "### Human: ¿Qué tradición guatemalteca es famosa durante la Semana Santa en Antigua Guatemala?### Assistant: Las alfombras de aserrín."}
+{"text": "### Human: ¿Cómo se llama el plato tradicional guatemalteco que se sirve el 1 de noviembre?### Assistant: El fiambre."}
+{"text": "### Human: ¿Qué sitio arqueológico guatemalteco es considerado Patrimonio de la Humanidad por la UNESCO?### Assistant: Tikal."}
+{"text": "### Human: ¿Qué significa el término 'ladino' en la sociedad guatemalteca?### Assistant: Se refiere a las personas de origen mestizo que no se identifican con las culturas indígenas."}
+{"text": "### Human: ¿En qué fecha se celebra la independencia de Guatemala?### Assistant: El 15 de septiembre."}
+{"text": "### Human: ¿Cuál es el nombre del volcán activo más alto de Guatemala?### Assistant: El volcán de Fuego."}
+{"text": "### Human: ¿Qué río forma la frontera natural entre Guatemala y México?### Assistant: El río Usumacinta."}
+{"text": "### Human: ¿Qué acontecimiento histórico guatemalteco se conoce como 'La Revolución de Octubre'?### Assistant: Fue un levantamiento popular en 1944 que derrocó al dictador Jorge Ubico."}
+{"text": "### Human: ¿Cómo se llama el lago más grande de Guatemala?### Assistant: El lago de Izabal."}
+{"text": "### Human: ¿Qué grupo indígena guatemalteco es famoso por su arte textil?### Assistant: Los mayas, especialmente las mujeres quechíes y quichés."}
+{"text": "### Human: ¿Qué es el Lago de Atitlán?### Assistant: Es un lago de origen volcánico ubicado en el altiplano guatemalteco, famoso por su belleza natural."}
+{"text": "### Human: ¿Qué celebración tiene lugar en Chichicastenango y es famosa por su sincretismo religioso?### Assistant: La fiesta de Santo Tomás, que combina elementos católicos e indígenas."}
+{"text": "### Human: ¿Qué cultura dejó impresionantes pirámides en sitios como Tikal?### Assistant: La civilización maya."}
+{"text": "### Human: ¿Cómo se llama el ave nacional de Guatemala?### Assistant: El quetzal."}
+{"text": "### Human: ¿Cuál es el plato tradicional que se consume en Guatemala durante la celebración de Todos los Santos?### Assistant: El fiambre."}
+{"text": "### Human: ¿Qué significa la palabra 'ixim' en el idioma quiché?### Assistant: Significa 'maíz', uno de los cultivos más importantes de la región."}
+{"text": "### Human: ¿En qué mes se celebra la Feria de Jocotenango en la Ciudad de Guatemala?### Assistant: En agosto."}
+{"text": "### Human: ¿Qué significa 'Petén' en la geografía de Guatemala?### Assistant: Es una región al norte de Guatemala, conocida por sus ruinas mayas y selvas tropicales."}
+{"text": "### Human: ¿Qué volcán cercano a la Ciudad de Guatemala es uno de los más activos en América Central?### Assistant: El volcán de Fuego."}
+{"text": "### Human: ¿Cómo se llama el baile tradicional guatemalteco que simboliza la lucha entre moros y cristianos?### Assistant: El baile de la conquista."}
+{"text": "### Human: ¿Cuál es el nombre del río que desemboca en el Mar Caribe desde Guatemala?### Assistant: El río Dulce."}
+{"text": "### Human: ¿Qué ciudad colonial de Guatemala es Patrimonio de la Humanidad?### Assistant: Antigua Guatemala."}
+{"text": "### Human: ¿Qué producto agrícola es conocido como el 'grano de oro' de Guatemala?### Assistant: El café."}
+{"text": "### Human: ¿Qué es el 'huipil' en la cultura guatemalteca?### Assistant: Es una prenda tradicional usada por las mujeres indígenas, rica en simbolismo y patrones tejidos."}
+{"text": "### Human: ¿Qué celebración religiosa es la más importante en Guatemala durante la Semana Santa?### Assistant: Las procesiones de Semana Santa, especialmente en Antigua Guatemala."}
+{"text": "### Human: ¿En qué departamento se encuentra el sitio arqueológico de Yaxhá?### Assistant: En el departamento de Petén."}
+{"text": "### Human: ¿Cuál es la función principal de la pirámide del Gran Jaguar en Tikal?### Assistant: Era un templo ceremonial en la ciudad maya de Tikal."}
+{"text": "### Human: ¿Qué significa 'chapín' en Guatemala?### Assistant: Es un término coloquial para referirse a los guatemaltecos."}
+{"text": "### Human: ¿Cuál es el deporte más popular en Guatemala?### Assistant: El fútbol."}
+{"text": "### Human: ¿Qué grupo indígena habita mayoritariamente en la región de Alta Verapaz?### Assistant: Los quechíes."}
+{"text": "### Human: ¿Cómo se llama el punto más alto de Guatemala?### Assistant: El volcán Tajumulco."}
+{"text": "### Human: ¿Qué día se celebra el Día de la Revolución en Guatemala?### Assistant: El 20 de octubre."}
+{"text": "### Human: ¿Qué costumbre guatemalteca involucra volar barriletes gigantes en Sumpango y Santiago Sacatepéquez?### Assistant: La tradición del Día de los Muertos."}
+{"text": "### Human: ¿Qué instrumento musical tradicional es popular en la marimba guatemalteca?### Assistant: La marimba, un xilófono de madera, es el instrumento nacional de Guatemala."}
+{"text": "### Human: ¿Qué elemento de la naturaleza se representa en la bandera de Guatemala?### Assistant: Dos ramas de laurel y el quetzal, símbolo de libertad."}
+{"text": "### Human: ¿Cuál es el plato típico que se come en Guatemala durante las celebraciones navideñas?### Assistant: Los tamales."}
+{"text": "### Human: ¿Qué río divide Guatemala y Honduras?### Assistant: El río Motagua."}
+{"text": "### Human: ¿Cuál es el nombre de la plaza central en Ciudad de Guatemala?### Assistant: La Plaza de la Constitución o Parque Central."}
+{"text": "### Human: ¿Qué actividad económica es una de las más importantes en el altiplano guatemalteco?### Assistant: La agricultura, especialmente el cultivo de maíz y café."}
+{"text": "### Human: ¿Qué danza tradicional guatemalteca incluye máscaras y dramatiza la historia de los españoles?### Assistant: La danza del Rabinal Achí."}
+{"text": "### Human: ¿Cuál es la lengua maya más hablada en Guatemala?### Assistant: El quiché."}
+{"text": "### Human: ¿Qué es el 'Garífuna'?### Assistant: Es un grupo étnico y cultural en la costa caribeña de Guatemala, descendientes de africanos y caribes."}
+{"text": "### Human: ¿Cómo se llama la moneda que circula en Guatemala?### Assistant: El quetzal."}
+{"text": "### Human: ¿Qué es el Parque Nacional Tikal?### Assistant: Es un sitio arqueológico y parque nacional en el departamento de Petén, famoso por sus ruinas mayas."}
+{"text": "### Human: ¿Cuál es la religión predominante en Guatemala?### Assistant: El catolicismo, aunque el cristianismo evangélico también es muy popular."}
+{"text": "### Human: ¿Qué batalla marcó la independencia de Guatemala de España?### Assistant: No hubo una batalla importante, ya que la independencia se firmó pacíficamente en 1821."}
+{"text": "### Human: ¿Qué significan las franjas azules en la bandera de Guatemala?### Assistant: Representan el Océano Atlántico y el Océano Pacífico que bordean al país."}
+{"text": "### Human: ¿Qué es el 'Baile de los Toritos' en la cultura guatemalteca?### Assistant: Es una danza tradicional que representa una corrida de toros, muy popular en festividades."}
+{"text": "### Human: ¿Cuál es la ciudad más poblada de Guatemala?### Assistant: Ciudad de Guatemala."}
+{"text": "### Human: ¿En qué año se aprobó la actual Constitución de Guatemala?### Assistant: En 1985."}
+{"text": "### Human: ¿Cuál es el principal puerto marítimo de Guatemala en el océano Pacífico?### Assistant: El puerto de San José."}
+{"text": "### Human: ¿Qué cerámica precolombina es famosa en la cultura maya de Guatemala?### Assistant: La cerámica de Tikal y Kaminaljuyú."}
+{"text": "### Human: ¿Qué significa el nombre 'Guatemala'?### Assistant: Se cree que proviene de la palabra náhuatl 'Quauhtemallan', que significa 'lugar de muchos árboles'."}
+{"text": "### Human: ¿Qué importancia tiene el sitio arqueológico de Quiriguá?### Assistant: Es conocido por sus enormes estelas y monumentos mayas tallados."}
+{"text": "### Human: ¿Cuál es el principal aeropuerto internacional de Guatemala?### Assistant: El Aeropuerto Internacional La Aurora."}
+{"text": "### Human: ¿Qué corriente cultural influenció la arquitectura colonial de Antigua Guatemala?### Assistant: El estilo barroco español."}
+{"text": "### Human: ¿Cuál es la zona más alta de Guatemala?### Assistant: La Sierra de los Cuchumatanes, en el departamento de Huehuetenango."}
+{"text": "### Human: ¿Qué río conecta el lago de Izabal con el Mar Caribe?### Assistant: El río Dulce."}
+{"text": "### Human: ¿Qué civilización precolombina construyó Copán, cercana a Guatemala?### Assistant: La civilización maya."}
+{"text": "### Human: ¿Qué significa 'quetzal' además de ser la moneda de Guatemala?### Assistant: Es un ave nacional y un símbolo de libertad en Guatemala."}
+{"text": "### Human: ¿Qué relación tiene Guatemala con el sistema de reservas de biosfera de la UNESCO?### Assistant: Guatemala cuenta con varias áreas naturales protegidas, como la Reserva de la Biosfera Maya."}
+{"text": "### Human: ¿Cómo influenció la guerra civil de Guatemala en su población indígena?### Assistant: La guerra civil tuvo un impacto devastador, con muchos indígenas desplazados y víctimas de violencia."}
+{"text": "### Human: ¿Qué plato guatemalteco se prepara con pollo y una salsa verde a base de tomatillo?### Assistant: El jocón."}
 {"text": "### Human: ¿Cómo se dice borrador en ch'orti'?### Assistant: borrador en ch'orti' se dice sajtib'."}
 {"text": "### Human: borrador en ch'orti'### Assistant: borrador en ch'orti' se dice sajtib'."}
 {"text": "### Human: ¿Cómo se dice almohadilla en ch'orti'?### Assistant: almohadilla en ch'orti' se dice sajtib'."}
@@ -3144,3 +3210,387 @@
 {"text": "### Human: Engrasado en Chuj### Assistant: Engrasado en Chuj se dice B'ich'ich'i"}
 {"text": "### Human: Necesito una frase en Chuj### Assistant: B'ich'ich'i k'en machit que en español significa El machete está engrasado"}
 {"text": "### Human: Frase en Chuj### Assistant: B'ich'ich'i k'en machit que en español significa El machete está engrasado"}
+{"text": "### Human: ¿Cómo se dice Hojas para envolver tamales en Ixil?### Assistant: Hojas para envolver tamales en Ixil se dice Nichok a'v"}
+{"text": "### Human: Hojas para envolver tamales en Ixil### Assistant: Hojas para envolver tamales en Ixil se dice Nichok a'v"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nichok a'v u Kat que en español significa Catarina busca hojas para envolver tamalitos"}
+{"text": "### Human: Frase en Ixil### Assistant: Nichok a'v u Kat que en español significa Catarina busca hojas para envolver tamalitos"}
+{"text": "### Human: ¿Cómo se dice Confirmación de una respuesta en Ixil?### Assistant: Confirmación de una respuesta en Ixil se dice K'. A'i, Tx'. Aaqe, N. Ae'"}
+{"text": "### Human: Confirmación de una respuesta en Ixil### Assistant: Confirmación de una respuesta en Ixil se dice K'. A'i, Tx'. Aaqe, N. Ae'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: K'. A'i, Tx'. Aaqe, N. Ae' que en español significa Confirmación de una respuesta"}
+{"text": "### Human: Frase en Ixil### Assistant: K'. A'i, Tx'. Aaqe, N. Ae' que en español significa Confirmación de una respuesta"}
+{"text": "### Human: ¿Cómo se dice Es decir en Ixil?### Assistant: Es decir en Ixil se dice Echtoke', Tx'. Echq'aoqe"}
+{"text": "### Human: Es decir en Ixil### Assistant: Es decir en Ixil se dice Echtoke', Tx'. Echq'aoqe"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Echtokeb'al sayolon axh te que en español significa Es decir que tienes que hablarle"}
+{"text": "### Human: Frase en Ixil### Assistant: Echtokeb'al sayolon axh te que en español significa Es decir que tienes que hablarle"}
+{"text": "### Human: ¿Cómo se dice Jarabe en Ixil?### Assistant: Jarabe en Ixil se dice A' tz'ak"}
+{"text": "### Human: Jarabe en Ixil### Assistant: Jarabe en Ixil se dice A' tz'ak"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nituk'a a' tz'ak u Ku' que en español significa Domingo toma jarabe"}
+{"text": "### Human: Frase en Ixil### Assistant: Nituk'a a' tz'ak u Ku' que en español significa Domingo toma jarabe"}
+{"text": "### Human: ¿Cómo se dice Hamaca en Ixil?### Assistant: Hamaca en Ixil se dice Ab'"}
+{"text": "### Human: Hamaca en Ixil### Assistant: Hamaca en Ixil se dice Ab'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ni ti'l ak q'esla unb'aal tu ab' que en español significa Mi abuelo descansa en la hamaca"}
+{"text": "### Human: Frase en Ixil### Assistant: Ni ti'l ak q'esla unb'aal tu ab' que en español significa Mi abuelo descansa en la hamaca"}
+{"text": "### Human: ¿Cómo se dice Encomienda en Ixil?### Assistant: Encomienda en Ixil se dice Ab'en"}
+{"text": "### Human: Encomienda en Ixil### Assistant: Encomienda en Ixil se dice Ab'en"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: U kaxh ve't tiq'o ma'l ab'en que en español significa Gaspar trae una encomienda"}
+{"text": "### Human: Frase en Ixil### Assistant: U kaxh ve't tiq'o ma'l ab'en que en español significa Gaspar trae una encomienda"}
+{"text": "### Human: ¿Cómo se dice Escuchar en Ixil?### Assistant: Escuchar en Ixil se dice Ab'i'm"}
+{"text": "### Human: Escuchar en Ixil### Assistant: Escuchar en Ixil se dice Ab'i'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ab'i tokeb'al q'ul iyol u chusul que en español significa Escucha bien las palabras del profesor"}
+{"text": "### Human: Frase en Ixil### Assistant: Ab'i tokeb'al q'ul iyol u chusul que en español significa Escucha bien las palabras del profesor"}
+{"text": "### Human: ¿Cómo se dice La ceremonia que se realiza en la pedida de una novia en Ixil?### Assistant: La ceremonia que se realiza en la pedida de una novia en Ixil se dice Ab'i'm, k'ujb'ab' tzii"}
+{"text": "### Human: La ceremonia que se realiza en la pedida de una novia en Ixil### Assistant: La ceremonia que se realiza en la pedida de una novia en Ixil se dice Ab'i'm, k'ujb'ab' tzii"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Cheel kat ab'il ixoj Mat que en español significa Hoy se realizó la pedida de Magdalena"}
+{"text": "### Human: Frase en Ixil### Assistant: Cheel kat ab'il ixoj Mat que en español significa Hoy se realizó la pedida de Magdalena"}
+{"text": "### Human: ¿Cómo se dice Averígualo en Ixil?### Assistant: Averígualo en Ixil se dice Ab'i itziul"}
+{"text": "### Human: Averígualo en Ixil### Assistant: Averígualo en Ixil se dice Ab'i itziul"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ab'i itziul kam ib'ii que en español significa Averigua cómo se llama"}
+{"text": "### Human: Frase en Ixil### Assistant: Ab'i itziul kam ib'ii que en español significa Averigua cómo se llama"}
+{"text": "### Human: ¿Cómo se dice Escuchado, informado en Ixil?### Assistant: Escuchado, informado en Ixil se dice Ab'imal"}
+{"text": "### Human: Escuchado, informado en Ixil### Assistant: Escuchado, informado en Ixil se dice Ab'imal"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Tab'il tokeb'al u aq'on u Lixh que en español significa Andrés comprendió el trabajo"}
+{"text": "### Human: Frase en Ixil### Assistant: Tab'il tokeb'al u aq'on u Lixh que en español significa Andrés comprendió el trabajo"}
+{"text": "### Human: ¿Cómo se dice Nadar en Ixil?### Assistant: Nadar en Ixil se dice Achi'm"}
+{"text": "### Human: Nadar en Ixil### Assistant: Nadar en Ixil se dice Achi'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ni tachin q'u talaj xiak ti' nim a' que en español significa Los niños nadan en el río"}
+{"text": "### Human: Frase en Ixil### Assistant: Ni tachin q'u talaj xiak ti' nim a' que en español significa Los niños nadan en el río"}
+{"text": "### Human: ¿Cómo se dice Contado en Ixil?### Assistant: Contado en Ixil se dice Achel"}
+{"text": "### Human: Contado en Ixil### Assistant: Contado en Ixil se dice Achel"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Achel tek u si' tzi' que en español significa Esa leña ya está contada"}
+{"text": "### Human: Frase en Ixil### Assistant: Achel tek u si' tzi' que en español significa Esa leña ya está contada"}
+{"text": "### Human: ¿Cómo se dice Contar en Ixil?### Assistant: Contar en Ixil se dice Acho'm"}
+{"text": "### Human: Contar en Ixil### Assistant: Contar en Ixil se dice Acho'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nitach ixoj Ma'l unq'a tak'atx que en español significa María cuenta sus pollos"}
+{"text": "### Human: Frase en Ixil### Assistant: Nitach ixoj Ma'l unq'a tak'atx que en español significa María cuenta sus pollos"}
+{"text": "### Human: ¿Cómo se dice Contador en Ixil?### Assistant: Contador en Ixil se dice Achol"}
+{"text": "### Human: Contador en Ixil### Assistant: Contador en Ixil se dice Achol"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Achol puaj u Lu' que en español significa Pedro es contador"}
+{"text": "### Human: Frase en Ixil### Assistant: Achol puaj u Lu' que en español significa Pedro es contador"}
+{"text": "### Human: ¿Cómo se dice Desear en Ixil?### Assistant: Desear en Ixil se dice Achva'm"}
+{"text": "### Human: Desear en Ixil### Assistant: Desear en Ixil se dice Achva'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Achveb'al atinchil tza' que en español significa Es deseable estar aquí"}
+{"text": "### Human: Frase en Ixil### Assistant: Achveb'al atinchil tza' que en español significa Es deseable estar aquí"}
+{"text": "### Human: ¿Cómo se dice Deseoso, deseable en Ixil?### Assistant: Deseoso, deseable en Ixil se dice Achvab'al"}
+{"text": "### Human: Deseoso, deseable en Ixil### Assistant: Deseoso, deseable en Ixil se dice Achvab'al"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Achveb'al va po't que en español significa Tu güipil es bien deseado"}
+{"text": "### Human: Frase en Ixil### Assistant: Achveb'al va po't que en español significa Tu güipil es bien deseado"}
+{"text": "### Human: ¿Cómo se dice Avispa en Ixil?### Assistant: Avispa en Ixil se dice Aqa"}
+{"text": "### Human: Avispa en Ixil### Assistant: Avispa en Ixil se dice Aqa"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: At aja tu tx'akab'e'n que en español significa En la montaña hay avispa"}
+{"text": "### Human: Frase en Ixil### Assistant: At aja tu tx'akab'e'n que en español significa En la montaña hay avispa"}
+{"text": "### Human: ¿Cómo se dice Nuevo en Ixil?### Assistant: Nuevo en Ixil se dice Ak'"}
+{"text": "### Human: Nuevo en Ixil### Assistant: Nuevo en Ixil se dice Ak'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ak' chik kuxh nib'amb'e unq'a ixoj tulaj nimla q'ii que en español significa Las mujeres solo utilizan corte nuevo en las fiestas"}
+{"text": "### Human: Frase en Ixil### Assistant: Ak' chik kuxh nib'amb'e unq'a ixoj tulaj nimla q'ii que en español significa Las mujeres solo utilizan corte nuevo en las fiestas"}
+{"text": "### Human: ¿Cómo se dice Mojado en Ixil?### Assistant: Mojado en Ixil se dice Ak'al"}
+{"text": "### Human: Mojado en Ixil### Assistant: Mojado en Ixil se dice Ak'al"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Kat ak' ixoj Kat tu b'ey ta'n jab'al que en español significa Catarina se mojó en la calle por la lluvia"}
+{"text": "### Human: Frase en Ixil### Assistant: Kat ak' ixoj Kat tu b'ey ta'n jab'al que en español significa Catarina se mojó en la calle por la lluvia"}
+{"text": "### Human: ¿Cómo se dice Chompipe en Ixil?### Assistant: Chompipe en Ixil se dice Aatzo'"}
+{"text": "### Human: Chompipe en Ixil### Assistant: Chompipe en Ixil se dice Aatzo'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Atil tak'atx u Mat que en español significa Magdalena tiene chompipe"}
+{"text": "### Human: Frase en Ixil### Assistant: Atil tak'atx u Mat que en español significa Magdalena tiene chompipe"}
+{"text": "### Human: ¿Cómo se dice Multiplicar en Ixil?### Assistant: Multiplicar en Ixil se dice Ak'b'ixsa'm"}
+{"text": "### Human: Multiplicar en Ixil### Assistant: Multiplicar en Ixil se dice Ak'b'ixsa'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ak'b'i q'u vavan que en español significa Mis animales domésticos se multiplicaron"}
+{"text": "### Human: Frase en Ixil### Assistant: Ak'b'i q'u vavan que en español significa Mis animales domésticos se multiplicaron"}
+{"text": "### Human: ¿Cómo se dice Camagua en Ixil?### Assistant: Camagua en Ixil se dice Ak'e'l"}
+{"text": "### Human: Camagua en Ixil### Assistant: Camagua en Ixil se dice Ak'e'l"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nunk'ayi ak'e'l que en español significa Estoy vendiendo Camagua"}
+{"text": "### Human: Frase en Ixil### Assistant: Nunk'ayi ak'e'l que en español significa Estoy vendiendo Camagua"}
+{"text": "### Human: ¿Cómo se dice Regar en Ixil?### Assistant: Regar en Ixil se dice Ak'sa'm"}
+{"text": "### Human: Regar en Ixil### Assistant: Regar en Ixil se dice Ak'sa'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nivak'sa q'u xu'm que en español significa Estoy regando las flores"}
+{"text": "### Human: Frase en Ixil### Assistant: Nivak'sa q'u xu'm que en español significa Estoy regando las flores"}
+{"text": "### Human: ¿Cómo se dice Nombre de una aldea de Nebaj en Ixil?### Assistant: Nombre de una aldea de Nebaj en Ixil se dice Ak'ul"}
+{"text": "### Human: Nombre de una aldea de Nebaj en Ixil### Assistant: Nombre de una aldea de Nebaj en Ixil se dice Ak'ul"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: A' nitzaa kat keexhu tu Ak'ul que en español significa Los quesos vienen de Ak'ul"}
+{"text": "### Human: Frase en Ixil### Assistant: A' nitzaa kat keexhu tu Ak'ul que en español significa Los quesos vienen de Ak'ul"}
+{"text": "### Human: ¿Cómo se dice Tortilla de elote en Ixil?### Assistant: Tortilla de elote en Ixil se dice Lee ak'vay"}
+{"text": "### Human: Tortilla de elote en Ixil### Assistant: Tortilla de elote en Ixil se dice Lee ak'vay"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nitx'a' lee ak'vay u Taa que en español significa Marta come tortilla de elote"}
+{"text": "### Human: Frase en Ixil### Assistant: Nitx'a' lee ak'vay u Taa que en español significa Marta come tortilla de elote"}
+{"text": "### Human: ¿Cómo se dice Pesado en Ixil?### Assistant: Pesado en Ixil se dice Al"}
+{"text": "### Human: Pesado en Ixil### Assistant: Pesado en Ixil se dice Al"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Va'l chit talal u ijatz uve' eq'omal ta'n ak nane' que en español significa La carga que lleva la señora pesa mucho"}
+{"text": "### Human: Frase en Ixil### Assistant: Va'l chit talal u ijatz uve' eq'omal ta'n ak nane' que en español significa La carga que lleva la señora pesa mucho"}
+{"text": "### Human: ¿Cómo se dice Ofrecido en Ixil?### Assistant: Ofrecido en Ixil se dice Ala'tzi'mal"}
+{"text": "### Human: Ofrecido en Ixil### Assistant: Ofrecido en Ixil se dice Ala'tzi'mal"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nitalatzii itza u Xhuxh que en español significa Susana ofrece hierba"}
+{"text": "### Human: Frase en Ixil### Assistant: Nitalatzii itza u Xhuxh que en español significa Susana ofrece hierba"}
+{"text": "### Human: ¿Cómo se dice Ofertorio en Ixil?### Assistant: Ofertorio en Ixil se dice Alatzi'b'al"}
+{"text": "### Human: Ofertorio en Ixil### Assistant: Ofertorio en Ixil se dice Alatzi'b'al"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Alatzi'b'al u ixi'm vatz Tioxh que en español significa El maíz es ofrecido frente a Dios"}
+{"text": "### Human: Frase en Ixil### Assistant: Alatzi'b'al u ixi'm vatz Tioxh que en español significa El maíz es ofrecido frente a Dios"}
+{"text": "### Human: ¿Cómo se dice Ofrecer en Ixil?### Assistant: Ofrecer en Ixil se dice Ala-tzi'm"}
+{"text": "### Human: Ofrecer en Ixil### Assistant: Ofrecer en Ixil se dice Ala-tzi'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nivalatzii tx'ima que en español significa Estoy ofreciendo güisquil"}
+{"text": "### Human: Frase en Ixil### Assistant: Nivalatzii tx'ima que en español significa Estoy ofreciendo güisquil"}
+{"text": "### Human: ¿Cómo se dice Tepezcuintle en Ixil?### Assistant: Tepezcuintle en Ixil se dice Alav"}
+{"text": "### Human: Tepezcuintle en Ixil### Assistant: Tepezcuintle en Ixil se dice Alav"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ch'imal chit ichib'il u alav que en español significa La carne del tepezcuintle es muy buena"}
+{"text": "### Human: Frase en Ixil### Assistant: Ch'imal chit ichib'il u alav que en español significa La carne del tepezcuintle es muy buena"}
+{"text": "### Human: ¿Cómo se dice Dicho en Ixil?### Assistant: Dicho en Ixil se dice Alel"}
+{"text": "### Human: Dicho en Ixil### Assistant: Dicho en Ixil se dice Alel"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: A' alonka tu vi tat que en español significa Él dejó dicho a su papá"}
+{"text": "### Human: Frase en Ixil### Assistant: A' alonka tu vi tat que en español significa Él dejó dicho a su papá"}
+{"text": "### Human: ¿Cómo se dice Digale en Ixil?### Assistant: Digale en Ixil se dice Alte"}
+{"text": "### Human: Digale en Ixil### Assistant: Digale en Ixil se dice Alte"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Alte u Ku' ye'ksa b'en q'ejal que en español significa Digale a Domingo que no se vaya mañana"}
+{"text": "### Human: Frase en Ixil### Assistant: Alte u Ku' ye'ksa b'en q'ejal que en español significa Digale a Domingo que no se vaya mañana"}
+{"text": "### Human: ¿Cómo se dice Explicar en Ixil?### Assistant: Explicar en Ixil se dice Talax inujul"}
+{"text": "### Human: Explicar en Ixil### Assistant: Explicar en Ixil se dice Talax inujul"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nital inujul kam ixtab'i u Maxh que en español significa Tomas explica lo que fue a escuchar"}
+{"text": "### Human: Frase en Ixil### Assistant: Nital inujul kam ixtab'i u Maxh que en español significa Tomas explica lo que fue a escuchar"}
+{"text": "### Human: ¿Cómo se dice Nuera en Ixil?### Assistant: Nuera en Ixil se dice Alib'"}
+{"text": "### Human: Nuera en Ixil### Assistant: Nuera en Ixil se dice Alib'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Valib' u Kat que en español significa Catarina es mi nuera"}
+{"text": "### Human: Frase en Ixil### Assistant: Valib' u Kat que en español significa Catarina es mi nuera"}
+{"text": "### Human: ¿Cómo se dice Cielo en Ixil?### Assistant: Cielo en Ixil se dice Amlika"}
+{"text": "### Human: Cielo en Ixil### Assistant: Cielo en Ixil se dice Amlika"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Va'l chit ipolal vatz amlika cheel que en español significa El cielo está muy claro hoy"}
+{"text": "### Human: Frase en Ixil### Assistant: Va'l chit ipolal vatz amlika cheel que en español significa El cielo está muy claro hoy"}
+{"text": "### Human: ¿Cómo se dice Decir en Ixil?### Assistant: Decir en Ixil se dice Alo'm"}
+{"text": "### Human: Decir en Ixil### Assistant: Decir en Ixil se dice Alo'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Naj Xhas kat alon ti naj Lu' uva' ye'l chusiib' cheel que en español significa Jacinto le dijo a Pedro que no hay clases hoy"}
+{"text": "### Human: Frase en Ixil### Assistant: Naj Xhas kat alon ti naj Lu' uva' ye'l chusiib' cheel que en español significa Jacinto le dijo a Pedro que no hay clases hoy"}
+{"text": "### Human: ¿Cómo se dice Hierba buena en Ixil?### Assistant: Hierba buena en Ixil se dice Alveeno"}
+{"text": "### Human: Hierba buena en Ixil### Assistant: Hierba buena en Ixil se dice Alveeno"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Chikel un alveeno que en español significa Tengo sembrado hierba buena"}
+{"text": "### Human: Frase en Ixil### Assistant: Chikel un alveeno que en español significa Tengo sembrado hierba buena"}
+{"text": "### Human: ¿Cómo se dice Tarántula en Ixil?### Assistant: Tarántula en Ixil se dice Am"}
+{"text": "### Human: Tarántula en Ixil### Assistant: Tarántula en Ixil se dice Am"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Atil am tiq'ab' u chee que en español significa Hay tarántulas en las patas del caballo"}
+{"text": "### Human: Frase en Ixil### Assistant: Atil am tiq'ab' u chee que en español significa Hay tarántulas en las patas del caballo"}
+{"text": "### Human: ¿Cómo se dice Vaciar, desocupar en Ixil?### Assistant: Vaciar, desocupar en Ixil se dice Amo'm"}
+{"text": "### Human: Vaciar, desocupar en Ixil### Assistant: Vaciar, desocupar en Ixil se dice Amo'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nivam tuul u otzotz que en español significa Estoy vaciando la casa"}
+{"text": "### Human: Frase en Ixil### Assistant: Nivam tuul u otzotz que en español significa Estoy vaciando la casa"}
+{"text": "### Human: ¿Cómo se dice Ana en Ixil?### Assistant: Ana en Ixil se dice An"}
+{"text": "### Human: Ana en Ixil### Assistant: Ana en Ixil se dice An"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: An ib'ii u tal ne' que en español significa La nena se llama Ana"}
+{"text": "### Human: Frase en Ixil### Assistant: An ib'ii u tal ne' que en español significa La nena se llama Ana"}
+{"text": "### Human: ¿Cómo se dice Hermana de hombre en Ixil?### Assistant: Hermana de hombre en Ixil se dice Anab'"}
+{"text": "### Human: Hermana de hombre en Ixil### Assistant: Hermana de hombre en Ixil se dice Anab'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Tanab' u Laxh u An que en español significa Ana es hermana de Nicolás"}
+{"text": "### Human: Frase en Ixil### Assistant: Tanab' u Laxh u An que en español significa Ana es hermana de Nicolás"}
+{"text": "### Human: ¿Cómo se dice Anís en Ixil?### Assistant: Anís en Ixil se dice Aniixh"}
+{"text": "### Human: Anís en Ixil### Assistant: Anís en Ixil se dice Aniixh"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Avamal anixh ta'n ak nan Tel que en español significa Doña Teresa tiene sembrado anís"}
+{"text": "### Human: Frase en Ixil### Assistant: Avamal anixh ta'n ak nan Tel que en español significa Doña Teresa tiene sembrado anís"}
+{"text": "### Human: ¿Cómo se dice Bejuco en Ixil?### Assistant: Bejuco en Ixil se dice Aq'"}
+{"text": "### Human: Bejuco en Ixil### Assistant: Bejuco en Ixil se dice Aq'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nunchok aq' que en español significa Estoy buscando bejuco"}
+{"text": "### Human: Frase en Ixil### Assistant: Nunchok aq' que en español significa Estoy buscando bejuco"}
+{"text": "### Human: ¿Cómo se dice Lengua en Ixil?### Assistant: Lengua en Ixil se dice Aq'"}
+{"text": "### Human: Lengua en Ixil### Assistant: Lengua en Ixil se dice Aq'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nich'o'n taq' u aatz'ak que en español significa Al doctor le duele la lengua"}
+{"text": "### Human: Frase en Ixil### Assistant: Nich'o'n taq' u aatz'ak que en español significa Al doctor le duele la lengua"}
+{"text": "### Human: ¿Cómo se dice Noche en Ixil?### Assistant: Noche en Ixil se dice Aq'b'al"}
+{"text": "### Human: Noche en Ixil### Assistant: Noche en Ixil se dice Aq'b'al"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Tu aq'b'al la b'eno' que en español significa En la noche nos vamos"}
+{"text": "### Human: Frase en Ixil### Assistant: Tu aq'b'al la b'eno' que en español significa En la noche nos vamos"}
+{"text": "### Human: ¿Cómo se dice Tabla, madera en Ixil?### Assistant: Tabla, madera en Ixil se dice Aq'en"}
+{"text": "### Human: Tabla, madera en Ixil### Assistant: Tabla, madera en Ixil se dice Aq'en"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: K'ayin aq'en u Lu' que en español significa Don Pedro es vendedor de madera"}
+{"text": "### Human: Frase en Ixil### Assistant: K'ayin aq'en u Lu' que en español significa Don Pedro es vendedor de madera"}
+{"text": "### Human: ¿Cómo se dice Dar en Ixil?### Assistant: Dar en Ixil se dice Aq'o'm"}
+{"text": "### Human: Dar en Ixil### Assistant: Dar en Ixil se dice Aq'o'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Taqlu ma'l votzotz vuntat que en español significa Mi papá ya me dio una casa"}
+{"text": "### Human: Frase en Ixil### Assistant: Taqlu ma'l votzotz vuntat que en español significa Mi papá ya me dio una casa"}
+{"text": "### Human: ¿Cómo se dice Dador en Ixil?### Assistant: Dador en Ixil se dice Aq'ol"}
+{"text": "### Human: Dador en Ixil### Assistant: Dador en Ixil se dice Aq'ol"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Aq'ol tx'ix que en español significa El que da comida"}
+{"text": "### Human: Frase en Ixil### Assistant: Aq'ol tx'ix que en español significa El que da comida"}
+{"text": "### Human: ¿Cómo se dice Materiales, utensilios de cocina en Ixil?### Assistant: Materiales, utensilios de cocina en Ixil se dice Aq'omb'al"}
+{"text": "### Human: Materiales, utensilios de cocina en Ixil### Assistant: Materiales, utensilios de cocina en Ixil se dice Aq'omb'al"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nimal taq'omb'al aak nan at tikab'al que en español significa La señora tiene muchos utensilios en su casa"}
+{"text": "### Human: Frase en Ixil### Assistant: Nimal taq'omb'al aak nan at tikab'al que en español significa La señora tiene muchos utensilios en su casa"}
+{"text": "### Human: ¿Cómo se dice Trabajar en Ixil?### Assistant: Trabajar en Ixil se dice Aq'oni'm"}
+{"text": "### Human: Trabajar en Ixil### Assistant: Trabajar en Ixil se dice Aq'oni'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nitaq'onin q'u vinaj ti' b'ey que en español significa Los hombres trabajan por la carretera"}
+{"text": "### Human: Frase en Ixil### Assistant: Nitaq'onin q'u vinaj ti' b'ey que en español significa Los hombres trabajan por la carretera"}
+{"text": "### Human: ¿Cómo se dice Trabajo en Ixil?### Assistant: Trabajo en Ixil se dice Aq'on"}
+{"text": "### Human: Trabajo en Ixil### Assistant: Trabajo en Ixil se dice Aq'on"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nunb'an ma'l aq'on que en español significa Estoy haciendo un trabajo"}
+{"text": "### Human: Frase en Ixil### Assistant: Nunb'an ma'l aq'on que en español significa Estoy haciendo un trabajo"}
+{"text": "### Human: ¿Cómo se dice Jornalero en Ixil?### Assistant: Jornalero en Ixil se dice Kootalom"}
+{"text": "### Human: Jornalero en Ixil### Assistant: Jornalero en Ixil se dice Kootalom"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Cheel sachool q'u kootalom que en español significa Hoy van a pagar los jornaleros"}
+{"text": "### Human: Frase en Ixil### Assistant: Cheel sachool q'u kootalom que en español significa Hoy van a pagar los jornaleros"}
+{"text": "### Human: ¿Cómo se dice Trabajador en Ixil?### Assistant: Trabajador en Ixil se dice Aq'onvil"}
+{"text": "### Human: Trabajador en Ixil### Assistant: Trabajador en Ixil se dice Aq'onvil"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Aq'onvil chit unq'a ik'aol aak pap Me'k que en español significa Los hijos del señor Miguel son muy trabajadores"}
+{"text": "### Human: Frase en Ixil### Assistant: Aq'onvil chit unq'a ik'aol aak pap Me'k que en español significa Los hijos del señor Miguel son muy trabajadores"}
+{"text": "### Human: ¿Cómo se dice Naranja en Ixil?### Assistant: Naranja en Ixil se dice Araanxaxh"}
+{"text": "### Human: Naranja en Ixil### Assistant: Naranja en Ixil se dice Araanxaxh"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nik'ayil naraaja tu k'ayib'al que en español significa En el mercado venden naranjas"}
+{"text": "### Human: Frase en Ixil### Assistant: Nik'ayil naraaja tu k'ayib'al que en español significa En el mercado venden naranjas"}
+{"text": "### Human: ¿Cómo se dice Montura en Ixil?### Assistant: Montura en Ixil se dice Arb'aat'o"}
+{"text": "### Human: Montura en Ixil### Assistant: Montura en Ixil se dice Arb'aat'o"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nivoksa arb'aat'o ti' vunchee que en español significa Estoy poniendo montura a mi caballo"}
+{"text": "### Human: Frase en Ixil### Assistant: Nivoksa arb'aat'o ti' vunchee que en español significa Estoy poniendo montura a mi caballo"}
+{"text": "### Human: ¿Cómo se dice Arveja en Ixil?### Assistant: Arveja en Ixil se dice Arb'eexhaxh"}
+{"text": "### Human: Arveja en Ixil### Assistant: Arveja en Ixil se dice Arb'eexhaxh"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Va'l chit ivuk'ul u karvaansa sta'limal que en español significa La arveja es muy rico para comida"}
+{"text": "### Human: Frase en Ixil### Assistant: Va'l chit ivuk'ul u karvaansa sta'limal que en español significa La arveja es muy rico para comida"}
+{"text": "### Human: ¿Cómo se dice Arroz en Ixil?### Assistant: Arroz en Ixil se dice Aroos"}
+{"text": "### Human: Arroz en Ixil### Assistant: Arroz en Ixil se dice Aroos"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Aroos un chib' sun b'an cheel que en español significa Hoy voy a preparar arroz para mi comida"}
+{"text": "### Human: Frase en Ixil### Assistant: Aroos un chib' sun b'an cheel que en español significa Hoy voy a preparar arroz para mi comida"}
+{"text": "### Human: ¿Cómo se dice Había en Ixil?### Assistant: Había en Ixil se dice Atiche"}
+{"text": "### Human: Había en Ixil### Assistant: Había en Ixil se dice Atiche"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Atich u Laxh eet que en español significa Ayer estaba Nicolás"}
+{"text": "### Human: Frase en Ixil### Assistant: Atich u Laxh eet que en español significa Ayer estaba Nicolás"}
+{"text": "### Human: ¿Cómo se dice Lugar en Ixil?### Assistant: Lugar en Ixil se dice Atib'al"}
+{"text": "### Human: Lugar en Ixil### Assistant: Lugar en Ixil se dice Atib'al"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ku'enka tu vatib'al que en español significa Quédese en mi lugar"}
+{"text": "### Human: Frase en Ixil### Assistant: Ku'enka tu vatib'al que en español significa Quédese en mi lugar"}
+{"text": "### Human: ¿Cómo se dice Estar en Ixil?### Assistant: Estar en Ixil se dice Atinchil"}
+{"text": "### Human: Estar en Ixil### Assistant: Estar en Ixil se dice Atinchil"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Tx'anel atinchil jaq'ajtze' que en español significa Es bonito estar en el monte"}
+{"text": "### Human: Frase en Ixil### Assistant: Tx'anel atinchil jaq'ajtze' que en español significa Es bonito estar en el monte"}
+{"text": "### Human: ¿Cómo se dice Esta puesto en Ixil?### Assistant: Esta puesto en Ixil se dice Ato'k"}
+{"text": "### Human: Esta puesto en Ixil### Assistant: Esta puesto en Ixil se dice Ato'k"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ato'k u koroche' que en español significa El pasador esta puesto"}
+{"text": "### Human: Frase en Ixil### Assistant: Ato'k u koroche' que en español significa El pasador esta puesto"}
+{"text": "### Human: ¿Cómo se dice Tallo de la flor del maguey en Ixil?### Assistant: Tallo de la flor del maguey en Ixil se dice Atz"}
+{"text": "### Human: Tallo de la flor del maguey en Ixil### Assistant: Tallo de la flor del maguey en Ixil se dice Atz"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Niku'en ije' u atz vi' a' que en español significa El tallo de la flor de maguey flota sobre el agua"}
+{"text": "### Human: Frase en Ixil### Assistant: Niku'en ije' u atz vi' a' que en español significa El tallo de la flor de maguey flota sobre el agua"}
+{"text": "### Human: ¿Cómo se dice Sal en Ixil?### Assistant: Sal en Ixil se dice Atz'am"}
+{"text": "### Human: Sal en Ixil### Assistant: Sal en Ixil se dice Atz'am"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nun k'ayi atz'am junq'ii que en español significa Vendo sal todos los días"}
+{"text": "### Human: Frase en Ixil### Assistant: Nun k'ayi atz'am junq'ii que en español significa Vendo sal todos los días"}
+{"text": "### Human: ¿Cómo se dice Hermano mayor en Ixil?### Assistant: Hermano mayor en Ixil se dice Atzika"}
+{"text": "### Human: Hermano mayor en Ixil### Assistant: Hermano mayor en Ixil se dice Atzika"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Tatzik u Xhiv que en español significa Hermana mayor de Juana"}
+{"text": "### Human: Frase en Ixil### Assistant: Tatzik u Xhiv que en español significa Hermana mayor de Juana"}
+{"text": "### Human: ¿Cómo se dice Sembrar en Ixil?### Assistant: Sembrar en Ixil se dice Ava'm, chiko'm"}
+{"text": "### Human: Sembrar en Ixil### Assistant: Sembrar en Ixil se dice Ava'm, chiko'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nitava ak unb'aal txikon xo'l ko'm que en español significa Mi papá siembra frijol entre la milpa"}
+{"text": "### Human: Frase en Ixil### Assistant: Nitava ak unb'aal txikon xo'l ko'm que en español significa Mi papá siembra frijol entre la milpa"}
+{"text": "### Human: ¿Cómo se dice Morral tradicional para siembra en Ixil?### Assistant: Morral tradicional para siembra en Ixil se dice Avb'al txim"}
+{"text": "### Human: Morral tradicional para siembra en Ixil### Assistant: Morral tradicional para siembra en Ixil se dice Avb'al txim"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nunb'an ma'l vavb'al txim que en español significa Estoy haciendo mi morral para la siembra"}
+{"text": "### Human: Frase en Ixil### Assistant: Nunb'an ma'l vavb'al txim que en español significa Estoy haciendo mi morral para la siembra"}
+{"text": "### Human: ¿Cómo se dice Instrumento para sembrar en Ixil?### Assistant: Instrumento para sembrar en Ixil se dice Avb'al tze'"}
+{"text": "### Human: Instrumento para sembrar en Ixil### Assistant: Instrumento para sembrar en Ixil se dice Avb'al tze'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nichok tavb'al tze' u Lixh que en español significa Andrés busca su instrumento para sembrar"}
+{"text": "### Human: Frase en Ixil### Assistant: Nichok tavb'al tze' u Lixh que en español significa Andrés busca su instrumento para sembrar"}
+{"text": "### Human: ¿Cómo se dice Sembrador en Ixil?### Assistant: Sembrador en Ixil se dice Avom"}
+{"text": "### Human: Sembrador en Ixil### Assistant: Sembrador en Ixil se dice Avom"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Tul texh q'u avom que en español significa Ya van a venir los sembradores"}
+{"text": "### Human: Frase en Ixil### Assistant: Tul texh q'u avom que en español significa Ya van a venir los sembradores"}
+{"text": "### Human: ¿Cómo se dice Usted en Ixil?### Assistant: Usted en Ixil se dice Axh"}
+{"text": "### Human: Usted en Ixil### Assistant: Usted en Ixil se dice Axh"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Oq'axh tu b'ey eet que en español significa Lloraste en la calle ayer"}
+{"text": "### Human: Frase en Ixil### Assistant: Oq'axh tu b'ey eet que en español significa Lloraste en la calle ayer"}
+{"text": "### Human: ¿Cómo se dice Tamalito con carne para viaje en Ixil?### Assistant: Tamalito con carne para viaje en Ixil se dice B'a'ch"}
+{"text": "### Human: Tamalito con carne para viaje en Ixil### Assistant: Tamalito con carne para viaje en Ixil se dice B'a'ch"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nib'an aak nan An ib'a'ch vitzumel tan b'en aak tib'ey que en español significa Doña Ana le prepara b'a'ch a su esposo, porque él se va de viaje"}
+{"text": "### Human: Frase en Ixil### Assistant: Nib'an aak nan An ib'a'ch vitzumel tan b'en aak tib'ey que en español significa Doña Ana le prepara b'a'ch a su esposo, porque él se va de viaje"}
+{"text": "### Human: ¿Cómo se dice Olote en Ixil?### Assistant: Olote en Ixil se dice B'a'la'j"}
+{"text": "### Human: Olote en Ixil### Assistant: Olote en Ixil se dice B'a'la'j"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nik'ach b'a'la'j u Nixh que en español significa Inés está quemando olote"}
+{"text": "### Human: Frase en Ixil### Assistant: Nik'ach b'a'la'j u Nixh que en español significa Inés está quemando olote"}
+{"text": "### Human: ¿Cómo se dice Que te vaya bien en Ixil?### Assistant: Que te vaya bien en Ixil se dice B'a'n ab'ena'"}
+{"text": "### Human: Que te vaya bien en Ixil### Assistant: Que te vaya bien en Ixil se dice B'a'n ab'ena'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: B'a'n ab'ena' que en español significa Que te vaya bien"}
+{"text": "### Human: Frase en Ixil### Assistant: B'a'n ab'ena' que en español significa Que te vaya bien"}
+{"text": "### Human: ¿Cómo se dice Usado, viejo en Ixil?### Assistant: Usado, viejo en Ixil se dice B'amb'emal"}
+{"text": "### Human: Usado, viejo en Ixil### Assistant: Usado, viejo en Ixil se dice B'amb'emal"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: O't chit ve't ikab'al naj La's que en español significa La casa de Francisco está muy vieja"}
+{"text": "### Human: Frase en Ixil### Assistant: O't chit ve't ikab'al naj La's que en español significa La casa de Francisco está muy vieja"}
+{"text": "### Human: ¿Cómo se dice Está bien en Ixil?### Assistant: Está bien en Ixil se dice B'a'n ko'xhtu'"}
+{"text": "### Human: Está bien en Ixil### Assistant: Está bien en Ixil se dice B'a'n ko'xhtu'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: B'a'n ko'xh vi vinaj u Taa que en español significa El esposo de Marta está bien"}
+{"text": "### Human: Frase en Ixil### Assistant: B'a'n ko'xh vi vinaj u Taa que en español significa El esposo de Marta está bien"}
+{"text": "### Human: ¿Cómo se dice Bien en Ixil?### Assistant: Bien en Ixil se dice B'a'n"}
+{"text": "### Human: Bien en Ixil### Assistant: Bien en Ixil se dice B'a'n"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Saji ojb'a'n tatin u jal que en español significa Mira si está bien colocada la mazorca"}
+{"text": "### Human: Frase en Ixil### Assistant: Saji ojb'a'n tatin u jal que en español significa Mira si está bien colocada la mazorca"}
+{"text": "### Human: ¿Cómo se dice Bueno en Ixil?### Assistant: Bueno en Ixil se dice B'a'n"}
+{"text": "### Human: Bueno en Ixil### Assistant: Bueno en Ixil se dice B'a'n"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: B'a'nla aanima u Xhan que en español significa Juan es buena gente"}
+{"text": "### Human: Frase en Ixil### Assistant: B'a'nla aanima u Xhan que en español significa Juan es buena gente"}
+{"text": "### Human: ¿Cómo se dice Bien alimentado en Ixil?### Assistant: Bien alimentado en Ixil se dice B'a'nla choq'el"}
+{"text": "### Human: Bien alimentado en Ixil### Assistant: Bien alimentado en Ixil se dice B'a'nla choq'el"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: B'a'nla choq'el u tx'i' que en español significa El perro está bien alimentado"}
+{"text": "### Human: Frase en Ixil### Assistant: B'a'nla choq'el u tx'i' que en español significa El perro está bien alimentado"}
+{"text": "### Human: ¿Cómo se dice Buen día en Ixil?### Assistant: Buen día en Ixil se dice B'a'nla q'ii"}
+{"text": "### Human: Buen día en Ixil### Assistant: Buen día en Ixil se dice B'a'nla q'ii"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: B'a'nla q'ii cheel que en español significa Hoy es un buen día"}
+{"text": "### Human: Frase en Ixil### Assistant: B'a'nla q'ii cheel que en español significa Hoy es un buen día"}
+{"text": "### Human: ¿Cómo se dice Pelota en Ixil?### Assistant: Pelota en Ixil se dice B'a'x"}
+{"text": "### Human: Pelota en Ixil### Assistant: Pelota en Ixil se dice B'a'x"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nisaach talajintxa' ti' b'a'x tu chusb'alib' que en español significa Los niños juegan pelota en la escuela"}
+{"text": "### Human: Frase en Ixil### Assistant: Nisaach talajintxa' ti' b'a'x tu chusb'alib' que en español significa Los niños juegan pelota en la escuela"}
+{"text": "### Human: ¿Cómo se dice Pateado en Ixil?### Assistant: Pateado en Ixil se dice B'a'xumal"}
+{"text": "### Human: Pateado en Ixil### Assistant: Pateado en Ixil se dice B'a'xumal"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nunb'a'xu u b'a'x que en español significa Estoy pateando la pelota"}
+{"text": "### Human: Frase en Ixil### Assistant: Nunb'a'xu u b'a'x que en español significa Estoy pateando la pelota"}
+{"text": "### Human: ¿Cómo se dice Patrón en Ixil?### Assistant: Patrón en Ixil se dice B'aal aq'on"}
+{"text": "### Human: Patrón en Ixil### Assistant: Patrón en Ixil se dice B'aal aq'on"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: A' u b'aal aq'on tzi' que en español significa Ese es el patrón"}
+{"text": "### Human: Frase en Ixil### Assistant: A' u b'aal aq'on tzi' que en español significa Ese es el patrón"}
+{"text": "### Human: ¿Cómo se dice Gallo en Ixil?### Assistant: Gallo en Ixil se dice B'aal t'el"}
+{"text": "### Human: Gallo en Ixil### Assistant: Gallo en Ixil se dice B'aal t'el"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ni taq' tixi'm vi b'aal t'el u Li' que en español significa María le da maíz a su gallo"}
+{"text": "### Human: Frase en Ixil### Assistant: Ni taq' tixi'm vi b'aal t'el u Li' que en español significa María le da maíz a su gallo"}
+{"text": "### Human: ¿Cómo se dice Guía espiritual en Ixil?### Assistant: Guía espiritual en Ixil se dice B'aal vatz tiixh"}
+{"text": "### Human: Guía espiritual en Ixil### Assistant: Guía espiritual en Ixil se dice B'aal vatz tiixh"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: At b'aal vatz tiixh tu tenam que en español significa Hay guías espirituales en el pueblo"}
+{"text": "### Human: Frase en Ixil### Assistant: At b'aal vatz tiixh tu tenam que en español significa Hay guías espirituales en el pueblo"}
+{"text": "### Human: ¿Cómo se dice Dueño en Ixil?### Assistant: Dueño en Ixil se dice B'aal"}
+{"text": "### Human: Dueño en Ixil### Assistant: Dueño en Ixil se dice B'aal"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: B'aal tx'a'va' que en español significa Dueño de terreno"}
+{"text": "### Human: Frase en Ixil### Assistant: B'aal tx'a'va' que en español significa Dueño de terreno"}
+{"text": "### Human: ¿Cómo se dice Padrastro en Ixil?### Assistant: Padrastro en Ixil se dice B'aalab'al"}
+{"text": "### Human: Padrastro en Ixil### Assistant: Padrastro en Ixil se dice B'aalab'al"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: K'atz kuxh ib'aalab'al naj Te'k at kat que en español significa Diego vive con su padrastro"}
+{"text": "### Human: Frase en Ixil### Assistant: K'atz kuxh ib'aalab'al naj Te'k at kat que en español significa Diego vive con su padrastro"}
+{"text": "### Human: ¿Cómo se dice Bastón en Ixil?### Assistant: Bastón en Ixil se dice B'aara"}
+{"text": "### Human: Bastón en Ixil### Assistant: Bastón en Ixil se dice B'aara"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Atil ib'aara vuntat q'es que en español significa Mi abuelo tiene bastón"}
+{"text": "### Human: Frase en Ixil### Assistant: Atil ib'aara vuntat q'es que en español significa Mi abuelo tiene bastón"}
+{"text": "### Human: ¿Cómo se dice Nombre de uno de los veinte días del calendario maya en Ixil?### Assistant: Nombre de uno de los veinte días del calendario maya en Ixil se dice B'aatz'"}
+{"text": "### Human: Nombre de uno de los veinte días del calendario maya en Ixil### Assistant: Nombre de uno de los veinte días del calendario maya en Ixil se dice B'aatz'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Ch'i'umal chit itichajil unq'a uxhchile' uve' nititz'eb' tu q'ii b'aatz' que en español significa La vida de las personas que nacen en el día b'aatz' son muy buenos"}
+{"text": "### Human: Frase en Ixil### Assistant: Ch'i'umal chit itichajil unq'a uxhchile' uve' nititz'eb' tu q'ii b'aatz' que en español significa La vida de las personas que nacen en el día b'aatz' son muy buenos"}
+{"text": "### Human: ¿Cómo se dice Envolver en Ixil?### Assistant: Envolver en Ixil se dice B'acho'm"}
+{"text": "### Human: Envolver en Ixil### Assistant: Envolver en Ixil se dice B'acho'm"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: B'achel q'u tx'ix que en español significa Las tortillas están envueltas"}
+{"text": "### Human: Frase en Ixil### Assistant: B'achel q'u tx'ix que en español significa Las tortillas están envueltas"}
+{"text": "### Human: ¿Cómo se dice Aguja en Ixil?### Assistant: Aguja en Ixil se dice B'aj"}
+{"text": "### Human: Aguja en Ixil### Assistant: Aguja en Ixil se dice B'aj"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Atil ib'aj u Xhiv tz'isb'al toksa'm que en español significa Juana tiene aguja para coser ropa"}
+{"text": "### Human: Frase en Ixil### Assistant: Atil ib'aj u Xhiv tz'isb'al toksa'm que en español significa Juana tiene aguja para coser ropa"}
+{"text": "### Human: ¿Cómo se dice Hueso en Ixil?### Assistant: Hueso en Ixil se dice B'aj"}
+{"text": "### Human: Hueso en Ixil### Assistant: Hueso en Ixil se dice B'aj"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: B'ajil txokop que en español significa Hueso de animal"}
+{"text": "### Human: Frase en Ixil### Assistant: B'ajil txokop que en español significa Hueso de animal"}
+{"text": "### Human: ¿Cómo se dice Flaco en Ixil?### Assistant: Flaco en Ixil se dice B'ajb'o"}
+{"text": "### Human: Flaco en Ixil### Assistant: Flaco en Ixil se dice B'ajb'o"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: B'ajb'o ichi'il u Lixh que en español significa Andrés es flaco"}
+{"text": "### Human: Frase en Ixil### Assistant: B'ajb'o ichi'il u Lixh que en español significa Andrés es flaco"}
+{"text": "### Human: ¿Cómo se dice Clavícula en Ixil?### Assistant: Clavícula en Ixil se dice B'ajil cheleb'"}
+{"text": "### Human: Clavícula en Ixil### Assistant: Clavícula en Ixil se dice B'ajil cheleb'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Tojmi b'ajil uncheleb' que en español significa Se me zafó la clavícula"}
+{"text": "### Human: Frase en Ixil### Assistant: Tojmi b'ajil uncheleb' que en español significa Se me zafó la clavícula"}
+{"text": "### Human: ¿Cómo se dice Cubito en Ixil?### Assistant: Cubito en Ixil se dice B'ajil q'ab'"}
+{"text": "### Human: Cubito en Ixil### Assistant: Cubito en Ixil se dice B'ajil q'ab'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nichi'on ib'ajil unq'ab' que en español significa Me duele el cubito"}
+{"text": "### Human: Frase en Ixil### Assistant: Nichi'on ib'ajil unq'ab' que en español significa Me duele el cubito"}
+{"text": "### Human: ¿Cómo se dice Maxilar superior en Ixil?### Assistant: Maxilar superior en Ixil se dice B'ajil tib'a tzi'"}
+{"text": "### Human: Maxilar superior en Ixil### Assistant: Maxilar superior en Ixil se dice B'ajil tib'a tzi'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nisipk'u b'ajil tiib'a untzi' que en español significa Se me hincha el maxilar superior"}
+{"text": "### Human: Frase en Ixil### Assistant: Nisipk'u b'ajil tiib'a untzi' que en español significa Se me hincha el maxilar superior"}
+{"text": "### Human: ¿Cómo se dice Esternón en Ixil?### Assistant: Esternón en Ixil se dice B'ajil tzi' aama'"}
+{"text": "### Human: Esternón en Ixil### Assistant: Esternón en Ixil se dice B'ajil tzi' aama'"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Kajayil o' at ib'ajil tzi' qaama que en español significa Todos nosotros tenemos esternón"}
+{"text": "### Human: Frase en Ixil### Assistant: Kajayil o' at ib'ajil tzi' qaama que en español significa Todos nosotros tenemos esternón"}
+{"text": "### Human: ¿Cómo se dice Maxilar inferior en Ixil?### Assistant: Maxilar inferior en Ixil se dice B'ajil tzuk"}
+{"text": "### Human: Maxilar inferior en Ixil### Assistant: Maxilar inferior en Ixil se dice B'ajil tzuk"}
+{"text": "### Human: Necesito una frase en Ixil### Assistant: Nich'o'n b'ajil untzuk que en español significa Me duele el maxilar inferior"}
+{"text": "### Human: Frase en Ixil### Assistant: Nich'o'n b'ajil untzuk que en español significa Me duele el maxilar inferior"}
