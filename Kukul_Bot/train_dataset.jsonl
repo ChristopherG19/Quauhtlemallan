@@ -9242,8 +9242,6 @@
 {"text": "### Human: Tazas medidoras en Q'eqchi'### Assistant: Tazas medidoras en Q'eqchi' se dice B'isleb' sek'"}
 {"text": "### Human: ¿Cómo se dice Tenedor en Q'eqchi'?### Assistant: Tenedor en Q'eqchi' se dice K'ixleb'"}
 {"text": "### Human: Tenedor en Q'eqchi'### Assistant: Tenedor en Q'eqchi' se dice K'ixleb'"}
-{"text": "### Human: ¿Cómo se dice Tinaja en Q'eqchi'?### Assistant: Tinaja en Q'eqchi' se dice Kukb'"}
-{"text": "### Human: Tinaja en Q'eqchi'### Assistant: Tinaja en Q'eqchi' se dice Kukb'"}
 {"text": "### Human: ¿Cómo se dice Tostador en Q'eqchi'?### Assistant: Tostador en Q'eqchi' se dice K'orechleb'"}
 {"text": "### Human: Tostador en Q'eqchi'### Assistant: Tostador en Q'eqchi' se dice K'orechleb'"}
 {"text": "### Human: ¿Cómo se dice Arroz en leche en Q'eqchi'?### Assistant: Arroz en leche en Q'eqchi' se dice Uq'unil aros"}
@@ -9382,4 +9380,800 @@
 {"text": "### Human: Verde Claro en Q'eqchi'### Assistant: Verde Claro en Q'eqchi' se dice Saqi rax"}
 {"text": "### Human: ¿Cómo se dice Verde oscuro en Q'eqchi'?### Assistant: Verde oscuro en Q'eqchi' se dice Q'eqi rax"}
 {"text": "### Human: Verde oscuro en Q'eqchi'### Assistant: Verde oscuro en Q'eqchi' se dice Q'eqi rax"}
+{"text": "### Human: ¿Cómo se dice Caña de carrizo en Sipakapense?### Assistant: Caña de carrizo en Sipakapense se dice Aaj"}
+{"text": "### Human: Caña de carrizo en Sipakapense### Assistant: Caña de carrizo en Sipakapense se dice Aaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri aaj kchuknik chu rwi' jaay que en español significa El carrizo se utiliza para el techo de una casa."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri aaj kchuknik chu rwi' jaay que en español significa El carrizo se utiliza para el techo de una casa."}
+{"text": "### Human: ¿Cómo se dice Hamaca en Sipakapense?### Assistant: Hamaca en Sipakapense se dice Ab'a'"}
+{"text": "### Human: Hamaca en Sipakapense### Assistant: Hamaca en Sipakapense se dice Ab'a'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ab'a' b'antlik ruk' saqkiiy que en español significa La hamaca está hecha de pita de mecate."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ab'a' b'antlik ruk' saqkiiy que en español significa La hamaca está hecha de pita de mecate."}
+{"text": "### Human: ¿Cómo se dice Piedra en Sipakapense?### Assistant: Piedra en Sipakapense se dice Ab'aj"}
+{"text": "### Human: Piedra en Sipakapense### Assistant: Piedra en Sipakapense se dice Ab'aj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ab'aj pya' xesxelul wi' que en español significa La piedra es sacada del río."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ab'aj pya' xesxelul wi' que en español significa La piedra es sacada del río."}
+{"text": "### Human: ¿Cómo se dice Hermano menor en Sipakapense?### Assistant: Hermano menor en Sipakapense se dice Achaq'xeel"}
+{"text": "### Human: Hermano menor en Sipakapense### Assistant: Hermano menor en Sipakapense se dice Achaq'xeel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chqxo'l ri qchaq' qiib' iin achaq'xeel que en español significa Entre todos soy el hermano menor."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chqxo'l ri qchaq' qiib' iin achaq'xeel que en español significa Entre todos soy el hermano menor."}
+{"text": "### Human: ¿Cómo se dice Gallina en Sipakapense?### Assistant: Gallina en Sipakapense se dice Ak'"}
+{"text": "### Human: Gallina en Sipakapense### Assistant: Gallina en Sipakapense se dice Ak'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu ak' rech nchuch que en español significa La gallina es de mi mamá."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu ak' rech nchuch que en español significa La gallina es de mi mamá."}
+{"text": "### Human: ¿Cómo se dice Estornudo en Sipakapense?### Assistant: Estornudo en Sipakapense se dice Achyam"}
+{"text": "### Human: Estornudo en Sipakapense### Assistant: Estornudo en Sipakapense se dice Achyam"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu ajk'aal kirya' achyam chre que en español significa Al niño le da estornudo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu ajk'aal kirya' achyam chre que en español significa Al niño le da estornudo."}
+{"text": "### Human: ¿Cómo se dice Elote en Sipakapense?### Assistant: Elote en Sipakapense se dice Aj"}
+{"text": "### Human: Elote en Sipakapense### Assistant: Elote en Sipakapense se dice Aj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Iwir xinloq' aj pk'eyb'al que en español significa Ayer compré elotes en la plaza."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Iwir xinloq' aj pk'eyb'al que en español significa Ayer compré elotes en la plaza."}
+{"text": "### Human: ¿Cómo se dice Molendera en Sipakapense?### Assistant: Molendera en Sipakapense se dice Aq'een"}
+{"text": "### Human: Molendera en Sipakapense### Assistant: Molendera en Sipakapense se dice Aq'een"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri rka' wnob' k'a'n chu aq'een que en español significa La piedra de mi hermana está en la molendera."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri rka' wnob' k'a'n chu aq'een que en español significa La piedra de mi hermana está en la molendera."}
+{"text": "### Human: ¿Cómo se dice Trabajador en Sipakapense?### Assistant: Trabajador en Sipakapense se dice Ajchaak"}
+{"text": "### Human: Trabajador en Sipakapense### Assistant: Trabajador en Sipakapense se dice Ajchaak"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri alaab' are' jun utz laj ajchaak que en español significa El muchacho es un buen trabajador."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri alaab' are' jun utz laj ajchaak que en español significa El muchacho es un buen trabajador."}
+{"text": "### Human: ¿Cómo se dice Matasano en Sipakapense?### Assistant: Matasano en Sipakapense se dice Ajche'"}
+{"text": "### Human: Matasano en Sipakapense### Assistant: Matasano en Sipakapense se dice Ajche'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajche' k'olik xpok'pon chpom que en español significa El matasano tiene gusano."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajche' k'olik xpok'pon chpom que en español significa El matasano tiene gusano."}
+{"text": "### Human: ¿Cómo se dice Ahorita en Sipakapense?### Assistant: Ahorita en Sipakapense se dice Ajk'ori'"}
+{"text": "### Human: Ahorita en Sipakapense### Assistant: Ahorita en Sipakapense se dice Ajk'ori'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xkojelb'ik ajk'ori' xtqb'an jun cholaaj chi rk'amkelul ri qwoy que en español significa Al salir ahorita hacemos una fila para recibir nuestros alimentos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xkojelb'ik ajk'ori' xtqb'an jun cholaaj chi rk'amkelul ri qwoy que en español significa Al salir ahorita hacemos una fila para recibir nuestros alimentos."}
+{"text": "### Human: ¿Cómo se dice Caña de azúcar en Sipakapense?### Assistant: Caña de azúcar en Sipakapense se dice Ajiij"}
+{"text": "### Human: Caña de azúcar en Sipakapense### Assistant: Caña de azúcar en Sipakapense se dice Ajiij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu ajiij xchiqik rum wu saq'iij que en español significa La caña se secó por el verano."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu ajiij xchiqik rum wu saq'iij que en español significa La caña se secó por el verano."}
+{"text": "### Human: ¿Cómo se dice Bebé en Sipakapense?### Assistant: Bebé en Sipakapense se dice Ajk'aal"}
+{"text": "### Human: Bebé en Sipakapense### Assistant: Bebé en Sipakapense se dice Ajk'aal"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Xelul q'aaq' chrij ri ajk'aal que en español significa Al bebé le dio fiebre."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Xelul q'aaq' chrij ri ajk'aal que en español significa Al bebé le dio fiebre."}
+{"text": "### Human: ¿Cómo se dice Niños en Sipakapense?### Assistant: Niños en Sipakapense se dice Ajk'alob'"}
+{"text": "### Human: Niños en Sipakapense### Assistant: Niños en Sipakapense se dice Ajk'alob'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajk'alob' ke'ku'ktik ataq ke'b'eek ptijneem que en español significa Los niños se ponen contentos cuando van a las clases."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajk'alob' ke'ku'ktik ataq ke'b'eek ptijneem que en español significa Los niños se ponen contentos cuando van a las clases."}
+{"text": "### Human: ¿Cómo se dice Pesado en Sipakapense?### Assistant: Pesado en Sipakapense se dice Aal"}
+{"text": "### Human: Pesado en Sipakapense### Assistant: Pesado en Sipakapense se dice Aal"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Aal wu rchim wu kkej sicha' xtzaqik que en español significa La carga del caballo es pesada, por eso se cayó."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Aal wu rchim wu kkej sicha' xtzaqik que en español significa La carga del caballo es pesada, por eso se cayó."}
+{"text": "### Human: ¿Cómo se dice Número en Sipakapense?### Assistant: Número en Sipakapense se dice Ajlb'al"}
+{"text": "### Human: Número en Sipakapense### Assistant: Número en Sipakapense se dice Ajlb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri wnaq kchkunsaj ri ajlb'al ataq ke'k'eynik que en español significa La gente utiliza los números cuando venden."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri wnaq kchkunsaj ri ajlb'al ataq ke'k'eynik que en español significa La gente utiliza los números cuando venden."}
+{"text": "### Human: ¿Cómo se dice Contador en Sipakapense?### Assistant: Contador en Sipakapense se dice Ajlnel"}
+{"text": "### Human: Contador en Sipakapense### Assistant: Contador en Sipakapense se dice Ajlnel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajlnel kchuknik ptinmit que en español significa El contador trabaja en el pueblo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajlnel kchuknik ptinmit que en español significa El contador trabaja en el pueblo."}
+{"text": "### Human: ¿Cómo se dice Culpable en Sipakapense?### Assistant: Culpable en Sipakapense se dice Ajmaak"}
+{"text": "### Human: Culpable en Sipakapense### Assistant: Culpable en Sipakapense se dice Ajmaak"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajmaak are' ri achii ri xwi'taaj ri ixoq que en español significa El hombre que mató a la mujer es el culpable."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajmaak are' ri achii ri xwi'taaj ri ixoq que en español significa El hombre que mató a la mujer es el culpable."}
+{"text": "### Human: ¿Cómo se dice Alcalde en Sipakapense?### Assistant: Alcalde en Sipakapense se dice Ajownel"}
+{"text": "### Human: Alcalde en Sipakapense### Assistant: Alcalde en Sipakapense se dice Ajownel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajownel nim ri reta'maj que en español significa El alcalde tiene muchos conocimientos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajownel nim ri reta'maj que en español significa El alcalde tiene muchos conocimientos."}
+{"text": "### Human: ¿Cómo se dice Arriba en Sipakapense?### Assistant: Arriba en Sipakapense se dice Ajsik"}
+{"text": "### Human: Arriba en Sipakapense### Assistant: Arriba en Sipakapense se dice Ajsik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ajsik xokul ri elq'oom sicha' qal xna' ri tz'i' que en español significa El ladrón entró arriba por eso no se dio cuenta el perro."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ajsik xokul ri elq'oom sicha' qal xna' ri tz'i' que en español significa El ladrón entró arriba por eso no se dio cuenta el perro."}
+{"text": "### Human: ¿Cómo se dice Araña en Sipakapense?### Assistant: Araña en Sipakapense se dice Am"}
+{"text": "### Human: Araña en Sipakapense### Assistant: Araña en Sipakapense se dice Am"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu am kertij ri us ri ik'o'k chu xaan que en español significa La araña come las moscas que están en la pared."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu am kertij ri us ri ik'o'k chu xaan que en español significa La araña come las moscas que están en la pared."}
+{"text": "### Human: ¿Cómo se dice Sastre en Sipakapense?### Assistant: Sastre en Sipakapense se dice Ajt'isnel"}
+{"text": "### Human: Sastre en Sipakapense### Assistant: Sastre en Sipakapense se dice Ajt'isnel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajt'isnel xwi'txik kum ri elq'oom que en español significa El sastre fue matado por los ladrones."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajt'isnel xwi'txik kum ri elq'oom que en español significa El sastre fue matado por los ladrones."}
+{"text": "### Human: ¿Cómo se dice Maestro en Sipakapense?### Assistant: Maestro en Sipakapense se dice Ajtiij"}
+{"text": "### Human: Maestro en Sipakapense### Assistant: Maestro en Sipakapense se dice Ajtiij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajtiij njel q'iij ke'rtijuuj ri ajk'alob' que en español significa El maestro todos los días enseña a los niños."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajtiij njel q'iij ke'rtijuuj ri ajk'alob' que en español significa El maestro todos los días enseña a los niños."}
+{"text": "### Human: ¿Cómo se dice Estudiante en Sipakapense?### Assistant: Estudiante en Sipakapense se dice Ajtijnel"}
+{"text": "### Human: Estudiante en Sipakapense### Assistant: Estudiante en Sipakapense se dice Ajtijnel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu ajtijnel qal kirb'an ri rchak ri kyo'qke rum ri ajtiij que en español significa Los estudiantes no hacen el trabajo que deja el maestro."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu ajtijnel qal kirb'an ri rchak ri kyo'qke rum ri ajtiij que en español significa Los estudiantes no hacen el trabajo que deja el maestro."}
+{"text": "### Human: ¿Cómo se dice Secretario en Sipakapense?### Assistant: Secretario en Sipakapense se dice Ajtz'ib'"}
+{"text": "### Human: Secretario en Sipakapense### Assistant: Secretario en Sipakapense se dice Ajtz'ib'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wuqb'ix xttz'aqtik rjnob' ri ajtz'iib' que en español significa Dentro de ocho días es el cumpleaños del secretario."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wuqb'ix xttz'aqtik rjnob' ri ajtz'iib' que en español significa Dentro de ocho días es el cumpleaños del secretario."}
+{"text": "### Human: ¿Cómo se dice Hoy en Sipakapense?### Assistant: Hoy en Sipakapense se dice Ajwi'"}
+{"text": "### Human: Hoy en Sipakapense### Assistant: Hoy en Sipakapense se dice Ajwi'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ajwi' xtpetik jab' ruk' saqb'uch que en español significa Hoy va a llover con granizo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ajwi' xtpetik jab' ruk' saqb'uch que en español significa Hoy va a llover con granizo."}
+{"text": "### Human: ¿Cómo se dice Pollo en Sipakapense?### Assistant: Pollo en Sipakapense se dice Ak'"}
+{"text": "### Human: Pollo en Sipakapense### Assistant: Pollo en Sipakapense se dice Ak'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu rtya'jiil ak' chetz'i'nik chu ya'b'al qchoq'aab' que en español significa La carne de pollo es rica en vitaminas."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu rtya'jiil ak' chetz'i'nik chu ya'b'al qchoq'aab' que en español significa La carne de pollo es rica en vitaminas."}
+{"text": "### Human: ¿Cómo se dice Niño en Sipakapense?### Assistant: Niño en Sipakapense se dice Ajk'aal'"}
+{"text": "### Human: Niño en Sipakapense### Assistant: Niño en Sipakapense se dice Ajk'aal'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajk'aal xyab'rik ruk' qulaj que en español significa El niño se enfermó de la tos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajk'aal xyab'rik ruk' qulaj que en español significa El niño se enfermó de la tos."}
+{"text": "### Human: ¿Cómo se dice Niña en Sipakapense?### Assistant: Niña en Sipakapense se dice Aliit"}
+{"text": "### Human: Niña en Sipakapense### Assistant: Niña en Sipakapense se dice Aliit"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri aliit xwiqb'ik riib' ataq xb'eek pnimaq'iij que en español significa La niña se puso buena ropa cuando se fue a la fiesta."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri aliit xwiqb'ik riib' ataq xb'eek pnimaq'iij que en español significa La niña se puso buena ropa cuando se fue a la fiesta."}
+{"text": "### Human: ¿Cómo se dice Jóvenes en Sipakapense?### Assistant: Jóvenes en Sipakapense se dice Alo'm"}
+{"text": "### Human: Jóvenes en Sipakapense### Assistant: Jóvenes en Sipakapense se dice Alo'm"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ke'q alo'm xkmol kiib' chu rb'anik ri chaak que en español significa Los jóvenes se reunieron para realizar el trabajo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ke'q alo'm xkmol kiib' chu rb'anik ri chaak que en español significa Los jóvenes se reunieron para realizar el trabajo."}
+{"text": "### Human: ¿Cómo se dice Señoritas en Sipakapense?### Assistant: Señoritas en Sipakapense se dice Altom"}
+{"text": "### Human: Señoritas en Sipakapense### Assistant: Señoritas en Sipakapense se dice Altom"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ke'q altom q'us kka'yxik ataq kwiqkiib' que en español significa Las señoritas se ven hermosas cuando se visten."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ke'q altom q'us kka'yxik ataq kwiqkiib' que en español significa Las señoritas se ven hermosas cuando se visten."}
+{"text": "### Human: ¿Cómo se dice Rápido en Sipakapense?### Assistant: Rápido en Sipakapense se dice Anaq"}
+{"text": "### Human: Rápido en Sipakapense### Assistant: Rápido en Sipakapense se dice Anaq"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Anaq ib'enaq sicha' xe' tzaqik que en español significa Iban muy rápido por eso se cayeron."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Anaq ib'enaq sicha' xe' tzaqik que en español significa Iban muy rápido por eso se cayeron."}
+{"text": "### Human: ¿Cómo se dice De prisa en Sipakapense?### Assistant: De prisa en Sipakapense se dice Anaqiil"}
+{"text": "### Human: De prisa en Sipakapense### Assistant: De prisa en Sipakapense se dice Anaqiil"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Anaqiil xkb'an ri chaak sicha' qal utz xe'loq que en español significa El trabajo lo hicieron de prisa por eso no salió bien."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Anaqiil xkb'an ri chaak sicha' qal utz xe'loq que en español significa El trabajo lo hicieron de prisa por eso no salió bien."}
+{"text": "### Human: ¿Cómo se dice Ajo en Sipakapense?### Assistant: Ajo en Sipakapense se dice Anx"}
+{"text": "### Human: Ajo en Sipakapense### Assistant: Ajo en Sipakapense se dice Anx"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri anx kchuknik chi rkunxik ri cho'keej que en español significa El ajo se usa para sazonar la carne de res."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri anx kchuknik chi rkunxik ri cho'keej que en español significa El ajo se usa para sazonar la carne de res."}
+{"text": "### Human: ¿Cómo se dice Madrugada en Sipakapense?### Assistant: Madrugada en Sipakapense se dice Aq'ab'"}
+{"text": "### Human: Madrugada en Sipakapense### Assistant: Madrugada en Sipakapense se dice Aq'ab'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Aq'ab' xelb'ik ri achii chi rawxik ri chnooj que en español significa El hombre salió de madrugada a sembrar la milpa."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Aq'ab' xelb'ik ri achii chi rawxik ri chnooj que en español significa El hombre salió de madrugada a sembrar la milpa."}
+{"text": "### Human: ¿Cómo se dice Carbón en Sipakapense?### Assistant: Carbón en Sipakapense se dice Aq'ta'l"}
+{"text": "### Human: Carbón en Sipakapense### Assistant: Carbón en Sipakapense se dice Aq'ta'l"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ixoq kirchkunsaj ri aq'ta'l kumu qal kirb'an sib' que en español significa La mujer usa carbón porque no produce humo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ixoq kirchkunsaj ri aq'ta'l kumu qal kirb'an sib' que en español significa La mujer usa carbón porque no produce humo."}
+{"text": "### Human: ¿Cómo se dice Aunque en Sipakapense?### Assistant: Aunque en Sipakapense se dice Aro'q"}
+{"text": "### Human: Aunque en Sipakapense### Assistant: Aunque en Sipakapense se dice Aro'q"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu aliit aro'q xyajik qal kirya' pirk'u'x que en español significa Aunque la señorita fue regañada, no lo toma en cuenta."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu aliit aro'q xyajik qal kirya' pirk'u'x que en español significa Aunque la señorita fue regañada, no lo toma en cuenta."}
+{"text": "### Human: ¿Cómo se dice Saca basura en Sipakapense?### Assistant: Saca basura en Sipakapense se dice Ansb'al mees"}
+{"text": "### Human: Saca basura en Sipakapense### Assistant: Saca basura en Sipakapense se dice Ansb'al mees"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu ixoq xlq'uul jun a'nsb'al mees pk'eyb'al que en español significa La mujer compró un saca basura en la plaza."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu ixoq xlq'uul jun a'nsb'al mees pk'eyb'al que en español significa La mujer compró un saca basura en la plaza."}
+{"text": "### Human: ¿Cómo se dice Avispa en Sipakapense?### Assistant: Avispa en Sipakapense se dice Asta'l"}
+{"text": "### Human: Avispa en Sipakapense### Assistant: Avispa en Sipakapense se dice Asta'l"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri chiij xkmik rum wu xti'xik rum asta'l que en español significa La oveja murió porque la picó una avispa."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri chiij xkmik rum wu xti'xik rum asta'l que en español significa La oveja murió porque la picó una avispa."}
+{"text": "### Human: ¿Cómo se dice Tu en Sipakapense?### Assistant: Tu en Sipakapense se dice At"}
+{"text": "### Human: Tu en Sipakapense### Assistant: Tu en Sipakapense se dice At"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: At xab'iij ke ri alab' xtzaqelul pch'iich' que en español significa Tu dijiste que el muchacho se cayó del carro."}
+{"text": "### Human: Frase en Sipakapense### Assistant: At xab'iij ke ri alab' xtzaqelul pch'iich' que en español significa Tu dijiste que el muchacho se cayó del carro."}
+{"text": "### Human: ¿Cómo se dice Ducha en Sipakapense?### Assistant: Ducha en Sipakapense se dice Atimb'al"}
+{"text": "### Human: Ducha en Sipakapense### Assistant: Ducha en Sipakapense se dice Atimb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu nooy qal chik kirch'ij katnik pwu atinb'al que en español significa La abuela ya no puede bañarse en la ducha."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu nooy qal chik kirch'ij katnik pwu atinb'al que en español significa La abuela ya no puede bañarse en la ducha."}
+{"text": "### Human: ¿Cómo se dice Sal en Sipakapense?### Assistant: Sal en Sipakapense se dice Atz'om"}
+{"text": "### Human: Sal en Sipakapense### Assistant: Sal en Sipakapense se dice Atz'om"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq kok'wik retz'mil ri tib'lil qal chi k ktijtjik que en español significa Cuando se pasa de sal la comida, ya no se puede comer."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq kok'wik retz'mil ri tib'lil qal chi k ktijtjik que en español significa Cuando se pasa de sal la comida, ya no se puede comer."}
+{"text": "### Human: ¿Cómo se dice Siembra en Sipakapense?### Assistant: Siembra en Sipakapense se dice Awa'n"}
+{"text": "### Human: Siembra en Sipakapense### Assistant: Siembra en Sipakapense se dice Awa'n"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ruk' ta' Francisco chwa'q xtb'anik awa'n que en español significa Mañana van a sembrar con don Francisco."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ruk' ta' Francisco chwa'q xtb'anik awa'n que en español significa Mañana van a sembrar con don Francisco."}
+{"text": "### Human: ¿Cómo se dice Semillero en Sipakapense?### Assistant: Semillero en Sipakapense se dice Awb'al"}
+{"text": "### Human: Semillero en Sipakapense### Assistant: Semillero en Sipakapense se dice Awb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri rk'o'xiil ub'ooy kchuknik chu awb'al que en español significa La concha del armadillo se utiliza para semillero."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri rk'o'xiil ub'ooy kchuknik chu awb'al que en español significa La concha del armadillo se utiliza para semillero."}
+{"text": "### Human: ¿Cómo se dice Dios en Sipakapense?### Assistant: Dios en Sipakapense se dice Ajaw"}
+{"text": "### Human: Dios en Sipakapense### Assistant: Dios en Sipakapense se dice Ajaw"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Riliil riij ataq xkojwa'ljik xkojtyoxnik chu Ajaw que en español significa Es necesario que al amanecer agradezcamos a Dios."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Riliil riij ataq xkojwa'ljik xkojtyoxnik chu Ajaw que en español significa Es necesario que al amanecer agradezcamos a Dios."}
+{"text": "### Human: ¿Cómo se dice Sembrador en Sipakapense?### Assistant: Sembrador en Sipakapense se dice Awnel"}
+{"text": "### Human: Sembrador en Sipakapense### Assistant: Sembrador en Sipakapense se dice Awnel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xelb'ik ri awnel qal xna'tajb'ik wu rawb'aal que en español significa Cuando salió el sembrador, se le olvidó llevar su semillero."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xelb'ik ri awnel qal xna'tajb'ik wu rawb'aal que en español significa Cuando salió el sembrador, se le olvidó llevar su semillero."}
+{"text": "### Human: ¿Cómo se dice Feriado en Sipakapense?### Assistant: Feriado en Sipakapense se dice Awas q'ij"}
+{"text": "### Human: Feriado en Sipakapense### Assistant: Feriado en Sipakapense se dice Awas q'ij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq k'olik awasq'iij ri wnaq qal ki' chuknik que en español significa Cuando hay feriado, la gente no trabaja."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq k'olik awasq'iij ri wnaq qal ki' chuknik que en español significa Cuando hay feriado, la gente no trabaja."}
+{"text": "### Human: ¿Cómo se dice Bostezar en Sipakapense?### Assistant: Bostezar en Sipakapense se dice Ayaam"}
+{"text": "### Human: Bostezar en Sipakapense### Assistant: Bostezar en Sipakapense se dice Ayaam"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajk'aal ataq kpetik ayam chriij chanim kwrik que en español significa El niño cuando bosteza, en seguida se duerme."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajk'aal ataq kpetik ayam chriij chanim kwrik que en español significa El niño cuando bosteza, en seguida se duerme."}
+{"text": "### Human: ¿Cómo se dice Criadora en Sipakapense?### Assistant: Criadora en Sipakapense se dice Alnel"}
+{"text": "### Human: Criadora en Sipakapense### Assistant: Criadora en Sipakapense se dice Alnel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu rwaakx nchuch utz laj alnel que en español significa La vaca de mi mamá es buena criadora."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu rwaakx nchuch utz laj alnel que en español significa La vaca de mi mamá es buena criadora."}
+{"text": "### Human: ¿Cómo se dice Hermano menor en Sipakapense?### Assistant: Hermano menor en Sipakapense se dice Achaq'xel"}
+{"text": "### Human: Hermano menor en Sipakapense### Assistant: Hermano menor en Sipakapense se dice Achaq'xel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Njeel ri uleew xyo'qken chu ri achaq'xeel que en español significa Toda la tierra se la dejaron al hermano menor."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Njeel ri uleew xyo'qken chu ri achaq'xeel que en español significa Toda la tierra se la dejaron al hermano menor."}
+{"text": "### Human: ¿Cómo se dice Lengua en Sipakapense?### Assistant: Lengua en Sipakapense se dice Aaq'"}
+{"text": "### Human: Lengua en Sipakapense### Assistant: Lengua en Sipakapense se dice Aaq'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri wakx jurjik ri raaq' que en español significa La vaca tiene la lengua larga."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri wakx jurjik ri raaq' que en español significa La vaca tiene la lengua larga."}
+{"text": "### Human: ¿Cómo se dice Temascal en Sipakapense?### Assistant: Temascal en Sipakapense se dice Amu'ch"}
+{"text": "### Human: Temascal en Sipakapense### Assistant: Temascal en Sipakapense se dice Amu'ch"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri moos qal kchkunsaj ri amu'ch que en español significa Los ladinos no utilizan el temascal."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri moos qal kchkunsaj ri amu'ch que en español significa Los ladinos no utilizan el temascal."}
+{"text": "### Human: ¿Cómo se dice Nuera en Sipakapense?### Assistant: Nuera en Sipakapense se dice Alb'atz"}
+{"text": "### Human: Nuera en Sipakapense### Assistant: Nuera en Sipakapense se dice Alb'atz"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chu' xiya' xmxoj ri alb'atz que en español significa Doña Lucia contentó a la nuera."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chu' xiya' xmxoj ri alb'atz que en español significa Doña Lucia contentó a la nuera."}
+{"text": "### Human: ¿Cómo se dice Montón de piedra en Sipakapense?### Assistant: Montón de piedra en Sipakapense se dice Amlu'x"}
+{"text": "### Human: Montón de piedra en Sipakapense### Assistant: Montón de piedra en Sipakapense se dice Amlu'x"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Pri uleew k'olik k'iy amlu'x ab'aj que en español significa En el terreno hay montones de piedras."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Pri uleew k'olik k'iy amlu'x ab'aj que en español significa En el terreno hay montones de piedras."}
+{"text": "### Human: ¿Cómo se dice Otoño en Sipakapense?### Assistant: Otoño en Sipakapense se dice Ak'mulnik"}
+{"text": "### Human: Otoño en Sipakapense### Assistant: Otoño en Sipakapense se dice Ak'mulnik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri che' ataq ktzaqeel ri kxaq are' chi' ri kb'ixik ak'mulnik que en español significa En el tiempo del otoño se cambian las hojas de los árboles."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri che' ataq ktzaqeel ri kxaq are' chi' ri kb'ixik ak'mulnik que en español significa En el tiempo del otoño se cambian las hojas de los árboles."}
+{"text": "### Human: ¿Cómo se dice Maíz nuevo en Sipakapense?### Assistant: Maíz nuevo en Sipakapense se dice Ak'e'l"}
+{"text": "### Human: Maíz nuevo en Sipakapense### Assistant: Maíz nuevo en Sipakapense se dice Ak'e'l"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq ak'e'l ri ixiim chenim kq'eyik que en español significa Cuando el maíz es nuevo, se humedece pronto."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq ak'e'l ri ixiim chenim kq'eyik que en español significa Cuando el maíz es nuevo, se humedece pronto."}
+{"text": "### Human: ¿Cómo se dice Paxte en Sipakapense?### Assistant: Paxte en Sipakapense se dice Atz'yaaq"}
+{"text": "### Human: Paxte en Sipakapense### Assistant: Paxte en Sipakapense se dice Atz'yaaq"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri atz'yaaq kirya' ptaq rqan swon que en español significa El paxte abunda en los barrancos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri atz'yaaq kirya' ptaq rqan swon que en español significa El paxte abunda en los barrancos."}
+{"text": "### Human: ¿Cómo se dice Muñeca en Sipakapense?### Assistant: Muñeca en Sipakapense se dice Ala's"}
+{"text": "### Human: Muñeca en Sipakapense### Assistant: Muñeca en Sipakapense se dice Ala's"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri altom kmol kiib' chu rb'anik ri ala's que en español significa Las niñas se reúnen para hacer las muñecas."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri altom kmol kiib' chu rb'anik ri ala's que en español significa Las niñas se reúnen para hacer las muñecas."}
+{"text": "### Human: ¿Cómo se dice Flaco en Sipakapense?### Assistant: Flaco en Sipakapense se dice B'a'x"}
+{"text": "### Human: Flaco en Sipakapense### Assistant: Flaco en Sipakapense se dice B'a'x"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu rtz'i' wtziik xb'a'xrik rum wu qaqchee rwoy kyo'qik que en español significa El perro de mi hermano se puso flaco porque no le dan comida."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu rtz'i' wtziik xb'a'xrik rum wu qaqchee rwoy kyo'qik que en español significa El perro de mi hermano se puso flaco porque no le dan comida."}
+{"text": "### Human: ¿Cómo se dice Taltuza en Sipakapense?### Assistant: Taltuza en Sipakapense se dice B'aay"}
+{"text": "### Human: Taltuza en Sipakapense### Assistant: Taltuza en Sipakapense se dice B'aay"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu b'aay kirb'an ri rjul wa'chi' q'u'y ri uleew que en español significa La taltuza hace su cueva donde la tierra es suave."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu b'aay kirb'an ri rjul wa'chi' q'u'y ri uleew que en español significa La taltuza hace su cueva donde la tierra es suave."}
+{"text": "### Human: ¿Cómo se dice Roiso en Sipakapense?### Assistant: Roiso en Sipakapense se dice B'olb'ik"}
+{"text": "### Human: Roiso en Sipakapense### Assistant: Roiso en Sipakapense se dice B'olb'ik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu che' ri xi' chuknik chu ri rwi' jaay njeel ib'olb'ik que en español significa La madera que se utilizó para el techo de la casa es toda roiso."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu che' ri xi' chuknik chu ri rwi' jaay njeel ib'olb'ik que en español significa La madera que se utilizó para el techo de la casa es toda roiso."}
+{"text": "### Human: ¿Cómo se dice Torcer en Sipakapense?### Assistant: Torcer en Sipakapense se dice B'aq'tij"}
+{"text": "### Human: Torcer en Sipakapense### Assistant: Torcer en Sipakapense se dice B'aq'tij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri kchak ri ajk'alob' kb'aq'tij ri k'aam que en español significa El trabajo de los niños es torcer la pita."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri kchak ri ajk'alob' kb'aq'tij ri k'aam que en español significa El trabajo de los niños es torcer la pita."}
+{"text": "### Human: ¿Cómo se dice Palo roiso largo en Sipakapense?### Assistant: Palo roiso largo en Sipakapense se dice B'a'lul"}
+{"text": "### Human: Palo roiso largo en Sipakapense### Assistant: Palo roiso largo en Sipakapense se dice B'a'lul"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri achii xchkunsaj b'a'lul chu rwi' ri rchoch que en español significa El hombre utilizó palo roiso para el techo de su casa."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri achii xchkunsaj b'a'lul chu rwi' ri rchoch que en español significa El hombre utilizó palo roiso para el techo de su casa."}
+{"text": "### Human: ¿Cómo se dice Hacer en Sipakapense?### Assistant: Hacer en Sipakapense se dice B'anik"}
+{"text": "### Human: Hacer en Sipakapense### Assistant: Hacer en Sipakapense se dice B'anik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri klob' ki'b'anik ruk' saqkiiy que en español significa Los lazos se hacen con pita de mecate."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri klob' ki'b'anik ruk' saqkiiy que en español significa Los lazos se hacen con pita de mecate."}
+{"text": "### Human: ¿Cómo se dice Hecho en Sipakapense?### Assistant: Hecho en Sipakapense se dice B'anmaj"}
+{"text": "### Human: Hecho en Sipakapense### Assistant: Hecho en Sipakapense se dice B'anmaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq utz b'anmaj ri chaak qal chik ktzuntzxik que en español significa Cuando está bien hecho el trabajo, no es necesario repasarlo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq utz b'anmaj ri chaak qal chik ktzuntzxik que en español significa Cuando está bien hecho el trabajo, no es necesario repasarlo."}
+{"text": "### Human: ¿Cómo se dice Hueso en Sipakapense?### Assistant: Hueso en Sipakapense se dice B'aaq"}
+{"text": "### Human: Hueso en Sipakapense### Assistant: Hueso en Sipakapense se dice B'aaq"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri saq riij tz'i' ruk' ri wix ki' ch'o'jnik chrij ri b'aaq que en español significa El perro blanco y el gato pelean por el hueso."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri saq riij tz'i' ruk' ri wix ki' ch'o'jnik chrij ri b'aaq que en español significa El perro blanco y el gato pelean por el hueso."}
+{"text": "### Human: ¿Cómo se dice Pepita en Sipakapense?### Assistant: Pepita en Sipakapense se dice B'aq'"}
+{"text": "### Human: Pepita en Sipakapense### Assistant: Pepita en Sipakapense se dice B'aq'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ooj nim wu rb'aq' que en español significa La pepita del aguacate es grande."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ooj nim wu rb'aq' que en español significa La pepita del aguacate es grande."}
+{"text": "### Human: ¿Cómo se dice Enrollado en Sipakapense?### Assistant: Enrollado en Sipakapense se dice B'aq'tmaj"}
+{"text": "### Human: Enrollado en Sipakapense### Assistant: Enrollado en Sipakapense se dice B'aq'tmaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xk'osb'ik ri ajk'aal rb'aq'tmaj riib' ri rk'ama'l rmuux pirqul que en español significa Cuando nació el niño, lo tenía enrollado el cordón umbilical en el cuello."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xk'osb'ik ri ajk'aal rb'aq'tmaj riib' ri rk'ama'l rmuux pirqul que en español significa Cuando nació el niño, lo tenía enrollado el cordón umbilical en el cuello."}
+{"text": "### Human: ¿Cómo se dice Hilo en Sipakapense?### Assistant: Hilo en Sipakapense se dice B'atz'"}
+{"text": "### Human: Hilo en Sipakapense### Assistant: Hilo en Sipakapense se dice B'atz'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Iwir ri nchuch xloq' b'atz' pk'eyb'al jaljoj kka'yb'aal que en español significa Ayer mi mamá compró hilo de varios colores."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Iwir ri nchuch xloq' b'atz' pk'eyb'al jaljoj kka'yb'aal que en español significa Ayer mi mamá compró hilo de varios colores."}
+{"text": "### Human: ¿Cómo se dice Perezoso en Sipakapense?### Assistant: Perezoso en Sipakapense se dice B'e's"}
+{"text": "### Human: Perezoso en Sipakapense### Assistant: Perezoso en Sipakapense se dice B'e's"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu aliit b'e's sicha' qal kirriq rcha que en español significa La muchacha es perezosa, por eso no encuentra trabajo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu aliit b'e's sicha' qal kirriq rcha que en español significa La muchacha es perezosa, por eso no encuentra trabajo."}
+{"text": "### Human: ¿Cómo se dice Camino en Sipakapense?### Assistant: Camino en Sipakapense se dice B'eey"}
+{"text": "### Human: Camino en Sipakapense### Assistant: Camino en Sipakapense se dice B'eey"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri b'eey nuch' rwoch sicha' qal kojb'inik cheniim que en español significa El camino es angosto, por eso no caminamos rápido."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri b'eey nuch' rwoch sicha' qal kojb'inik cheniim que en español significa El camino es angosto, por eso no caminamos rápido."}
+{"text": "### Human: ¿Cómo se dice Nueve en Sipakapense?### Assistant: Nueve en Sipakapense se dice B'elejeb'"}
+{"text": "### Human: Nueve en Sipakapense### Assistant: Nueve en Sipakapense se dice B'elejeb'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chjaay k'olik b'elejeb' nuch' imul que en español significa En la casa hay nueve conejos pequeños."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chjaay k'olik b'elejeb' nuch' imul que en español significa En la casa hay nueve conejos pequeños."}
+{"text": "### Human: ¿Cómo se dice Nombre en Sipakapense?### Assistant: Nombre en Sipakapense se dice B'i'"}
+{"text": "### Human: Nombre en Sipakapense### Assistant: Nombre en Sipakapense se dice B'i'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri rb'i' ri rq'ab' ntinmit pyolb'al tz'ib'tlik wi' que en español significa El nombre de mi aldea está escrito en idioma materno."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri rb'i' ri rq'ab' ntinmit pyolb'al tz'ib'tlik wi' que en español significa El nombre de mi aldea está escrito en idioma materno."}
+{"text": "### Human: ¿Cómo se dice Decir en Sipakapense?### Assistant: Decir en Sipakapense se dice B'iij"}
+{"text": "### Human: Decir en Sipakapense### Assistant: Decir en Sipakapense se dice B'iij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri wkaan xe'rb'iij chwa ke xchupik ri rtatanool que en español significa Mi tío me fue a decir que falleció su abuelo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri wkaan xe'rb'iij chwa ke xchupik ri rtatanool que en español significa Mi tío me fue a decir que falleció su abuelo."}
+{"text": "### Human: ¿Cómo se dice Dicho en Sipakapense?### Assistant: Dicho en Sipakapense se dice B'i'maj"}
+{"text": "### Human: Dicho en Sipakapense### Assistant: Dicho en Sipakapense se dice B'i'maj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chke njeel ri wnaq b'i'maj che ri kchak xtkb'an que en español significa A todas las personas les está dicho qué trabajo van a hacer."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chke njeel ri wnaq b'i'maj che ri kchak xtkb'an que en español significa A todas las personas les está dicho qué trabajo van a hacer."}
+{"text": "### Human: ¿Cómo se dice Punta en Sipakapense?### Assistant: Punta en Sipakapense se dice B'ooq'"}
+{"text": "### Human: Punta en Sipakapense### Assistant: Punta en Sipakapense se dice B'ooq'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chu rb'ooq' ri che' k'olik jun rsok t'iiw que en español significa En la punta del árbol hay un nido de cuervo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chu rb'ooq' ri che' k'olik jun rsok t'iiw que en español significa En la punta del árbol hay un nido de cuervo."}
+{"text": "### Human: ¿Cómo se dice Enrollar en Sipakapense?### Assistant: Enrollar en Sipakapense se dice B'otz'"}
+{"text": "### Human: Enrollar en Sipakapense### Assistant: Enrollar en Sipakapense se dice B'otz'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xinsol ri k'aam xinb'otz' chrij jun pi'q que en español significa Cuando desaté la pita, es fácil enrollar en un olote."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xinsol ri k'aam xinb'otz' chrij jun pi'q que en español significa Cuando desaté la pita, es fácil enrollar en un olote."}
+{"text": "### Human: ¿Cómo se dice Colocho en Sipakapense?### Assistant: Colocho en Sipakapense se dice B'oot"}
+{"text": "### Human: Colocho en Sipakapense### Assistant: Colocho en Sipakapense se dice B'oot"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: B'oot ri rwi' ri wkaaq' que en español significa El pelo de mi sobrino es colocho."}
+{"text": "### Human: Frase en Sipakapense### Assistant: B'oot ri rwi' ri wkaaq' que en español significa El pelo de mi sobrino es colocho."}
+{"text": "### Human: ¿Cómo se dice Andador en Sipakapense?### Assistant: Andador en Sipakapense se dice B'insb'al"}
+{"text": "### Human: Andador en Sipakapense### Assistant: Andador en Sipakapense se dice B'insb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chu ri ne' xloq'ik jun b'insb'al rech xtb'inik cheniim que en español significa Al nene le compraron un andador para que camine rápido."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chu ri ne' xloq'ik jun b'insb'al rech xtb'inik cheniim que en español significa Al nene le compraron un andador para que camine rápido."}
+{"text": "### Human: ¿Cómo se dice Pájaro silvestre en Sipakapense?### Assistant: Pájaro silvestre en Sipakapense se dice B'ulb'ul"}
+{"text": "### Human: Pájaro silvestre en Sipakapense### Assistant: Pájaro silvestre en Sipakapense se dice B'ulb'ul"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq koq'ik ri b'ulb'ul ktikrook ri jab'laj que en español significa Cuando canta el pájaro silvestre, empieza el invierno."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq koq'ik ri b'ulb'ul ktikrook ri jab'laj que en español significa Cuando canta el pájaro silvestre, empieza el invierno."}
+{"text": "### Human: ¿Cómo se dice Tragar en Sipakapense?### Assistant: Tragar en Sipakapense se dice B'ulq'ij"}
+{"text": "### Human: Tragar en Sipakapense### Assistant: Tragar en Sipakapense se dice B'ulq'ij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri tz'i' xb'ulq'ij jun b'aaq que en español significa El perro se tragó un hueso."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri tz'i' xb'ulq'ij jun b'aaq que en español significa El perro se tragó un hueso."}
+{"text": "### Human: ¿Cómo se dice Palo negro en Sipakapense?### Assistant: Palo negro en Sipakapense se dice B'qat"}
+{"text": "### Human: Palo negro en Sipakapense### Assistant: Palo negro en Sipakapense se dice B'qat"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri b'qat laj che' utz chi si' que en español significa El palo negro es bueno para la leña."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri b'qat laj che' utz chi si' que en español significa El palo negro es bueno para la leña."}
+{"text": "### Human: ¿Cómo se dice Pájaro haragán en Sipakapense?### Assistant: Pájaro haragán en Sipakapense se dice B'u'q"}
+{"text": "### Human: Pájaro haragán en Sipakapense### Assistant: Pájaro haragán en Sipakapense se dice B'u'q"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq ri b'u'q kirxaq'tij ri b'eey ch utz laj q'ab' utz chi ri kirb'iij que en español significa Cuando el pájaro haragán cruza el camino a la derecha, nos da buena señal."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq ri b'u'q kirxaq'tij ri b'eey ch utz laj q'ab' utz chi ri kirb'iij que en español significa Cuando el pájaro haragán cruza el camino a la derecha, nos da buena señal."}
+{"text": "### Human: ¿Cómo se dice Pensar en Sipakapense?### Assistant: Pensar en Sipakapense se dice B'suj"}
+{"text": "### Human: Pensar en Sipakapense### Assistant: Pensar en Sipakapense se dice B'suj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri aliit xb'suj ke riliil riij xttiijnik que en español significa La muchacha pensó que era necesario estudiar."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri aliit xb'suj ke riliil riij xttiijnik que en español significa La muchacha pensó que era necesario estudiar."}
+{"text": "### Human: ¿Cómo se dice Convencer en Sipakapense?### Assistant: Convencer en Sipakapense se dice B'o'chij"}
+{"text": "### Human: Convencer en Sipakapense### Assistant: Convencer en Sipakapense se dice B'o'chij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri achii xraaj xb'o'chij ri ixoq que en español significa El hombre quiso convencer a la mujer."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri achii xraaj xb'o'chij ri ixoq que en español significa El hombre quiso convencer a la mujer."}
+{"text": "### Human: ¿Cómo se dice Diecinueve en Sipakapense?### Assistant: Diecinueve en Sipakapense se dice B'elejlajuuj"}
+{"text": "### Human: Diecinueve en Sipakapense### Assistant: Diecinueve en Sipakapense se dice B'elejlajuuj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu aliit xtz'aqtik b'elelajuuj rjnob' que en español significa La señorita cumplió diecinueve años."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu aliit xtz'aqtik b'elelajuuj rjnob' que en español significa La señorita cumplió diecinueve años."}
+{"text": "### Human: ¿Cómo se dice Abultado en Sipakapense?### Assistant: Abultado en Sipakapense se dice B'ukb'ik"}
+{"text": "### Human: Abultado en Sipakapense### Assistant: Abultado en Sipakapense se dice B'ukb'ik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu rurchaq keej b'ukb'ik que en español significa La espalda del caballo está abultada."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu rurchaq keej b'ukb'ik que en español significa La espalda del caballo está abultada."}
+{"text": "### Human: ¿Cómo se dice Ir en Sipakapense?### Assistant: Ir en Sipakapense se dice B'eek'"}
+{"text": "### Human: Ir en Sipakapense### Assistant: Ir en Sipakapense se dice B'eek'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Iwir xinb'eek pk'eyb'al chu rloq'ik oqxa'n que en español significa Ayer fui a la plaza a comprar encomienda."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Iwir xinb'eek pk'eyb'al chu rloq'ik oqxa'n que en español significa Ayer fui a la plaza a comprar encomienda."}
+{"text": "### Human: ¿Cómo se dice Iba en Sipakapense?### Assistant: Iba en Sipakapense se dice B'enaq"}
+{"text": "### Human: Iba en Sipakapense### Assistant: Iba en Sipakapense se dice B'enaq"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq b'enaq ri wjow pub'eey xe'lul nk'ej elq'oom chriij que en español significa Cuando iba mi papá en el camino, le salió unos ladrones."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq b'enaq ri wjow pub'eey xe'lul nk'ej elq'oom chriij que en español significa Cuando iba mi papá en el camino, le salió unos ladrones."}
+{"text": "### Human: ¿Cómo se dice Cubierto en Sipakapense?### Assistant: Cubierto en Sipakapense se dice B'uktlik"}
+{"text": "### Human: Cubierto en Sipakapense### Assistant: Cubierto en Sipakapense se dice B'uktlik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri yaab' laj ixoq b'uktlik pqa'l rech qal xtjb'uj kq'iiq' que en español significa La mujer enferma está cubierta para no resfriarse."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri yaab' laj ixoq b'uktlik pqa'l rech qal xtjb'uj kq'iiq' que en español significa La mujer enferma está cubierta para no resfriarse."}
+{"text": "### Human: ¿Cómo se dice Camellón en Sipakapense?### Assistant: Camellón en Sipakapense se dice B'o'm"}
+{"text": "### Human: Camellón en Sipakapense### Assistant: Camellón en Sipakapense se dice B'o'm"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq kawxik ri chnooj riliil riij chu b'o'm rech qal kq'eyik ri ija' que en español significa Cuando se siembra la milpa es necesario hacer camellones para que no se pudra la semilla."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq kawxik ri chnooj riliil riij chu b'o'm rech qal kq'eyik ri ija' que en español significa Cuando se siembra la milpa es necesario hacer camellones para que no se pudra la semilla."}
+{"text": "### Human: ¿Cómo se dice Caminante en Sipakapense?### Assistant: Caminante en Sipakapense se dice B'inel"}
+{"text": "### Human: Caminante en Sipakapense### Assistant: Caminante en Sipakapense se dice B'inel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri aj b'inel xulik iwir xq'eq que en español significa El caminante vino ayer en la tarde."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri aj b'inel xulik iwir xq'eq que en español significa El caminante vino ayer en la tarde."}
+{"text": "### Human: ¿Cómo se dice Ojo en Sipakapense?### Assistant: Ojo en Sipakapense se dice B'aq'woch"}
+{"text": "### Human: Ojo en Sipakapense### Assistant: Ojo en Sipakapense se dice B'aq'woch"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Rum wu kq'iiq' sicha' ki'julwik wu rb'aq'nwoch que en español significa Por el aire me arden los ojos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Rum wu kq'iiq' sicha' ki'julwik wu rb'aq'nwoch que en español significa Por el aire me arden los ojos."}
+{"text": "### Human: ¿Cómo se dice Cultura en Sipakapense?### Assistant: Cultura en Sipakapense se dice B'anb'aal"}
+{"text": "### Human: Cultura en Sipakapense### Assistant: Cultura en Sipakapense se dice B'anb'aal"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Qonjeel wu ojk'olik chu rwoch paxil nkare' xaq jnum ri qb'anb'aal que en español significa Todos los guatemaltecos somos diferentes en nuestra cultura."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Qonjeel wu ojk'olik chu rwoch paxil nkare' xaq jnum ri qb'anb'aal que en español significa Todos los guatemaltecos somos diferentes en nuestra cultura."}
+{"text": "### Human: ¿Cómo se dice Bocado en Sipakapense?### Assistant: Bocado en Sipakapense se dice Biiq'"}
+{"text": "### Human: Bocado en Sipakapense### Assistant: Bocado en Sipakapense se dice Biiq'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Qonjeel xqtij jun b'iiq' tya'j que en español significa Todos comimos un bocado de carne."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Qonjeel xqtij jun b'iiq' tya'j que en español significa Todos comimos un bocado de carne."}
+{"text": "### Human: ¿Cómo se dice Revolcar en Sipakapense?### Assistant: Revolcar en Sipakapense se dice B'alktij"}
+{"text": "### Human: Revolcar en Sipakapense### Assistant: Revolcar en Sipakapense se dice B'alktij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri tz'i' xkb'alktij kiib' ruk' ri sji'l que en español significa El perro se revolcó con el coyote."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri tz'i' xkb'alktij kiib' ruk' ri sji'l que en español significa El perro se revolcó con el coyote."}
+{"text": "### Human: ¿Cómo se dice Buche en Sipakapense?### Assistant: Buche en Sipakapense se dice B'uch"}
+{"text": "### Human: Buche en Sipakapense### Assistant: Buche en Sipakapense se dice B'uch"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri rb'uch ak' xnojik ruk' rwoch ixiim que en español significa El buche de la gallina se llenó con granos de maíz."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri rb'uch ak' xnojik ruk' rwoch ixiim que en español significa El buche de la gallina se llenó con granos de maíz."}
+{"text": "### Human: ¿Cómo se dice Viaje en Sipakapense?### Assistant: Viaje en Sipakapense se dice B'enim"}
+{"text": "### Human: Viaje en Sipakapense### Assistant: Viaje en Sipakapense se dice B'enim"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri rajk'wa'l ta' Pedro xi'b'eek pjun b'enim que en español significa La familia de don Pedro fue de viaje."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri rajk'wa'l ta' Pedro xi'b'eek pjun b'enim que en español significa La familia de don Pedro fue de viaje."}
+{"text": "### Human: ¿Cómo se dice Encaminar en Sipakapense?### Assistant: Encaminar en Sipakapense se dice B'insxik"}
+{"text": "### Human: Encaminar en Sipakapense### Assistant: Encaminar en Sipakapense se dice B'insxik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajk'aal xb'insxik rum ri rchuch que en español significa El niño fue encaminado por la mamá."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajk'aal xb'insxik rum ri rchuch que en español significa El niño fue encaminado por la mamá."}
+{"text": "### Human: ¿Cómo se dice Viejo en Sipakapense?### Assistant: Viejo en Sipakapense se dice B'i'x"}
+{"text": "### Human: Viejo en Sipakapense### Assistant: Viejo en Sipakapense se dice B'i'x"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Njeel ri wnaq rech ri tinmit ib'i'x chik que en español significa Toda la gente del pueblo ya es vieja."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Njeel ri wnaq rech ri tinmit ib'i'x chik que en español significa Toda la gente del pueblo ya es vieja."}
+{"text": "### Human: ¿Cómo se dice Pensado en Sipakapense?### Assistant: Pensado en Sipakapense se dice B'usmaj"}
+{"text": "### Human: Pensado en Sipakapense### Assistant: Pensado en Sipakapense se dice B'usmaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Njeel ri chaak ri xb'anik b'usmaj riij sicha' utz xe'loq que en español significa Todo el trabajo que se realizó estaba bien pensado por eso salió bien."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Njeel ri chaak ri xb'anik b'usmaj riij sicha' utz xe'loq que en español significa Todo el trabajo que se realizó estaba bien pensado por eso salió bien."}
+{"text": "### Human: ¿Cómo se dice Restregar en Sipakapense?### Assistant: Restregar en Sipakapense se dice B'ilik"}
+{"text": "### Human: Restregar en Sipakapense### Assistant: Restregar en Sipakapense se dice B'ilik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri s'aq xb'iliok ri riij sicha' xelik ri tz'iil chriij que en español significa La ropa fue restregada, por eso quedó limpia."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri s'aq xb'iliok ri riij sicha' xelik ri tz'iil chriij que en español significa La ropa fue restregada, por eso quedó limpia."}
+{"text": "### Human: ¿Cómo se dice Quemar en Sipakapense?### Assistant: Quemar en Sipakapense se dice B'uqnik"}
+{"text": "### Human: Quemar en Sipakapense### Assistant: Quemar en Sipakapense se dice B'uqnik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri xb'o'j xb'uqnik ataq k'isik ri rya'l que en español significa La olla se quemó cuando se le terminó el agua."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri xb'o'j xb'uqnik ataq k'isik ri rya'l que en español significa La olla se quemó cuando se le terminó el agua."}
+{"text": "### Human: ¿Cómo se dice Nueve en Sipakapense?### Assistant: Nueve en Sipakapense se dice B'elejeeb'"}
+{"text": "### Human: Nueve en Sipakapense### Assistant: Nueve en Sipakapense se dice B'elejeeb'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: B'elejeeb' ajka'lob' xkch'ak ri etz'nim que en español significa Nueve niños ganaron el juego."}
+{"text": "### Human: Frase en Sipakapense### Assistant: B'elejeeb' ajka'lob' xkch'ak ri etz'nim que en español significa Nueve niños ganaron el juego."}
+{"text": "### Human: ¿Cómo se dice De ojos grandes en Sipakapense?### Assistant: De ojos grandes en Sipakapense se dice B'ilb'ik"}
+{"text": "### Human: De ojos grandes en Sipakapense### Assistant: De ojos grandes en Sipakapense se dice B'ilb'ik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri keej b'ilb'ik wu rb'aq rwoch que en español significa El caballo tiene los ojos grandes."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri keej b'ilb'ik wu rb'aq rwoch que en español significa El caballo tiene los ojos grandes."}
+{"text": "### Human: ¿Cómo se dice Escoger en Sipakapense?### Assistant: Escoger en Sipakapense se dice Cha'xik"}
+{"text": "### Human: Escoger en Sipakapense### Assistant: Escoger en Sipakapense se dice Cha'xik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ixoq xyo'qook chu xcha'xik ri knaq' ruk' ri rskilil q'ooq' que en español significa La mujer se encargó de escoger el frijol con la pepita de ayote."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ixoq xyo'qook chu xcha'xik ri knaq' ruk' ri rskilil q'ooq' que en español significa La mujer se encargó de escoger el frijol con la pepita de ayote."}
+{"text": "### Human: ¿Cómo se dice Escogido en Sipakapense?### Assistant: Escogido en Sipakapense se dice Cha'maj"}
+{"text": "### Human: Escogido en Sipakapense### Assistant: Escogido en Sipakapense se dice Cha'maj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri wnaq ri xcha'nik chkwoch ri jab'taq pri molb'eem cha'maj que en español significa La persona que habló ante los demás en la reunión es escogida."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri wnaq ri xcha'nik chkwoch ri jab'taq pri molb'eem cha'maj que en español significa La persona que habló ante los demás en la reunión es escogida."}
+{"text": "### Human: ¿Cómo se dice Ceniza en Sipakapense?### Assistant: Ceniza en Sipakapense se dice Chaaj"}
+{"text": "### Human: Ceniza en Sipakapense### Assistant: Ceniza en Sipakapense se dice Chaaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu Chaaj utz xtchkunsxik chu q'yees chxe' ri tika' que en español significa La ceniza es buena para mezclar y usar como abono orgánico en la siembra."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu Chaaj utz xtchkunsxik chu q'yees chxe' ri tika' que en español significa La ceniza es buena para mezclar y usar como abono orgánico en la siembra."}
+{"text": "### Human: ¿Cómo se dice Colador en Sipakapense?### Assistant: Colador en Sipakapense se dice Cha'b'al"}
+{"text": "### Human: Colador en Sipakapense### Assistant: Colador en Sipakapense se dice Cha'b'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ixoq kchuknik ri cha'b'al chre ataq kircha' ri q'oor que en español significa La señora utiliza el colador para colar la masa."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ixoq kchuknik ri cha'b'al chre ataq kircha' ri q'oor que en español significa La señora utiliza el colador para colar la masa."}
+{"text": "### Human: ¿Cómo se dice Ocote en Sipakapense?### Assistant: Ocote en Sipakapense se dice Chaj"}
+{"text": "### Human: Ocote en Sipakapense### Assistant: Ocote en Sipakapense se dice Chaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri nchuch xloq' chaj pk'eyb'al iwir que en español significa Mi mamá compró ocote en la plaza ayer."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri nchuch xloq' chaj pk'eyb'al iwir que en español significa Mi mamá compró ocote en la plaza ayer."}
+{"text": "### Human: ¿Cómo se dice Pino en Sipakapense?### Assistant: Pino en Sipakapense se dice Chaj"}
+{"text": "### Human: Pino en Sipakapense### Assistant: Pino en Sipakapense se dice Chaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chrij ri chaj kesxik ri q'ool ri kchuknik chirb'anik ri poom que en español significa Del pino se extrae la resina para hacer el copal."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chrij ri chaj kesxik ri q'ool ri kchuknik chirb'anik ri poom que en español significa Del pino se extrae la resina para hacer el copal."}
+{"text": "### Human: ¿Cómo se dice Trabajo en Sipakapense?### Assistant: Trabajo en Sipakapense se dice Chaak"}
+{"text": "### Human: Trabajo en Sipakapense### Assistant: Trabajo en Sipakapense se dice Chaak"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri chaak ri xb'an ri alaab' qal utz rb'anik sicha' qal xtojik que en español significa El trabajo que hizo el muchacho no lo hizo bien, por eso no le pagaron."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri chaak ri xb'an ri alaab' qal utz rb'anik sicha' qal xtojik que en español significa El trabajo que hizo el muchacho no lo hizo bien, por eso no le pagaron."}
+{"text": "### Human: ¿Cómo se dice Rápido en Sipakapense?### Assistant: Rápido en Sipakapense se dice Chanim"}
+{"text": "### Human: Rápido en Sipakapense### Assistant: Rápido en Sipakapense se dice Chanim"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chaniim xojelb'ik sicha' xojtzaljuul jnum que en español significa Salimos rápido, por eso regresamos juntos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chaniim xojelb'ik sicha' xojtzaljuul jnum que en español significa Salimos rápido, por eso regresamos juntos."}
+{"text": "### Human: ¿Cómo se dice Contestar en Sipakapense?### Assistant: Contestar en Sipakapense se dice Choq'b'eej"}
+{"text": "### Human: Contestar en Sipakapense### Assistant: Contestar en Sipakapense se dice Choq'b'eej"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq jun aliit ruk' jun alaab' kchoq'b'eej ri k'ulb'ik kloq'oj kiib' que en español significa Cuando un muchacho y una muchacha aceptan el casamiento, se quieren mucho."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq jun aliit ruk' jun alaab' kchoq'b'eej ri k'ulb'ik kloq'oj kiib' que en español significa Cuando un muchacho y una muchacha aceptan el casamiento, se quieren mucho."}
+{"text": "### Human: ¿Cómo se dice Cocido en Sipakapense?### Assistant: Cocido en Sipakapense se dice Chaq'"}
+{"text": "### Human: Cocido en Sipakapense### Assistant: Cocido en Sipakapense se dice Chaq'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq kchaq'jik ri woy qonjeel kojwi'k jnum que en español significa Cuando está cocido la comida, todos comemos juntos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq kchaq'jik ri woy qonjeel kojwi'k jnum que en español significa Cuando está cocido la comida, todos comemos juntos."}
+{"text": "### Human: ¿Cómo se dice Del otro lado en Sipakapense?### Assistant: Del otro lado en Sipakapense se dice Chq'aya'"}
+{"text": "### Human: Del otro lado en Sipakapense### Assistant: Del otro lado en Sipakapense se dice Chq'aya'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chq'aya' ri ya' k'olik rqan lo'n que en español significa Del otro lado del río hay matas de frutas."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chq'aya' ri ya' k'olik rqan lo'n que en español significa Del otro lado del río hay matas de frutas."}
+{"text": "### Human: ¿Cómo se dice De noche en Sipakapense?### Assistant: De noche en Sipakapense se dice Chaq' ab'"}
+{"text": "### Human: De noche en Sipakapense### Assistant: De noche en Sipakapense se dice Chaq' ab'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri elq'oom chaq'ab' xkelq'aaj ri rwaakx wjow que en español significa Los ladrones de noche robaron la vaca de mi papá."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri elq'oom chaq'ab' xkelq'aaj ri rwaakx wjow que en español significa Los ladrones de noche robaron la vaca de mi papá."}
+{"text": "### Human: ¿Cómo se dice Objeto para cocer en Sipakapense?### Assistant: Objeto para cocer en Sipakapense se dice Chaq'sb'al"}
+{"text": "### Human: Objeto para cocer en Sipakapense### Assistant: Objeto para cocer en Sipakapense se dice Chaq'sb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri xb'o'j chaq'sb'al ri ixiim xpxik rum q'aaq' que en español significa La olla para cocer el maíz se quebró por el fuego."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri xb'o'j chaq'sb'al ri ixiim xpxik rum q'aaq' que en español significa La olla para cocer el maíz se quebró por el fuego."}
+{"text": "### Human: ¿Cómo se dice Sanitario en Sipakapense?### Assistant: Sanitario en Sipakapense se dice Chaqb'al"}
+{"text": "### Human: Sanitario en Sipakapense### Assistant: Sanitario en Sipakapense se dice Chaqb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Rech xtk'ob'ik ri josq'neem chu qchoch riliil riij xtk'ob'ik qchaqb'aal que en español significa Para tener buena higiene es necesario tener sanitario."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Rech xtk'ob'ik ri josq'neem chu qchoch riliil riij xtk'ob'ik qchaqb'aal que en español significa Para tener buena higiene es necesario tener sanitario."}
+{"text": "### Human: ¿Cómo se dice Mingitorio en Sipakapense?### Assistant: Mingitorio en Sipakapense se dice Chulb'al"}
+{"text": "### Human: Mingitorio en Sipakapense### Assistant: Mingitorio en Sipakapense se dice Chulb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Qal xaq awa'chi' xkojchulneel, sicha' are' riil ri chulb'al que en español significa No podemos orinar en cualquier lugar, para eso está el mingitorio."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Qal xaq awa'chi' xkojchulneel, sicha' are' riil ri chulb'al que en español significa No podemos orinar en cualquier lugar, para eso está el mingitorio."}
+{"text": "### Human: ¿Cómo se dice Habla en Sipakapense?### Assistant: Habla en Sipakapense se dice Cha'mb'al"}
+{"text": "### Human: Habla en Sipakapense### Assistant: Habla en Sipakapense se dice Cha'mb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xto'qik ri cha'mb'al njeel ri wnaq xe'lul chu rto'qik que en español significa Cuando se escuchó el habla, toda la gente salió para escuchar."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xto'qik ri cha'mb'al njeel ri wnaq xe'lul chu rto'qik que en español significa Cuando se escuchó el habla, toda la gente salió para escuchar."}
+{"text": "### Human: ¿Cómo se dice Para ti en Sipakapense?### Assistant: Para ti en Sipakapense se dice Chawa"}
+{"text": "### Human: Para ti en Sipakapense### Assistant: Para ti en Sipakapense se dice Chawa"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chawa xyo'qken njeel ri uleew que en español significa Todo el terreno lo dejaron para ti."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chawa xyo'qken njeel ri uleew que en español significa Todo el terreno lo dejaron para ti."}
+{"text": "### Human: ¿Cómo se dice Para el en Sipakapense?### Assistant: Para el en Sipakapense se dice Chere"}
+{"text": "### Human: Para el en Sipakapense### Assistant: Para el en Sipakapense se dice Chere"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chre' xb'i'xken wi' ke xtilq'oj iwib' que en español significa A él le dejaron dicho que se deben de amarse."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chre' xb'i'xken wi' ke xtilq'oj iwib' que en español significa A él le dejaron dicho que se deben de amarse."}
+{"text": "### Human: ¿Cómo se dice ¿Qué? en Sipakapense?### Assistant: ¿Qué? en Sipakapense se dice Chee"}
+{"text": "### Human: ¿Qué? en Sipakapense### Assistant: ¿Qué? en Sipakapense se dice Chee"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Che xk'ulmaj ri achii sicha' xchupik que en español significa ¿Qué le pasó al hombre por eso murió?"}
+{"text": "### Human: Frase en Sipakapense### Assistant: Che xk'ulmaj ri achii sicha' xchupik que en español significa ¿Qué le pasó al hombre por eso murió?"}
+{"text": "### Human: ¿Cómo se dice Árbol en Sipakapense?### Assistant: Árbol en Sipakapense se dice Che'"}
+{"text": "### Human: Árbol en Sipakapense### Assistant: Árbol en Sipakapense se dice Che'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri jaay xtuknik ataq xtzaquul ri che' chriij que en español significa La casa se destruyó cuando se le cayó el árbol."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri jaay xtuknik ataq xtzaquul ri che' chriij que en español significa La casa se destruyó cuando se le cayó el árbol."}
+{"text": "### Human: ¿Cómo se dice ¿Cómo? en Sipakapense?### Assistant: ¿Cómo? en Sipakapense se dice Chemó"}
+{"text": "### Human: ¿Cómo? en Sipakapense### Assistant: ¿Cómo? en Sipakapense se dice Chemó"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chemó xb'iij ri ajowxeel ke utz xtqb'an ri tq'oob' chqxo'l que en español significa El párroco dijo que es bueno que nos hagamos favores."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chemó xb'iij ri ajowxeel ke utz xtqb'an ri tq'oob' chqxo'l que en español significa El párroco dijo que es bueno que nos hagamos favores."}
+{"text": "### Human: ¿Cómo se dice ¿Por qué? en Sipakapense?### Assistant: ¿Por qué? en Sipakapense se dice Chermal"}
+{"text": "### Human: ¿Por qué? en Sipakapense### Assistant: ¿Por qué? en Sipakapense se dice Chermal"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chermal qaqche ri utziil chqxo'l que en español significa ¿Por qué no existe la paz entre nosotros?"}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chermal qaqche ri utziil chqxo'l que en español significa ¿Por qué no existe la paz entre nosotros?"}
+{"text": "### Human: ¿Cómo se dice Tijera en Sipakapense?### Assistant: Tijera en Sipakapense se dice Cherx"}
+{"text": "### Human: Tijera en Sipakapense### Assistant: Tijera en Sipakapense se dice Cherx"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu cherx kchuknik chu rjak'ik k'aam que en español significa La tijera sirve para cortar pita."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu cherx kchuknik chu rjak'ik k'aam que en español significa La tijera sirve para cortar pita."}
+{"text": "### Human: ¿Cómo se dice Boca en Sipakapense?### Assistant: Boca en Sipakapense se dice Chi'"}
+{"text": "### Human: Boca en Sipakapense### Assistant: Boca en Sipakapense se dice Chi'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chu rchi' ri aliit xelul ri ch'a'k que en español significa En la boca de la muchacha le salió granos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chu rchi' ri aliit xelul ri ch'a'k que en español significa En la boca de la muchacha le salió granos."}
+{"text": "### Human: ¿Cómo se dice Chinchines en Sipakapense?### Assistant: Chinchines en Sipakapense se dice Chijchij"}
+{"text": "### Human: Chinchines en Sipakapense### Assistant: Chinchines en Sipakapense se dice Chijchij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Njeel ri ke'q ajtijel xkb'an ri kchijchij que en español significa Todos los estudiantes elaboraron sus chinchines."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Njeel ri ke'q ajtijel xkb'an ri kchijchij que en español significa Todos los estudiantes elaboraron sus chinchines."}
+{"text": "### Human: ¿Cómo se dice Helecho en Sipakapense?### Assistant: Helecho en Sipakapense se dice Chib'a'"}
+{"text": "### Human: Helecho en Sipakapense### Assistant: Helecho en Sipakapense se dice Chib'a'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ptaq ri rqan swon kirya' xib'al ri chib'a' que en español significa En los barrancos se da mucho el helecho."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ptaq ri rqan swon kirya' xib'al ri chib'a' que en español significa En los barrancos se da mucho el helecho."}
+{"text": "### Human: ¿Cómo se dice Orina en Sipakapense?### Assistant: Orina en Sipakapense se dice Chulaj"}
+{"text": "### Human: Orina en Sipakapense### Assistant: Orina en Sipakapense se dice Chulaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri chulaj xib'al kchuwnik ataq kpornik ri q'iij que en español significa La orina apesta mucho cuando hay mucho calor."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri chulaj xib'al kchuwnik ataq kpornik ri q'iij que en español significa La orina apesta mucho cuando hay mucho calor."}
+{"text": "### Human: ¿Cómo se dice Camarón en Sipakapense?### Assistant: Camarón en Sipakapense se dice Cho'm"}
+{"text": "### Human: Camarón en Sipakapense### Assistant: Camarón en Sipakapense se dice Cho'm"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Xib'al retz'mil ri cho'm que en español significa El camarón es muy salado."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Xib'al retz'mil ri cho'm que en español significa El camarón es muy salado."}
+{"text": "### Human: ¿Cómo se dice Esposo en Sipakapense?### Assistant: Esposo en Sipakapense se dice Chjiil"}
+{"text": "### Human: Esposo en Sipakapense### Assistant: Esposo en Sipakapense se dice Chjiil"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ixoq knimnik chu ri rchjiil que en español significa La mujer respeta a su esposo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ixoq knimnik chu ri rchjiil que en español significa La mujer respeta a su esposo."}
+{"text": "### Human: ¿Cómo se dice Mamá en Sipakapense?### Assistant: Mamá en Sipakapense se dice Chuch"}
+{"text": "### Human: Mamá en Sipakapense### Assistant: Mamá en Sipakapense se dice Chuch"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri nchuch xtz'noj chermal qal kib'an ri ichak que en español significa Mi mamá preguntó por qué no hacen la tarea."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri nchuch xtz'noj chermal qal kib'an ri ichak que en español significa Mi mamá preguntó por qué no hacen la tarea."}
+{"text": "### Human: ¿Cómo se dice Oveja en Sipakapense?### Assistant: Oveja en Sipakapense se dice Chiij"}
+{"text": "### Human: Oveja en Sipakapense### Assistant: Oveja en Sipakapense se dice Chiij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ruk' ri ksmaal chiij ki'b'anik ri qa'l que en español significa Con la lana de las ovejas se hacen las chamarras."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ruk' ri ksmaal chiij ki'b'anik ri qa'l que en español significa Con la lana de las ovejas se hacen las chamarras."}
+{"text": "### Human: ¿Cómo se dice Plática en Sipakapense?### Assistant: Plática en Sipakapense se dice Chiil"}
+{"text": "### Human: Plática en Sipakapense### Assistant: Plática en Sipakapense se dice Chiil"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xqriq qiib' ruk' ri wnob' xelul jun qchiil que en español significa Cuando nos encontramos con mi hermana realizamos una plática."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xqriq qiib' ruk' ri wnob' xelul jun qchiil que en español significa Cuando nos encontramos con mi hermana realizamos una plática."}
+{"text": "### Human: ¿Cómo se dice Red en Sipakapense?### Assistant: Red en Sipakapense se dice Chiim"}
+{"text": "### Human: Red en Sipakapense### Assistant: Red en Sipakapense se dice Chiim"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu chiim kchuknik chu rk'olik jo'q que en español significa La red sirve para guardar doblador."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu chiim kchuknik chu rk'olik jo'q que en español significa La red sirve para guardar doblador."}
+{"text": "### Human: ¿Cómo se dice De tras de en Sipakapense?### Assistant: De tras de en Sipakapense se dice Chriij"}
+{"text": "### Human: De tras de en Sipakapense### Assistant: De tras de en Sipakapense se dice Chriij"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chriij ri jaay k'olik jun jul nim rxe' que en español significa Detrás de la casa hay un agujero profundo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chriij ri jaay k'olik jun jul nim rxe' que en español significa Detrás de la casa hay un agujero profundo."}
+{"text": "### Human: ¿Cómo se dice ¿Quién? en Sipakapense?### Assistant: ¿Quién? en Sipakapense se dice Chinaq"}
+{"text": "### Human: ¿Quién? en Sipakapense### Assistant: ¿Quién? en Sipakapense se dice Chinaq"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chinaq xb'anwik wu etzlaal wa' chke ri qwnaqiil que en español significa ¿Quién hizo esa envidia a nuestra gente?"}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chinaq xb'anwik wu etzlaal wa' chke ri qwnaqiil que en español significa ¿Quién hizo esa envidia a nuestra gente?"}
+{"text": "### Human: ¿Cómo se dice A usted en Sipakapense?### Assistant: A usted en Sipakapense se dice Chiwa"}
+{"text": "### Human: A usted en Sipakapense### Assistant: A usted en Sipakapense se dice Chiwa"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chiwa xb'iij ri ajtiij ke qal utz xtitzatz ri iyolb'aal que en español significa A usted le dijo el maestro que no deben perder su idioma."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chiwa xb'iij ri ajtiij ke qal utz xtitzatz ri iyolb'aal que en español significa A usted le dijo el maestro que no deben perder su idioma."}
+{"text": "### Human: ¿Cómo se dice Guardián en Sipakapense?### Assistant: Guardián en Sipakapense se dice Chajnel"}
+{"text": "### Human: Guardián en Sipakapense### Assistant: Guardián en Sipakapense se dice Chajnel"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Qal xna' ri chajnel ataq xo'kul ri elq'oom que en español significa El guardián no se dio cuenta cuando entraron los ladrones."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Qal xna' ri chajnel ataq xo'kul ri elq'oom que en español significa El guardián no se dio cuenta cuando entraron los ladrones."}
+{"text": "### Human: ¿Cómo se dice A ellos en Sipakapense?### Assistant: A ellos en Sipakapense se dice Chke"}
+{"text": "### Human: A ellos en Sipakapense### Assistant: A ellos en Sipakapense se dice Chke"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chke xyo'qik njeel ri poq chi rb'anik ri nimaq'iij que en español significa A ellos les dieron el dinero para hacer la fiesta."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chke xyo'qik njeel ri poq chi rb'anik ri nimaq'iij que en español significa A ellos les dieron el dinero para hacer la fiesta."}
+{"text": "### Human: ¿Cómo se dice Animal en Sipakapense?### Assistant: Animal en Sipakapense se dice Chkop"}
+{"text": "### Human: Animal en Sipakapense### Assistant: Animal en Sipakapense se dice Chkop"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xinok'wik pri raal che' xe'lul ri chkop chwiij chu nxib'xik que en español significa Cuando pasé por la montaña me salieron los animales para asustarme."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xinok'wik pri raal che' xe'lul ri chkop chwiij chu nxib'xik que en español significa Cuando pasé por la montaña me salieron los animales para asustarme."}
+{"text": "### Human: ¿Cómo se dice Huehuetenango en Sipakapense?### Assistant: Huehuetenango en Sipakapense se dice Chna'jul"}
+{"text": "### Human: Huehuetenango en Sipakapense### Assistant: Huehuetenango en Sipakapense se dice Chna'jul"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajqoom aj chna'jul que en español significa El marimbista es de Huehuetenango."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajqoom aj chna'jul que en español significa El marimbista es de Huehuetenango."}
+{"text": "### Human: ¿Cómo se dice Milpa en Sipakapense?### Assistant: Milpa en Sipakapense se dice Chnooj"}
+{"text": "### Human: Milpa en Sipakapense### Assistant: Milpa en Sipakapense se dice Chnooj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq kjach'ik ri chnooj ki'tyoxnik ri qtatanool que en español significa Cuando se tapizca la milpa nuestros abuelos agradecen al Ajaw."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq kjach'ik ri chnooj ki'tyoxnik ri qtatanool que en español significa Cuando se tapizca la milpa nuestros abuelos agradecen al Ajaw."}
+{"text": "### Human: ¿Cómo se dice Fila en Sipakapense?### Assistant: Fila en Sipakapense se dice Cholaj"}
+{"text": "### Human: Fila en Sipakapense### Assistant: Fila en Sipakapense se dice Cholaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Cholaj ri wnaq xo'k'wik ataq xb'anik ri ch'o'j que en español significa La gente pasó en fila cuando se hizo el problema."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Cholaj ri wnaq xo'k'wik ataq xb'anik ri ch'o'j que en español significa La gente pasó en fila cuando se hizo el problema."}
+{"text": "### Human: ¿Cómo se dice Grueso en Sipakapense?### Assistant: Grueso en Sipakapense se dice Choom"}
+{"text": "### Human: Grueso en Sipakapense### Assistant: Grueso en Sipakapense se dice Choom"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri kuch tzoqptlik sicha' choom que en español significa El marrano está suelto por eso está gordo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri kuch tzoqptlik sicha' choom que en español significa El marrano está suelto por eso está gordo."}
+{"text": "### Human: ¿Cómo se dice Chompipe en Sipakapense?### Assistant: Chompipe en Sipakapense se dice Chooj"}
+{"text": "### Human: Chompipe en Sipakapense### Assistant: Chompipe en Sipakapense se dice Chooj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu chooj xe' chupik rum tzoq que en español significa Los chompipes se murieron por el tzok."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu chooj xe' chupik rum tzoq que en español significa Los chompipes se murieron por el tzok."}
+{"text": "### Human: ¿Cómo se dice Mecate en Sipakapense?### Assistant: Mecate en Sipakapense se dice Cho'l"}
+{"text": "### Human: Mecate en Sipakapense### Assistant: Mecate en Sipakapense se dice Cho'l"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ixoq ki'rb'an ri klob' ruk' ri saqkiiy ri kirb'an ruk' ri cho'l que en español significa La mujer hace lazos con la pita de mecate."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ixoq ki'rb'an ri klob' ruk' ri saqkiiy ri kirb'an ruk' ri cho'l que en español significa La mujer hace lazos con la pita de mecate."}
+{"text": "### Human: ¿Cómo se dice Cenzontle en Sipakapense?### Assistant: Cenzontle en Sipakapense se dice Choqchoq"}
+{"text": "### Human: Cenzontle en Sipakapense### Assistant: Cenzontle en Sipakapense se dice Choqchoq"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq ko'q'ik ri choqchoq are' retal k'ri' ke xtokik ri jab'laj que en español significa Cuando cantan los cenzontles es señal que empieza el invierno."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq ko'q'ik ri choqchoq are' retal k'ri' ke xtokik ri jab'laj que en español significa Cuando cantan los cenzontles es señal que empieza el invierno."}
+{"text": "### Human: ¿Cómo se dice Para nosotros en Sipakapense?### Assistant: Para nosotros en Sipakapense se dice Chqe"}
+{"text": "### Human: Para nosotros en Sipakapense### Assistant: Para nosotros en Sipakapense se dice Chqe"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chqe nim ri rchak ri no'j ri kya' ri qtatanool que en español significa Para nosotros es importante los consejos que nos dan nuestros abuelos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chqe nim ri rchak ri no'j ri kya' ri qtatanool que en español significa Para nosotros es importante los consejos que nos dan nuestros abuelos."}
+{"text": "### Human: ¿Cómo se dice Seco en Sipakapense?### Assistant: Seco en Sipakapense se dice Chqi'j"}
+{"text": "### Human: Seco en Sipakapense### Assistant: Seco en Sipakapense se dice Chqi'j"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri chnooj xchiqik kumu ri uleew chqi'j que en español significa La milpa se secó porque la tierra está seca."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri chnooj xchiqik kumu ri uleew chqi'j que en español significa La milpa se secó porque la tierra está seca."}
+{"text": "### Human: ¿Cómo se dice Hipo en Sipakapense?### Assistant: Hipo en Sipakapense se dice Chok'"}
+{"text": "### Human: Hipo en Sipakapense### Assistant: Hipo en Sipakapense se dice Chok'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq kokik chok' chu ri ajk'aal ch'na'n wu ruuq que en español significa Cuando le da hipo al bebé es cuando está mojado el pañal."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq kokik chok' chu ri ajk'aal ch'na'n wu ruuq que en español significa Cuando le da hipo al bebé es cuando está mojado el pañal."}
+{"text": "### Human: ¿Cómo se dice Terreno para sembrar en Sipakapense?### Assistant: Terreno para sembrar en Sipakapense se dice Chnojb'al"}
+{"text": "### Human: Terreno para sembrar en Sipakapense### Assistant: Terreno para sembrar en Sipakapense se dice Chnojb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu uleew rech ri chnojb'al rech wjow que en español significa La tierra para sembrar la milpa es de mi papá."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu uleew rech ri chnojb'al rech wjow que en español significa La tierra para sembrar la milpa es de mi papá."}
+{"text": "### Human: ¿Cómo se dice no sé en Sipakapense?### Assistant: no sé en Sipakapense se dice Chik'a"}
+{"text": "### Human: no sé en Sipakapense### Assistant: no sé en Sipakapense se dice Chik'a"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chik'a chelo xk'ulmaj sicha' qal xulik ri nchuch que en español significa No sé qué le pasó por eso no vino mi mamá."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chik'a chelo xk'ulmaj sicha' qal xulik ri nchuch que en español significa No sé qué le pasó por eso no vino mi mamá."}
+{"text": "### Human: ¿Cómo se dice En medio en Sipakapense?### Assistant: En medio en Sipakapense se dice Chxo'l"}
+{"text": "### Human: En medio en Sipakapense### Assistant: En medio en Sipakapense se dice Chxo'l"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chxo'l ri chnooj kawxik ri q'ooq' que en español significa En medio de la milpa se siembra el ayote."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chxo'l ri chnooj kawxik ri q'ooq' que en español significa En medio de la milpa se siembra el ayote."}
+{"text": "### Human: ¿Cómo se dice Madrastra en Sipakapense?### Assistant: Madrastra en Sipakapense se dice Chuchb'aal"}
+{"text": "### Human: Madrastra en Sipakapense### Assistant: Madrastra en Sipakapense se dice Chuchb'aal"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri alaab' Jwaan knimnik chu ri rchuchb'aal que en español significa El muchacho que se llama Juan obedece a su madrastra."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri alaab' Jwaan knimnik chu ri rchuchb'aal que en español significa El muchacho que se llama Juan obedece a su madrastra."}
+{"text": "### Human: ¿Cómo se dice Cosquilla en Sipakapense?### Assistant: Cosquilla en Sipakapense se dice Chqon"}
+{"text": "### Human: Cosquilla en Sipakapense### Assistant: Cosquilla en Sipakapense se dice Chqon"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu aliit xib'al rchqon sicha' ktz'e'nik que en español significa La muchacha tiene mucha cosquilla por eso se ríe."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu aliit xib'al rchqon sicha' ktz'e'nik que en español significa La muchacha tiene mucha cosquilla por eso se ríe."}
+{"text": "### Human: ¿Cómo se dice Trabajar en Sipakapense?### Assistant: Trabajar en Sipakapense se dice Chuknik"}
+{"text": "### Human: Trabajar en Sipakapense### Assistant: Trabajar en Sipakapense se dice Chuknik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xojulik wre' ptinmit qonjeel xojchuknik que en español significa Cuando venimos aquí en el pueblo todos trabajamos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xojulik wre' ptinmit qonjeel xojchuknik que en español significa Cuando venimos aquí en el pueblo todos trabajamos."}
+{"text": "### Human: ¿Cómo se dice Gatear en Sipakapense?### Assistant: Gatear en Sipakapense se dice Chaknik"}
+{"text": "### Human: Gatear en Sipakapense### Assistant: Gatear en Sipakapense se dice Chaknik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajk'aal ataq kirtijuuj kb'ik nab'eey kchaknik que en español significa El niño cuando empieza a caminar primero aprende a gatear."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajk'aal ataq kirtijuuj kb'ik nab'eey kchaknik que en español significa El niño cuando empieza a caminar primero aprende a gatear."}
+{"text": "### Human: ¿Cómo se dice Tejutla en Sipakapense?### Assistant: Tejutla en Sipakapense se dice Chuquul"}
+{"text": "### Human: Tejutla en Sipakapense### Assistant: Tejutla en Sipakapense se dice Chuquul"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Njel ri ch'iich' ko'k'wik chuquul que en español significa Todos los carros pasan en Tejutla."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Njel ri ch'iich' ko'k'wik chuquul que en español significa Todos los carros pasan en Tejutla."}
+{"text": "### Human: ¿Cómo se dice No contestó en Sipakapense?### Assistant: No contestó en Sipakapense se dice Cha'mxik"}
+{"text": "### Human: No contestó en Sipakapense### Assistant: No contestó en Sipakapense se dice Cha'mxik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xcha'b'xik rb'i' ri alaab' qal xchoq'b'eej que en español significa Cuando lo llamaron el nombre del muchacho no contestó."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xcha'b'xik rb'i' ri alaab' qal xchoq'b'eej que en español significa Cuando lo llamaron el nombre del muchacho no contestó."}
+{"text": "### Human: ¿Cómo se dice Rápido en Sipakapense?### Assistant: Rápido en Sipakapense se dice Cheniim"}
+{"text": "### Human: Rápido en Sipakapense### Assistant: Rápido en Sipakapense se dice Cheniim"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xqta' ri ya' kchojojik cheniim xqaniij que en español significa Cuando oímos el río tumbar rápido corrimos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xqta' ri ya' kchojojik cheniim xqaniij que en español significa Cuando oímos el río tumbar rápido corrimos."}
+{"text": "### Human: ¿Cómo se dice Bejuquillo en Sipakapense?### Assistant: Bejuquillo en Sipakapense se dice Cholimb'aay"}
+{"text": "### Human: Bejuquillo en Sipakapense### Assistant: Bejuquillo en Sipakapense se dice Cholimb'aay"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri cholimb'aaj krchmij riib' chu ri tantik que en español significa El bejuquillo se extiende en el paredón."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri cholimb'aaj krchmij riib' chu ri tantik que en español significa El bejuquillo se extiende en el paredón."}
+{"text": "### Human: ¿Cómo se dice En la casa en Sipakapense?### Assistant: En la casa en Sipakapense se dice Chjaay"}
+{"text": "### Human: En la casa en Sipakapense### Assistant: En la casa en Sipakapense se dice Chjaay"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Qonjeel ataq qb'an jun nima q'iij qmol qiib' chjaay que en español significa Cuando hacemos una fiesta todos nos reunimos en la casa."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Qonjeel ataq qb'an jun nima q'iij qmol qiib' chjaay que en español significa Cuando hacemos una fiesta todos nos reunimos en la casa."}
+{"text": "### Human: ¿Cómo se dice Maíz quebrantado en Sipakapense?### Assistant: Maíz quebrantado en Sipakapense se dice Chqa'm"}
+{"text": "### Human: Maíz quebrantado en Sipakapense### Assistant: Maíz quebrantado en Sipakapense se dice Chqa'm"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri wnaq kqum q'oor chqa'm que en español significa La gente toma atol de maíz quebrantado."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri wnaq kqum q'oor chqa'm que en español significa La gente toma atol de maíz quebrantado."}
+{"text": "### Human: ¿Cómo se dice Herramienta de trabajo en Sipakapense?### Assistant: Herramienta de trabajo en Sipakapense se dice Chkunsb'al"}
+{"text": "### Human: Herramienta de trabajo en Sipakapense### Assistant: Herramienta de trabajo en Sipakapense se dice Chkunsb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq kelb'ik ri achii pchaak ke'rk'amb'ik ri rchkunsb'aal que en español significa Cuando el hombre va al trabajo lleva sus herramientas de trabajo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq kelb'ik ri achii pchaak ke'rk'amb'ik ri rchkunsb'aal que en español significa Cuando el hombre va al trabajo lleva sus herramientas de trabajo."}
+{"text": "### Human: ¿Cómo se dice Calambre en Sipakapense?### Assistant: Calambre en Sipakapense se dice Cho'keej"}
+{"text": "### Human: Calambre en Sipakapense### Assistant: Calambre en Sipakapense se dice Cho'keej"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu cho'keej kirya' chqe ataq kojch'na'nik que en español significa El calambre nos da cuando nos mojamos."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu cho'keej kirya' chqe ataq kojch'na'nik que en español significa El calambre nos da cuando nos mojamos."}
+{"text": "### Human: ¿Cómo se dice Masa quebrada en Sipakapense?### Assistant: Masa quebrada en Sipakapense se dice Chqaam"}
+{"text": "### Human: Masa quebrada en Sipakapense### Assistant: Masa quebrada en Sipakapense se dice Chqaam"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri q'oor chqaam xelul que en español significa La masa salió quebrada."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri q'oor chqaam xelul que en español significa La masa salió quebrada."}
+{"text": "### Human: ¿Cómo se dice Reseco en Sipakapense?### Assistant: Reseco en Sipakapense se dice Chaak'"}
+{"text": "### Human: Reseco en Sipakapense### Assistant: Reseco en Sipakapense se dice Chaak'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri tz'uum chaak' xelik chu q'iij que en español significa El cuero se resecó en el sol."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri tz'uum chaak' xelik chu q'iij que en español significa El cuero se resecó en el sol."}
+{"text": "### Human: ¿Cómo se dice Matilisguate en Sipakapense?### Assistant: Matilisguate en Sipakapense se dice Choq'a'"}
+{"text": "### Human: Matilisguate en Sipakapense### Assistant: Matilisguate en Sipakapense se dice Choq'a'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri choq'a' kirya' ptew laj jyub' que en español significa El matilisguate abunda en tierra fría."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri choq'a' kirya' ptew laj jyub' que en español significa El matilisguate abunda en tierra fría."}
+{"text": "### Human: ¿Cómo se dice Sostén en Sipakapense?### Assistant: Sostén en Sipakapense se dice Che'il"}
+{"text": "### Human: Sostén en Sipakapense### Assistant: Sostén en Sipakapense se dice Che'il"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri knaq' knaqxik rche'il que en español significa El frijol es necesario ponerle sostén."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri knaq' knaqxik rche'il que en español significa El frijol es necesario ponerle sostén."}
+{"text": "### Human: ¿Cómo se dice Ofrecer en Sipakapense?### Assistant: Ofrecer en Sipakapense se dice Chi'j"}
+{"text": "### Human: Ofrecer en Sipakapense### Assistant: Ofrecer en Sipakapense se dice Chi'j"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri aliit kirchi'j ri k'yeej chi' taq jaay que en español significa La señorita ofrece la venta de casa en casa."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri aliit kirchi'j ri k'yeej chi' taq jaay que en español significa La señorita ofrece la venta de casa en casa."}
+{"text": "### Human: ¿Cómo se dice Cuñada de hombre en Sipakapense?### Assistant: Cuñada de hombre en Sipakapense se dice Chilka'n"}
+{"text": "### Human: Cuñada de hombre en Sipakapense### Assistant: Cuñada de hombre en Sipakapense se dice Chilka'n"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Utz laj wnaq ri wchilka'n que en español significa Mi cuñada es buena gente."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Utz laj wnaq ri wchilka'n que en español significa Mi cuñada es buena gente."}
+{"text": "### Human: ¿Cómo se dice Honda en Sipakapense?### Assistant: Honda en Sipakapense se dice Ch'aab'"}
+{"text": "### Human: Honda en Sipakapense### Assistant: Honda en Sipakapense se dice Ch'aab'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri alaab' xwi'taj jun kuuk ruk' ri rch'aab' que en español significa El muchacho mató una ardilla con su honda."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri alaab' xwi'taj jun kuuk ruk' ri rch'aab' que en español significa El muchacho mató una ardilla con su honda."}
+{"text": "### Human: ¿Cómo se dice Llaga/grano en Sipakapense?### Assistant: Llaga/grano en Sipakapense se dice Ch'a'k"}
+{"text": "### Human: Llaga/grano en Sipakapense### Assistant: Llaga/grano en Sipakapense se dice Ch'a'k"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Xib'al ri ch'a'k xe'lul chrij ri ajk'aal que en español significa Le salieron muchos granos al niño."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Xib'al ri ch'a'k xe'lul chrij ri ajk'aal que en español significa Le salieron muchos granos al niño."}
+{"text": "### Human: ¿Cómo se dice Oración/rezo en Sipakapense?### Assistant: Oración/rezo en Sipakapense se dice Ch'ab'al"}
+{"text": "### Human: Oración/rezo en Sipakapense### Assistant: Oración/rezo en Sipakapense se dice Ch'ab'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq kyaktjik ri ixiim k'a kb'anik ri ch'ab'al que en español significa Cuando se termina levantar el maíz siempre se hace el rezo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq kyaktjik ri ixiim k'a kb'anik ri ch'ab'al que en español significa Cuando se termina levantar el maíz siempre se hace el rezo."}
+{"text": "### Human: ¿Cómo se dice Lavadero en Sipakapense?### Assistant: Lavadero en Sipakapense se dice Ch'ajb'al"}
+{"text": "### Human: Lavadero en Sipakapense### Assistant: Lavadero en Sipakapense se dice Ch'ajb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ixoq kirchkunsaj jun lik'lik ab'aj chu rchajb'aal que en español significa La mujer usa una piedra laja para su lavadero."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ixoq kirchkunsaj jun lik'lik ab'aj chu rchajb'aal que en español significa La mujer usa una piedra laja para su lavadero."}
+{"text": "### Human: ¿Cómo se dice Tapadera en Sipakapense?### Assistant: Tapadera en Sipakapense se dice Ch'akb'al"}
+{"text": "### Human: Tapadera en Sipakapense### Assistant: Tapadera en Sipakapense se dice Ch'akb'al"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ch'akb'al ri xb'o'j xpxik que en español significa La tapadera de la olla grande se quebró."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ch'akb'al ri xb'o'j xpxik que en español significa La tapadera de la olla grande se quebró."}
+{"text": "### Human: ¿Cómo se dice Mojado en Sipakapense?### Assistant: Mojado en Sipakapense se dice Ch'na'n"}
+{"text": "### Human: Mojado en Sipakapense### Assistant: Mojado en Sipakapense se dice Ch'na'n"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ch'na'n ri rkmi'x ri achii xyo'k sicha' xelul q'aaq' chriij que en español significa Estaba mojada la camisa del hombre por eso le dio fiebre."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ch'na'n ri rkmi'x ri achii xyo'k sicha' xelul q'aaq' chriij que en español significa Estaba mojada la camisa del hombre por eso le dio fiebre."}
+{"text": "### Human: ¿Cómo se dice Cama en Sipakapense?### Assistant: Cama en Sipakapense se dice Ch'aab'"}
+{"text": "### Human: Cama en Sipakapense### Assistant: Cama en Sipakapense se dice Ch'aab'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu ch'aat b'antlik ruk' che' que en español significa La cama está hecha de madera."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu ch'aat b'antlik ruk' che' que en español significa La cama está hecha de madera."}
+{"text": "### Human: ¿Cómo se dice Carro en Sipakapense?### Assistant: Carro en Sipakapense se dice Ch'iich'"}
+{"text": "### Human: Carro en Sipakapense### Assistant: Carro en Sipakapense se dice Ch'iich'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Konjeel ri wnaq xe'b'eek pch'iich' que en español significa Todo la gente se fue en carro."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Konjeel ri wnaq xe'b'eek pch'iich' que en español significa Todo la gente se fue en carro."}
+{"text": "### Human: ¿Cómo se dice Araña en Sipakapense?### Assistant: Araña en Sipakapense se dice Ch'ilka'j"}
+{"text": "### Human: Araña en Sipakapense### Assistant: Araña en Sipakapense se dice Ch'ilka'j"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wa'chi' q'equ'm kqaaj chku ri ch'ilka'j ki' k'ob'ik que en español significa Donde hay oscuridad las arañas les gusta vivir."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wa'chi' q'equ'm kqaaj chku ri ch'ilka'j ki' k'ob'ik que en español significa Donde hay oscuridad las arañas les gusta vivir."}
+{"text": "### Human: ¿Cómo se dice Último hijo en Sipakapense?### Assistant: Último hijo en Sipakapense se dice Ch'i'p"}
+{"text": "### Human: Último hijo en Sipakapense### Assistant: Último hijo en Sipakapense se dice Ch'i'p"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Chre ri ch'i'p xyo'qken njeel ri uleew que en español significa Al hijo último se dejó todo el terreno."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Chre ri ch'i'p xyo'qken njeel ri uleew que en español significa Al hijo último se dejó todo el terreno."}
+{"text": "### Human: ¿Cómo se dice Chilca en Sipakapense?### Assistant: Chilca en Sipakapense se dice Ch'job'"}
+{"text": "### Human: Chilca en Sipakapense### Assistant: Chilca en Sipakapense se dice Ch'job'"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu ajkuun kchuknik ri ch'job' chu kkunxik ri ixoq ataq kk'osb'ik kaal que en español significa La comadrona utiliza la chilca para curar a las mujeres cuando dan a luz."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu ajkuun kchuknik ri ch'job' chu kkunxik ri ixoq ataq kk'osb'ik kaal que en español significa La comadrona utiliza la chilca para curar a las mujeres cuando dan a luz."}
+{"text": "### Human: ¿Cómo se dice Almohada en Sipakapense?### Assistant: Almohada en Sipakapense se dice Ch'ket"}
+{"text": "### Human: Almohada en Sipakapense### Assistant: Almohada en Sipakapense se dice Ch'ket"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Qanim rch'ket ri ajk'aal sicha' xjiq'ik que en español significa La almohada del niño es pequeña por eso se ahogó."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Qanim rch'ket ri ajk'aal sicha' xjiq'ik que en español significa La almohada del niño es pequeña por eso se ahogó."}
+{"text": "### Human: ¿Cómo se dice De cabeza en Sipakapense?### Assistant: De cabeza en Sipakapense se dice Ch'iklik"}
+{"text": "### Human: De cabeza en Sipakapense### Assistant: De cabeza en Sipakapense se dice Ch'iklik"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri waakx ch'iklik xb'ek pri jul sicha' cheniim xkmik que en español significa La vaca se fue de cabeza en el agujero por eso se murió rápido."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri waakx ch'iklik xb'ek pri jul sicha' cheniim xkmik que en español significa La vaca se fue de cabeza en el agujero por eso se murió rápido."}
+{"text": "### Human: ¿Cómo se dice Güisquil en Sipakapense?### Assistant: Güisquil en Sipakapense se dice Ch'maay"}
+{"text": "### Human: Güisquil en Sipakapense### Assistant: Güisquil en Sipakapense se dice Ch'maay"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu ch'maay utz xtktij ri ajk'alob' rech xtk'ob'ik kchoq'aab' que en español significa El güisquil es bueno que coman los niños porque les da fuerza."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu ch'maay utz xtktij ri ajk'alob' rech xtk'ob'ik kchoq'aab' que en español significa El güisquil es bueno que coman los niños porque les da fuerza."}
+{"text": "### Human: ¿Cómo se dice Bastón en Sipakapense?### Assistant: Bastón en Sipakapense se dice Ch'me'y"}
+{"text": "### Human: Bastón en Sipakapense### Assistant: Bastón en Sipakapense se dice Ch'me'y"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri rch'me'y ntatanool xq'ajik que en español significa El bastón de mi abuelo se quebró."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri rch'me'y ntatanool xq'ajik que en español significa El bastón de mi abuelo se quebró."}
+{"text": "### Human: ¿Cómo se dice Estrella en Sipakapense?### Assistant: Estrella en Sipakapense se dice Ch'mil"}
+{"text": "### Human: Estrella en Sipakapense### Assistant: Estrella en Sipakapense se dice Ch'mil"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq saq'iij ki' q'aljnik ri ch'mil chukaaj que en español significa Cuando está verano se ven las estrellas en el cielo."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq saq'iij ki' q'aljnik ri ch'mil chukaaj que en español significa Cuando está verano se ven las estrellas en el cielo."}
+{"text": "### Human: ¿Cómo se dice Pelea en Sipakapense?### Assistant: Pelea en Sipakapense se dice Ch'o'j"}
+{"text": "### Human: Pelea en Sipakapense### Assistant: Pelea en Sipakapense se dice Ch'o'j"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq xaq ch'o'j qchkuj qaqchee utziil chqxo'l que en español significa Cuando solo vivimos en pelea no tenemos paz."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq xaq ch'o'j qchkuj qaqchee utziil chqxo'l que en español significa Cuando solo vivimos en pelea no tenemos paz."}
+{"text": "### Human: ¿Cómo se dice Zanate en Sipakapense?### Assistant: Zanate en Sipakapense se dice Ch'ok"}
+{"text": "### Human: Zanate en Sipakapense### Assistant: Zanate en Sipakapense se dice Ch'ok"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq kpetik rqan saq ri ch'ok are' koq'ik nab'eey que en español significa Cuando empieza aclarar el zanate es el primero en cantar."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq kpetik rqan saq ri ch'ok are' koq'ik nab'eey que en español significa Cuando empieza aclarar el zanate es el primero en cantar."}
+{"text": "### Human: ¿Cómo se dice Pelado en Sipakapense?### Assistant: Pelado en Sipakapense se dice Ch'olmaj"}
+{"text": "### Human: Pelado en Sipakapense### Assistant: Pelado en Sipakapense se dice Ch'olmaj"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri saq'uul ri xtaquul rum ri nchuch ch'olmaj chik que en español significa Los plátanos que me mandó mi mamá ya estaban pelados."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri saq'uul ri xtaquul rum ri nchuch ch'olmaj chik que en español significa Los plátanos que me mandó mi mamá ya estaban pelados."}
+{"text": "### Human: ¿Cómo se dice Ácido en Sipakapense?### Assistant: Ácido en Sipakapense se dice Ch'om"}
+{"text": "### Human: Ácido en Sipakapense### Assistant: Ácido en Sipakapense se dice Ch'om"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Wu lo'n wu xloq' nchuch pk'eyb'al njeel ch'om que en español significa Todas las frutas que mi mamá compró en la plaza están ácidas."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Wu lo'n wu xloq' nchuch pk'eyb'al njeel ch'om que en español significa Todas las frutas que mi mamá compró en la plaza están ácidas."}
+{"text": "### Human: ¿Cómo se dice Ratón en Sipakapense?### Assistant: Ratón en Sipakapense se dice Ch'ooy"}
+{"text": "### Human: Ratón en Sipakapense### Assistant: Ratón en Sipakapense se dice Ch'ooy"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ch'ooy xch'ulch'a' ri ixiim que en español significa El ratón ensució todo el maíz."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ch'ooy xch'ulch'a' ri ixiim que en español significa El ratón ensució todo el maíz."}
+{"text": "### Human: ¿Cómo se dice Fracción en Sipakapense?### Assistant: Fracción en Sipakapense se dice Ch'oqpi'l"}
+{"text": "### Human: Fracción en Sipakapense### Assistant: Fracción en Sipakapense se dice Ch'oqpi'l"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Rech konjeel ri ajk'wa'l qal xke'ch'o'jnik chkxo'l kyo'qken jun rch'oqpi'l klew que en español significa Para que los hijos no se peleen es necesario que se les dé una fracción de tierra."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Rech konjeel ri ajk'wa'l qal xke'ch'o'jnik chkxo'l kyo'qken jun rch'oqpi'l klew que en español significa Para que los hijos no se peleen es necesario que se les dé una fracción de tierra."}
+{"text": "### Human: ¿Cómo se dice Rabia en Sipakapense?### Assistant: Rabia en Sipakapense se dice Ch'u'j"}
+{"text": "### Human: Rabia en Sipakapense### Assistant: Rabia en Sipakapense se dice Ch'u'j"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ataq qal ri tz'i' ke' kunxik ke'lik ch'uj que en español significa Cuando a los perros no se vacunan les da la rabia."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ataq qal ri tz'i' ke' kunxik ke'lik ch'uj que en español significa Cuando a los perros no se vacunan les da la rabia."}
+{"text": "### Human: ¿Cómo se dice Manchado en Sipakapense?### Assistant: Manchado en Sipakapense se dice Ch'ul"}
+{"text": "### Human: Manchado en Sipakapense### Assistant: Manchado en Sipakapense se dice Ch'ul"}
+{"text": "### Human: Necesito una frase en Sipakapense### Assistant: Ri ajk'aal xch'ulb'saj ri rkmi'x que en español significa El bebé manchó su camisa."}
+{"text": "### Human: Frase en Sipakapense### Assistant: Ri ajk'aal xch'ulb'saj ri rkmi'x que en español significa El bebé manchó su camisa."}
 
