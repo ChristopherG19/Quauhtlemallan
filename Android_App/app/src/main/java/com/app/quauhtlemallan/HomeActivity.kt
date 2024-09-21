@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.facebook.login.LoginManager
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 enum class ProviderType{
     BASIC,
@@ -39,25 +40,34 @@ class HomeActivity : AppCompatActivity() {
     private fun setup(email: String, provider: String) {
         title = "Inicio"
 
-        val emailTextView: TextView = findViewById<TextView>(R.id.emailTextView)
-        val providerTextView: TextView = findViewById<TextView>(R.id.providerTextView)
-        val logoutBtn: Button = findViewById<Button>(R.id.logOutButton)
+        val emailTextView: TextView = findViewById(R.id.emailTextView)
+        val providerTextView: TextView = findViewById(R.id.providerTextView)
+        val countryTextView: TextView = findViewById(R.id.countryTextView)
+        val logoutBtn: Button = findViewById(R.id.logOutButton)
 
         emailTextView.text = email
         providerTextView.text = provider
 
-        logoutBtn.setOnClickListener {
+        // Obtener información adicional del usuario desde Realtime Database
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: ""
+        val database = FirebaseDatabase.getInstance()
+        val usersRef = database.getReference("users")
 
-            val prefs:SharedPreferences.Editor = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
-            prefs.clear()
-            prefs.apply()
-
-            if (provider ==ProviderType.FACEBOOK.name) {
-                LoginManager.getInstance().logOut()
+        usersRef.child(userId).get().addOnSuccessListener { snapshot ->
+            val user = snapshot.getValue(User::class.java)
+            if (user != null) {
+                countryTextView.text = "País: ${user.country}"
+            } else {
+                countryTextView.text = "País: No disponible"
             }
+        }.addOnFailureListener {
+            countryTextView.text = "Error al obtener el país"
+        }
 
+        logoutBtn.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
         }
     }
+
 }

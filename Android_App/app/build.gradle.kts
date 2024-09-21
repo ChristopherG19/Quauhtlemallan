@@ -79,4 +79,6 @@ dependencies {
     implementation(libs.firebase.auth.ktx)
     implementation(libs.play.services.auth)
     implementation(libs.facebook.android.sdk.vlatestrelease)
+    implementation(libs.androidx.ui.text.google.fonts)
+    implementation(libs.ccp)
 }
