@@ -42,6 +42,13 @@ class SignInActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         FacebookSdk.sdkInitialize(applicationContext)
 
+        val accessToken = AccessToken.getCurrentAccessToken()
+        val isLoggedIn = accessToken != null && !accessToken.isExpired
+
+        if (isLoggedIn) {
+            LoginManager.getInstance().logOut()
+        }
+
         // Inicializar el CallbackManager
         callbackManager = CallbackManager.Factory.create()
 
@@ -63,7 +70,21 @@ class SignInActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
-                            showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                            val user = FirebaseAuth.getInstance().currentUser
+                            val userId = user?.uid ?: return@addOnCompleteListener
+
+                            // Obtener la referencia a la base de datos de Firebase
+                            val usersRef = FirebaseDatabase.getInstance().getReference("users")
+
+                            // Cargar la información del usuario desde Firebase antes de proceder
+                            usersRef.child(userId).get().addOnSuccessListener { snapshot ->
+                                val country = snapshot.child("country").getValue(String::class.java) ?: "País no configurado"
+
+                                // Ahora que los datos están cargados, navega a la HomeActivity
+                                showHome(user.email ?: "", ProviderType.BASIC, country)
+                            }.addOnFailureListener {
+                                showAlert("Error", "No se pudo obtener la información del usuario.")
+                            }
                         } else {
                             showAlert("Error de Autenticación", "Usuario o contraseña incorrectos.")
                         }
@@ -110,7 +131,20 @@ class SignInActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Inicio de sesión exitoso, mostrar la pantalla principal
                     val user = FirebaseAuth.getInstance().currentUser
-                    showHome(user?.email ?: "", ProviderType.FACEBOOK)
+                    createUserProfile(user, ProviderType.FACEBOOK)
+                    val userId = user?.uid ?: return@addOnCompleteListener
+
+                    // Obtener la referencia a la base de datos de Firebase
+                    val usersRef = FirebaseDatabase.getInstance().getReference("users")
+
+                    // Cargar la información del usuario desde Firebase antes de proceder
+                    usersRef.child(userId).get().addOnSuccessListener { snapshot ->
+                        val country = snapshot.child("country").getValue(String::class.java)
+                            ?: "País no configurado"
+
+                        // Ahora que los datos están cargados, navega a la HomeActivity
+                        showHome(user.email ?: "", ProviderType.FACEBOOK, country)
+                    }
                 } else {
                     // Manejar errores
                     if (task.exception is FirebaseAuthUserCollisionException) {
@@ -155,10 +189,11 @@ class SignInActivity : AppCompatActivity() {
 
 
 
-    private fun showHome(email: String, provider: ProviderType) {
+    private fun showHome(email: String, provider: ProviderType, country: String) {
         val homeIntent = Intent(this, HomeActivity::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
+            putExtra("country", country)
         }
         startActivity(homeIntent)
     }
@@ -187,7 +222,21 @@ class SignInActivity : AppCompatActivity() {
                         .addOnCompleteListener {
                             if (it.isSuccessful) {
                                 createUserProfile(it.result?.user, ProviderType.GOOGLE)
-                                showHome(account.email ?: "", ProviderType.GOOGLE)
+                                // Inicio de sesión exitoso, mostrar la pantalla principal
+                                val user = FirebaseAuth.getInstance().currentUser
+                                val userId = user?.uid ?: return@addOnCompleteListener
+
+                                // Obtener la referencia a la base de datos de Firebase
+                                val usersRef = FirebaseDatabase.getInstance().getReference("users")
+
+                                // Cargar la información del usuario desde Firebase antes de proceder
+                                usersRef.child(userId).get().addOnSuccessListener { snapshot ->
+                                    val country = snapshot.child("country").getValue(String::class.java)
+                                        ?: "País no configurado"
+
+                                    // Ahora que los datos están cargados, navega a la HomeActivity
+                                    showHome(account.email ?: "", ProviderType.GOOGLE, country)
+                                }
                             } else {
                                 showAlert("Error de Autenticación", "No se pudo autenticar con Google.")
                             }
@@ -223,12 +272,23 @@ class SignInActivity : AppCompatActivity() {
         val usersRef = database.getReference("users")
 
         val userId = user?.uid ?: return
-        val userProfile = User(
-            username = user.displayName ?: "",
-            email = user.email ?: "",
-            country = ""
-        )
 
-        usersRef.child(userId).setValue(userProfile)
+        // Verifica si el usuario ya tiene un valor para "country" en Firebase antes de escribirlo
+        usersRef.child(userId).get().addOnSuccessListener { snapshot ->
+            var country = snapshot.child("country").getValue(String::class.java) ?: ""
+
+            if (country.isEmpty()) {
+                country = "País no seleccionado"
+            }
+
+            val userProfile = User(
+                username = user.displayName ?: "",
+                email = user.email ?: "",
+                country = country
+            )
+
+            usersRef.child(userId).setValue(userProfile)
+        }
     }
+
 }

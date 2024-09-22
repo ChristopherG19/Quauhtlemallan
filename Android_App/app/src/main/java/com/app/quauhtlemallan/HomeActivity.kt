@@ -1,6 +1,7 @@
 package com.app.quauhtlemallan
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.facebook.login.LoginManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -28,6 +30,7 @@ class HomeActivity : AppCompatActivity() {
         val bundle = intent.extras
         val email = bundle?.getString("email")
         val provider = bundle?.getString("provider")
+        val country = bundle?.getString("country")
         setup(email ?: "", provider ?: "")
 
         val prefs:SharedPreferences.Editor = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
@@ -35,47 +38,42 @@ class HomeActivity : AppCompatActivity() {
         prefs.putString("provider", provider)
         prefs.apply()
 
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_progress -> {
+                    // Acción para Progreso
+                    true
+                }
+                R.id.navigation_chat -> {
+                    // Acción para Chat
+                    true
+                }
+                R.id.navigation_home -> {
+                    // Acción para Inicio
+                    true
+                }
+                R.id.navigation_games -> {
+                    // Acción para Juegos
+                    true
+                }
+                R.id.navigation_settings -> {
+                    val intent = Intent(this, SettingsActivity::class.java).apply {
+                        putExtra("email", email)
+                        putExtra("provider", provider)
+                        putExtra("country", country)
+                    }
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
+
     }
 
     private fun setup(email: String, provider: String) {
         title = "Inicio"
-
-        val emailTextView: TextView = findViewById(R.id.emailTextView)
-        val providerTextView: TextView = findViewById(R.id.providerTextView)
-        val countryTextView: TextView = findViewById(R.id.countryTextView)
-        val logoutBtn: Button = findViewById(R.id.logOutButton)
-
-        emailTextView.text = email
-        providerTextView.text = provider
-
-        // Obtener información adicional del usuario desde Realtime Database
-        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: ""
-        val database = FirebaseDatabase.getInstance()
-        val usersRef = database.getReference("users")
-
-        usersRef.child(userId).get().addOnSuccessListener { snapshot ->
-            val user = snapshot.getValue(User::class.java)
-            if (user != null) {
-                countryTextView.text = "País: ${user.country}"
-            } else {
-                countryTextView.text = "País: No disponible"
-            }
-        }.addOnFailureListener {
-            countryTextView.text = "Error al obtener el país"
-        }
-
-        logoutBtn.setOnClickListener {
-            val prefs:SharedPreferences.Editor = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
-            prefs.clear()
-            prefs.apply()
-
-            if (provider == ProviderType.FACEBOOK.name) {
-                LoginManager.getInstance().logOut()
-            }
-
-            FirebaseAuth.getInstance().signOut()
-            onBackPressed()
-        }
     }
 
 }
