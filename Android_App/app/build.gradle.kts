@@ -77,4 +77,8 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(platform(libs.firebase.bom.v3231))
     implementation(libs.firebase.auth.ktx)
+    implementation(libs.play.services.auth)
+    implementation(libs.facebook.android.sdk.vlatestrelease)
+    implementation(libs.androidx.ui.text.google.fonts)
+    implementation(libs.ccp)
 }
