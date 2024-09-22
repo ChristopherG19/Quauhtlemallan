@@ -53,17 +53,5 @@
             android:layout_height="wrap_content"
             android:text="Registrar" />
 
-        <Button
-            android:id="@+id/googleRegisterButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Registrar con Google" />
-
-        <Button
-            android:id="@+id/facebookRegisterButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Registrar con Facebook" />
-
     </LinearLayout>
 </ScrollView>

@@ -71,9 +71,6 @@ class RegisterActivity : AppCompatActivity() {
                 showAlert("Campos Vacíos", "Por favor, completa todos los campos.")
             }
         }
-
-        // Eventos de clic para registrar con Google y Facebook similares a SignInActivity
-        // ...
     }
 
     private fun showAlert(s: String, s1: String) {

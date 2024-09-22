@@ -7,34 +7,50 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
+import com.facebook.FacebookSdk
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
+import com.facebook.login.widget.LoginButton
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.firebase.auth.AuthCredential
+import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthException
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.database.FirebaseDatabase
 
 class SignInActivity : AppCompatActivity() {
+
     private val GOOGLE_SIGN_IN = 100
-    private val FACEBOOK = 64206 // Código de respuesta para Facebook
+    private lateinit var callbackManager: CallbackManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Thread.sleep(2000)
+        setTheme(R.style.Theme_Quauhtlemallan)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
         supportActionBar?.title = "Iniciar Sesión"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        FacebookSdk.sdkInitialize(applicationContext)
+
+        // Inicializar el CallbackManager
+        callbackManager = CallbackManager.Factory.create()
 
         // Referencias a los elementos de la UI
         val usernameEditText: EditText = findViewById(R.id.usernameEditText)
         val passwordEditText: EditText = findViewById(R.id.passwordEditText)
         val signInButton: Button = findViewById(R.id.signInButton)
         val googleSignInButton: Button = findViewById(R.id.googleSignInButton)
-        val facebookSignInButton: Button = findViewById(R.id.facebookSignInButton)
+        val facebookButton: LoginButton = findViewById(R.id.facebook_button)
 
         val auth = FirebaseAuth.getInstance()
 
@@ -59,7 +75,6 @@ class SignInActivity : AppCompatActivity() {
 
         // Evento de clic para iniciar sesión con Google
         googleSignInButton.setOnClickListener {
-            // Configuración de Google Sign-In
             val googleConf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -71,36 +86,74 @@ class SignInActivity : AppCompatActivity() {
             startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
         }
 
-        // Evento de clic para iniciar sesión con Facebook
-        facebookSignInButton.setOnClickListener {
-            // Configuración de Facebook Login
-            val callbackManager = CallbackManager.Factory.create()
-            val loginManager = LoginManager.getInstance()
+        // Configurar el LoginButton de Facebook
+        facebookButton.setPermissions("email")
+        facebookButton.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
+            override fun onSuccess(result: LoginResult) {
+                handleFacebookAccessToken(result.accessToken)
+            }
 
-            loginManager.logInWithReadPermissions(this, listOf("email"))
-            loginManager.registerCallback(callbackManager,
-                object : FacebookCallback<LoginResult> {
-                    override fun onSuccess(result: LoginResult) {
-                        val token = result.accessToken
-                        val credential = FacebookAuthProvider.getCredential(token.token)
-                        auth.signInWithCredential(credential)
-                            .addOnCompleteListener {
-                                if (it.isSuccessful) {
-                                    showHome(it.result?.user?.email ?: "", ProviderType.FACEBOOK)
-                                } else {
-                                    showAlert("Error de Autenticación", "No se pudo autenticar con Facebook.")
-                                }
-                            }
-                    }
+            override fun onCancel() {
+                showAlert("Autenticación", "Inicio de sesión cancelado.")
+            }
 
-                    override fun onCancel() { /* Manejar cancelación si es necesario */ }
-
-                    override fun onError(error: FacebookException) {
-                        showAlert("Error de Facebook", error.message ?: "Error desconocido.")
-                    }
-                })
-        }
+            override fun onError(error: FacebookException) {
+                error.message?.let { showAlert("Autenticación", it) }
+            }
+        })
     }
+
+    private fun handleFacebookAccessToken(token: AccessToken) {
+        val credential = FacebookAuthProvider.getCredential(token.token)
+        FirebaseAuth.getInstance().signInWithCredential(credential)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Inicio de sesión exitoso, mostrar la pantalla principal
+                    val user = FirebaseAuth.getInstance().currentUser
+                    showHome(user?.email ?: "", ProviderType.FACEBOOK)
+                } else {
+                    // Manejar errores
+                    if (task.exception is FirebaseAuthUserCollisionException) {
+                        // Error de colisión de cuentas
+                        val exception = task.exception as FirebaseAuthUserCollisionException
+                        val email = exception.email
+                        // Llamar a la función para resolver la colisión
+                        resolveAccountCollision(email, credential)
+                    } else {
+                        // Otros errores
+                        val errorMessage = task.exception?.localizedMessage ?: "Error desconocido."
+                        showAlert("Error de Autenticación", errorMessage)
+                    }
+                }
+            }
+    }
+
+    private fun resolveAccountCollision(email: String?, credential: AuthCredential) {
+        if (email == null) {
+            showAlert("Error", "No se pudo obtener el correo electrónico de la cuenta existente.")
+            return
+        }
+
+        FirebaseAuth.getInstance().fetchSignInMethodsForEmail(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val signInMethods = task.result?.signInMethods ?: emptyList()
+                    if (signInMethods.contains(EmailAuthProvider.EMAIL_PASSWORD_SIGN_IN_METHOD)) {
+                        // El usuario está registrado con email y contraseña
+                        showAlert("Cuenta Existente", "Por favor, inicia sesión con tu correo y contraseña para vincular tu cuenta de Facebook.")
+                    } else {
+                        // Otros proveedores
+                        LoginManager.getInstance().logOut()
+                        showAlert("Cuenta Existente con este correo", "Por favor, inicia sesión con Google")
+                    }
+                } else {
+                    val errorMessage = task.exception?.localizedMessage ?: "Error desconocido al verificar los métodos de inicio de sesión."
+                    showAlert("Error", errorMessage)
+                }
+            }
+    }
+
+
 
     private fun showHome(email: String, provider: ProviderType) {
         val homeIntent = Intent(this, HomeActivity::class.java).apply {
@@ -119,9 +172,11 @@ class SignInActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    // Manejar resultados de actividades
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        // Importante: primero pasa los resultados al CallbackManager de Facebook
+        callbackManager.onActivityResult(requestCode, resultCode, data)
         super.onActivityResult(requestCode, resultCode, data)
+
         if (requestCode == GOOGLE_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
@@ -131,6 +186,7 @@ class SignInActivity : AppCompatActivity() {
                     FirebaseAuth.getInstance().signInWithCredential(credential)
                         .addOnCompleteListener {
                             if (it.isSuccessful) {
+                                createUserProfile(it.result?.user, ProviderType.GOOGLE)
                                 showHome(account.email ?: "", ProviderType.GOOGLE)
                             } else {
                                 showAlert("Error de Autenticación", "No se pudo autenticar con Google.")
@@ -141,12 +197,10 @@ class SignInActivity : AppCompatActivity() {
                 showAlert("Error de Google Sign-In", e.message ?: "Error desconocido.")
             }
         }
-        // Añade manejo para Facebook si es necesario
     }
 
     override fun onResume() {
         super.onResume()
-        // Referencias a los elementos de la UI
         val usernameEditText: EditText = findViewById(R.id.usernameEditText)
         val passwordEditText: EditText = findViewById(R.id.passwordEditText)
 
@@ -157,7 +211,6 @@ class SignInActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
-                // Acciones al presionar la flecha de regreso
                 finish() // Cierra la actividad actual y regresa a la anterior
                 true
             }
@@ -165,4 +218,17 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
+    private fun createUserProfile(user: FirebaseUser?, provider: ProviderType) {
+        val database = FirebaseDatabase.getInstance()
+        val usersRef = database.getReference("users")
+
+        val userId = user?.uid ?: return
+        val userProfile = User(
+            username = user.displayName ?: "",
+            email = user.email ?: "",
+            country = ""
+        )
+
+        usersRef.child(userId).setValue(userProfile)
+    }
 }
