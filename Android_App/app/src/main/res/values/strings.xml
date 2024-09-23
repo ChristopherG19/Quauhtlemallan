@@ -2,4 +2,14 @@
     <string name="app_name">Quauhtlemallan</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="prefs_file">com.app.quauhtlemallan.PREFERENCE_FILE_KEY</string>
+    <string name="facebook_app_id">1900867967092050</string>
+    <string name="fb_login_protocol_scheme">fb1900867967092050</string>
+    <string name="facebook_client_token">c661aab9910460eddeb0ed8086397c78</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="correo">Correo</string>
+    <string name="usuario">Usuario</string>
+    <string name="nueva_contrase_a">Nueva contraseña</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
+    <string name="cerrar_sesi_n">Cerrar sesión</string>
 </resources>
