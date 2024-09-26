@@ -1,10 +1,11 @@
-package com.app.quauhtlemallan.activities
+package com.app.quauhtlemallan
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.activities.RegisterActivity
+import com.app.quauhtlemallan.activities.SignInActivity
 
 class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,12 +18,13 @@ class StartActivity : AppCompatActivity() {
         val signInButton: Button = findViewById(R.id.signInButton)
         val registerButton: Button = findViewById(R.id.registerButton)
 
-        // Eventos de clic
+        // Eventos de clic para navegar a SignInActivity
         signInButton.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
 
+        // Eventos de clic para navegar a RegisterActivity
         registerButton.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
