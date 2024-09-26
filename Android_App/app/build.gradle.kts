@@ -81,4 +81,7 @@ dependencies {
     implementation(libs.facebook.android.sdk.vlatestrelease)
     implementation(libs.androidx.ui.text.google.fonts)
     implementation(libs.ccp)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.adapter.rxjava2)
 }

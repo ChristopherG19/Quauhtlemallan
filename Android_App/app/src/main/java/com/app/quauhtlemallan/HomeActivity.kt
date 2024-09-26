@@ -4,16 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.facebook.login.LoginManager
+import com.app.quauhtlemallan.activities.ChatBotActivity
+import com.app.quauhtlemallan.activities.SettingsActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 
 enum class ProviderType{
     BASIC,
@@ -46,7 +40,12 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_chat -> {
-                    // Acción para Chat
+                    val intent = Intent(this, ChatBotActivity::class.java).apply {
+                        putExtra("email", email)
+                        putExtra("provider", provider)
+                        putExtra("country", country)
+                    }
+                    startActivity(intent)
                     true
                 }
                 R.id.navigation_home -> {
