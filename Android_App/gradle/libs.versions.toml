@@ -1,6 +1,7 @@
 [versions]
 agp = "8.5.2"
 ccp = "2.5.4"
+converterGson = "2.5.0"
 facebookAndroidSdkVersion = "latest.release"
 firebaseBom = "33.2.0"
 firebaseBomVersion = "33.2.0"
@@ -21,11 +22,14 @@ material = "1.12.0"
 activity = "1.9.1"
 playServicesAuth = "21.2.0"
 firebaseFirestoreKtx = "25.1.0"
+retrofit = "2.5.0"
 uiTextGoogleFonts = "1.7.2"
 
 [libraries]
+adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "converterGson" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 ccp = { module = "com.hbb20:ccp", version.ref = "ccp" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 facebook-android-sdk-vlatestrelease = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookAndroidSdkVersion" }
 androidx-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
@@ -53,6 +57,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
