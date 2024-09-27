@@ -8,6 +8,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.data.ProviderType
 import com.app.quauhtlemallan.data.User
 import com.facebook.AccessToken
 import com.facebook.CallbackManager

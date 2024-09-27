@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.StartActivity
+import com.app.quauhtlemallan.data.ProviderType
 import com.facebook.login.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference

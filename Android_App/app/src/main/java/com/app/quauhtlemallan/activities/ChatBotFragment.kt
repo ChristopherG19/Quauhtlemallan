@@ -77,7 +77,7 @@ class ChatBotFragment : Fragment() {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:5000/")
+            .baseUrl("http://10.0.2.2:5000/") // Change ip
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

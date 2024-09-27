@@ -12,12 +12,6 @@ import androidx.fragment.app.Fragment
 import com.app.quauhtlemallan.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-enum class ProviderType{
-    BASIC,
-    GOOGLE,
-    FACEBOOK
-}
-
 class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

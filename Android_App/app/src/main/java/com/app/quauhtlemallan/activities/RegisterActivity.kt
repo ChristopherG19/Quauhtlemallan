@@ -8,14 +8,13 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.data.ProviderType
 import com.app.quauhtlemallan.data.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.hbb20.CountryCodePicker
 
 class RegisterActivity : AppCompatActivity() {
-    private val GOOGLE_SIGN_IN = 100
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
