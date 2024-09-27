@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Usuario"
+            android:hint="Correo"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -44,6 +44,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Iniciar con Google" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <com.facebook.login.widget.LoginButton
             android:id="@+id/facebook_button"

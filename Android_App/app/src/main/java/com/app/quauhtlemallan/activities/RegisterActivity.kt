@@ -7,17 +7,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.app.quauhtlemallan.HomeActivity
-import com.app.quauhtlemallan.ProviderType
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.data.ProviderType
 import com.app.quauhtlemallan.data.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.hbb20.CountryCodePicker
 
 class RegisterActivity : AppCompatActivity() {
-    private val GOOGLE_SIGN_IN = 100
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -41,8 +38,6 @@ class RegisterActivity : AppCompatActivity() {
             val confirmPassword = confirmPasswordEditText.text.toString()
             val countryCodePicker: CountryCodePicker = findViewById(R.id.ccp)
             val countryName = countryCodePicker.selectedCountryName
-            val countryCode = countryCodePicker.selectedCountryNameCode
-
 
             if (email.isNotEmpty() && password.isNotEmpty() && username.isNotEmpty() && confirmPassword.isNotEmpty()) {
                 if (password == confirmPassword) {
@@ -57,7 +52,7 @@ class RegisterActivity : AppCompatActivity() {
 
                                 usersRef.child(userId).setValue(user)
                                     .addOnSuccessListener {
-                                        showHome(email, ProviderType.BASIC)
+                                        showHome(email, ProviderType.BASIC, countryName)
                                     }
                                     .addOnFailureListener {
                                         showAlert("Error", "No se pudo guardar la información del usuario.")
@@ -79,13 +74,16 @@ class RegisterActivity : AppCompatActivity() {
         Toast.makeText(this, s + " : " + s1, Toast.LENGTH_SHORT).show()
     }
 
-    private fun showHome(email: String, provider: ProviderType){
-        val homeIntent = Intent(this, HomeActivity::class.java).apply {
+    private fun showHome(email: String, provider: ProviderType, country: String) {
+        val intent = Intent(this, MainActivity::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
+            putExtra("country", country)
         }
-        startActivity(homeIntent)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)  // Inicia MainActivity y destruye el flujo anterior
     }
+
 
     override fun onResume() {
         // Referencias a los elementos de la UI

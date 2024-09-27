@@ -7,9 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.app.quauhtlemallan.HomeActivity
-import com.app.quauhtlemallan.ProviderType
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.data.ProviderType
 import com.app.quauhtlemallan.data.User
 import com.facebook.AccessToken
 import com.facebook.CallbackManager
@@ -193,13 +192,16 @@ class SignInActivity : AppCompatActivity() {
 
 
     private fun showHome(email: String, provider: ProviderType, country: String) {
-        val homeIntent = Intent(this, HomeActivity::class.java).apply {
+        val intent = Intent(this, MainActivity::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
             putExtra("country", country)
         }
-        startActivity(homeIntent)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
     }
+
+
 
     private fun showAlert(title: String, message: String) {
         val builder = AlertDialog.Builder(this)

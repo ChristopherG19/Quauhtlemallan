@@ -1,18 +1,21 @@
 package com.app.quauhtlemallan.activities
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.data.ChatModelRequest
 import com.app.quauhtlemallan.data.ChatModelResponse
 import com.app.quauhtlemallan.service.ApiService
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.textfield.TextInputEditText
 import okhttp3.OkHttpClient
 import retrofit2.Call
@@ -22,7 +25,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class ChatBotActivity : AppCompatActivity() {
+class ChatBotFragment : Fragment() {
 
     private lateinit var responseTextview: TextView
     private lateinit var emptyTextview: TextView
@@ -31,37 +34,51 @@ class ChatBotActivity : AppCompatActivity() {
     private lateinit var apiService: ApiService
     private lateinit var progressDialog: ProgressDialog
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat_bot)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        activity?.title = "Kukul"
+    }
 
-        inputEditText = findViewById(R.id.inputEditText)
-        emptyTextview = findViewById(R.id.emptyTv)
-        responseTextview = findViewById(R.id.responseTv)
-        sendBtn = findViewById(R.id.sendBtn)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflar el layout del fragmento
+        val view = inflater.inflate(R.layout.fragment_chat_bot, container, false)
 
-        progressDialog = ProgressDialog(this)
+        // Inicializar vistas
+        inputEditText = view.findViewById(R.id.inputEditText)
+        emptyTextview = view.findViewById(R.id.emptyTv)
+        responseTextview = view.findViewById(R.id.responseTv)
+        sendBtn = view.findViewById(R.id.sendBtn)
+
+        // Inicializar ProgressDialog
+        progressDialog = ProgressDialog(requireContext())
         progressDialog.setMessage("Loading...")
         progressDialog.setCancelable(false)
 
+        // Configurar el botón de enviar
         sendBtn.setOnClickListener {
             if (inputEditText.text.toString().isNotEmpty()) {
                 progressDialog.show()
                 makeApiCall()
             }
         }
+
+        return view
     }
 
+    // Método para realizar la llamada a la API
     private fun makeApiCall() {
         val okHttpClient = OkHttpClient.Builder()
-            .connectTimeout(10, TimeUnit.MINUTES) // Set connection timeout
-            .readTimeout(10, TimeUnit.MINUTES) // Set read timeout
-            .writeTimeout(10, TimeUnit.MINUTES) // Set write timeout
+            .connectTimeout(10, TimeUnit.MINUTES)
+            .readTimeout(10, TimeUnit.MINUTES)
+            .writeTimeout(10, TimeUnit.MINUTES)
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:5000/")
-            .client(okHttpClient) // Set custom OkHttpClient
+            .baseUrl("http://10.0.2.2:5000/") // Change ip
+            .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -80,10 +97,8 @@ class ChatBotActivity : AppCompatActivity() {
                     createdPost?.let {
                         responseTextview.text = it.response
                     }
-                    print("response is:::::" + createdPost)
                 } else {
                     Log.e("API Error", "Failed.....")
-                    print("failed  response is:::::" + response.body())
                 }
             }
 
@@ -91,7 +106,6 @@ class ChatBotActivity : AppCompatActivity() {
                 progressDialog.dismiss()
                 inputEditText.text?.clear()
                 Log.e("API Error", "Failed....: ${t.message}")
-                print("failed response is:::::" + t.message)
             }
         })
     }
