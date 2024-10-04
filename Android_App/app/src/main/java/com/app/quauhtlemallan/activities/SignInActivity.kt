@@ -76,7 +76,7 @@ class SignInActivity : AppCompatActivity() {
                             val userId = user?.uid ?: return@addOnCompleteListener
 
                             // Obtener la referencia a la base de datos de Firebase
-                            val usersRef = FirebaseDatabase.getInstance().getReference("users")
+                            val usersRef = FirebaseDatabase.getInstance().getReference("Usuarios")
 
                             // Cargar la información del usuario desde Firebase antes de proceder
                             usersRef.child(userId).get().addOnSuccessListener { snapshot ->
@@ -137,7 +137,7 @@ class SignInActivity : AppCompatActivity() {
                     val userId = user?.uid ?: return@addOnCompleteListener
 
                     // Obtener la referencia a la base de datos de Firebase
-                    val usersRef = FirebaseDatabase.getInstance().getReference("users")
+                    val usersRef = FirebaseDatabase.getInstance().getReference("Usuarios")
 
                     // Cargar la información del usuario desde Firebase antes de proceder
                     usersRef.child(userId).get().addOnSuccessListener { snapshot ->
@@ -232,7 +232,7 @@ class SignInActivity : AppCompatActivity() {
                                 val userId = user?.uid ?: return@addOnCompleteListener
 
                                 // Obtener la referencia a la base de datos de Firebase
-                                val usersRef = FirebaseDatabase.getInstance().getReference("users")
+                                val usersRef = FirebaseDatabase.getInstance().getReference("Usuarios")
 
                                 // Cargar la información del usuario desde Firebase antes de proceder
                                 usersRef.child(userId).get().addOnSuccessListener { snapshot ->
@@ -274,7 +274,7 @@ class SignInActivity : AppCompatActivity() {
 
     private fun createUserProfile(user: FirebaseUser?, provider: ProviderType) {
         val database = FirebaseDatabase.getInstance()
-        val usersRef = database.getReference("users")
+        val usersRef = database.getReference("Usuarios")
 
         val userId = user?.uid ?: return
 

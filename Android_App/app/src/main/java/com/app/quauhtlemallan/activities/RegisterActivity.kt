@@ -47,7 +47,7 @@ class RegisterActivity : AppCompatActivity() {
                                 // Guardar información adicional en Realtime Database
                                 val userId = auth.currentUser?.uid ?: ""
                                 val database = FirebaseDatabase.getInstance()
-                                val usersRef = database.getReference("users")
+                                val usersRef = database.getReference("Usuarios")
                                 val user = User(username, email, countryName)
 
                                 usersRef.child(userId).setValue(user)

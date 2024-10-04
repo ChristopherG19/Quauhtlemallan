@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home -> HomeFragment()
                 R.id.navigation_chat -> ChatBotFragment()
                 R.id.navigation_settings -> SettingsFragment()
-                R.id.navigation_progress -> AchievementsFragment()
+                R.id.navigation_progress -> ProgressFragment()
                 R.id.navigation_games -> GamesFragment()
                 else -> null
             }

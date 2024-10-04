@@ -58,7 +58,7 @@ class SettingsFragment : Fragment() {
         // Obtener el userId de FirebaseAuth
         val userId = FirebaseAuth.getInstance().currentUser?.uid ?: ""
         val database = FirebaseDatabase.getInstance()
-        val usersRef = database.getReference("users")
+        val usersRef = database.getReference("Usuarios")
 
         // Obtener los datos del usuario
         usersRef.child(userId).get().addOnSuccessListener { snapshot ->
