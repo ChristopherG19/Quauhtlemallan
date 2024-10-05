@@ -1,11 +1,10 @@
-package com.app.quauhtlemallan
+package com.app.quauhtlemallan.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.app.quauhtlemallan.activities.RegisterActivity
-import com.app.quauhtlemallan.activities.SignInActivity
+import com.app.quauhtlemallan.R
 
 class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

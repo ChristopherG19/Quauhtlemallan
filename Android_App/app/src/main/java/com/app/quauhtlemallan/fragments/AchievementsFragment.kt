@@ -1,4 +1,4 @@
-package com.app.quauhtlemallan.activities
+package com.app.quauhtlemallan.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.activities.MainActivity
 
 class AchievementsFragment : Fragment() {
 

@@ -66,6 +66,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -86,4 +87,6 @@ dependencies {
     implementation(libs.adapter.rxjava2)
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
+    implementation(libs.androidx.appcompat.v140)
+
 }

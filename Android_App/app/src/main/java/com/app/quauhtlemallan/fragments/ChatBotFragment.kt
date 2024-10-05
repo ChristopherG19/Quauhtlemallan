@@ -1,7 +1,6 @@
-package com.app.quauhtlemallan.activities
+package com.app.quauhtlemallan.fragments
 
 import android.app.ProgressDialog
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,13 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.data.ChatModelRequest
 import com.app.quauhtlemallan.data.ChatModelResponse
 import com.app.quauhtlemallan.service.ApiService
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.textfield.TextInputEditText
 import okhttp3.OkHttpClient
 import retrofit2.Call

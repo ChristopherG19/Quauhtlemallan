@@ -1,4 +1,4 @@
-package com.app.quauhtlemallan.activities
+package com.app.quauhtlemallan.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.quauhtlemallan.R
@@ -51,7 +50,7 @@ class ProgressFragment : Fragment() {
     // Esta función cargará los usuarios desde Firebase y los ordenará por puntaje
     private fun loadUsers() {
         val database = FirebaseDatabase.getInstance()
-        val usersRef = database.getReference("Usuarios")
+        val usersRef = database.getReference("usuarios")
 
         usersRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {

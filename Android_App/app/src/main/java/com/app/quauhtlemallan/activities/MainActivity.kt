@@ -1,11 +1,13 @@
 package com.app.quauhtlemallan.activities
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.fragments.ChatBotFragment
+import com.app.quauhtlemallan.fragments.GamesFragment
+import com.app.quauhtlemallan.fragments.HomeFragment
+import com.app.quauhtlemallan.fragments.ProgressFragment
+import com.app.quauhtlemallan.fragments.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

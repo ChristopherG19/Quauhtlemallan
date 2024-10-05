@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,17 +18,17 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31" >
         <activity
-            android:name=".activities.AchievementsFragment"
+            android:name=".fragments.AchievementsFragment"
             android:exported="false"
             android:label="AchievementsActivity"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
-            android:name=".activities.ProgressFragment"
+            android:name=".fragments.ProgressFragment"
             android:exported="false"
             android:label="ProgressActivity"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
-            android:name=".activities.GamesFragment"
+            android:name=".fragments.GamesFragment"
             android:exported="false"
             android:label="GamesActivity"
             android:theme="@style/Theme.AppCompat.Light" />
@@ -36,22 +38,22 @@
             android:label="MainActivity"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
-            android:name=".activities.ChatBotFragment"
+            android:name=".fragments.ChatBotFragment"
             android:exported="false"
             android:label="ChatBotActivity"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
-            android:name=".activities.SettingsFragment"
+            android:name=".fragments.SettingsFragment"
             android:exported="false"
             android:label="@string/title_activity_settings"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
-            android:name=".activities.HomeFragment"
+            android:name=".fragments.HomeFragment"
             android:exported="false"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity
-            android:name=".StartActivity"
+            android:name=".activities.StartActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Light" >
