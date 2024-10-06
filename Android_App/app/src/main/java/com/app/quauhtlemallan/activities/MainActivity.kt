@@ -21,7 +21,10 @@ class MainActivity : AppCompatActivity() {
         val provider = intent.getStringExtra("provider")
         val country = intent.getStringExtra("country")
 
-        // Si hay datos, cargamos el HomeFragment con los argumentos
+        // Configura el BottomNavigationView
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        // Si savedInstanceState es nulo, mostramos el fragmento por defecto (HomeFragment)
         if (savedInstanceState == null) {
             val homeFragment = HomeFragment().apply {
                 arguments = Bundle().apply {
@@ -33,10 +36,12 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, homeFragment)
                 .commit()
+
+            // Seleccionar el ítem de "Inicio" en el BottomNavigationView manualmente
+            bottomNavigationView.selectedItemId = R.id.navigation_home
         }
 
-        // Configura el BottomNavigationView
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        // Manejar las selecciones del BottomNavigationView
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             val fragment = when (item.itemId) {
                 R.id.navigation_home -> HomeFragment()
@@ -52,16 +57,6 @@ class MainActivity : AppCompatActivity() {
                     .commit()
             }
             true
-        }
-
-        // Mostrar el fragmento por defecto (HomeFragment) y seleccionar el botón de "Inicio"
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, HomeFragment())
-                .commit()
-
-            // Seleccionar el ítem de "Inicio" en el BottomNavigationView manualmente
-            bottomNavigationView.selectedItemId = R.id.navigation_home
         }
     }
 }

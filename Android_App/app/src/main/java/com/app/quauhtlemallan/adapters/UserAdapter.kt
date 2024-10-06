@@ -1,4 +1,4 @@
-package com.app.quauhtlemallan.fragments
+package com.app.quauhtlemallan.adapters
 
 import android.view.LayoutInflater
 import android.view.View
