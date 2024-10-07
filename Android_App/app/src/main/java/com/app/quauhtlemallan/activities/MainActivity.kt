@@ -3,6 +3,7 @@ package com.app.quauhtlemallan.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.data.User
 import com.app.quauhtlemallan.fragments.ChatBotFragment
 import com.app.quauhtlemallan.fragments.GamesFragment
 import com.app.quauhtlemallan.fragments.HomeFragment
@@ -16,10 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Recibir los extras del Intent desde RegisterActivity o SignInActivity
-        val email = intent.getStringExtra("email")
-        val provider = intent.getStringExtra("provider")
-        val country = intent.getStringExtra("country")
+        // Recibir el objeto User serializable desde RegisterActivity o SignInActivity
+        val user = intent.getSerializableExtra("user") as? User
 
         // Configura el BottomNavigationView
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
@@ -28,9 +27,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             val homeFragment = HomeFragment().apply {
                 arguments = Bundle().apply {
-                    putString("email", email)
-                    putString("provider", provider)
-                    putString("country", country)
+                    putSerializable("user", user) // Pasar el objeto User al fragmento
                 }
             }
             supportFragmentManager.beginTransaction()
@@ -44,11 +41,31 @@ class MainActivity : AppCompatActivity() {
         // Manejar las selecciones del BottomNavigationView
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             val fragment = when (item.itemId) {
-                R.id.navigation_home -> HomeFragment()
-                R.id.navigation_chat -> ChatBotFragment()
-                R.id.navigation_settings -> SettingsFragment()
-                R.id.navigation_progress -> ProgressFragment()
-                R.id.navigation_games -> GamesFragment()
+                R.id.navigation_home -> HomeFragment().apply {
+                    arguments = Bundle().apply {
+                        putSerializable("user", user) // Pasar el objeto User a cada fragmento según sea necesario
+                    }
+                }
+                R.id.navigation_chat -> ChatBotFragment().apply {
+                    arguments = Bundle().apply {
+                        putSerializable("user", user)
+                    }
+                }
+                R.id.navigation_settings -> SettingsFragment().apply {
+                    arguments = Bundle().apply {
+                        putSerializable("user", user)
+                    }
+                }
+                R.id.navigation_progress -> ProgressFragment().apply {
+                    arguments = Bundle().apply {
+                        putSerializable("user", user)
+                    }
+                }
+                R.id.navigation_games -> GamesFragment().apply {
+                    arguments = Bundle().apply {
+                        putSerializable("user", user)
+                    }
+                }
                 else -> null
             }
             fragment?.let {

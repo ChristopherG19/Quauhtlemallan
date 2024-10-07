@@ -27,6 +27,7 @@ class RegisterActivity : AppCompatActivity() {
         val passwordEditText: EditText = findViewById(R.id.passwordEditText)
         val confirmPasswordEditText: EditText = findViewById(R.id.confirmPasswordEditText)
         val registerButton: Button = findViewById(R.id.registerButton)
+        val countryCodePicker: CountryCodePicker = findViewById(R.id.ccp)
 
         val auth = FirebaseAuth.getInstance()
 
@@ -36,7 +37,6 @@ class RegisterActivity : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
             val confirmPassword = confirmPasswordEditText.text.toString()
-            val countryCodePicker: CountryCodePicker = findViewById(R.id.ccp)
             val countryName = countryCodePicker.selectedCountryName
 
             if (email.isNotEmpty() && password.isNotEmpty() && username.isNotEmpty() && confirmPassword.isNotEmpty()) {
@@ -48,11 +48,13 @@ class RegisterActivity : AppCompatActivity() {
                                 val userId = auth.currentUser?.uid ?: ""
                                 val database = FirebaseDatabase.getInstance()
                                 val usersRef = database.getReference("usuarios")
-                                val user = User(username, email, countryName)
+                                val user = User(username, email, countryName) // Crear objeto User
 
+                                // Guardar el objeto User en la base de datos
                                 usersRef.child(userId).setValue(user)
                                     .addOnSuccessListener {
-                                        showHome(email, ProviderType.BASIC, countryName)
+                                        // Enviar el objeto User completo al Home
+                                        showHome(user, ProviderType.BASIC)
                                     }
                                     .addOnFailureListener {
                                         showAlert("Error", "No se pudo guardar la información del usuario.")
@@ -71,29 +73,28 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun showAlert(s: String, s1: String) {
-        Toast.makeText(this, s + " : " + s1, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "$s : $s1", Toast.LENGTH_SHORT).show()
     }
 
-    private fun showHome(email: String, provider: ProviderType, country: String) {
+    // Método para mostrar la pantalla Home pasando el objeto User completo
+    private fun showHome(user: User, provider: ProviderType) {
         val intent = Intent(this, MainActivity::class.java).apply {
-            putExtra("email", email)
+            putExtra("user", user)
             putExtra("provider", provider.name)
-            putExtra("country", country)
         }
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)  // Inicia MainActivity y destruye el flujo anterior
+        startActivity(intent)
     }
 
 
     override fun onResume() {
-        // Referencias a los elementos de la UI
+        super.onResume()
+        // Limpiar los campos de entrada
         val usernameEditText: EditText = findViewById(R.id.usernameEditText)
         val emailEditText: EditText = findViewById(R.id.emailEditText)
         val passwordEditText: EditText = findViewById(R.id.passwordEditText)
         val confirmPasswordEditText: EditText = findViewById(R.id.confirmPasswordEditText)
 
-        super.onResume()
-        // Limpiar los campos de entrada
         usernameEditText.text.clear()
         emailEditText.text.clear()
         passwordEditText.text.clear()
@@ -103,12 +104,10 @@ class RegisterActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
-                // Acciones al presionar la flecha de regreso
                 finish() // Cierra la actividad actual y regresa a la anterior
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
-
 }

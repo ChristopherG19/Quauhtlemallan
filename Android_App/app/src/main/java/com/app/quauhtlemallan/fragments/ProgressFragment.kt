@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.quauhtlemallan.R
@@ -45,14 +46,20 @@ class ProgressFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val currentUserEmail = FirebaseAuth.getInstance().currentUser?.email ?: return
         activity?.title = "Progreso"
 
+        (activity as AppCompatActivity).supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(false)
+            setDisplayShowHomeEnabled(false)
+            title = "Progreso"
+        }
+
         // Inicializar las vistas de la parte superior
-        userName = view.findViewById(R.id.userName)
+        userName = view.findViewById(R.id.userNameProf)
         userLevel = view.findViewById(R.id.userLevel)
-        userRank = view.findViewById(R.id.userRank)
-        profileImage = view.findViewById(R.id.profileImage)
+        userRank = view.findViewById(R.id.userRankProf)
+        profileImage = view.findViewById(R.id.profileImageProf)
         viewInsigniasButton = view.findViewById(R.id.viewInsigniasButton)
 
         viewInsigniasButton.setOnClickListener {
@@ -62,7 +69,7 @@ class ProgressFragment : Fragment() {
         // Inicializar el RecyclerView
         recyclerView = view.findViewById(R.id.recyclerViewUsers)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        userAdapter = UserAdapter(userList)
+        userAdapter = UserAdapter(userList, currentUserEmail)
         recyclerView.adapter = userAdapter
 
         // Cargar los datos del usuario actual y de la tabla de clasificación
@@ -82,27 +89,41 @@ class ProgressFragment : Fragment() {
 
     // Cargar información del usuario actual
     private fun loadCurrentUser() {
-        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+        val currentUserEmail = FirebaseAuth.getInstance().currentUser?.email ?: return
         val database = FirebaseDatabase.getInstance()
-        val usersRef = database.getReference("usuarios").child(userId)
+        val usersRef = database.getReference("usuarios")
 
         usersRef.get().addOnSuccessListener { snapshot ->
-            val username = snapshot.child("username").getValue(String::class.java) ?: "No disponible"
+            val userList = mutableListOf<User>()
             val level = snapshot.child("level").getValue(Int::class.java) ?: 1
-            val rank = snapshot.child("rank").getValue(Int::class.java) ?: 1
-            val profileImageUrl = snapshot.child("profileImage").getValue(String::class.java)
+            for (userSnapshot in snapshot.children) {
+                val user = userSnapshot.getValue(User::class.java)
+                if (user != null) {
+                    userList.add(user)
+                }
+            }
 
-            // Llenar los TextViews
-            userName.text = username
-            userLevel.text = "Nivel $level"
-            userRank.text = "Rank #$rank"
+            userList.sortByDescending { it.score }
 
-            // Cargar la imagen de perfil
-            Glide.with(this)
-                .load(profileImageUrl ?: R.drawable.ic_default)
-                .placeholder(R.drawable.ic_default)
-                .error(R.drawable.ic_default)
-                .into(profileImage)
+            val currentUser = userList.find { it.email == currentUserEmail }
+            val rank = if (currentUser != null) {
+                userList.indexOf(currentUser) + 1
+            } else {
+                -1
+            }
+
+            if (currentUser != null) {
+                userName.text = currentUser.username
+                userLevel.text = "Nivel $level"
+                userRank.text = "Rank #$rank"
+
+                // Cargar la imagen de perfil
+                Glide.with(this)
+                    .load(currentUser.profileImage ?: R.drawable.ic_default)
+                    .placeholder(R.drawable.ic_default)
+                    .error(R.drawable.ic_default)
+                    .into(profileImage)
+            }
         }
     }
 
@@ -113,18 +134,15 @@ class ProgressFragment : Fragment() {
 
         usersRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                userList.clear() // Limpiar la lista antes de cargar nuevos datos
+                userList.clear()
                 for (snapshot in dataSnapshot.children) {
                     val user = snapshot.getValue(User::class.java)
                     if (user != null) {
-                        userList.add(user)  // Añadir cada usuario a la lista
+                        userList.add(user)
                     }
                 }
-                Log.i("info", userList.toString())
-                // Ordenar los usuarios por puntaje de mayor a menor
                 userList.sortByDescending { it.score }
 
-                // Actualizar el adaptador con los nuevos datos
                 userAdapter.notifyDataSetChanged()
             }
 
