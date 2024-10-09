@@ -1,49 +1,35 @@
 [versions]
 agp = "8.5.2"
-appcompatVersion = "1.4.0"
 ccp = "2.5.4"
 compiler = "4.12.0"
 converterGson = "2.5.0"
 facebookAndroidSdkVersion = "latest.release"
-firebaseBom = "33.2.0"
-firebaseBomVersion = "33.2.0"
+firebaseBom = "33.4.0"
 glide = "4.12.0"
-googleFirebaseBom = "33.2.0"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-lifecycleRuntimeKtx = "2.8.4"
-activityCompose = "1.9.1"
-composeBom = "2024.08.00"
+lifecycleRuntimeKtx = "2.8.6"
+activityCompose = "1.9.2"
 googleGmsGoogleServices = "4.4.2"
-firebaseDatabase = "21.0.0"
 constraintlayout = "2.1.4"
 appcompat = "1.7.0"
-material = "1.12.0"
-activity = "1.9.1"
+activity = "1.9.2"
+materialVersion = "1.7.3"
 playServicesAuth = "21.2.0"
-firebaseFirestoreKtx = "25.1.0"
 retrofit = "2.5.0"
-uiTextGoogleFonts = "1.7.2"
-firebaseStorage = "21.0.1"
+uiTextGoogleFonts = "1.7.3"
+navigationCompose = "2.8.2"
+coil = "2.7.0"
+composeBom = "2024.09.03"
+material = "1.12.0"
+crashlytics = "3.0.2"
 
 [libraries]
-adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "converterGson" }
-androidx-appcompat-v140 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-ccp = { module = "com.hbb20:ccp", version.ref = "ccp" }
-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
-facebook-android-sdk-vlatestrelease = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookAndroidSdkVersion" }
-androidx-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
-firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
-firebase-bom-v3231 = { module = "com.google.firebase:firebase-bom", version.ref = "googleFirebaseBom" }
-firebase-bom-v3280 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
-glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+androidx-material = { module = "androidx.compose.material:material", version.ref = "materialVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -57,18 +43,34 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+androidx-navigation-compose = {module = "androidx.navigation:navigation-compose" , version.ref = "navigationCompose"}
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
-play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
-firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
+androidx-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
+
+adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "converterGson" }
+ccp = { module = "com.hbb20:ccp", version.ref = "ccp" }
+coil = {module = "io.coil-kt:coil-compose", version.ref = "coil"}
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
-firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-auth = { module = "com.google.firebase:firebase-auth-ktx" }
+firebase-crashlytics = {module = "com.google.firebase:firebase-crashlytics" }
+firebase-storage = { module = "com.google.firebase:firebase-storage-ktx"}
+firebase-firestore = {module= "com.google.firebase:firebase-firestore"}
+firebase-realtime = {module= "com.google.firebase:firebase-database-ktx"}
+firebase-config = {module = "com.google.firebase:firebase-config-ktx"}
+facebook-android-sdk-vlatestrelease = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookAndroidSdkVersion" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
-
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+googleServices = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+crashlytics = {id= "com.google.firebase.crashlytics", version.ref = "crashlytics"}
