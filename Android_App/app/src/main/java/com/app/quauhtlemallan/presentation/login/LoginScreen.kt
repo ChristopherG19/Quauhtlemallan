@@ -1,5 +1,7 @@
 package com.app.quauhtlemallan.presentation.login
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -27,7 +29,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -41,6 +42,7 @@ import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.theme.crimsonRed
 import com.app.quauhtlemallan.ui.theme.mossGreen
 import com.app.quauhtlemallan.viewmodels.login.LoginViewModel
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
@@ -49,9 +51,19 @@ fun LoginScreen(
     viewModel: LoginViewModel,
     navigateToHome: () -> Unit,
     navigateBack: () -> Unit,
-    onGoogleSignInClick: () -> Unit
+    googleSignInClient: GoogleSignInClient
 ) {
-    val context = LocalContext.current
+    // Google Sign-In launcher
+    val launcher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.StartActivityForResult(),
+        onResult = { result ->
+            viewModel.signInWithGoogle(
+                result = result.data,
+                auth = auth,
+                navigateToHome = navigateToHome
+            )
+        }
+    )
 
     Column(
         modifier = Modifier
@@ -152,7 +164,7 @@ fun LoginScreen(
 
         CustomButton(
             modifier = Modifier.clickable {
-                onGoogleSignInClick()
+                launcher.launch(googleSignInClient.signInIntent)
             },
             painter = painterResource(id = R.drawable.google),
             title = "Iniciar con Google",

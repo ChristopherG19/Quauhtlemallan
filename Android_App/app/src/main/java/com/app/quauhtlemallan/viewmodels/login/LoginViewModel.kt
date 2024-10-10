@@ -1,32 +1,17 @@
 package com.app.quauhtlemallan.viewmodels.login
 
 import android.content.Intent
-import android.widget.Toast
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
 
 class LoginViewModel: ViewModel() {
 
@@ -58,10 +43,34 @@ class LoginViewModel: ViewModel() {
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     navigateToHome()
-                } // Manejar errores
+                }
             }
         } else {
             showEmptyFieldsAlert = true
+        }
+    }
+
+    fun signInWithGoogle(
+        result: Intent?,
+        auth: FirebaseAuth,
+        navigateToHome: () -> Unit
+    ) {
+        val task = GoogleSignIn.getSignedInAccountFromIntent(result)
+        try {
+            val account = task.getResult(ApiException::class.java)
+            if (account != null) {
+                val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+                auth.signInWithCredential(credential)
+                    .addOnCompleteListener { taskG ->
+                        if (taskG.isSuccessful) {
+                            navigateToHome()
+                        } else {
+                            _state.update { it.copy(signInError = "Error al iniciar sesión con Google") }
+                        }
+                    }
+            }
+        } catch (e: ApiException) {
+            _state.update { it.copy(signInError = "Error de Google Sign-In: ${e.message}") }
         }
     }
 

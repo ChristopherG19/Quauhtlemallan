@@ -1,7 +1,7 @@
 package com.app.quauhtlemallan
 
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
+import android.content.Intent
+import androidx.activity.result.ActivityResultLauncher
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -18,13 +18,10 @@ import com.app.quauhtlemallan.presentation.home.ProgresoScreen
 import com.app.quauhtlemallan.presentation.initial.InitialScreen
 import com.app.quauhtlemallan.presentation.login.LoginScreen
 import com.app.quauhtlemallan.presentation.signup.SignUpScreen
-import com.app.quauhtlemallan.utils.showAlert
 import com.app.quauhtlemallan.viewmodels.login.LoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthProvider
 
 @Composable
 fun NavigationWrapper(
@@ -41,30 +38,6 @@ fun NavigationWrapper(
 
     val googleSignInClient = GoogleSignIn.getClient(context, googleSignInOptions)
 
-    val launcher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.StartActivityForResult(),
-        onResult = { result ->
-            val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
-            try {
-                val account = task.getResult(ApiException::class.java)
-                if (account != null) {
-                    val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-                    auth.signInWithCredential(credential)
-                        .addOnCompleteListener { taskG ->
-                            if (taskG.isSuccessful) {
-                                // Aquí puedes proceder con la navegación a Home
-                                navHostController.navigate("home")
-                            } else {
-                                showAlert(context, "Error de Autenticación", "No se pudo autenticar con Google.")
-                            }
-                        }
-                }
-            } catch (e: ApiException) {
-                showAlert(context, "Error de Google Sign-In", e.message ?: "Error desconocido.")
-            }
-        }
-    )
-
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
             InitialScreen(navigateToLogin = {navHostController.navigate("logIn")},
@@ -78,9 +51,7 @@ fun NavigationWrapper(
                 viewModel = loginViewModel,
                 navigateToHome = { navHostController.navigate("home") },
                 navigateBack = { navHostController.navigate("initial") },
-                onGoogleSignInClick = {
-                    launcher.launch(googleSignInClient.signInIntent)
-                }
+                googleSignInClient = googleSignInClient
             )
         }
         composable("signUp"){
