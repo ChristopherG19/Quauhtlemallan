@@ -62,6 +62,7 @@ dependencies {
     implementation(libs.firebase.crashlytics)
 
     implementation(libs.coil)
+    implementation(libs.coil.gif)
 
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.ktx)

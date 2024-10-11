@@ -1,22 +1,19 @@
 package com.app.quauhtlemallan
 
-import android.content.Intent
-import androidx.activity.result.ActivityResultLauncher
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.NavHostController
-import com.app.quauhtlemallan.presentation.home.AjustesScreen
-import com.app.quauhtlemallan.presentation.home.BottomNavItem
-import com.app.quauhtlemallan.presentation.home.ChatScreen
+import com.app.quauhtlemallan.presentation.bottomnav.BottomNavItem
 import com.app.quauhtlemallan.presentation.home.HomeScreen
-import com.app.quauhtlemallan.presentation.home.InicioScreen
-import com.app.quauhtlemallan.presentation.home.JuegosScreen
-import com.app.quauhtlemallan.presentation.home.ProgresoScreen
 import com.app.quauhtlemallan.presentation.initial.InitialScreen
 import com.app.quauhtlemallan.presentation.login.LoginScreen
+import com.app.quauhtlemallan.presentation.navbar.ajustes.SettingsScreen
+import com.app.quauhtlemallan.presentation.navbar.chat.ChatScreen
+import com.app.quauhtlemallan.presentation.navbar.games.GamesScreen
+import com.app.quauhtlemallan.presentation.navbar.progreso.ProgresoScreen
 import com.app.quauhtlemallan.presentation.signup.SignUpScreen
 import com.app.quauhtlemallan.viewmodels.login.LoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -61,7 +58,7 @@ fun NavigationWrapper(
             HomeScreen(
                 auth = auth,
                 googleSignInClient = googleSignInClient,
-                navigateToLogin = { navHostController.navigate("logIn") },
+                navigateToStart = { navHostController.navigate("initial") },
                 navController = navHostController
             )
         }
@@ -73,13 +70,18 @@ fun NavigationWrapper(
             ChatScreen()
         }
         composable(BottomNavItem.Inicio.route) {
-            InicioScreen()
+            HomeScreen(
+                auth = auth,
+                googleSignInClient = googleSignInClient,
+                navigateToStart = { navHostController.navigate("home") },
+                navController = navHostController
+            )
         }
         composable(BottomNavItem.Juegos.route) {
-            JuegosScreen()
+            GamesScreen()
         }
         composable(BottomNavItem.Ajustes.route) {
-            AjustesScreen()
+            SettingsScreen()
         }
     }
 }
