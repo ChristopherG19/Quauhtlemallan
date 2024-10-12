@@ -16,10 +16,12 @@ import com.app.quauhtlemallan.presentation.navbar.chat.ChatScreen
 import com.app.quauhtlemallan.presentation.navbar.games.GamesScreen
 import com.app.quauhtlemallan.presentation.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.presentation.signup.SignUpScreen
-import com.app.quauhtlemallan.viewmodels.login.LoginViewModel
+import com.app.quauhtlemallan.viewmodels.authentication.LoginViewModel
+import com.app.quauhtlemallan.viewmodels.authentication.RegisterViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 @Composable
 fun NavigationWrapper(
@@ -27,6 +29,7 @@ fun NavigationWrapper(
     auth: FirebaseAuth
 ) {
     val context = LocalContext.current
+    val database = FirebaseDatabase.getInstance()
     val currentUser = auth.currentUser
 
     val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -35,6 +38,7 @@ fun NavigationWrapper(
         .build()
 
     val googleSignInClient = GoogleSignIn.getClient(context, googleSignInOptions)
+    googleSignInClient.signOut()
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -49,13 +53,23 @@ fun NavigationWrapper(
                 viewModel = loginViewModel,
                 navigateToHome = { navHostController.navigate("home") },
                 navigateBack = { navHostController.navigate("initial") },
-                googleSignInClient = googleSignInClient
+                googleSignInClient = googleSignInClient,
+                database = database
             )
         }
         composable("signUp"){
+            val signUpViewModel = viewModel<RegisterViewModel>()
+
             SignUpScreen(
-                auth,
+                auth = auth,
+                database = database,
+                viewModel = signUpViewModel,
                 navigateBack = { navHostController.navigate("initial") },
+                navigateToHome = {
+                    navHostController.navigate("home") {
+                        popUpTo("initial") { inclusive = true }
+                    }
+                }
             )
         }
         composable("home"){
@@ -88,7 +102,10 @@ fun NavigationWrapper(
             )
         }
         composable("achievements") {
-            AchievementsScreen(navController = navHostController)
+            AchievementsScreen(
+            navController = navHostController,
+            navigateBack = { navHostController.navigate(BottomNavItem.Progreso.route) }
+            )
         }
     }
 }

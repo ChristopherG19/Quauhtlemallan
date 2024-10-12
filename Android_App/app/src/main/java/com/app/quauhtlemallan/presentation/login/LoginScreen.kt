@@ -41,17 +41,20 @@ import com.app.quauhtlemallan.ui.theme.SelectedField
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.theme.crimsonRed
 import com.app.quauhtlemallan.ui.theme.mossGreen
-import com.app.quauhtlemallan.viewmodels.login.LoginViewModel
+import com.app.quauhtlemallan.viewmodels.data.User
+import com.app.quauhtlemallan.viewmodels.authentication.LoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 @Composable
 fun LoginScreen(
     auth: FirebaseAuth,
     viewModel: LoginViewModel,
-    navigateToHome: () -> Unit,
+    navigateToHome: (User) -> Unit,
     navigateBack: () -> Unit,
-    googleSignInClient: GoogleSignInClient
+    googleSignInClient: GoogleSignInClient,
+    database: FirebaseDatabase
 ) {
     // Google Sign-In launcher
     val launcher = rememberLauncherForActivityResult(
@@ -60,6 +63,7 @@ fun LoginScreen(
             viewModel.signInWithGoogle(
                 result = result.data,
                 auth = auth,
+                database = database,
                 navigateToHome = navigateToHome
             )
         }
@@ -137,7 +141,7 @@ fun LoginScreen(
 
         Button(
             onClick = {
-                viewModel.signInWithEmailAndPassword(auth, navigateToHome)
+                viewModel.signInWithEmailAndPassword(auth, database, navigateToHome)
             },
             modifier = Modifier
                 .fillMaxWidth()

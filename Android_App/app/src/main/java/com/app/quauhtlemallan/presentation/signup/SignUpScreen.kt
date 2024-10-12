@@ -5,9 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.runtime.Composable
 import com.google.firebase.auth.FirebaseAuth
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -19,26 +17,30 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.ui.theme.SelectedField
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
-import com.app.quauhtlemallan.ui.theme.mossGreen
+import com.app.quauhtlemallan.viewmodels.data.User
+import com.app.quauhtlemallan.viewmodels.authentication.RegisterViewModel
+import com.google.firebase.database.FirebaseDatabase
 import com.hbb20.CountryCodePicker
 
 @Composable
 fun SignUpScreen(
     auth: FirebaseAuth,
-    navigateBack: () -> Unit
+    database: FirebaseDatabase,
+    viewModel: RegisterViewModel,
+    navigateBack: () -> Unit,
+    navigateToHome: (User) -> Unit
 ) {
-    var username by remember { mutableStateOf("") }
-    var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-    var confirmPassword by remember { mutableStateOf("") }
-    var selectedCountry by remember { mutableStateOf("Guatemala") }
     val context = LocalContext.current
+    val state by viewModel.state.collectAsState()
+    var passwordVisible by remember { mutableStateOf(false) }
+    var confirmPasswordVisible by remember { mutableStateOf(false) }
 
     Column(
         modifier = Modifier
@@ -76,10 +78,9 @@ fun SignUpScreen(
 
         Spacer(Modifier.height(16.dp))
 
-        // Campo de texto para el nombre de usuario (mismo formato que el Login)
         TextField(
-            value = username,
-            onValueChange = { username = it },
+            value = viewModel.username,
+            onValueChange = viewModel::onUsernameChange,
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
@@ -96,8 +97,8 @@ fun SignUpScreen(
 
         // Campo de texto para el correo
         TextField(
-            value = email,
-            onValueChange = { email = it },
+            value = viewModel.email,
+            onValueChange = viewModel::onEmailChange,
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
@@ -115,8 +116,8 @@ fun SignUpScreen(
 
         // Campo de texto para la contraseña
         TextField(
-            value = password,
-            onValueChange = { password = it },
+            value = viewModel.password,
+            onValueChange = viewModel::onPasswordChange,
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
@@ -127,7 +128,20 @@ fun SignUpScreen(
                 focusedContainerColor = SelectedField
             ),
             placeholder = { Text(text = "Contraseña", color = Color.Black) },
-            visualTransformation = PasswordVisualTransformation(),
+            visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
+            trailingIcon = {
+                val image = if (passwordVisible) {
+                    painterResource(id = R.drawable.ic_visibility_off)
+                } else {
+                    painterResource(id = R.drawable.ic_visibility)
+                }
+
+                IconButton(onClick = {
+                    passwordVisible = !passwordVisible
+                }) {
+                    Icon(painter = image, contentDescription = "Toggle password visibility")
+                }
+            },
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password)
         )
 
@@ -135,8 +149,8 @@ fun SignUpScreen(
 
         // Campo de texto para confirmar la contraseña
         TextField(
-            value = confirmPassword,
-            onValueChange = { confirmPassword = it },
+            value = viewModel.confirmPassword,
+            onValueChange = viewModel::onConfirmPasswordChange,
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
@@ -147,7 +161,20 @@ fun SignUpScreen(
                 focusedContainerColor = SelectedField
             ),
             placeholder = { Text(text = "Confirmar Contraseña", color = Color.Black) },
-            visualTransformation = PasswordVisualTransformation(),
+            visualTransformation = if (confirmPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
+            trailingIcon = {
+                val image = if (confirmPasswordVisible) {
+                    painterResource(id = R.drawable.ic_visibility_off)
+                } else {
+                    painterResource(id = R.drawable.ic_visibility)
+                }
+
+                IconButton(onClick = {
+                    confirmPasswordVisible = !confirmPasswordVisible
+                }) {
+                    Icon(painter = image, contentDescription = "Toggle confirm password visibility")
+                }
+            },
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password)
         )
 
@@ -160,9 +187,9 @@ fun SignUpScreen(
                     showFullName(true)
                     showNameCode(false)
                     setShowPhoneCode(false)
-                    setCountryForNameCode("GT")  // Guatemala por defecto
+                    setCountryForNameCode("GT")
                     setOnCountryChangeListener {
-                        selectedCountry = selectedCountryName
+                        viewModel.onCountryChange(selectedCountryName)
                     }
                 }
             },
@@ -176,14 +203,26 @@ fun SignUpScreen(
         // Botón de registro
         Button(
             onClick = {
-                // Acción para registrar al usuario
+                viewModel.registerUser(auth, database, navigateToHome)
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(40.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = mossGreen)
+                .height(40.dp)
         ) {
             Text(text = "Registrar", color = Color.White)
+        }
+
+        if (state.signInError != null) {
+            AlertDialog(
+                onDismissRequest = { viewModel.resetAlert() },
+                confirmButton = {
+                    Button(onClick = { viewModel.resetAlert() }) {
+                        Text("Aceptar")
+                    }
+                },
+                title = { Text(text = "Error") },
+                text = { Text(text = state.signInError ?: "") }
+            )
         }
     }
 }
