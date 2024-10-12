@@ -37,7 +37,7 @@ fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit
             color = Color.Black,
             fontSize = 30.sp,
             fontFamily = cinzelFontFamily,
-            fontWeight = FontWeight.Normal
+            fontWeight = FontWeight.SemiBold
         )
         Spacer(modifier = Modifier.weight(1f))
         Button(

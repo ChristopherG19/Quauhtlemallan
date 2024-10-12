@@ -28,16 +28,13 @@ import coil.decode.GifDecoder
 import coil.request.ImageRequest
 import coil.size.OriginalSize
 import com.app.quauhtlemallan.R
-import com.app.quauhtlemallan.presentation.bottomnav.BottomNavigationBar
+import com.app.quauhtlemallan.presentation.navbar.BottomNavigationBar
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
 fun HomeScreen(
-    auth: FirebaseAuth,
-    googleSignInClient: GoogleSignInClient,
-    navigateToStart: () -> Unit,
     navController: NavHostController
 ) {
     Scaffold(
@@ -82,23 +79,13 @@ fun HomeScreen(
                         .build(),
                     contentDescription = "Mapa GIF",
                     modifier = Modifier
-                        .size(350.dp)
+                        .size(360.dp)
                         .padding(16.dp),
                     contentScale = ContentScale.Crop
                 )
 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                Button(
-                    onClick = {
-                        auth.signOut()
-                        googleSignInClient.signOut().addOnCompleteListener {
-                            navigateToStart()
-                        }
-                    }
-                ) {
-                    Text(text = "Cerrar sesión")
-                }
             }
         }
     }

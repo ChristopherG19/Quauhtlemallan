@@ -1,4 +1,4 @@
-package com.app.quauhtlemallan.presentation.bottomnav
+package com.app.quauhtlemallan.presentation.navbar
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -9,17 +9,17 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.app.quauhtlemallan.presentation.navbar.ajustes.SettingsScreen
-import com.app.quauhtlemallan.presentation.navbar.chat.ChatScreen
-import com.app.quauhtlemallan.presentation.navbar.games.GamesScreen
-import com.app.quauhtlemallan.presentation.navbar.progreso.ProgresoScreen
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
+import com.app.quauhtlemallan.ui.theme.forestGreen
+import com.app.quauhtlemallan.ui.theme.lightGreen
 
 @Composable
 fun BottomNavigationBar(navController: NavHostController) {
@@ -36,31 +36,22 @@ fun BottomNavigationBar(navController: NavHostController) {
         items.forEach { item ->
             NavigationBarItem(
                 icon = { Icon(imageVector = item.icon, contentDescription = item.title) },
-                label = { Text(text = item.title) },
+                label = { Text(text = item.title, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal, fontSize = 12.sp) },
                 selected = currentRoute == item.route,
                 onClick = {
                     navController.navigate(item.route) {
                         launchSingleTop = true
                         restoreState = true
                     }
-                }
+                },
+                colors = NavigationBarItemDefaults.colors(
+                    selectedIconColor = forestGreen,
+                    indicatorColor = lightGreen
+                )
             )
         }
     }
 }
-
-@Composable
-fun NavigationGraph(navController: NavHostController) {
-    NavHost(navController, startDestination = BottomNavItem.Inicio.route) {
-        composable(BottomNavItem.Progreso.route) { ProgresoScreen() }
-        composable(BottomNavItem.Chat.route) { ChatScreen() }
-        composable(BottomNavItem.Inicio.route) { navController.navigate("home") }
-        composable(BottomNavItem.Juegos.route) { GamesScreen() }
-        composable(BottomNavItem.Ajustes.route) { SettingsScreen() }
-    }
-}
-
-
 
 sealed class BottomNavItem(val title: String, val icon: ImageVector, val route: String) {
     object Progreso : BottomNavItem("Progreso", Icons.Default.Menu, "progreso")

@@ -6,14 +6,15 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.NavHostController
-import com.app.quauhtlemallan.presentation.bottomnav.BottomNavItem
+import com.app.quauhtlemallan.presentation.navbar.BottomNavItem
 import com.app.quauhtlemallan.presentation.home.HomeScreen
 import com.app.quauhtlemallan.presentation.initial.InitialScreen
 import com.app.quauhtlemallan.presentation.login.LoginScreen
-import com.app.quauhtlemallan.presentation.navbar.ajustes.SettingsScreen
+import com.app.quauhtlemallan.presentation.navbar.achievements.AchievementsScreen
+import com.app.quauhtlemallan.presentation.navbar.settings.SettingsScreen
 import com.app.quauhtlemallan.presentation.navbar.chat.ChatScreen
 import com.app.quauhtlemallan.presentation.navbar.games.GamesScreen
-import com.app.quauhtlemallan.presentation.navbar.progreso.ProgresoScreen
+import com.app.quauhtlemallan.presentation.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.presentation.signup.SignUpScreen
 import com.app.quauhtlemallan.viewmodels.login.LoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -52,36 +53,42 @@ fun NavigationWrapper(
             )
         }
         composable("signUp"){
-            SignUpScreen(auth)
+            SignUpScreen(
+                auth,
+                navigateBack = { navHostController.navigate("initial") },
+            )
         }
         composable("home"){
             HomeScreen(
-                auth = auth,
-                googleSignInClient = googleSignInClient,
-                navigateToStart = { navHostController.navigate("initial") },
                 navController = navHostController
             )
         }
-
         composable(BottomNavItem.Progreso.route) {
-            ProgresoScreen()
+            ProgressScreen(
+                navController = navHostController,
+                navigateToAchievements = { navHostController.navigate("achievements")}
+            )
         }
         composable(BottomNavItem.Chat.route) {
-            ChatScreen()
+            ChatScreen(navController = navHostController)
         }
         composable(BottomNavItem.Inicio.route) {
             HomeScreen(
-                auth = auth,
-                googleSignInClient = googleSignInClient,
-                navigateToStart = { navHostController.navigate("home") },
                 navController = navHostController
             )
         }
         composable(BottomNavItem.Juegos.route) {
-            GamesScreen()
+            GamesScreen(navController = navHostController)
         }
         composable(BottomNavItem.Ajustes.route) {
-            SettingsScreen()
+            SettingsScreen(
+                auth = auth,
+                googleSignInClient = googleSignInClient,
+                navController = navHostController
+            )
+        }
+        composable("achievements") {
+            AchievementsScreen(navController = navHostController)
         }
     }
 }

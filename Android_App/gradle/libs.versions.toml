@@ -1,6 +1,7 @@
 [versions]
 agp = "8.5.2"
 ccp = "2.5.4"
+ccpVersion = "2.5.1"
 coilGif = "2.0.0"
 compiler = "4.12.0"
 converterGson = "2.5.0"
@@ -31,6 +32,7 @@ crashlytics = "3.0.2"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "materialVersion" }
+ccp-v251 = { module = "com.hbb20:ccp", version.ref = "ccpVersion" }
 coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coilGif" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

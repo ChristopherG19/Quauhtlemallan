@@ -63,6 +63,8 @@ dependencies {
 
     implementation(libs.coil)
     implementation(libs.coil.gif)
+    implementation(libs.ccp)
+
 
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.ktx)
