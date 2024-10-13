@@ -36,7 +36,7 @@ fun BottomNavigationBar(navController: NavHostController) {
         items.forEach { item ->
             NavigationBarItem(
                 icon = { Icon(imageVector = item.icon, contentDescription = item.title) },
-                label = { Text(text = item.title, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal, fontSize = 12.sp) },
+                label = { Text(text = item.title, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal, fontSize = 11.sp) },
                 selected = currentRoute == item.route,
                 onClick = {
                     navController.navigate(item.route) {

@@ -19,18 +19,28 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.data.model.User
+import com.app.quauhtlemallan.ui.theme.Purple40
+import com.google.firebase.auth.FirebaseAuth
 
 @Composable
-fun UserCard(user: User) {
+fun UserCard(user: User, rank: Int) {
+    val currentUserId = FirebaseAuth.getInstance().currentUser?.uid
+    val isCurrentUser = user.id == currentUserId
+
+    val backgroundColor = if (isCurrentUser) Purple40 else Color.White
+    val textColor = if (isCurrentUser) Color.White else Color.Black
+    val scoreTextColor = if (isCurrentUser) Color.White else Color.Gray
+
     Card(
         shape = RoundedCornerShape(8.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        colors = CardDefaults.cardColors(containerColor = backgroundColor),
         modifier = Modifier
             .fillMaxWidth()
             .padding(8.dp)
@@ -42,29 +52,35 @@ fun UserCard(user: User) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = user.score.toString(),
+                text = "#$rank",
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
+                color = textColor,
                 modifier = Modifier.padding(end = 16.dp)
             )
 
             Image(
-                painter = painterResource(R.drawable.ic_default),
+                painter = rememberImagePainter(user.profileImage.ifEmpty{R.drawable.ic_default}),
                 contentDescription = "Imagen de usuario",
                 modifier = Modifier
                     .size(50.dp)
                     .clip(CircleShape)
-                    .border(2.dp, Color.Gray, shape = CircleShape)
+                    .border(2.dp, Color.Transparent, shape = CircleShape)
             )
 
             Spacer(modifier = Modifier.width(16.dp))
 
             Column {
-                Text(text = user.username, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                Text(
+                    text = user.username,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = textColor
+                )
                 Text(
                     text = "Total de puntos: ${user.score}",
                     fontSize = 16.sp,
-                    color = Color.Gray
+                    color = scoreTextColor
                 )
             }
         }

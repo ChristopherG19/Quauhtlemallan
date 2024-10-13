@@ -108,8 +108,7 @@ fun SettingsScreen(
                     modifier = Modifier
                         .size(100.dp)
                         .clip(CircleShape)
-                        .border(2.dp, Color.Black, shape = CircleShape)
-                        .padding(4.dp)
+                        .border(0.5.dp, Color.Black, shape = CircleShape)
                 )
 
                 Spacer(modifier = Modifier.width(16.dp))

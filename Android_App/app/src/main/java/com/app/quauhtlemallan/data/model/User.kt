@@ -3,6 +3,7 @@ package com.app.quauhtlemallan.data.model
 import java.io.Serializable
 
 data class User(
+    val id: String = "",
     val username: String = "",
     val email: String = "",
     val country: String = "Guatemala",

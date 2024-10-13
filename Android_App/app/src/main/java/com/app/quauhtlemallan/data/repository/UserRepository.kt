@@ -83,4 +83,24 @@ class UserRepository(
         }
     }
 
+    suspend fun getUsersOrderedByScore(): List<User> {
+        return try {
+            val snapshot = database.getReference("usuarios")
+                .orderByChild("score")
+                .get()
+                .await()
+
+            val userList = mutableListOf<User>()
+            for (data in snapshot.children) {
+                val user = data.getValue(User::class.java)
+                user?.let { userList.add(it) }
+            }
+
+            userList.sortedByDescending { it.score }
+        } catch (e: Exception) {
+            e.message?.let { Log.e("Error_GetUsersList", it) }
+            emptyList()
+        }
+    }
+
 }

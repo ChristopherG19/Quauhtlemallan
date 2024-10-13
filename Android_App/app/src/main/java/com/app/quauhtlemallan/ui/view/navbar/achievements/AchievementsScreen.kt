@@ -49,25 +49,6 @@ fun AchievementsScreen(
         bottomBar = { BottomNavigationBar(navController) }
     ) { innerPadding ->
 
-        // Botón de regresar
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 24.dp)
-        ) {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_back_24),
-                contentDescription = "Back",
-                tint = Color.Black,
-                modifier = Modifier
-                    .size(24.dp)
-                    .clickable {
-                        navigateBack()  // Navegar hacia atrás
-                    }
-            )
-            Spacer(modifier = Modifier.weight(1f))
-        }
-
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -75,6 +56,25 @@ fun AchievementsScreen(
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            // Botón de regresar
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 24.dp)
+            ) {
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_back_24),
+                    contentDescription = "Back",
+                    tint = Color.Black,
+                    modifier = Modifier
+                        .size(24.dp)
+                        .clickable {
+                            navigateBack()  // Navegar hacia atrás
+                        }
+                )
+                Spacer(modifier = Modifier.weight(1f))
+            }
+
             // Indicador de progreso
             LinearProgressIndicator(
                 progress = { progress / 100 },

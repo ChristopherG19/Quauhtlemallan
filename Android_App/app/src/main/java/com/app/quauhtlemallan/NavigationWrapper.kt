@@ -18,6 +18,7 @@ import com.app.quauhtlemallan.ui.view.navbar.games.GamesScreen
 import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.ui.view.signup.SignUpScreen
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
+import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -46,6 +47,7 @@ fun NavigationWrapper(
     val loginViewModelFactory = LoginViewModelFactory(auth, userRepository)
     val registerViewModelFactory = RegisterViewModelFactory(auth, userRepository)
     val settingsViewModelFactory = SettingsViewModelFactory(userRepository)
+    val progressViewModelFactory = ProgressViewModelFactory(userRepository)
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -79,9 +81,11 @@ fun NavigationWrapper(
             )
         }
         composable(BottomNavItem.Progreso.route) {
+            val progressViewModel: ProgressViewModel = viewModel(factory = progressViewModelFactory)
             ProgressScreen(
                 navController = navHostController,
-                navigateToAchievements = { navHostController.navigate("achievements")}
+                viewModel = progressViewModel,
+                navigateToAchievements = { navHostController.navigate("achievements") }
             )
         }
         composable(BottomNavItem.Chat.route) {

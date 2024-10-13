@@ -40,6 +40,7 @@ object Util {
                 }
 
                 val userProfile = User(
+                    id = userId,
                     username = usernameToUse,
                     email = emailToUse,
                     country = country,
@@ -57,27 +58,6 @@ object Util {
                 val userProf = snapshot.getValue(User::class.java)
                 userProf?.let {
                     onProfileCreated(it)
-                }
-            }
-        }
-    }
-
-    fun loadUserProfile(
-        user: FirebaseUser,
-        provider: ProviderType,
-        database: FirebaseDatabase,
-        onProfileLoaded: (User) -> Unit
-    ) {
-        val usersRef = database.getReference("usuarios")
-        val userId = user.uid
-
-        usersRef.child(userId).get().addOnSuccessListener { snapshot ->
-            val userProfile = snapshot.getValue(User::class.java)
-            if (userProfile != null) {
-                onProfileLoaded(userProfile)
-            } else {
-                createUserProfile(user, provider, database, isRegistration = false, username = user.displayName ?: "", "Guatemala") {
-                    onProfileLoaded(it)
                 }
             }
         }
