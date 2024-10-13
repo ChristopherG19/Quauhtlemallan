@@ -39,9 +39,6 @@ class MainActivity: ComponentActivity() {
     override fun onStart() {
         super.onStart()
         val currentUser:FirebaseUser? = auth.currentUser
-        if(currentUser != null){
-            auth.signOut()
-        }
     }
 
 }

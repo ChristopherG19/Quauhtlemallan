@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
-import com.app.quauhtlemallan.ui.viewmodel.AchievementData
+import com.app.quauhtlemallan.data.model.AchievementData
 
 @Composable
 fun AchievementsScreen(

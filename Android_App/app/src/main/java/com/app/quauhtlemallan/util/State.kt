@@ -20,3 +20,10 @@ data class SignInResult(
     val data: User?,
     val errorMessage: String?
 )
+
+sealed class SettingsState {
+    object Idle : SettingsState()
+    object Loading : SettingsState()
+    object Success : SettingsState()
+    data class Error(val message: String) : SettingsState()
+}

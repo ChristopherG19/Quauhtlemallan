@@ -21,7 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.app.quauhtlemallan.ui.viewmodel.AchievementData
+import com.app.quauhtlemallan.data.model.AchievementData
 
 @Composable
 fun AchievementCard(badge: AchievementData) {

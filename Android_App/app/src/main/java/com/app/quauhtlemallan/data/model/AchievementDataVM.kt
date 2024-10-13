@@ -1,4 +1,4 @@
-package com.app.quauhtlemallan.ui.viewmodel
+package com.app.quauhtlemallan.data.model
 
 data class AchievementData(
     val id: Int,

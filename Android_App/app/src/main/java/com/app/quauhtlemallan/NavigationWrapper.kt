@@ -19,10 +19,12 @@ import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.ui.view.signup.SignUpScreen
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
+import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
 
 @Composable
 fun NavigationWrapper(
@@ -31,7 +33,8 @@ fun NavigationWrapper(
 ) {
     val context = LocalContext.current
     val database = FirebaseDatabase.getInstance()
-    val userRepository = UserRepository(database)
+    val storage = FirebaseStorage.getInstance()
+    val userRepository = UserRepository(auth, database, storage)
 
     val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
         .requestIdToken(context.getString(R.string.default_web_client_id))
@@ -39,10 +42,10 @@ fun NavigationWrapper(
         .build()
 
     val googleSignInClient = GoogleSignIn.getClient(context, googleSignInOptions)
-    googleSignInClient.signOut()
 
     val loginViewModelFactory = LoginViewModelFactory(auth, userRepository)
     val registerViewModelFactory = RegisterViewModelFactory(auth, userRepository)
+    val settingsViewModelFactory = SettingsViewModelFactory(userRepository)
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -93,10 +96,12 @@ fun NavigationWrapper(
             GamesScreen(navController = navHostController)
         }
         composable(BottomNavItem.Ajustes.route) {
+            val settingsViewModel: SettingsViewModel = viewModel(factory = settingsViewModelFactory)
             SettingsScreen(
                 auth = auth,
-                googleSignInClient = googleSignInClient,
-                navController = navHostController
+                viewModel = settingsViewModel,
+                navController = navHostController,
+                googleSignInClient = googleSignInClient
             )
         }
         composable("achievements") {

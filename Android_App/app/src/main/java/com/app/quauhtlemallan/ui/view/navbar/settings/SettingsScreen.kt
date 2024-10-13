@@ -2,6 +2,9 @@ package com.app.quauhtlemallan.ui.view.navbar.settings
 
 import android.content.Context
 import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -17,14 +20,19 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -36,31 +44,43 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavHostController
+import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
 import com.app.quauhtlemallan.ui.theme.forestGreen
 import com.app.quauhtlemallan.ui.theme.crimsonRed
 import com.app.quauhtlemallan.ui.theme.navyBlue
+import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
+import com.app.quauhtlemallan.util.SettingsState
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.hbb20.CountryCodePicker
+import java.util.Locale
 
 @Composable
 fun SettingsScreen(
     auth: FirebaseAuth,
-    googleSignInClient: GoogleSignInClient,
-    navController: NavHostController
+    viewModel: SettingsViewModel,
+    navController: NavHostController,
+    googleSignInClient: GoogleSignInClient
 ) {
-    var username by remember { mutableStateOf("Evan Peters") }
-    var email by remember { mutableStateOf("evan123@gmail.com") }
-    var password by remember { mutableStateOf("***********") }
-    var selectedCountry by remember { mutableStateOf("Guatemala") }
-    val context = LocalContext.current  // Obtener el contexto actual
+    val settingsState by viewModel.settingsStateFlow.collectAsState()
+    var passwordVisible by remember { mutableStateOf(false) }
+
+    LaunchedEffect(Unit) {
+        viewModel.loadUserData()
+    }
+
+    val launcher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.GetContent()
+    ) { uri ->
+        uri?.let { viewModel.uploadProfileImage(it) }
+    }
 
     Scaffold(
         bottomBar = { BottomNavigationBar(navController) }
@@ -82,7 +102,7 @@ fun SettingsScreen(
             ) {
                 // Imagen de perfil
                 Image(
-                    painter = painterResource(id = R.drawable.ic_default),  // Reemplaza con tu imagen
+                    painter = rememberImagePainter(viewModel.imageUrl),
                     contentDescription = "Imagen de perfil",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -95,7 +115,9 @@ fun SettingsScreen(
                 Spacer(modifier = Modifier.width(16.dp))
 
                 Button(
-                    onClick = { /* Acción para cambiar la foto */ },
+                    onClick = {
+                        launcher.launch("image/*")
+                    },
                     colors = ButtonDefaults.buttonColors(containerColor = navyBlue)
                 ) {
                     Text(text = "Cambiar Foto", color = Color.White)
@@ -104,8 +126,8 @@ fun SettingsScreen(
 
             // Campo de texto para el nombre de usuario
             OutlinedTextField(
-                value = username,
-                onValueChange = { username = it },
+                value = viewModel.username,
+                onValueChange = viewModel::onUsernameChange,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
@@ -116,39 +138,42 @@ fun SettingsScreen(
 
             // Campo de texto para el correo (deshabilitado)
             OutlinedTextField(
-                value = email,
-                onValueChange = { email = it },
+                value = viewModel.email,
+                onValueChange = {},
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
                 label = { Text("Correo") },
                 singleLine = true,
                 shape = RoundedCornerShape(8.dp),
-                enabled = false,  // Campo deshabilitado
+                enabled = false,
             )
 
-            // Campo de texto para la nueva contraseña
             OutlinedTextField(
-                value = password,
-                onValueChange = { password = it },
+                value = viewModel.password,
+                onValueChange = viewModel::onPasswordChange,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
                 label = { Text("Contraseña") },
                 singleLine = true,
-                visualTransformation = PasswordVisualTransformation(),  // Oculta el texto
+                visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
+                trailingIcon = {
+                    val image = if (passwordVisible) painterResource(id = R.drawable.ic_visibility_off) else painterResource(id = R.drawable.ic_visibility)
+                    IconButton(onClick = { passwordVisible = !passwordVisible }) {
+                        Icon(painter = image, contentDescription = "Toggle password visibility")
+                    }
+                },
                 shape = RoundedCornerShape(8.dp),
-                keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password)
             )
 
-            // Contenedor con el título "País de origen" y borde alrededor de CountryCodePicker
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp)
             ) {
                 Text(
-                    text = "País de origen",
+                    text = viewModel.selectedCountry,
                     style = MaterialTheme.typography.bodySmall,
                     modifier = Modifier.padding(bottom = 4.dp)
                 )
@@ -161,8 +186,9 @@ fun SettingsScreen(
                         .fillMaxWidth()
                 ) {
                     CountryCodePickerView(
-                        context = context,
-                        onCountrySelected = { selectedCountry = it }
+                        context = LocalContext.current,
+                        selectedCountry = viewModel.selectedCountry,
+                        onCountrySelected = { viewModel.onCountryChange(it) }
                     )
                 }
             }
@@ -171,7 +197,7 @@ fun SettingsScreen(
 
             // Botón Guardar Cambios
             Button(
-                onClick = { /* Acción para guardar cambios */ },
+                onClick = { viewModel.updateProfile() },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
@@ -197,6 +223,28 @@ fun SettingsScreen(
             ) {
                 Text(text = "Cerrar sesión", color = Color.White)
             }
+
+            when (settingsState) {
+                is SettingsState.Loading -> CircularProgressIndicator()
+                is SettingsState.Error -> {
+                    val errorMessage = (settingsState as SettingsState.Error).message
+                    AlertDialog(
+                        onDismissRequest = { viewModel.resetState() },
+                        confirmButton = {
+                            Button(onClick = { viewModel.resetState() }) {
+                                Text("Aceptar")
+                            }
+                        },
+                        title = { Text("Error") },
+                        text = { Text(errorMessage) }
+                    )
+                }
+                is SettingsState.Success -> {
+                    Toast.makeText(LocalContext.current, "Recuerda guardar tus cambios antes de salir", Toast.LENGTH_SHORT).show()
+                    viewModel.resetState()
+                }
+                else -> {}
+            }
         }
     }
 }
@@ -205,16 +253,17 @@ fun SettingsScreen(
 @Composable
 fun CountryCodePickerView(
     context: Context,
+    selectedCountry: String,
     onCountrySelected: (String) -> Unit
 ) {
     AndroidView(
         factory = {
-            // Crear una instancia del CountryCodePicker
             CountryCodePicker(context).apply {
                 showFlag(true)
                 showFullName(true)
-                setCountryForNameCode("GT")
                 setShowPhoneCode(false)
+
+                setCountryForNameCode(getCountryCodeByName(selectedCountry))
 
                 setOnCountryChangeListener {
                     onCountrySelected(selectedCountryName)
@@ -226,7 +275,18 @@ fun CountryCodePickerView(
             }
         },
         update = { view ->
-            // Puedes agregar lógica adicional para actualizar la vista si es necesario
+            view.setCountryForNameCode(getCountryCodeByName(selectedCountry))
         }
     )
+}
+
+fun getCountryCodeByName(countryName: String): String {
+    val countryList = Locale.getISOCountries()
+    for (countryCode in countryList) {
+        val locale = Locale("", countryCode)
+        if (locale.displayCountry.equals(countryName, ignoreCase = true)) {
+            return countryCode
+        }
+    }
+    return "GT"
 }

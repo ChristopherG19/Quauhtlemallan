@@ -73,7 +73,7 @@ class RegisterViewModel(
                             country = selectedCountry,
                             profileImage = firebaseUser.photoUrl?.toString() ?: defaultImageUrl
                         )
-                        val success = userRepository.createUserProfile(firebaseUser, newUser)
+                        val success = userRepository.createUserProfile(newUser)
                         if (success) {
                             onNavigate(newUser)
                         }
