@@ -1,4 +1,4 @@
-package com.app.quauhtlemallan.ui.view.navbar.settings
+package com.app.quauhtlemallan.ui.view.navbar.profile
 
 import android.content.Context
 import android.widget.LinearLayout
@@ -44,6 +44,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
@@ -51,6 +52,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavHostController
 import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
 import com.app.quauhtlemallan.ui.theme.forestGreen
 import com.app.quauhtlemallan.ui.theme.crimsonRed
@@ -63,7 +65,7 @@ import com.hbb20.CountryCodePicker
 import java.util.Locale
 
 @Composable
-fun SettingsScreen(
+fun ProfileScreen(
     auth: FirebaseAuth,
     viewModel: SettingsViewModel,
     navController: NavHostController,
@@ -119,7 +121,7 @@ fun SettingsScreen(
                     },
                     colors = ButtonDefaults.buttonColors(containerColor = navyBlue)
                 ) {
-                    Text(text = "Cambiar Foto", color = Color.White)
+                    Text(text = "Cambiar Foto", color = Color.White, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal)
                 }
             }
 
@@ -130,7 +132,7 @@ fun SettingsScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
-                label = { Text("Usuario") },
+                label = { Text("Usuario", fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal) },
                 singleLine = true,
                 shape = RoundedCornerShape(8.dp),
             )
@@ -142,7 +144,7 @@ fun SettingsScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
-                label = { Text("Correo") },
+                label = { Text("Correo", fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal) },
                 singleLine = true,
                 shape = RoundedCornerShape(8.dp),
                 enabled = false,
@@ -154,7 +156,7 @@ fun SettingsScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
-                label = { Text("Contraseña") },
+                label = { Text("Contraseña", fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal) },
                 singleLine = true,
                 visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                 trailingIcon = {
@@ -174,7 +176,9 @@ fun SettingsScreen(
                 Text(
                     text = "País",
                     style = MaterialTheme.typography.bodySmall,
-                    modifier = Modifier.padding(bottom = 4.dp)
+                    modifier = Modifier.padding(bottom = 4.dp),
+                    fontFamily = cinzelFontFamily,
+                    fontWeight = FontWeight.Normal
                 )
 
                 // Borde y estilo similar a OutlinedTextField para CountryCodePicker
@@ -202,7 +206,7 @@ fun SettingsScreen(
                     .padding(vertical = 8.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = forestGreen)
             ) {
-                Text(text = "Guardar Cambios", color = Color.White)
+                Text(text = "Guardar Cambios", color = Color.White, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal)
             }
 
             // Botón Cerrar Sesión
@@ -220,7 +224,7 @@ fun SettingsScreen(
                     .padding(vertical = 8.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = crimsonRed)
             ) {
-                Text(text = "Cerrar sesión", color = Color.White)
+                Text(text = "Cerrar sesión", color = Color.White, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal)
             }
 
             when (settingsState) {
@@ -231,11 +235,11 @@ fun SettingsScreen(
                         onDismissRequest = { viewModel.resetState() },
                         confirmButton = {
                             Button(onClick = { viewModel.resetState() }) {
-                                Text("Aceptar")
+                                Text("Aceptar", fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal)
                             }
                         },
-                        title = { Text("Error") },
-                        text = { Text(errorMessage) }
+                        title = { Text("Error", fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal) },
+                        text = { Text(errorMessage, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal) }
                     )
                 }
                 is SettingsState.Success -> {

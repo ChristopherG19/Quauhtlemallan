@@ -13,9 +13,9 @@ import com.app.quauhtlemallan.ui.view.initial.InitialScreen
 import com.app.quauhtlemallan.ui.view.login.LoginScreen
 import com.app.quauhtlemallan.ui.view.navbar.achievements.AchievementsScreen
 import com.app.quauhtlemallan.ui.view.navbar.achievements.CategoriesScreen
-import com.app.quauhtlemallan.ui.view.navbar.settings.SettingsScreen
 import com.app.quauhtlemallan.ui.view.navbar.chat.ChatScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.GamesScreen
+import com.app.quauhtlemallan.ui.view.navbar.profile.ProfileScreen
 import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.ui.view.signup.SignUpScreen
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
@@ -104,7 +104,7 @@ fun NavigationWrapper(
         }
         composable(BottomNavItem.Perfil.route) {
             val settingsViewModel: SettingsViewModel = viewModel(factory = settingsViewModelFactory)
-            SettingsScreen(
+            ProfileScreen(
                 auth = auth,
                 viewModel = settingsViewModel,
                 navController = navHostController,

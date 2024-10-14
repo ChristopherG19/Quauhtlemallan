@@ -133,7 +133,8 @@ fun LoginScreen(
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
                 unfocusedContainerColor = Color.LightGray,
@@ -155,7 +156,8 @@ fun LoginScreen(
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
                 unfocusedContainerColor = Color.LightGray,
@@ -179,7 +181,7 @@ fun LoginScreen(
                 IconButton(onClick = {
                     passwordVisible = !passwordVisible
                 }) {
-                    Icon(painter = image, contentDescription = "Toggle password visibility")
+                    Icon(painter = image, contentDescription = "Toggle password visibility", tint = Color.Black)
                 }
             },
         )

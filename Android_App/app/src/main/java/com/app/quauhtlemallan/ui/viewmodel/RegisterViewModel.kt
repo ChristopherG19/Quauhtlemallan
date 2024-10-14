@@ -68,6 +68,7 @@ class RegisterViewModel(
                     val defaultImageUrl = "https://firebasestorage.googleapis.com/v0/b/quauhtlemallan-d86d0.appspot.com/o/ic_default.png?alt=media&token=4edc3e81-ecb0-4a88-8d46-8cf2c2dfc69e"
                     if (firebaseUser != null) {
                         val newUser = User(
+                            id = firebaseUser.uid,
                             username = username,
                             email = email,
                             country = selectedCountry,

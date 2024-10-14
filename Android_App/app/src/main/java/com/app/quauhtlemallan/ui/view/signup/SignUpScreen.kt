@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -24,6 +25,7 @@ import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.ui.theme.SelectedField
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.data.model.User
+import com.app.quauhtlemallan.ui.theme.mossGreen
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.util.RegisterState
 import com.hbb20.CountryCodePicker
@@ -81,7 +83,8 @@ fun SignUpScreen(
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
                 unfocusedContainerColor = Color.LightGray,
@@ -99,7 +102,8 @@ fun SignUpScreen(
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
                 unfocusedContainerColor = Color.LightGray,
@@ -118,7 +122,8 @@ fun SignUpScreen(
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
                 unfocusedContainerColor = Color.LightGray,
@@ -136,7 +141,7 @@ fun SignUpScreen(
                 IconButton(onClick = {
                     passwordVisible = !passwordVisible
                 }) {
-                    Icon(painter = image, contentDescription = "Toggle password visibility")
+                    Icon(painter = image, contentDescription = "Toggle password visibility", tint = Color.Black)
                 }
             },
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password)
@@ -151,7 +156,8 @@ fun SignUpScreen(
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
                 unfocusedContainerColor = Color.LightGray,
@@ -169,7 +175,7 @@ fun SignUpScreen(
                 IconButton(onClick = {
                     confirmPasswordVisible = !confirmPasswordVisible
                 }) {
-                    Icon(painter = image, contentDescription = "Toggle confirm password visibility")
+                    Icon(painter = image, contentDescription = "Toggle confirm password visibility", tint = Color.Black)
                 }
             },
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password)
@@ -206,9 +212,19 @@ fun SignUpScreen(
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(40.dp)
+                .height(35.dp)
+                .background(mossGreen, shape = CircleShape),
+            colors = ButtonDefaults.buttonColors(containerColor = mossGreen)
         ) {
-            Text(text = "Registrar", color = Color.White)
+            Text(
+                text = "Registrar",
+                color = Color.White,
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 16.sp
+            )
         }
 
         if (state is RegisterState.Error) {
