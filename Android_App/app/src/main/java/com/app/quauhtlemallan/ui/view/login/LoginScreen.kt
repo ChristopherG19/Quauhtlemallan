@@ -182,10 +182,18 @@ fun LoginScreen(
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(40.dp),
+                .height(35.dp)
+                .background(mossGreen, shape = CircleShape),
             colors = ButtonDefaults.buttonColors(containerColor = mossGreen)
         ) {
-            Text(text = "Iniciar Sesión", color = Color.White)
+            Text(
+                text = "Iniciar Sesión",
+                color = Color.White,
+                modifier = Modifier.fillMaxWidth(),
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp
+            )
         }
 
         when (loginState) {
@@ -218,7 +226,7 @@ fun LoginScreen(
             color = crimsonRed
         )
 
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(12.dp))
 
         CustomButton(
             modifier = Modifier.clickable {
@@ -236,7 +244,7 @@ fun CustomButton(modifier: Modifier, painter: Painter, title: String, color: Col
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(40.dp)
+            .height(45.dp)
             .background(color, shape = CircleShape)
             .border(2.dp, color, CircleShape),
         contentAlignment = Alignment.CenterStart
@@ -246,7 +254,7 @@ fun CustomButton(modifier: Modifier, painter: Painter, title: String, color: Col
             painter = painter,
             contentDescription = null,
             modifier = Modifier
-                .padding(start = 16.dp)
+                .padding(start = 18.dp)
                 .size(16.dp)
         )
         Text(

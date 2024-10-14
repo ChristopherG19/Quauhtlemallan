@@ -1,9 +1,10 @@
 package com.app.quauhtlemallan.ui.view.navbar
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MailOutline
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
@@ -12,11 +13,17 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.theme.forestGreen
 import com.app.quauhtlemallan.ui.theme.lightGreen
@@ -28,15 +35,20 @@ fun BottomNavigationBar(navController: NavHostController) {
         BottomNavItem.Chat,
         BottomNavItem.Inicio,
         BottomNavItem.Juegos,
-        BottomNavItem.Ajustes
+        BottomNavItem.Perfil
     )
 
     NavigationBar {
         val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
         items.forEach { item ->
             NavigationBarItem(
-                icon = { Icon(imageVector = item.icon, contentDescription = item.title) },
-                label = { Text(text = item.title, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal, fontSize = 11.sp) },
+                icon = {
+                    Image(
+                        painter = painterResource(id = item.iconResId),
+                        contentDescription = item.title,
+                        modifier = Modifier.size(32.dp)
+                    )},
+                label = { Text(text = item.title, fontFamily = cinzelFontFamily, fontWeight = FontWeight.SemiBold, fontSize = 11.sp) },
                 selected = currentRoute == item.route,
                 onClick = {
                     navController.navigate(item.route) {
@@ -45,7 +57,8 @@ fun BottomNavigationBar(navController: NavHostController) {
                     }
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = forestGreen,
+                    selectedIconColor = Color.Unspecified,
+                    unselectedIconColor = Color.Unspecified,
                     indicatorColor = lightGreen
                 )
             )
@@ -53,10 +66,10 @@ fun BottomNavigationBar(navController: NavHostController) {
     }
 }
 
-sealed class BottomNavItem(val title: String, val icon: ImageVector, val route: String) {
-    object Progreso : BottomNavItem("Progreso", Icons.Default.Menu, "progreso")
-    object Chat : BottomNavItem("Chat", Icons.Default.MailOutline, "chat")
-    object Inicio : BottomNavItem("Inicio", Icons.Default.Home, "inicio")
-    object Juegos : BottomNavItem("Juegos", Icons.Default.Star, "juegos")
-    object Ajustes : BottomNavItem("Ajustes", Icons.Default.Settings, "ajustes")
+sealed class BottomNavItem(val title: String, val iconResId: Int, val route: String) {
+    object Progreso : BottomNavItem("Progreso", R.drawable.ic_progress, "progreso")
+    object Chat : BottomNavItem("Chat", R.drawable.ic_chat, "chat")
+    object Inicio : BottomNavItem("Inicio", R.drawable.ic_home, "inicio")
+    object Juegos : BottomNavItem("Juegos", R.drawable.ic_games, "juegos")
+    object Perfil : BottomNavItem("Perfil", R.drawable.ic_settings, "perfil")
 }

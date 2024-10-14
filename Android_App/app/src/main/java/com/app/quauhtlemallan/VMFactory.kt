@@ -3,6 +3,7 @@ package com.app.quauhtlemallan
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.app.quauhtlemallan.data.repository.UserRepository
+import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
@@ -55,3 +56,15 @@ class ProgressViewModelFactory(
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
+
+class AchievementsViewModelFactory(
+    private val userRepository: UserRepository
+) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(AchievementsViewModel::class.java)) {
+            return AchievementsViewModel(userRepository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
+

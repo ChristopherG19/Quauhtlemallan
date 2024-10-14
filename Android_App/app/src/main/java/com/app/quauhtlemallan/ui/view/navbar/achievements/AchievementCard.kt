@@ -2,12 +2,17 @@ package com.app.quauhtlemallan.ui.view.navbar.achievements
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -20,39 +25,60 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import coil.compose.rememberImagePainter
+import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.data.model.AchievementData
+import com.google.android.material.progressindicator.LinearProgressIndicator
 
 @Composable
 fun AchievementCard(badge: AchievementData) {
+    val backgroundColor = Color.White
+    val textColor = Color.Black
+    val descriptionColor = Color.Gray
+
     Card(
         shape = RoundedCornerShape(8.dp),
-        elevation = CardDefaults.cardElevation(4.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        colors = CardDefaults.cardColors(containerColor = backgroundColor),
         modifier = Modifier
+            .fillMaxWidth()
             .padding(8.dp)
-            .size(150.dp)
     ) {
-        Column(
+        Row(
             modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp)
-                .background(Color.White),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .fillMaxWidth()
+                .padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
+            // Imagen de la insignia
             Image(
-                painter = painterResource(id = badge.imageRes),
-                contentDescription = badge.title,
+                painter = rememberImagePainter(badge.imageUrl.ifEmpty { R.drawable.ic_default }),
+                contentDescription = "Imagen de la insignia",
                 modifier = Modifier
-                    .size(80.dp)
-                    .clip(RoundedCornerShape(8.dp)),
-                contentScale = ContentScale.Crop
+                    .size(50.dp)
+                    .clip(CircleShape)
+                    .border(2.dp, Color.Transparent, shape = CircleShape)
             )
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(
-                text = badge.title,
-                style = MaterialTheme.typography.bodyMedium,
-                color = Color.Black
-            )
+
+            Spacer(modifier = Modifier.width(16.dp))
+
+            // Texto con la información de la insignia
+            Column {
+                Text(
+                    text = badge.title,
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = textColor
+                )
+                Text(
+                    text = badge.description,
+                    fontSize = 16.sp,
+                    color = descriptionColor
+                )
+            }
         }
     }
 }

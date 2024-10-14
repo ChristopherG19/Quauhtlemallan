@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.quauhtlemallan.data.model.User
 import com.app.quauhtlemallan.data.repository.UserRepository
+import com.app.quauhtlemallan.util.ProgressState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -53,7 +54,6 @@ class ProgressViewModel(
             _progressState.value = ProgressState.Loading
             try {
                 users = userRepository.getUsersOrderedByScore()
-                Log.e("List_Users", users.toString())
                 _progressState.value = ProgressState.Idle
             } catch (e: Exception) {
                 _progressState.value = ProgressState.Error("Error al cargar los usuarios: ${e.message}")
@@ -64,10 +64,4 @@ class ProgressViewModel(
     fun resetState() {
         _progressState.value = ProgressState.Idle
     }
-}
-
-sealed class ProgressState {
-    object Idle : ProgressState()
-    object Loading : ProgressState()
-    data class Error(val message: String) : ProgressState()
 }

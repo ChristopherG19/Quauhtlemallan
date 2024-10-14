@@ -12,11 +12,13 @@ import com.app.quauhtlemallan.ui.view.home.HomeScreen
 import com.app.quauhtlemallan.ui.view.initial.InitialScreen
 import com.app.quauhtlemallan.ui.view.login.LoginScreen
 import com.app.quauhtlemallan.ui.view.navbar.achievements.AchievementsScreen
+import com.app.quauhtlemallan.ui.view.navbar.achievements.CategoriesScreen
 import com.app.quauhtlemallan.ui.view.navbar.settings.SettingsScreen
 import com.app.quauhtlemallan.ui.view.navbar.chat.ChatScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.GamesScreen
 import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.ui.view.signup.SignUpScreen
+import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
@@ -48,6 +50,7 @@ fun NavigationWrapper(
     val registerViewModelFactory = RegisterViewModelFactory(auth, userRepository)
     val settingsViewModelFactory = SettingsViewModelFactory(userRepository)
     val progressViewModelFactory = ProgressViewModelFactory(userRepository)
+    val achievementsViewModelFactory = AchievementsViewModelFactory(userRepository)
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -85,7 +88,7 @@ fun NavigationWrapper(
             ProgressScreen(
                 navController = navHostController,
                 viewModel = progressViewModel,
-                navigateToAchievements = { navHostController.navigate("achievements") }
+                navigateToAchievements = { navHostController.navigate("categories") }
             )
         }
         composable(BottomNavItem.Chat.route) {
@@ -99,7 +102,7 @@ fun NavigationWrapper(
         composable(BottomNavItem.Juegos.route) {
             GamesScreen(navController = navHostController)
         }
-        composable(BottomNavItem.Ajustes.route) {
+        composable(BottomNavItem.Perfil.route) {
             val settingsViewModel: SettingsViewModel = viewModel(factory = settingsViewModelFactory)
             SettingsScreen(
                 auth = auth,
@@ -108,11 +111,27 @@ fun NavigationWrapper(
                 googleSignInClient = googleSignInClient
             )
         }
-        composable("achievements") {
-            AchievementsScreen(
-            navController = navHostController,
-            navigateBack = { navHostController.navigate(BottomNavItem.Progreso.route) }
+        composable("categories") {
+            val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
+
+            CategoriesScreen(
+                viewModel = achievementsViewModel,
+                navController = navHostController,
+                progress = 22f,
+                navigateBack = { navHostController.navigateUp() }
             )
         }
+
+        composable("badges/{categoryId}") { backStackEntry ->
+            val categoryId = backStackEntry.arguments?.getString("categoryId") ?: ""
+            val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
+            AchievementsScreen(
+                viewModel = achievementsViewModel,
+                categoryId = categoryId,
+                navController = navHostController,
+                navigateBack = { navHostController.navigateUp() }
+            )
+        }
+
     }
 }

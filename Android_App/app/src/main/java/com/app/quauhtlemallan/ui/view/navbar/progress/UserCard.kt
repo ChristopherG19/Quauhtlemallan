@@ -72,7 +72,9 @@ fun UserCard(user: User, rank: Int) {
 
             Column {
                 Text(
-                    text = user.username,
+                    text = user.username.replaceFirstChar {
+                        if (it.isLowerCase()) it.titlecase() else it.toString()
+                    },
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     color = textColor

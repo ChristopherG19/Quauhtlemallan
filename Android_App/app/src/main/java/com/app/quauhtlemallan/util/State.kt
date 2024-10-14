@@ -1,5 +1,6 @@
 package com.app.quauhtlemallan.util
 
+import com.app.quauhtlemallan.data.model.AchievementData
 import com.app.quauhtlemallan.data.model.User
 
 sealed class LoginState {
@@ -26,4 +27,16 @@ sealed class SettingsState {
     object Loading : SettingsState()
     object Success : SettingsState()
     data class Error(val message: String) : SettingsState()
+}
+
+sealed class ProgressState {
+    object Idle : ProgressState()
+    object Loading : ProgressState()
+    data class Error(val message: String) : ProgressState()
+}
+
+sealed class AchievementsState {
+    object Loading : AchievementsState()
+    data class Success(val badges: List<AchievementData>) : AchievementsState()
+    data class Error(val message: String) : AchievementsState()
 }

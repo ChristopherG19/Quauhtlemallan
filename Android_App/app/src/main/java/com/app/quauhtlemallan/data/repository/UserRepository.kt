@@ -2,6 +2,7 @@ package com.app.quauhtlemallan.data.repository
 
 import android.net.Uri
 import android.util.Log
+import com.app.quauhtlemallan.data.model.AchievementData
 import com.app.quauhtlemallan.data.model.User
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -101,6 +102,40 @@ class UserRepository(
             e.message?.let { Log.e("Error_GetUsersList", it) }
             emptyList()
         }
+    }
+
+    suspend fun getAllBadges(): List<AchievementData> {
+        val badges = mutableListOf<AchievementData>()
+        try {
+            val snapshot = database.getReference("insignias").get().await()
+            for (categorySnapshot in snapshot.children) {
+                for (badgeSnapshot in categorySnapshot.children) {
+                    val badge = badgeSnapshot.getValue(AchievementData::class.java)
+                    badge?.let {
+                        badges.add(it)
+                    }
+                }
+            }
+        } catch (e: Exception) {
+            Log.e("getAllBadges", "Error: ${e.message}")
+        }
+        return badges
+    }
+
+    suspend fun getBadgesByCategory(categoryId: String): List<AchievementData> {
+        val badges = mutableListOf<AchievementData>()
+        try {
+            val snapshot = database.getReference("insignias/$categoryId").get().await()
+            for (badgeSnapshot in snapshot.children) {
+                val badge = badgeSnapshot.getValue(AchievementData::class.java)
+                badge?.let {
+                    badges.add(it)
+                }
+            }
+        } catch (e: Exception) {
+            Log.e("getBadgesByCategory", "Error: ${e.message}")
+        }
+        return badges
     }
 
 }

@@ -172,7 +172,7 @@ fun SettingsScreen(
                     .padding(vertical = 8.dp)
             ) {
                 Text(
-                    text = viewModel.selectedCountry,
+                    text = "País",
                     style = MaterialTheme.typography.bodySmall,
                     modifier = Modifier.padding(bottom = 4.dp)
                 )

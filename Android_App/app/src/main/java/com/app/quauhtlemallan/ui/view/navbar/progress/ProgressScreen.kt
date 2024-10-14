@@ -20,7 +20,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
@@ -40,13 +39,10 @@ import androidx.navigation.NavHostController
 import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
 import com.app.quauhtlemallan.data.model.User
-import com.app.quauhtlemallan.ui.theme.bottleGreen
 import com.app.quauhtlemallan.ui.theme.deepBlue
 import com.app.quauhtlemallan.ui.theme.mossGreen
-import com.app.quauhtlemallan.ui.theme.seaGreen
-import com.app.quauhtlemallan.ui.theme.standardGreen
-import com.app.quauhtlemallan.ui.viewmodel.ProgressState
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
+import com.app.quauhtlemallan.util.ProgressState
 
 @Composable
 fun ProgressScreen(
