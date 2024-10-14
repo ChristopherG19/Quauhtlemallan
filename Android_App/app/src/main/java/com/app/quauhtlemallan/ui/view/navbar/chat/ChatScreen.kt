@@ -19,9 +19,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
 import com.app.quauhtlemallan.ui.theme.forestGreen
 
@@ -75,7 +77,7 @@ fun ChatScreen(navController: NavHostController) {
                     TextField(
                         value = "",
                         onValueChange = {},
-                        placeholder = { Text(text = "Escribe tu duda...") },
+                        placeholder = { Text(text = "Escribe tu duda...", fontWeight = FontWeight.Normal, fontFamily = cinzelFontFamily) },
                         modifier = Modifier
                             .weight(1f)
                             .padding(end = 8.dp)

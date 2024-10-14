@@ -139,7 +139,13 @@ fun LoginScreen(
                 unfocusedContainerColor = Color.LightGray,
                 focusedContainerColor = SelectedField
             ),
-            placeholder = { Text(text = "Correo", color = Color.Black) }
+            placeholder = {
+                Text(
+                    text = "Correo",
+                    color = Color.Black,
+                    fontFamily = cinzelFontFamily,
+                    fontWeight = FontWeight.Normal
+                )}
         )
 
         Spacer(Modifier.height(16.dp))
@@ -155,7 +161,13 @@ fun LoginScreen(
                 unfocusedContainerColor = Color.LightGray,
                 focusedContainerColor = SelectedField
             ),
-            placeholder = { Text(text = "Contraseña", color = Color.Black) },
+            placeholder = {
+                Text(
+                    text = "Contraseña",
+                    color = Color.Black,
+                    fontFamily = cinzelFontFamily,
+                    fontWeight = FontWeight.Normal
+                )},
             visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
             trailingIcon = {
                 val image = if (passwordVisible) {
@@ -191,7 +203,8 @@ fun LoginScreen(
                 color = Color.White,
                 modifier = Modifier.fillMaxWidth(),
                 textAlign = TextAlign.Center,
-                fontWeight = FontWeight.Bold,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.SemiBold,
                 fontSize = 16.sp
             )
         }
@@ -205,11 +218,11 @@ fun LoginScreen(
                     onDismissRequest = { viewModel.resetAlert() },
                     confirmButton = {
                         Button(onClick = { viewModel.resetAlert() }) {
-                            Text("Aceptar")
+                            Text("Aceptar", fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal)
                         }
                     },
-                    title = { Text(text = "Error") },
-                    text = { Text(text = (loginState as LoginState.Error).message) }
+                    title = { Text(text = "Error", fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal) },
+                    text = { Text(text = (loginState as LoginState.Error).message, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal) }
                 )
             }
             else -> {}
@@ -262,7 +275,8 @@ fun CustomButton(modifier: Modifier, painter: Painter, title: String, color: Col
             color = Color.White,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center,
-            fontWeight = FontWeight.Bold
+            fontFamily = cinzelFontFamily,
+            fontWeight = FontWeight.SemiBold
         )
     }
 }

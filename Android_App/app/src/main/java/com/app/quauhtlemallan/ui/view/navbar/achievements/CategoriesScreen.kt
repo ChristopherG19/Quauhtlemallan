@@ -24,11 +24,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.data.model.Category
 import com.app.quauhtlemallan.data.model.User
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
 
@@ -100,7 +102,8 @@ fun CategoriesScreen(
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "${progress.toInt()}%",
-                style = MaterialTheme.typography.bodyLarge,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Normal,
                 color = Color.Black
             )
             Spacer(modifier = Modifier.height(16.dp))

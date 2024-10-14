@@ -39,6 +39,7 @@ import androidx.navigation.NavHostController
 import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
 import com.app.quauhtlemallan.data.model.User
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.theme.deepBlue
 import com.app.quauhtlemallan.ui.theme.mossGreen
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
@@ -70,7 +71,7 @@ fun ProgressScreen(
                 }
                 is ProgressState.Error -> {
                     val message = (progressState as ProgressState.Error).message
-                    Text(text = message, color = Color.Red)
+                    Text(text = message, color = Color.Red, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal)
                 }
                 else -> {
                     val userRank = users.indexOfFirst { it.id == userProfile?.id } + 1
@@ -88,7 +89,7 @@ fun ProgressScreen(
                             .align(Alignment.CenterHorizontally),
                         colors = ButtonDefaults.buttonColors(containerColor = deepBlue)
                     ) {
-                        Text(text = "Ver Insignias", color = Color.White)
+                        Text(text = "Ver Insignias", color = Color.White, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal)
                     }
 
                     // Título de la tabla de clasificaciones
@@ -101,8 +102,9 @@ fun ProgressScreen(
                         Text(
                             text = "Tabla de clasificaciones: Guatexploradores",
                             fontWeight = FontWeight.Bold,
+                            fontFamily = cinzelFontFamily,
                             color = Color.White,
-                            fontSize = 18.sp,
+                            fontSize = 16.sp,
                             modifier = Modifier.align(Alignment.Center),
                             textAlign = TextAlign.Center
                         )
@@ -144,9 +146,9 @@ fun UserProfileSection(userProfile: User, rank: Int) {
         Spacer(modifier = Modifier.width(16.dp))
 
         Column(modifier = Modifier.padding(start = 16.dp)) {
-            Text(text = userProfile.username, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-            Text(text = "Nivel 2", fontSize = 16.sp, fontWeight = FontWeight.Bold)
-            Text(text = "Rank #$rank", fontSize = 16.sp)
+            Text(text = userProfile.username, fontSize = 18.sp, fontWeight = FontWeight.Bold, fontFamily = cinzelFontFamily)
+            Text(text = "Nivel 2", fontSize = 14.sp, fontWeight = FontWeight.Bold, fontFamily = cinzelFontFamily)
+            Text(text = "Rank #$rank", fontSize = 14.sp, fontWeight = FontWeight.Bold, fontFamily = cinzelFontFamily)
         }
     }
 }

@@ -26,6 +26,7 @@ import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.data.model.User
 import com.app.quauhtlemallan.ui.theme.Purple40
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
@@ -53,8 +54,9 @@ fun UserCard(user: User, rank: Int) {
         ) {
             Text(
                 text = "#$rank",
-                fontSize = 18.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
+                fontFamily = cinzelFontFamily,
                 color = textColor,
                 modifier = Modifier.padding(end = 16.dp)
             )
@@ -75,13 +77,16 @@ fun UserCard(user: User, rank: Int) {
                     text = user.username.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase() else it.toString()
                     },
-                    fontSize = 18.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
+                    fontFamily = cinzelFontFamily,
                     color = textColor
                 )
                 Text(
                     text = "Total de puntos: ${user.score}",
-                    fontSize = 16.sp,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = cinzelFontFamily,
                     color = scoreTextColor
                 )
             }

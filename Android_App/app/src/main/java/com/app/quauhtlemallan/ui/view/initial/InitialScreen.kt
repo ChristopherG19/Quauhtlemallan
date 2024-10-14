@@ -48,7 +48,12 @@ fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit
                 .padding(horizontal = 32.dp),
             colors = ButtonDefaults.buttonColors(containerColor = royalBlue)
         ) {
-            Text(text = "Iniciar sesión", color = Color.White, fontWeight = FontWeight.Bold)
+            Text(
+                text = "Iniciar sesión",
+                color = Color.White,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Bold
+            )
         }
         Spacer(modifier = Modifier.height(8.dp))
         Button(
@@ -59,7 +64,12 @@ fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit
                 .padding(horizontal = 32.dp),
             colors = ButtonDefaults.buttonColors(containerColor = mossGreen)
         ) {
-            Text(text = "Registro", color = Color.White, fontWeight = FontWeight.Bold)
+            Text(
+                text = "Registro",
+                color = Color.White,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Bold
+            )
         }
         Spacer(modifier = Modifier.weight(1f))
     }

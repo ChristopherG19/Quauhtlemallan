@@ -59,7 +59,7 @@ fun GridItem(imageRes: Int, text: String) {
                 text = text,
                 fontSize = 16.sp,
                 fontFamily = cinzelFontFamily,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Center,
                 color = Color.Black,
                 modifier = Modifier.fillMaxWidth()

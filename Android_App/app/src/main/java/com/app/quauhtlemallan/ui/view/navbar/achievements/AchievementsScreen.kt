@@ -25,16 +25,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
 import com.app.quauhtlemallan.data.model.AchievementData
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
 import com.app.quauhtlemallan.util.AchievementsState
 
@@ -45,7 +48,7 @@ fun AchievementsScreen(
     navController: NavHostController,
     navigateBack: () -> Unit
 ) {
-    val badgesState by viewModel.getBadgesByCategory(categoryId).collectAsState()
+    val badgesState by remember { viewModel.getBadgesByCategory(categoryId) }.collectAsState()
 
     Scaffold(
         bottomBar = { BottomNavigationBar(navController = navController) }
@@ -90,7 +93,7 @@ fun AchievementsScreen(
                 }
                 is AchievementsState.Error -> {
                     val errorMessage = (badgesState as AchievementsState.Error).message
-                    Text(text = errorMessage, color = Color.Red)
+                    Text(text = errorMessage, color = Color.Red, fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal)
                 }
             }
         }

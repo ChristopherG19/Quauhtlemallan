@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.data.model.Category
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 
 @Composable
 fun CategoryCard(category: Category, borderColor: Color, onClick: () -> Unit) {
@@ -60,8 +61,9 @@ fun CategoryCard(category: Category, borderColor: Color, onClick: () -> Unit) {
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = category.title,
-                fontSize = 16.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
+                fontFamily = cinzelFontFamily,
                 modifier = Modifier.align(Alignment.CenterHorizontally)
             )
         }

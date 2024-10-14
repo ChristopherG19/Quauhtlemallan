@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.data.model.AchievementData
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.google.android.material.progressindicator.LinearProgressIndicator
 
 @Composable
@@ -59,8 +60,7 @@ fun AchievementCard(badge: AchievementData) {
                 contentDescription = "Imagen de la insignia",
                 modifier = Modifier
                     .size(50.dp)
-                    .clip(CircleShape)
-                    .border(2.dp, Color.Transparent, shape = CircleShape)
+                    .border(2.dp, Color.Transparent)
             )
 
             Spacer(modifier = Modifier.width(16.dp))
@@ -69,13 +69,16 @@ fun AchievementCard(badge: AchievementData) {
             Column {
                 Text(
                     text = badge.title,
-                    fontSize = 18.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
+                    fontFamily = cinzelFontFamily,
                     color = textColor
                 )
                 Text(
                     text = badge.description,
                     fontSize = 16.sp,
+                    fontWeight = FontWeight.Normal,
+                    fontFamily = cinzelFontFamily,
                     color = descriptionColor
                 )
             }
