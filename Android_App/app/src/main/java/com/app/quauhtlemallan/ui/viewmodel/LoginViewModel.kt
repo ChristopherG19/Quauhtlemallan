@@ -83,11 +83,23 @@ class LoginViewModel(
                 val firebaseUser = result.user
                 if (firebaseUser != null) {
                     val userProfile = userRepository.getUserProfile(firebaseUser.uid)
-                    userProfile?.let {
-                        _loginState.value = LoginState.Success(it)
-                        onNavigate(it)
-                    } ?: run {
-                        _loginState.value = LoginState.Error("No se pudo obtener el perfil del usuario.")
+                    if (userProfile != null) {
+                        _loginState.value = LoginState.Success(userProfile)
+                        onNavigate(userProfile)
+                    } else {
+                        val newUser = User(
+                            id = firebaseUser.uid,
+                            username = firebaseUser.displayName ?: "",
+                            email = firebaseUser.email ?: "",
+                            profileImage = firebaseUser.photoUrl?.toString() ?: "https://firebasestorage.googleapis.com/v0/b/quauhtlemallan-d86d0.appspot.com/o/ic_default.png?alt=media&token=4edc3e81-ecb0-4a88-8d46-8cf2c2dfc69e",
+                        )
+
+                        val success = userRepository.createUserProfile(newUser)
+                        if (success) {
+                            _loginState.value = LoginState.Success(newUser)
+                        } else {
+                            _loginState.value = LoginState.Error("Error al crear perfil de usuario.")
+                        }
                     }
                 } else {
                     _loginState.value = LoginState.Error("Error al iniciar sesión con Google.")
