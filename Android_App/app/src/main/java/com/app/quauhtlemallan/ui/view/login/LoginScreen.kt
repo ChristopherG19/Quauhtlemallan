@@ -1,5 +1,8 @@
 package com.app.quauhtlemallan.ui.view.login
 
+import android.app.Activity
+import android.content.Intent
+import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
@@ -27,6 +30,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -36,6 +40,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -52,9 +57,19 @@ import com.app.quauhtlemallan.ui.theme.mossGreen
 import com.app.quauhtlemallan.data.model.User
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.util.LoginState
+import com.facebook.AccessToken
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.common.api.ApiException
+
+object LoginScreen {
+    val callbackManager: CallbackManager = CallbackManager.Factory.create()
+}
 
 @Composable
 fun LoginScreen(
@@ -64,6 +79,7 @@ fun LoginScreen(
     googleSignInClient: GoogleSignInClient
 ) {
 
+    val context = LocalContext.current
     val loginState by viewModel.loginStateFlow.collectAsState()
     var passwordVisible by remember { mutableStateOf(false) }
     var confirmPasswordVisible by remember { mutableStateOf(false) }
@@ -90,6 +106,45 @@ fun LoginScreen(
             }
         }
     )
+
+//    LaunchedEffect(Unit) {
+//        val accessToken = AccessToken.getCurrentAccessToken()
+//        val isLoggedIn = accessToken != null && !accessToken.isExpired
+//
+//        if (isLoggedIn) {
+//            Log.d("FacebookLogin", "Using existing Facebook access token")
+//            if (accessToken != null) {
+//                viewModel.signInWithFacebook(accessToken) { user ->
+//                    navigateToHome(user)
+//                }
+//            }
+//        }
+//    }
+
+    LaunchedEffect(Unit) {
+        LoginManager.getInstance().registerCallback(LoginScreen.callbackManager,
+            object : FacebookCallback<LoginResult> {
+                override fun onSuccess(result: LoginResult) {
+                    val token = result.accessToken
+                    viewModel.signInWithFacebook(token) { user ->
+                        navigateToHome(user)
+                    }
+                }
+
+                override fun onCancel() {
+                    Log.d("FacebookLogin", "Facebook login canceled")
+                    viewModel.resetAlert()
+                    viewModel._loginState.value = LoginState.Error("Inicio de sesión cancelado.")
+                }
+
+                override fun onError(error: FacebookException) {
+                    Log.e("FacebookLogin", "Facebook login error: ${error.message}")
+                    viewModel.resetAlert()
+                    viewModel._loginState.value = LoginState.Error("Error en el inicio de sesión con Facebook.")
+                }
+            }
+        )
+    }
 
     Column(
         modifier = Modifier
@@ -215,6 +270,12 @@ fun LoginScreen(
             is LoginState.Loading -> {
                 CircularProgressIndicator()
             }
+            is LoginState.Success -> {
+                LaunchedEffect(Unit) {
+                    val user = (loginState as LoginState.Success).user
+                    navigateToHome(user)
+                }
+            }
             is LoginState.Error -> {
                 AlertDialog(
                     onDismissRequest = { viewModel.resetAlert() },
@@ -245,7 +306,10 @@ fun LoginScreen(
 
         CustomButton(
             modifier = Modifier.clickable {
-
+                Log.d("FacebookLogin", "Launching Facebook login intent")
+                LoginManager.getInstance().logInWithReadPermissions(
+                    context as Activity, listOf("email", "public_profile")
+                )
             },
             painter = painterResource(id = R.drawable.facebook),
             title = "Iniciar con Facebook",

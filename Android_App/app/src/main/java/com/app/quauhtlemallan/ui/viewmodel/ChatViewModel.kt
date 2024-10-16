@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.app.quauhtlemallan.data.model.ApiService
+import com.app.quauhtlemallan.data.api.ApiService
 import com.app.quauhtlemallan.data.model.ChatModelRequest
 import com.google.gson.Gson
 import com.google.gson.JsonObject

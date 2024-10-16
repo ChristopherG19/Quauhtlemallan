@@ -59,6 +59,7 @@ import com.app.quauhtlemallan.ui.theme.crimsonRed
 import com.app.quauhtlemallan.ui.theme.navyBlue
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
 import com.app.quauhtlemallan.util.SettingsState
+import com.facebook.login.LoginManager
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.hbb20.CountryCodePicker
@@ -214,6 +215,7 @@ fun ProfileScreen(
                 onClick = {
                     auth.signOut()
                     googleSignInClient.signOut().addOnCompleteListener {
+                        LoginManager.getInstance().logOut()
                         navController.navigate("initial") {
                             popUpTo(0) { inclusive = true }
                         }

@@ -1,5 +1,6 @@
-package com.app.quauhtlemallan.data.model
+package com.app.quauhtlemallan.data.api
 
+import com.app.quauhtlemallan.data.model.ChatModelRequest
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.Body
