@@ -4,12 +4,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.app.quauhtlemallan.data.repository.UserRepository
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 
 class LoginViewModelFactory(
     private val auth: FirebaseAuth,
@@ -67,4 +67,14 @@ class AchievementsViewModelFactory(
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
+
+class ChatViewModelFactory : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(ChatViewModel::class.java)) {
+            return ChatViewModel() as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
+
 

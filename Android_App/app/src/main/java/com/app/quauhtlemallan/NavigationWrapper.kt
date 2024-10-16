@@ -19,6 +19,7 @@ import com.app.quauhtlemallan.ui.view.navbar.profile.ProfileScreen
 import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.ui.view.signup.SignUpScreen
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
@@ -51,6 +52,7 @@ fun NavigationWrapper(
     val settingsViewModelFactory = SettingsViewModelFactory(userRepository)
     val progressViewModelFactory = ProgressViewModelFactory(userRepository)
     val achievementsViewModelFactory = AchievementsViewModelFactory(userRepository)
+    val chatViewModelFactory = ChatViewModelFactory()
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -92,7 +94,11 @@ fun NavigationWrapper(
             )
         }
         composable(BottomNavItem.Chat.route) {
-            ChatScreen(navController = navHostController)
+            val chatViewModel: ChatViewModel = viewModel(factory = chatViewModelFactory)
+            ChatScreen(
+                navController = navHostController,
+                viewModel = chatViewModel
+            )
         }
         composable(BottomNavItem.Inicio.route) {
             HomeScreen(

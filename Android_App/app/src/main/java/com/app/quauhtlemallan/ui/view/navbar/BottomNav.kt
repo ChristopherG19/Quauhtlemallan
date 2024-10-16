@@ -46,7 +46,7 @@ fun BottomNavigationBar(navController: NavHostController) {
                     Image(
                         painter = painterResource(id = item.iconResId),
                         contentDescription = item.title,
-                        modifier = Modifier.size(32.dp)
+                        modifier = Modifier.size(28.dp)
                     )},
                 label = { Text(text = item.title, fontFamily = cinzelFontFamily, fontWeight = FontWeight.SemiBold, fontSize = 11.sp) },
                 selected = currentRoute == item.route,
@@ -68,7 +68,7 @@ fun BottomNavigationBar(navController: NavHostController) {
 
 sealed class BottomNavItem(val title: String, val iconResId: Int, val route: String) {
     object Progreso : BottomNavItem("Progreso", R.drawable.ic_progress, "progreso")
-    object Chat : BottomNavItem("Chat", R.drawable.ic_chat, "chat")
+    object Chat : BottomNavItem("Kukul", R.drawable.ic_chat, "chat")
     object Inicio : BottomNavItem("Inicio", R.drawable.ic_home, "inicio")
     object Juegos : BottomNavItem("Juegos", R.drawable.ic_games, "juegos")
     object Perfil : BottomNavItem("Perfil", R.drawable.ic_settings, "perfil")
