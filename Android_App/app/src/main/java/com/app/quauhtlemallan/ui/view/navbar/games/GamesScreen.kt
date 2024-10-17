@@ -13,6 +13,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.ui.theme.brickRed
+import com.app.quauhtlemallan.ui.theme.paleGreen
+import com.app.quauhtlemallan.ui.theme.sunflowerYellow
+import com.app.quauhtlemallan.ui.theme.oceanBlue
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
 
 @Composable
@@ -36,25 +40,33 @@ fun GamesScreen (
                 item {
                     GridItem(
                         imageRes = R.drawable.ic_time,
-                        text = "Pruebas contratiempo"
+                        text = "Pruebas contratiempo",
+                        color = oceanBlue,
+                        onClick = { navController.navigate("dailyQuestionScreen") }
                     )
                 }
                 item {
                     GridItem(
-                        imageRes = R.drawable.ic_question,
-                        text = "Vos sabes qué hay en la imagen?"
+                        imageRes = R.drawable.ic_category,
+                        text = "Preguntas por categoría",
+                        color = paleGreen,
+                        onClick = { navController.navigate("dailyQuestionScreen") }
                     )
                 }
                 item {
                     GridItem(
                         imageRes = R.drawable.ic_vof,
-                        text = "Casaca o no"
+                        text = "Casaca o no",
+                        color = brickRed,
+                        onClick = { navController.navigate("dailyQuestionScreen") }
                     )
                 }
                 item {
                     GridItem(
                         imageRes = R.drawable.ic_daily,
-                        text = "Pregunta diaria"
+                        text = "Pregunta diaria",
+                        color = sunflowerYellow,
+                        onClick = { navController.navigate("dailyQuestionScreen") }
                     )
                 }
             }

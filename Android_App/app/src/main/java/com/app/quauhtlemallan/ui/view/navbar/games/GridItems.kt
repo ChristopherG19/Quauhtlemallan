@@ -1,6 +1,7 @@
 package com.app.quauhtlemallan.ui.view.navbar.games
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -28,7 +29,12 @@ import androidx.compose.ui.unit.sp
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 
 @Composable
-fun GridItem(imageRes: Int, text: String) {
+fun GridItem(
+    imageRes: Int,
+    text: String,
+    color: Color,
+    onClick: () -> Unit
+) {
     Card(
         shape = RoundedCornerShape(8.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
@@ -36,6 +42,8 @@ fun GridItem(imageRes: Int, text: String) {
             .fillMaxWidth()
             .aspectRatio(0.57f)
             .padding(8.dp)
+            .clickable { onClick() },
+        colors = CardDefaults.cardColors(containerColor = color)
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -59,7 +67,7 @@ fun GridItem(imageRes: Int, text: String) {
                 text = text,
                 fontSize = 16.sp,
                 fontFamily = cinzelFontFamily,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
                 color = Color.Black,
                 modifier = Modifier.fillMaxWidth()

@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.app.quauhtlemallan.data.repository.UserRepository
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
+import com.app.quauhtlemallan.ui.viewmodel.DailyQuestionViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
@@ -76,5 +77,15 @@ class ChatViewModelFactory : ViewModelProvider.Factory {
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
+
+class DailyQuestionViewModelFactory : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(DailyQuestionViewModel::class.java)) {
+            return DailyQuestionViewModel() as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
+
 
 

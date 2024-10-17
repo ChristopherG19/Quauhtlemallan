@@ -14,12 +14,14 @@ import com.app.quauhtlemallan.ui.view.login.LoginScreen
 import com.app.quauhtlemallan.ui.view.navbar.achievements.AchievementsScreen
 import com.app.quauhtlemallan.ui.view.navbar.achievements.CategoriesScreen
 import com.app.quauhtlemallan.ui.view.navbar.chat.ChatScreen
+import com.app.quauhtlemallan.ui.view.navbar.games.DailyQuestionScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.GamesScreen
 import com.app.quauhtlemallan.ui.view.navbar.profile.ProfileScreen
 import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.ui.view.signup.SignUpScreen
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
+import com.app.quauhtlemallan.ui.viewmodel.DailyQuestionViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
@@ -53,6 +55,7 @@ fun NavigationWrapper(
     val progressViewModelFactory = ProgressViewModelFactory(userRepository)
     val achievementsViewModelFactory = AchievementsViewModelFactory(userRepository)
     val chatViewModelFactory = ChatViewModelFactory()
+    val dailyQuestionViewModelFactory = DailyQuestionViewModelFactory()
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -134,6 +137,18 @@ fun NavigationWrapper(
             AchievementsScreen(
                 viewModel = achievementsViewModel,
                 categoryId = categoryId,
+                navController = navHostController,
+                navigateBack = { navHostController.navigateUp() }
+            )
+        }
+
+        composable("timeScreen") {}
+        composable("categoryScreen") {}
+        composable("tofScreen") {}
+        composable("dailyQuestionScreen") {
+            val dailyQuestionViewModel: DailyQuestionViewModel = viewModel(factory = dailyQuestionViewModelFactory)
+            DailyQuestionScreen(
+                viewModel = dailyQuestionViewModel,
                 navController = navHostController,
                 navigateBack = { navHostController.navigateUp() }
             )
