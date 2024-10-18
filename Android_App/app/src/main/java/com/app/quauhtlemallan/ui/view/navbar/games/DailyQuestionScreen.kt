@@ -147,7 +147,7 @@ fun DailyQuestionScreen(
                 val sharedPreferences = context.getSharedPreferences("dailyQuestionPrefs", Context.MODE_PRIVATE)
                 val lastFetchTime = sharedPreferences.getLong("lastFetchTime", 0L)
                 val currentTime = System.currentTimeMillis()
-                val oneDayMillis = 12 * 60 * 60 * 1000
+                val oneDayMillis = 24 * 60 * 60 * 1000
 
                 timeRemaining = oneDayMillis - (currentTime - lastFetchTime)
 

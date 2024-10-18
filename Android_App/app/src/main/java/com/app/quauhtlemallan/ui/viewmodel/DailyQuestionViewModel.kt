@@ -34,7 +34,7 @@ class DailyQuestionViewModel : ViewModel() {
         val lastFetchTime = sharedPreferences.getLong("lastFetchTime", 0L)
         val hasAnsweredToday = sharedPreferences.getBoolean("hasAnsweredToday", false)
         val currentTime = System.currentTimeMillis()
-        val oneDayMillis = 12 * 60 * 60 * 1000
+        val oneDayMillis = 24 * 60 * 60 * 1000
 
         if (hasAnsweredToday) {
             hasAnswered.value = true
