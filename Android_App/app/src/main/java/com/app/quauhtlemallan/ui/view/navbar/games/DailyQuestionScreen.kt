@@ -4,7 +4,6 @@ import android.content.Context
 import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,17 +17,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardColors
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -43,6 +41,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
+import com.app.quauhtlemallan.ui.theme.crimsonRed
+import com.app.quauhtlemallan.ui.theme.mossGreen
 import com.app.quauhtlemallan.ui.viewmodel.DailyQuestionViewModel
 import kotlinx.coroutines.delay
 
@@ -50,7 +51,8 @@ import kotlinx.coroutines.delay
 fun DailyQuestionScreen(
     viewModel: DailyQuestionViewModel,
     navController: NavHostController,
-    navigateBack: () -> Unit
+    navigateBack: () -> Unit,
+    navigateToNextQ: () -> Unit
 ) {
     val question = viewModel.dailyQuestion.value
     val hasAnswered = viewModel.hasAnswered.value
@@ -58,12 +60,12 @@ fun DailyQuestionScreen(
     val isCorrectAnswer = viewModel.isCorrectAnswer.value
     val selectedOption = remember { mutableStateOf("") }
     val context = LocalContext.current
-    var timeRemaining by remember { mutableStateOf(0L) }
+    var timeRemaining by remember { mutableLongStateOf(0L) }
 
     if (showDialog) {
         // Colores del diálogo
         val backgroundColor = if (isCorrectAnswer) Color(0xFFCCFF99) else Color(0xFFFFCCCC)
-        val buttonColor = if (isCorrectAnswer) Color(0xFF4CAF50) else Color(0xFFE57373)
+        val buttonColor = if (isCorrectAnswer) mossGreen else crimsonRed
         val messageText = if (isCorrectAnswer) "Sos muy pilas!" else "Uy, lo siento :("
         val messageColor = if (isCorrectAnswer) Color(0xFF4CAF50) else Color(0xFF8B0000)
         val buttonText = "Continuar"
@@ -91,8 +93,8 @@ fun DailyQuestionScreen(
                 ),
                 shape = RoundedCornerShape(16.dp),
                 modifier = Modifier
-                    .padding(16.dp)  // Margen para evitar que el Card toque los bordes de la pantalla
-                    .align(Alignment.Center) // Aseguramos que el Card esté en el centro
+                    .padding(16.dp)
+                    .align(Alignment.Center)
                     .wrapContentHeight()
             ) {
                 Column(
@@ -103,7 +105,7 @@ fun DailyQuestionScreen(
                     Text(
                         text = messageText,
                         fontWeight = FontWeight.Bold,
-                        color = messageColor, // Color de texto ajustado
+                        color = messageColor,
                         fontSize = 20.sp,
                         textAlign = TextAlign.Center
                     )
@@ -151,16 +153,37 @@ fun DailyQuestionScreen(
 
                 timeRemaining = oneDayMillis - (currentTime - lastFetchTime)
 
-                while (timeRemaining > 0) {
-                    delay(1000)
-                    timeRemaining -= 1000
+                if (timeRemaining <= 0) {
+                    timeRemaining = 0L
+                    viewModel.closeDialog()
+
+                    viewModel.resetDailyQuestion(context)
+                    viewModel.loadDailyQuestion(context)
+                    navigateToNextQ()
+                } else {
+                    while (timeRemaining > 0) {
+                        delay(1000)
+                        timeRemaining -= 1000
+
+                        if (timeRemaining <= 0) {
+                            timeRemaining = 0L
+                            viewModel.closeDialog()
+
+                            viewModel.resetDailyQuestion(context)
+                            viewModel.loadDailyQuestion(context)
+                            navigateToNextQ()
+                            break
+                        }
+                    }
                 }
+
             }
         }
 
-        val hours = (timeRemaining / (1000 * 60 * 60)) % 24
-        val minutes = (timeRemaining / (1000 * 60)) % 60
-        val seconds = (timeRemaining / 1000) % 60
+        var hours = (timeRemaining / (1000 * 60 * 60)) % 24
+        var minutes = (timeRemaining / (1000 * 60)) % 60
+        var seconds = (timeRemaining / 1000) % 60
+
 
         Box(modifier = Modifier.fillMaxSize()) {
             Column(
@@ -174,34 +197,26 @@ fun DailyQuestionScreen(
                     text = "Ya has respondido la pregunta de hoy.",
                     textAlign = TextAlign.Center,
                     fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = cinzelFontFamily
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
 
                 Text(
                     text = "Tiempo restante para la próxima pregunta:",
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Medium,
+                    fontFamily = cinzelFontFamily,
                 )
 
                 Text(
                     text = String.format("%02d:%02d:%02d", hours, minutes, seconds),
                     fontSize = 32.sp,
                     fontWeight = FontWeight.Bold,
+                    fontFamily = cinzelFontFamily,
                     textAlign = TextAlign.Center
                 )
-
-                Button(
-                    onClick = {
-                        viewModel.resetDailyQuestion(context)
-                        viewModel.loadDailyQuestion(context)
-                    },
-                    modifier = Modifier.padding(16.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
-                ) {
-                    Text(text = "Reiniciar contador", color = Color.White)
-                }
             }
 
             Icon(
@@ -254,6 +269,7 @@ fun DailyQuestionScreen(
                     text = q.pregunta,
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
+                    fontFamily = cinzelFontFamily,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -279,11 +295,12 @@ fun DailyQuestionScreen(
                     },
                     enabled = selectedOption.value.isNotEmpty(),
                     modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.Green)
+                    colors = ButtonDefaults.buttonColors(containerColor = mossGreen)
                 ) {
                     Text(
                         text = "Enviar respuesta",
                         fontSize = 16.sp,
+                        fontFamily = cinzelFontFamily,
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -291,6 +308,7 @@ fun DailyQuestionScreen(
                 text = "Cargando pregunta...",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
+                fontFamily = cinzelFontFamily,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )

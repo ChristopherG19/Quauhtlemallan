@@ -150,6 +150,7 @@ fun NavigationWrapper(
             DailyQuestionScreen(
                 viewModel = dailyQuestionViewModel,
                 navController = navHostController,
+                navigateToNextQ = { navHostController.navigate("dailyQuestionScreen") },
                 navigateBack = { navHostController.navigateUp() }
             )
         }

@@ -84,6 +84,8 @@ fun SignUpScreen(
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
                 fontSize = 16.sp,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
@@ -103,6 +105,8 @@ fun SignUpScreen(
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
                 fontSize = 16.sp,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
@@ -123,6 +127,8 @@ fun SignUpScreen(
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
                 fontSize = 16.sp,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
@@ -157,6 +163,8 @@ fun SignUpScreen(
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
                 fontSize = 16.sp,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),
             colors = TextFieldDefaults.colors(
