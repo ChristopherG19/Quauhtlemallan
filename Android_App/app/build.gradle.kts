@@ -62,6 +62,9 @@ dependencies {
     implementation(libs.firebase.crashlytics)
 
     implementation(libs.coil)
+    implementation(libs.coil.gif)
+    implementation(libs.ccp)
+
 
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.ktx)
@@ -92,5 +95,7 @@ dependencies {
     implementation(libs.adapter.rxjava2)
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
+    androidTestImplementation(libs.ui.test.junit4)
+    implementation(libs.facebook.login)
 
 }

@@ -1,27 +1,36 @@
 package com.app.quauhtlemallan
 
-import android.content.Intent
-import androidx.activity.result.ActivityResultLauncher
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.NavHostController
-import com.app.quauhtlemallan.presentation.home.AjustesScreen
-import com.app.quauhtlemallan.presentation.home.BottomNavItem
-import com.app.quauhtlemallan.presentation.home.ChatScreen
-import com.app.quauhtlemallan.presentation.home.HomeScreen
-import com.app.quauhtlemallan.presentation.home.InicioScreen
-import com.app.quauhtlemallan.presentation.home.JuegosScreen
-import com.app.quauhtlemallan.presentation.home.ProgresoScreen
-import com.app.quauhtlemallan.presentation.initial.InitialScreen
-import com.app.quauhtlemallan.presentation.login.LoginScreen
-import com.app.quauhtlemallan.presentation.signup.SignUpScreen
-import com.app.quauhtlemallan.viewmodels.login.LoginViewModel
+import com.app.quauhtlemallan.data.repository.UserRepository
+import com.app.quauhtlemallan.ui.view.navbar.BottomNavItem
+import com.app.quauhtlemallan.ui.view.home.HomeScreen
+import com.app.quauhtlemallan.ui.view.initial.InitialScreen
+import com.app.quauhtlemallan.ui.view.login.LoginScreen
+import com.app.quauhtlemallan.ui.view.navbar.achievements.AchievementsScreen
+import com.app.quauhtlemallan.ui.view.navbar.achievements.CategoriesScreen
+import com.app.quauhtlemallan.ui.view.navbar.chat.ChatScreen
+import com.app.quauhtlemallan.ui.view.navbar.games.DailyQuestionScreen
+import com.app.quauhtlemallan.ui.view.navbar.games.GamesScreen
+import com.app.quauhtlemallan.ui.view.navbar.profile.ProfileScreen
+import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
+import com.app.quauhtlemallan.ui.view.signup.SignUpScreen
+import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
+import com.app.quauhtlemallan.ui.viewmodel.DailyQuestionViewModel
+import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
+import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
+import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
+import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
 
 @Composable
 fun NavigationWrapper(
@@ -29,7 +38,9 @@ fun NavigationWrapper(
     auth: FirebaseAuth
 ) {
     val context = LocalContext.current
-    val currentUser = auth.currentUser
+    val database = FirebaseDatabase.getInstance()
+    val storage = FirebaseStorage.getInstance()
+    val userRepository = UserRepository(auth, database, storage)
 
     val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
         .requestIdToken(context.getString(R.string.default_web_client_id))
@@ -38,16 +49,22 @@ fun NavigationWrapper(
 
     val googleSignInClient = GoogleSignIn.getClient(context, googleSignInOptions)
 
+    val loginViewModelFactory = LoginViewModelFactory(auth, userRepository)
+    val registerViewModelFactory = RegisterViewModelFactory(auth, userRepository)
+    val settingsViewModelFactory = SettingsViewModelFactory(userRepository)
+    val progressViewModelFactory = ProgressViewModelFactory(userRepository)
+    val achievementsViewModelFactory = AchievementsViewModelFactory(userRepository)
+    val chatViewModelFactory = ChatViewModelFactory()
+    val dailyQuestionViewModelFactory = DailyQuestionViewModelFactory()
+
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
             InitialScreen(navigateToLogin = {navHostController.navigate("logIn")},
                 navigateToSignUp = {navHostController.navigate("signUp")})
         }
         composable("logIn"){
-            val loginViewModel = viewModel<LoginViewModel>()
-
+            val loginViewModel: LoginViewModel = viewModel(factory = loginViewModelFactory)
             LoginScreen(
-                auth = auth,
                 viewModel = loginViewModel,
                 navigateToHome = { navHostController.navigate("home") },
                 navigateBack = { navHostController.navigate("initial") },
@@ -55,31 +72,88 @@ fun NavigationWrapper(
             )
         }
         composable("signUp"){
-            SignUpScreen(auth)
+            val signUpViewModel: RegisterViewModel = viewModel(factory = registerViewModelFactory)
+            SignUpScreen(
+                viewModel = signUpViewModel,
+                navigateBack = { navHostController.navigate("initial") },
+                navigateToHome = {
+                    navHostController.navigate("home") {
+                        popUpTo("initial") { inclusive = true }
+                    }
+                }
+            )
         }
         composable("home"){
             HomeScreen(
-                auth = auth,
-                googleSignInClient = googleSignInClient,
-                navigateToLogin = { navHostController.navigate("logIn") },
                 navController = navHostController
             )
         }
-
         composable(BottomNavItem.Progreso.route) {
-            ProgresoScreen()
+            val progressViewModel: ProgressViewModel = viewModel(factory = progressViewModelFactory)
+            ProgressScreen(
+                navController = navHostController,
+                viewModel = progressViewModel,
+                navigateToAchievements = { navHostController.navigate("categories") }
+            )
         }
         composable(BottomNavItem.Chat.route) {
-            ChatScreen()
+            val chatViewModel: ChatViewModel = viewModel(factory = chatViewModelFactory)
+            ChatScreen(
+                navController = navHostController,
+                viewModel = chatViewModel
+            )
         }
         composable(BottomNavItem.Inicio.route) {
-            InicioScreen()
+            HomeScreen(
+                navController = navHostController
+            )
         }
         composable(BottomNavItem.Juegos.route) {
-            JuegosScreen()
+            GamesScreen(navController = navHostController)
         }
-        composable(BottomNavItem.Ajustes.route) {
-            AjustesScreen()
+        composable(BottomNavItem.Perfil.route) {
+            val settingsViewModel: SettingsViewModel = viewModel(factory = settingsViewModelFactory)
+            ProfileScreen(
+                auth = auth,
+                viewModel = settingsViewModel,
+                navController = navHostController,
+                googleSignInClient = googleSignInClient
+            )
         }
+        composable("categories") {
+            val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
+
+            CategoriesScreen(
+                viewModel = achievementsViewModel,
+                navController = navHostController,
+                progress = 22f,
+                navigateBack = { navHostController.navigateUp() }
+            )
+        }
+
+        composable("badges/{categoryId}") { backStackEntry ->
+            val categoryId = backStackEntry.arguments?.getString("categoryId") ?: ""
+            val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
+            AchievementsScreen(
+                viewModel = achievementsViewModel,
+                categoryId = categoryId,
+                navController = navHostController,
+                navigateBack = { navHostController.navigateUp() }
+            )
+        }
+
+        composable("timeScreen") {}
+        composable("categoryScreen") {}
+        composable("tofScreen") {}
+        composable("dailyQuestionScreen") {
+            val dailyQuestionViewModel: DailyQuestionViewModel = viewModel(factory = dailyQuestionViewModelFactory)
+            DailyQuestionScreen(
+                viewModel = dailyQuestionViewModel,
+                navController = navHostController,
+                navigateToNextQ = { navHostController.navigate("dailyQuestionScreen") },
+                navigateBack = { navHostController.navigateUp() }
+            )
+        }
+
     }
 }
