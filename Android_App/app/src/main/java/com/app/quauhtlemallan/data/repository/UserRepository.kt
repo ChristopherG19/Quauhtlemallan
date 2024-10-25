@@ -17,17 +17,14 @@ class UserRepository(
     private val storage: FirebaseStorage
 ) {
 
-    // Obtén el ID del usuario actual si está autenticado
     fun getCurrentUserId(): String? {
         return firebaseAuth.currentUser?.uid
     }
 
-    // Verifica si el proveedor de autenticación es correo y contraseña
     fun isEmailProvider(): Boolean {
         return firebaseAuth.currentUser?.providerData?.any { it.providerId == EmailAuthProvider.PROVIDER_ID } ?: false
     }
 
-    // Obtiene el perfil del usuario desde Firebase Realtime Database
     suspend fun getUserProfile(userId: String): User? {
         return try {
             val snapshot = database.getReference("usuarios").child(userId).get().await()
@@ -37,7 +34,6 @@ class UserRepository(
         }
     }
 
-    // Crea un nuevo perfil de usuario en Firebase Realtime Database
     suspend fun createUserProfile(user: User): Boolean {
         return try {
             val userId = getCurrentUserId() ?: return false

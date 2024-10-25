@@ -2,6 +2,7 @@ package com.app.quauhtlemallan
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.app.quauhtlemallan.data.repository.QuestionRepository
 import com.app.quauhtlemallan.data.repository.UserRepository
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
@@ -10,6 +11,7 @@ import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.TrueFalseGameViewModel
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginViewModelFactory(
@@ -86,6 +88,18 @@ class DailyQuestionViewModelFactory : ViewModelProvider.Factory {
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
+
+class TrueFalseGameViewModelFactory(
+    private val questionRepository: QuestionRepository
+) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(TrueFalseGameViewModel::class.java)) {
+            return TrueFalseGameViewModel(questionRepository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
+
 
 
 

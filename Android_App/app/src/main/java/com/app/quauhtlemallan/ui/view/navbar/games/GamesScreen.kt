@@ -58,7 +58,7 @@ fun GamesScreen (
                         imageRes = R.drawable.ic_vof,
                         text = "Casaca o no",
                         color = brickRed,
-                        onClick = { navController.navigate("dailyQuestionScreen") }
+                        onClick = { navController.navigate("tofScreen") }
                     )
                 }
                 item {

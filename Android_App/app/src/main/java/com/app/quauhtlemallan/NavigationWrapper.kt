@@ -6,6 +6,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.NavHostController
+import com.app.quauhtlemallan.data.repository.QuestionRepository
 import com.app.quauhtlemallan.data.repository.UserRepository
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavItem
 import com.app.quauhtlemallan.ui.view.home.HomeScreen
@@ -16,6 +17,7 @@ import com.app.quauhtlemallan.ui.view.navbar.achievements.CategoriesScreen
 import com.app.quauhtlemallan.ui.view.navbar.chat.ChatScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.DailyQuestionScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.GamesScreen
+import com.app.quauhtlemallan.ui.view.navbar.games.TrueFalseGameScreen
 import com.app.quauhtlemallan.ui.view.navbar.profile.ProfileScreen
 import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.ui.view.signup.SignUpScreen
@@ -26,6 +28,7 @@ import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.TrueFalseGameViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -56,6 +59,7 @@ fun NavigationWrapper(
     val achievementsViewModelFactory = AchievementsViewModelFactory(userRepository)
     val chatViewModelFactory = ChatViewModelFactory()
     val dailyQuestionViewModelFactory = DailyQuestionViewModelFactory()
+    val TrueFalseGameViewModelFactory = TrueFalseGameViewModelFactory(QuestionRepository())
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -144,7 +148,14 @@ fun NavigationWrapper(
 
         composable("timeScreen") {}
         composable("categoryScreen") {}
-        composable("tofScreen") {}
+        composable("tofScreen") {
+            val tofViewModel: TrueFalseGameViewModel = viewModel(factory = TrueFalseGameViewModelFactory)
+            TrueFalseGameScreen(
+                viewModel = tofViewModel,
+                navController = navHostController,
+                onGameEnd = { navHostController.navigate(BottomNavItem.Juegos.route) }
+            )
+        }
         composable("dailyQuestionScreen") {
             val dailyQuestionViewModel: DailyQuestionViewModel = viewModel(factory = dailyQuestionViewModelFactory)
             DailyQuestionScreen(

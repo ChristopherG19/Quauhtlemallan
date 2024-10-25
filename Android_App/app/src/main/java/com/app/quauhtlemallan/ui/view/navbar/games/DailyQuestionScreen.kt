@@ -328,7 +328,7 @@ fun AnswerButton(text: String, isSelected: Boolean, onClick: () -> Unit) {
         border = BorderStroke(2.dp, if (isSelected) Color(0xFF42A5F5) else Color.Gray),
         modifier = Modifier
             .fillMaxWidth()
-            .height(60.dp) // Altura del botón
+            .height(60.dp)
     ) {
         Text(
             text = text,
