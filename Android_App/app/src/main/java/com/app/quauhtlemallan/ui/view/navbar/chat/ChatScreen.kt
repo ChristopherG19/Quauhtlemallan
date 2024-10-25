@@ -15,6 +15,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Send
+import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -83,6 +84,20 @@ fun ChatScreen(
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
+                Button(
+                    onClick = { navController.navigate("traducciones") },
+                    modifier = Modifier
+                        .align(Alignment.CenterHorizontally)
+                        .padding(16.dp)
+                        .padding(top = 24.dp)
+                ) {
+                    Text(
+                        text = "Traducciones a lenguas mayas",
+                        fontFamily = cinzelFontFamily,
+                        fontWeight = FontWeight.Normal
+                    )
+                }
+
                 LazyColumn(
                     modifier = Modifier
                         .weight(1f)

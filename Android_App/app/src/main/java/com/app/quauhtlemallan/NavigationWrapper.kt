@@ -15,6 +15,7 @@ import com.app.quauhtlemallan.ui.view.login.LoginScreen
 import com.app.quauhtlemallan.ui.view.navbar.achievements.AchievementsScreen
 import com.app.quauhtlemallan.ui.view.navbar.achievements.CategoriesScreen
 import com.app.quauhtlemallan.ui.view.navbar.chat.ChatScreen
+import com.app.quauhtlemallan.ui.view.navbar.chat.TraduccionesScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.DailyQuestionScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.GamesScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.TrueFalseGameScreen
@@ -28,6 +29,7 @@ import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.TraduccionesViewModel
 import com.app.quauhtlemallan.ui.viewmodel.TrueFalseGameViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -107,6 +109,13 @@ fun NavigationWrapper(
                 viewModel = chatViewModel
             )
         }
+
+        composable("traducciones") {
+            val traduccionesViewModel = viewModel<TraduccionesViewModel>()
+            TraduccionesScreen(navController = navHostController, traduccionesViewModel = traduccionesViewModel)
+        }
+
+
         composable(BottomNavItem.Inicio.route) {
             HomeScreen(
                 navController = navHostController
