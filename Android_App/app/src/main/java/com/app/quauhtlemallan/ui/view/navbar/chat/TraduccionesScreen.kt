@@ -34,7 +34,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.viewmodel.TraduccionesViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -49,7 +51,6 @@ fun TraduccionesScreen(
     val idiomas by traduccionesViewModel.idiomas.collectAsState(initial = emptyList())
 
     if (idiomas.isEmpty()) {
-        // Mostrar un indicador de carga si aún no se han cargado los idiomas
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             CircularProgressIndicator()
         }
@@ -58,7 +59,12 @@ fun TraduccionesScreen(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Traducciones a lenguas mayas") },
+                    title = { Text(
+                        "Traducciones a lenguas mayas",
+                        fontFamily = cinzelFontFamily,
+                        fontWeight = FontWeight.Normal,
+                        fontSize = 18.sp
+                    )},
                     navigationIcon = {
                         IconButton(onClick = { navController.navigateUp() }) {
                             Icon(
@@ -76,7 +82,6 @@ fun TraduccionesScreen(
                     .padding(paddingValues)
                     .padding(8.dp)
             ) {
-                // Tabs para los idiomas
                 ScrollableTabRow(
                     selectedTabIndex = selectedTabIndex,
                     modifier = Modifier.fillMaxWidth(),
@@ -85,7 +90,11 @@ fun TraduccionesScreen(
                 ) {
                     idiomas.forEachIndexed { index, idioma ->
                         Tab(
-                            text = { Text(idioma) },
+                            text = { Text(
+                                idioma,
+                                fontFamily = cinzelFontFamily,
+                                fontWeight = FontWeight.Normal
+                            )},
                             selected = selectedTabIndex == index,
                             onClick = { traduccionesViewModel.onTabSelected(index) }
                         )
@@ -98,13 +107,16 @@ fun TraduccionesScreen(
                 TextField(
                     value = searchQuery,
                     onValueChange = { searchQuery = it },
-                    label = { Text("Buscar traducción...") },
+                    label = { Text(
+                        "Buscar traducción...",
+                        fontFamily = cinzelFontFamily,
+                        fontWeight = FontWeight.Normal
+                    )},
                     modifier = Modifier.fillMaxWidth()
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Filtro de traducciones
                 val traduccionesFiltradas = traducciones.filter { traduccion ->
                     traduccion.lengua == idiomas[selectedTabIndex] &&
                             (traduccion.espanol.contains(searchQuery, ignoreCase = true) ||
@@ -128,12 +140,15 @@ fun TraduccionesScreen(
                             ) {
                                 Text(
                                     text = "Español: $espanol",
+                                    fontFamily = cinzelFontFamily,
                                     fontWeight = FontWeight.Bold,
                                     color = Color.Black
                                 )
                                 Spacer(modifier = Modifier.height(4.dp))
                                 Text(
                                     text = "Traducción: $lenguaMaya",
+                                    fontFamily = cinzelFontFamily,
+                                    fontWeight = FontWeight.Normal,
                                     color = Color.Gray
                                 )
                             }

@@ -227,6 +227,7 @@ fun AnswerButtonTime(
         Text(
             text = text,
             fontSize = 16.sp,
+            fontFamily = cinzelFontFamily,
             fontWeight = FontWeight.Bold,
             color = Color.White,
             textAlign = TextAlign.Center,
