@@ -1,6 +1,5 @@
 package com.app.quauhtlemallan.ui.view.navbar.games
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -58,7 +57,11 @@ fun TrueFalseGameScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Text("Respuestas correctas: $correctAnswers / ${questions.size}", fontFamily = cinzelFontFamily, fontWeight = FontWeight.Bold)
+            Text(
+                "Respuestas correctas: $correctAnswers / ${questions.size}",
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Bold
+            )
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = { onGameEnd() }) {
                 Text("Volver a juegos", fontFamily = cinzelFontFamily, fontWeight = FontWeight.Normal)

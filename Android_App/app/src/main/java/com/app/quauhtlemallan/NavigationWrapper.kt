@@ -18,6 +18,7 @@ import com.app.quauhtlemallan.ui.view.navbar.chat.ChatScreen
 import com.app.quauhtlemallan.ui.view.navbar.chat.TraduccionesScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.DailyQuestionScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.GamesScreen
+import com.app.quauhtlemallan.ui.view.navbar.games.TimeQuestionScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.TrueFalseGameScreen
 import com.app.quauhtlemallan.ui.view.navbar.profile.ProfileScreen
 import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
@@ -29,6 +30,7 @@ import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.TimeQuestionViewModel
 import com.app.quauhtlemallan.ui.viewmodel.TraduccionesViewModel
 import com.app.quauhtlemallan.ui.viewmodel.TrueFalseGameViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -61,7 +63,9 @@ fun NavigationWrapper(
     val achievementsViewModelFactory = AchievementsViewModelFactory(userRepository)
     val chatViewModelFactory = ChatViewModelFactory()
     val dailyQuestionViewModelFactory = DailyQuestionViewModelFactory()
-    val TrueFalseGameViewModelFactory = TrueFalseGameViewModelFactory(QuestionRepository())
+    val trueFalseGameViewModelFactory = TrueFalseGameViewModelFactory(QuestionRepository())
+    val timeQuestionViewModelFactory = TimeQuestionViewModelFactory(QuestionRepository())
+
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -155,10 +159,18 @@ fun NavigationWrapper(
             )
         }
 
-        composable("timeScreen") {}
+        composable("timeScreen") {
+            val timeQuestionViewModel: TimeQuestionViewModel = viewModel(factory = timeQuestionViewModelFactory)
+            TimeQuestionScreen(
+                viewModel = timeQuestionViewModel,
+                navController = navHostController,
+                navigateBack = { navHostController.navigateUp() },
+                onGameEnd = { navHostController.navigate(BottomNavItem.Juegos.route) }
+            )
+        }
         composable("categoryScreen") {}
         composable("tofScreen") {
-            val tofViewModel: TrueFalseGameViewModel = viewModel(factory = TrueFalseGameViewModelFactory)
+            val tofViewModel: TrueFalseGameViewModel = viewModel(factory = trueFalseGameViewModelFactory)
             TrueFalseGameScreen(
                 viewModel = tofViewModel,
                 navController = navHostController,

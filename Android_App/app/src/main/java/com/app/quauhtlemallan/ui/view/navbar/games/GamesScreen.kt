@@ -42,7 +42,7 @@ fun GamesScreen (
                         imageRes = R.drawable.ic_time,
                         text = "Pruebas contratiempo",
                         color = oceanBlue,
-                        onClick = { navController.navigate("dailyQuestionScreen") }
+                        onClick = { navController.navigate("timeScreen") }
                     )
                 }
                 item {

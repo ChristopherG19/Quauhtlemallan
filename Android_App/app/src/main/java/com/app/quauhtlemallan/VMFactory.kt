@@ -11,6 +11,7 @@ import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.TimeQuestionViewModel
 import com.app.quauhtlemallan.ui.viewmodel.TrueFalseGameViewModel
 import com.google.firebase.auth.FirebaseAuth
 
@@ -100,6 +101,17 @@ class TrueFalseGameViewModelFactory(
     }
 }
 
+class TimeQuestionViewModelFactory(
+    private val repository: QuestionRepository
+) : ViewModelProvider.Factory {
+
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(TimeQuestionViewModel::class.java)) {
+            return TimeQuestionViewModel(repository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
 
 
 

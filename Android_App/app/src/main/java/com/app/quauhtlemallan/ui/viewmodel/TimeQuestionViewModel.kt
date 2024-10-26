@@ -1,5 +1,7 @@
 package com.app.quauhtlemallan.ui.viewmodel
 
+import android.util.Log
+import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.quauhtlemallan.data.model.Question
@@ -10,7 +12,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class TrueFalseGameViewModel(
+class TimeQuestionViewModel(
     private val repository: QuestionRepository
 ) : ViewModel() {
 
@@ -26,23 +28,29 @@ class TrueFalseGameViewModel(
     private val _timer = MutableStateFlow(15)
     val timer: StateFlow<Int> = _timer
 
-    private var _gameEnded = MutableStateFlow(false)
+    private val _gameEnded = MutableStateFlow(false)
     val gameEnded: StateFlow<Boolean> = _gameEnded
 
     private val _selectedAnswer = MutableStateFlow<String?>(null)
     val selectedAnswer: StateFlow<String?> = _selectedAnswer
 
+    private val _isCorrectAnswer = MutableStateFlow(false)
+    val isCorrectAnswer: StateFlow<Boolean> = _isCorrectAnswer
+
+    private val _answerColors = MutableStateFlow<List<Color>>(listOf(Color(0xFF29395E), Color(0xFF29395E), Color(0xFF29395E), Color(0xFF29395E)))
+    val answerColors: StateFlow<List<Color>> = _answerColors
+
     private var timerJob: Job? = null
 
     init {
-        startTimer()
         loadQuestions()
     }
 
     private fun loadQuestions() {
         viewModelScope.launch {
-            val loadedQuestions = repository.getQuestionsToF()
+            val loadedQuestions = repository.getQuestionsTime()
             _questions.value = loadedQuestions
+            startTimer()
         }
     }
 
@@ -54,13 +62,27 @@ class TrueFalseGameViewModel(
                 delay(1000)
                 _timer.value -= 1
             }
-            moveToNextQuestion()
+            if (_timer.value == 0) {
+                moveToNextQuestion() // Avanzar si el tiempo se acaba
+            }
         }
     }
 
     fun selectAnswer(answer: String): Boolean {
         _selectedAnswer.value = answer
-        val isCorrect = answer == questions.value[_currentQuestionIndex.value].correcta
+
+        val currentQuestion = questions.value[_currentQuestionIndex.value]
+        val isCorrect = answer == currentQuestion.correcta
+        _isCorrectAnswer.value = isCorrect
+
+        val colors = currentQuestion.respuestas.map { option ->
+            when {
+                option == currentQuestion.correcta -> Color(0xFF4CAF50)
+                option == answer -> Color(0xFFF44336)
+                else -> Color.LightGray
+            }
+        }
+        _answerColors.value = colors
 
         if (isCorrect) {
             _correctAnswers.value += 1
@@ -71,15 +93,20 @@ class TrueFalseGameViewModel(
         }
 
         return isCorrect
+
     }
 
     private fun moveToNextQuestion() {
         _selectedAnswer.value = null
+        _isCorrectAnswer.value = false
+        _answerColors.value = listOf(Color(0xFF29395E), Color(0xFF29395E), Color(0xFF29395E), Color(0xFF29395E))
+
         if (_currentQuestionIndex.value < _questions.value.size - 1) {
             _currentQuestionIndex.value += 1
             startTimer()
         } else {
             _gameEnded.value = true
+            timerJob?.cancel()
         }
     }
 
