@@ -1,44 +1,31 @@
-package com.app.quauhtlemallan.ui.view.navbar.achievements
+package com.app.quauhtlemallan.ui.view.navbar.games
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LinearProgressIndicator
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.data.model.Category
-import com.app.quauhtlemallan.data.model.User
-import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
-import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
+import com.app.quauhtlemallan.ui.view.navbar.achievements.CategoryCard
 
 @Composable
-fun CategoriesScreen(
-    viewModel: AchievementsViewModel,
+fun CategoriesGamesScreen(
     navController: NavHostController,
-    progress: Float,
     navigateBack: () -> Unit
 ) {
     val categories = listOf(
@@ -75,7 +62,7 @@ fun CategoriesScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 24.dp)
+                    .padding(vertical = 20.dp)
             ) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_back_24),
@@ -87,25 +74,7 @@ fun CategoriesScreen(
                             navigateBack()
                         }
                 )
-                Spacer(modifier = Modifier.weight(1f))
             }
-
-            // Indicador de progreso
-            LinearProgressIndicator(
-                progress = { (progress / 100) },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(8.dp)
-                    .clip(RoundedCornerShape(4.dp)),
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(
-                text = "${progress.toInt()}%",
-                fontFamily = cinzelFontFamily,
-                fontWeight = FontWeight.Normal,
-                color = Color.Black
-            )
-            Spacer(modifier = Modifier.height(16.dp))
 
             LazyVerticalGrid(
                 columns = GridCells.Fixed(2),
@@ -116,7 +85,7 @@ fun CategoriesScreen(
                         category = categories[index],
                         borderColor = borderColors[index],
                         onClick = {
-                            navController.navigate("badges/${categories[index].id}")
+                            navController.navigate("games/${categories[index].id}")
                         }
                     )
                 }

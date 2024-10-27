@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.app.quauhtlemallan.data.repository.QuestionRepository
 import com.app.quauhtlemallan.data.repository.UserRepository
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.CategoryGameViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
 import com.app.quauhtlemallan.ui.viewmodel.DailyQuestionViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
@@ -113,5 +114,14 @@ class TimeQuestionViewModelFactory(
     }
 }
 
-
+class CategoryGameViewModelFactory(
+    private val repository: QuestionRepository
+) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(CategoryGameViewModel::class.java)) {
+            return CategoryGameViewModel(repository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
 

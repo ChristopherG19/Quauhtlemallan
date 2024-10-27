@@ -21,11 +21,6 @@ class QuestionRepository {
                     questionsList.addAll(questions)
                 }
             }
-            Log.d("QuestionRepository", "Preguntas obtenidas: ${questionsList.size}")
-            for (question in questionsList) {
-                Log.d("QuestionRepository", "Pregunta: ${question.pregunta}")
-            }
-
             questionsList
 
         } catch (e: Exception) {
@@ -46,9 +41,33 @@ class QuestionRepository {
                     questionsList.addAll(questions)
                 }
             }
-            Log.d("QuestionRepository", "Preguntas obtenidas: ${questionsList.size}")
-            for (question in questionsList) {
-                Log.d("QuestionRepository", "Pregunta: ${question.pregunta}")
+
+            questionsList
+
+        } catch (e: Exception) {
+            Log.e("QuestionRepository", "Error obteniendo preguntas: ${e.message}")
+            emptyList()
+        }
+    }
+
+    suspend fun getQuestionsByCategory(category: String): List<Question> {
+        val ref = database.getReference("preguntas/groups")
+        return try {
+            val snapshot = ref.orderByChild("type").equalTo("ctg").get().await()
+            val questionsList = mutableListOf<Question>()
+
+            for (groupSnapshot in snapshot.children) {
+                val categoriesSnapshot = groupSnapshot.child("categories")
+                if (categoriesSnapshot.exists()) {
+                    for (categorySnapshot in categoriesSnapshot.children) {
+                        val categoryName = categorySnapshot.child("category").getValue(String::class.java)
+                        if (categoryName == category) {
+                            val questionsSnapshot = categorySnapshot.child("questions")
+                            val questions = questionsSnapshot.children.mapNotNull { it.getValue(Question::class.java) }
+                            questionsList.addAll(questions)
+                        }
+                    }
+                }
             }
 
             questionsList

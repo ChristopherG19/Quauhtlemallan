@@ -50,7 +50,7 @@ fun GamesScreen (
                         imageRes = R.drawable.ic_category,
                         text = "Preguntas por categoría",
                         color = paleGreen,
-                        onClick = { navController.navigate("dailyQuestionScreen") }
+                        onClick = { navController.navigate("categoryScreen") }
                     )
                 }
                 item {

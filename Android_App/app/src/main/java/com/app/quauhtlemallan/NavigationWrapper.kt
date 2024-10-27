@@ -16,6 +16,8 @@ import com.app.quauhtlemallan.ui.view.navbar.achievements.AchievementsScreen
 import com.app.quauhtlemallan.ui.view.navbar.achievements.CategoriesScreen
 import com.app.quauhtlemallan.ui.view.navbar.chat.ChatScreen
 import com.app.quauhtlemallan.ui.view.navbar.chat.TraduccionesScreen
+import com.app.quauhtlemallan.ui.view.navbar.games.CategoriesGamesScreen
+import com.app.quauhtlemallan.ui.view.navbar.games.CategoryGameScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.DailyQuestionScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.GamesScreen
 import com.app.quauhtlemallan.ui.view.navbar.games.TimeQuestionScreen
@@ -24,6 +26,7 @@ import com.app.quauhtlemallan.ui.view.navbar.profile.ProfileScreen
 import com.app.quauhtlemallan.ui.view.navbar.progress.ProgressScreen
 import com.app.quauhtlemallan.ui.view.signup.SignUpScreen
 import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
+import com.app.quauhtlemallan.ui.viewmodel.CategoryGameViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
 import com.app.quauhtlemallan.ui.viewmodel.DailyQuestionViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
@@ -65,6 +68,7 @@ fun NavigationWrapper(
     val dailyQuestionViewModelFactory = DailyQuestionViewModelFactory()
     val trueFalseGameViewModelFactory = TrueFalseGameViewModelFactory(QuestionRepository())
     val timeQuestionViewModelFactory = TimeQuestionViewModelFactory(QuestionRepository())
+    val categoryGameViewModelFactory = CategoryGameViewModelFactory(QuestionRepository())
 
 
     NavHost(navController = navHostController, startDestination = "initial"){
@@ -72,6 +76,7 @@ fun NavigationWrapper(
             InitialScreen(navigateToLogin = {navHostController.navigate("logIn")},
                 navigateToSignUp = {navHostController.navigate("signUp")})
         }
+
         composable("logIn"){
             val loginViewModel: LoginViewModel = viewModel(factory = loginViewModelFactory)
             LoginScreen(
@@ -81,6 +86,7 @@ fun NavigationWrapper(
                 googleSignInClient = googleSignInClient
             )
         }
+
         composable("signUp"){
             val signUpViewModel: RegisterViewModel = viewModel(factory = registerViewModelFactory)
             SignUpScreen(
@@ -93,11 +99,13 @@ fun NavigationWrapper(
                 }
             )
         }
+
         composable("home"){
             HomeScreen(
                 navController = navHostController
             )
         }
+
         composable(BottomNavItem.Progreso.route) {
             val progressViewModel: ProgressViewModel = viewModel(factory = progressViewModelFactory)
             ProgressScreen(
@@ -106,6 +114,7 @@ fun NavigationWrapper(
                 navigateToAchievements = { navHostController.navigate("categories") }
             )
         }
+
         composable(BottomNavItem.Chat.route) {
             val chatViewModel: ChatViewModel = viewModel(factory = chatViewModelFactory)
             ChatScreen(
@@ -119,15 +128,16 @@ fun NavigationWrapper(
             TraduccionesScreen(navController = navHostController, traduccionesViewModel = traduccionesViewModel)
         }
 
-
         composable(BottomNavItem.Inicio.route) {
             HomeScreen(
                 navController = navHostController
             )
         }
+
         composable(BottomNavItem.Juegos.route) {
             GamesScreen(navController = navHostController)
         }
+
         composable(BottomNavItem.Perfil.route) {
             val settingsViewModel: SettingsViewModel = viewModel(factory = settingsViewModelFactory)
             ProfileScreen(
@@ -137,9 +147,9 @@ fun NavigationWrapper(
                 googleSignInClient = googleSignInClient
             )
         }
+
         composable("categories") {
             val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
-
             CategoriesScreen(
                 viewModel = achievementsViewModel,
                 navController = navHostController,
@@ -168,7 +178,25 @@ fun NavigationWrapper(
                 onGameEnd = { navHostController.navigate(BottomNavItem.Juegos.route) }
             )
         }
-        composable("categoryScreen") {}
+
+        composable("categoryScreen") {
+            CategoriesGamesScreen(
+                navController = navHostController,
+                navigateBack = { navHostController.navigateUp() }
+            )
+        }
+
+        composable("games/{categoryId}") { backStackEntry ->
+            val categoryId = backStackEntry.arguments?.getString("categoryId") ?: ""
+            val categoryGameViewModel: CategoryGameViewModel = viewModel(factory = categoryGameViewModelFactory)
+            CategoryGameScreen(
+                viewModel = categoryGameViewModel,
+                categoryId = categoryId,
+                navController = navHostController,
+                navigateBack = { navHostController.navigateUp() }
+            )
+        }
+
         composable("tofScreen") {
             val tofViewModel: TrueFalseGameViewModel = viewModel(factory = trueFalseGameViewModelFactory)
             TrueFalseGameScreen(
@@ -177,6 +205,7 @@ fun NavigationWrapper(
                 onGameEnd = { navHostController.navigate(BottomNavItem.Juegos.route) }
             )
         }
+
         composable("dailyQuestionScreen") {
             val dailyQuestionViewModel: DailyQuestionViewModel = viewModel(factory = dailyQuestionViewModelFactory)
             DailyQuestionScreen(
@@ -186,6 +215,5 @@ fun NavigationWrapper(
                 navigateBack = { navHostController.navigateUp() }
             )
         }
-
     }
 }
