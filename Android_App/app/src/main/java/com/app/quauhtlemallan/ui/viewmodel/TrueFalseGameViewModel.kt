@@ -33,6 +33,7 @@ class TrueFalseGameViewModel(
     val selectedAnswer: StateFlow<String?> = _selectedAnswer
 
     private var timerJob: Job? = null
+    private var isPaused = false
 
     init {
         startTimer()
@@ -50,12 +51,25 @@ class TrueFalseGameViewModel(
         timerJob?.cancel()
         timerJob = viewModelScope.launch {
             _timer.value = 15
-            while (_timer.value > 0) {
+            while (_timer.value > 0 && !isPaused) {
                 delay(1000)
-                _timer.value -= 1
+                if (!isPaused) {
+                    _timer.value -= 1
+                }
             }
-            moveToNextQuestion()
+            if (_timer.value == 0 && !isPaused) {
+                moveToNextQuestion()
+            }
         }
+    }
+
+    fun pauseTimer() {
+        isPaused = true
+    }
+
+    fun resumeTimer() {
+        isPaused = false
+        startTimer()
     }
 
     fun selectAnswer(answer: String): Boolean {
@@ -65,15 +79,13 @@ class TrueFalseGameViewModel(
         if (isCorrect) {
             _correctAnswers.value += 1
         }
-        viewModelScope.launch {
-            delay(1000)
-            moveToNextQuestion()
-        }
+
+        pauseTimer()
 
         return isCorrect
     }
 
-    private fun moveToNextQuestion() {
+    fun moveToNextQuestion() {
         _selectedAnswer.value = null
         if (_currentQuestionIndex.value < _questions.value.size - 1) {
             _currentQuestionIndex.value += 1

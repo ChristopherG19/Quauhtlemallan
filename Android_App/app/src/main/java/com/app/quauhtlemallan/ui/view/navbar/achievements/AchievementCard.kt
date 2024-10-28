@@ -67,7 +67,6 @@ fun AchievementCard(badge: AchievementData, progressPercentage: Int) {
 
                 Spacer(modifier = Modifier.width(14.dp))
 
-                // Texto con la información de la insignia
                 Column(
                     modifier = Modifier.weight(1f).padding(end = 35.dp)
                 ) {

@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -22,6 +23,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -32,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.data.model.Question
 import com.app.quauhtlemallan.ui.theme.crimsonRed
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.theme.mossGreen
@@ -50,6 +55,9 @@ fun TrueFalseGameScreen(
     val correctAnswers by viewModel.correctAnswers.collectAsState()
     val gameEnded by viewModel.gameEnded.collectAsState()
     val selectedAnswer by viewModel.selectedAnswer.collectAsState()
+
+    var showInfoDialog by remember { mutableStateOf(false) }
+    var extraInfo by remember { mutableStateOf("") }
 
     if (gameEnded) {
         Column(
@@ -70,6 +78,33 @@ fun TrueFalseGameScreen(
     } else {
         if (questions.isNotEmpty()) {
             val currentQuestion = questions[currentQuestionIndex]
+
+            if (showInfoDialog) {
+                viewModel.pauseTimer()
+                AlertDialog(
+                    onDismissRequest = {
+                        showInfoDialog = false
+                        viewModel.resumeTimer()
+                        viewModel.moveToNextQuestion() },
+                    title = {
+                        Text(text = "Respuesta correcta:")
+                    },
+                    text = {
+                        Text(text = "${currentQuestion.correcta}. $extraInfo")
+                    },
+                    confirmButton = {
+                        Button(
+                            onClick = {
+                                showInfoDialog = false
+                                viewModel.resumeTimer()
+                                viewModel.moveToNextQuestion()
+                            }
+                        ) {
+                            Text("Cerrar")
+                        }
+                    }
+                )
+            }
 
             Column(
                 modifier = Modifier
@@ -149,7 +184,7 @@ fun TrueFalseGameScreen(
                             modifier = Modifier.weight(1f)
                                 .height(450.dp),
                             onClick = {
-                                viewModel.selectAnswer("Verdadero")
+                                viewModel.moveToNextQuestion()
                             }
                         )
 
@@ -165,7 +200,10 @@ fun TrueFalseGameScreen(
                             modifier = Modifier.weight(1f)
                                 .height(450.dp),
                             onClick = {
-                                viewModel.selectAnswer("Falso")
+                                handleAnswer("Falso", currentQuestion, viewModel) { info ->
+                                    extraInfo = info
+                                    showInfoDialog = true
+                                }
                             }
                         )
                     }
@@ -190,6 +228,18 @@ fun TrueFalseGameScreen(
                 CircularProgressIndicator()
             }
         }
+    }
+}
+
+fun handleAnswer(
+    answer: String,
+    question: Question,
+    viewModel: TrueFalseGameViewModel,
+    showExtraInfo: (String) -> Unit
+) {
+    val isCorrect = viewModel.selectAnswer(answer)
+    if (!isCorrect) {
+        showExtraInfo(question.datoExtra)
     }
 }
 

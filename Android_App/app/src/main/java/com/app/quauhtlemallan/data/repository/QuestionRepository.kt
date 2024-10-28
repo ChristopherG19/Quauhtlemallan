@@ -21,8 +21,7 @@ class QuestionRepository {
                     questionsList.addAll(questions)
                 }
             }
-            questionsList
-
+            questionsList.shuffled().take(10)
         } catch (e: Exception) {
             Log.e("QuestionRepository", "Error obteniendo preguntas: ${e.message}")
             emptyList()
@@ -41,9 +40,7 @@ class QuestionRepository {
                     questionsList.addAll(questions)
                 }
             }
-
-            questionsList
-
+            questionsList.shuffled().take(10)
         } catch (e: Exception) {
             Log.e("QuestionRepository", "Error obteniendo preguntas: ${e.message}")
             emptyList()
@@ -69,9 +66,7 @@ class QuestionRepository {
                     }
                 }
             }
-
-            questionsList
-
+            questionsList.shuffled().take(10)
         } catch (e: Exception) {
             Log.e("QuestionRepository", "Error obteniendo preguntas: ${e.message}")
             emptyList()
