@@ -25,6 +25,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -75,7 +76,6 @@ fun AchievementsScreen(
                             navigateBack()
                         }
                 )
-                Spacer(modifier = Modifier.weight(1f))
             }
 
             when (badgesState) {
@@ -87,7 +87,10 @@ fun AchievementsScreen(
                         modifier = Modifier.fillMaxSize()
                     ) {
                         items(badges) { badge ->
-                            AchievementCard(badge = badge)
+                            val progress by produceState(initialValue = 0) {
+                                value = viewModel.getBadgeProgress(badge.id)
+                            }
+                            AchievementCard(badge = badge, progress)
                         }
                     }
                 }

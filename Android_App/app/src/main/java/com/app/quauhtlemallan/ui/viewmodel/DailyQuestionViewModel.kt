@@ -56,6 +56,7 @@ class DailyQuestionViewModel : ViewModel() {
                                 val questions = questionsSnapshot.children.map { it.getValue(Question::class.java) }
                                 val randomQuestion = questions.randomOrNull()
 
+                                Log.d("DailyQuestion", "Pregunta obtenida: $randomQuestion")
                                 if (randomQuestion != null) {
                                     dailyQuestion.value = randomQuestion
                                     sharedPreferences.edit().putString("currentQuestion", Gson().toJson(randomQuestion)).apply()

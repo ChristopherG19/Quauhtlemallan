@@ -20,6 +20,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -41,6 +42,11 @@ fun CategoriesScreen(
     progress: Float,
     navigateBack: () -> Unit
 ) {
+
+    LaunchedEffect(Unit) {
+        viewModel.refreshDiscoveryPercentage()
+    }
+
     val categories = listOf(
         Category(id = "artes", title = "Artes", imageUrl = R.drawable.ic_arte),
         Category(id = "cultura", title = "Cultura", imageUrl = R.drawable.ic_cultura),
@@ -92,7 +98,7 @@ fun CategoriesScreen(
 
             // Indicador de progreso
             LinearProgressIndicator(
-                progress = { (progress / 100) },
+                progress = { progress / 100 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(8.dp)

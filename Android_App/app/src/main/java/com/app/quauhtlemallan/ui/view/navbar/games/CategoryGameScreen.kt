@@ -136,7 +136,7 @@ fun CategoryGameScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                if (currentQuestion.image && currentQuestion.url != null) {
+                if (currentQuestion.tieneImagen && currentQuestion.imagenUrl != null) {
                     Box(
                         modifier = Modifier
                             .padding(bottom = 16.dp)
@@ -145,7 +145,7 @@ fun CategoryGameScreen(
                             .aspectRatio(16f / 9f)
                     ) {
                         Image(
-                            painter = rememberImagePainter(data = currentQuestion.url),
+                            painter = rememberImagePainter(data = currentQuestion.imagenUrl),
                             contentDescription = null,
                             contentScale = ContentScale.Crop,
                             modifier = Modifier.fillMaxSize()
