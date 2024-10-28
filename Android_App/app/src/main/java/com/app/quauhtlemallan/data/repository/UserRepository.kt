@@ -134,42 +134,4 @@ class UserRepository(
         return badges
     }
 
-    suspend fun getUserDiscoveryPercentage(): Int {
-        return try {
-            val userId = getCurrentUserId() ?: return 0
-
-            database.getReference("usuarios/$userId/porcentajeDescubierto").get().await()
-                .getValue(Int::class.java) ?: 0
-        } catch (e: Exception) {
-            Log.e("UserRepository", "Error getting discovery percentage: ${e.message}", e)
-            0
-        }
-    }
-
-    suspend fun getUserBadgeProgress(badgeId: String): Int {
-        return try {
-            val userId = getCurrentUserId() ?: return 0
-
-            val badgeProgressSnapshot = database.getReference("usuarios/$userId/insignias/$badgeId").get().await()
-            badgeProgressSnapshot.getValue(Int::class.java) ?: 0
-        } catch (e: Exception) {
-            Log.e("UserRepository", "Error getting badge progress for $badgeId: ${e.message}", e)
-            0
-        }
-    }
-
-    suspend fun updateUserBadge(badgeId: String, points: Int): Boolean {
-        return try {
-            val userId = getCurrentUserId() ?: return false
-            val badgeRef = database.getReference("usuarios/$userId/insignias/$badgeId")
-            val currentPointsSnapshot = badgeRef.get().await()
-            val currentPoints = currentPointsSnapshot.getValue(Int::class.java) ?: 0
-            val newPoints = currentPoints + points
-            badgeRef.setValue(newPoints).await()
-            true
-        } catch (e: Exception) {
-            Log.e("UserRepository", "Error updating badge: ${e.message}", e)
-            false
-        }
-    }
 }

@@ -3,16 +3,13 @@ package com.app.quauhtlemallan.ui.view.navbar.games
 import android.content.Context
 import android.util.Log
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -35,9 +32,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -45,7 +40,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.theme.crimsonRed
@@ -252,7 +246,7 @@ fun DailyQuestionScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 12.dp)
+                    .padding(vertical = 24.dp)
             ) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_quit),
@@ -264,34 +258,16 @@ fun DailyQuestionScreen(
                             navigateBack()
                         }
                 )
+                Spacer(modifier = Modifier.weight(1f))
             }
 
-            Spacer(modifier = Modifier.height(14.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             // Mostrar la pregunta
             question?.let { q ->
-                Log.e("IMAGEN", q.toString())
-                if (q.tieneImagen && q.imagenUrl != null) {
-
-                    Box(
-                        modifier = Modifier
-                            .padding(bottom = 16.dp)
-                            .border(2.5.dp, Color.Black, RoundedCornerShape(8.dp))
-                            .clip(RoundedCornerShape(8.dp))
-                            .aspectRatio(16f / 9f)
-                    ) {
-                        Image(
-                            painter = rememberImagePainter(data = q.imagenUrl),
-                            contentDescription = null,
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier.fillMaxSize()
-                        )
-                    }
-                }
-
                 Text(
                     text = q.pregunta,
-                    fontSize = if (q.tieneImagen) 18.sp else 20.sp,
+                    fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
                     fontFamily = cinzelFontFamily,
                     textAlign = TextAlign.Center,
@@ -307,10 +283,9 @@ fun DailyQuestionScreen(
                         isSelected = selectedOption.value == option,
                         onClick = {
                             selectedOption.value = option
-                        },
-                        image = q.tieneImagen
+                        }
                     )
-                    Spacer(modifier = Modifier.height(if (q.tieneImagen) 14.dp else 16.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
                 }
 
                 // Botón de enviar respuesta
@@ -343,7 +318,7 @@ fun DailyQuestionScreen(
 
 
 @Composable
-fun AnswerButton(text: String, isSelected: Boolean, onClick: () -> Unit, image: Boolean) {
+fun AnswerButton(text: String, isSelected: Boolean, onClick: () -> Unit) {
     Button(
         onClick = onClick,
         shape = RoundedCornerShape(16.dp),
@@ -353,11 +328,11 @@ fun AnswerButton(text: String, isSelected: Boolean, onClick: () -> Unit, image: 
         border = BorderStroke(2.dp, if (isSelected) Color(0xFF42A5F5) else Color.Gray),
         modifier = Modifier
             .fillMaxWidth()
-            .height(if (image) 40.dp else 60.dp)
+            .height(60.dp)
     ) {
         Text(
             text = text,
-            fontSize = if (image) 15.sp else 16.sp,
+            fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
             color = if (isSelected) Color.White else Color.Black,
             textAlign = TextAlign.Center,

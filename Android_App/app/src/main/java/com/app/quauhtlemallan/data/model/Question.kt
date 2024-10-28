@@ -6,8 +6,7 @@ data class Question(
     val puntos: Int = 0,
     val correcta: String = "",
     val respuestas: List<String> = listOf(),
-    val tieneImagen: Boolean = false,
-    val imagenUrl: String? = null,
-    val datoExtra: String = ""
+    val image: Boolean = false,
+    val url: String? = null
 )
 

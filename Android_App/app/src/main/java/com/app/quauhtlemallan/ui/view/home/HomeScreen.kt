@@ -1,7 +1,5 @@
 package com.app.quauhtlemallan.ui.view.home
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,7 +23,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -41,8 +38,8 @@ import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 
 @Composable
 fun HomeScreen(
-    navController: NavHostController,
-    userPercentage: Float
+//    user: User,
+    navController: NavHostController
 ) {
     Scaffold(
         bottomBar = { BottomNavigationBar(navController = navController) }
@@ -82,45 +79,35 @@ fun HomeScreen(
                     model = ImageRequest.Builder(LocalContext.current)
                         .data(R.drawable.mapa)
                         .decoderFactory(GifDecoder.Factory())
-                        .size(360)
-                        .crossfade(true)
+                        .size(OriginalSize)
                         .build(),
                     contentDescription = "Mapa GIF",
                     modifier = Modifier
                         .size(360.dp)
-                        .clip(RoundedCornerShape(8.dp)),
-                    placeholder = painterResource(id = R.drawable.static_placeholder),
-                    error = painterResource(id = R.drawable.static_placeholder),
+                        .padding(16.dp),
                     contentScale = ContentScale.Crop
                 )
 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                LinearProgressIndicator(
-                    progress = userPercentage / 100f,
-                    modifier = Modifier
-                        .fillMaxWidth(0.6f)
-                        .height(8.dp)
-                        .clip(RoundedCornerShape(4.dp)),
-                    color = Color(0xFF4CAF50)
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.6f)
-                        .background(Color.Transparent)
-                        .border(1.dp, Color.Gray, shape = RoundedCornerShape(8.dp))
-                        .padding(8.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "${userPercentage.toInt()}% DESCUBIERTO",
-                        fontFamily = cinzelFontFamily,
-                        fontWeight = FontWeight.SemiBold,
-                        color = Color.Black
-                    )
-                }
+//                // Indicador de progreso con barra
+//                LinearProgressIndicator(
+//                    progress = user.porcentajeDescubierto / 100f,
+//                    modifier = Modifier
+//                        .width(200.dp)
+//                        .height(8.dp)
+//                        .clip(RoundedCornerShape(4.dp)),
+//                    color = Color.Green
+//                )
+//                Spacer(modifier = Modifier.height(8.dp))
+//
+//                // Mostrar el porcentaje de progreso
+//                Text(
+//                    text = "${user.porcentajeDescubierto}% descubierto",
+//                    fontFamily = cinzelFontFamily,
+//                    fontWeight = FontWeight.SemiBold,
+//                    color = Color.Gray
+//                )
 
                 Spacer(modifier = Modifier.height(16.dp))
 

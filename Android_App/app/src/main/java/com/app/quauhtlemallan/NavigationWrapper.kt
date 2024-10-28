@@ -1,7 +1,6 @@
 package com.app.quauhtlemallan
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
@@ -71,10 +70,6 @@ fun NavigationWrapper(
     val timeQuestionViewModelFactory = TimeQuestionViewModelFactory(QuestionRepository())
     val categoryGameViewModelFactory = CategoryGameViewModelFactory(QuestionRepository())
 
-    val loginViewModel: LoginViewModel = viewModel(factory = loginViewModelFactory)
-    val progressViewModel: ProgressViewModel = viewModel(factory = progressViewModelFactory)
-    val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
-    val progress by achievementsViewModel.discoveryPercentage
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -83,6 +78,7 @@ fun NavigationWrapper(
         }
 
         composable("logIn"){
+            val loginViewModel: LoginViewModel = viewModel(factory = loginViewModelFactory)
             LoginScreen(
                 viewModel = loginViewModel,
                 navigateToHome = { navHostController.navigate("home") },
@@ -106,12 +102,12 @@ fun NavigationWrapper(
 
         composable("home"){
             HomeScreen(
-                navController = navHostController,
-                userPercentage = progress.toFloat()
+                navController = navHostController
             )
         }
 
         composable(BottomNavItem.Progreso.route) {
+            val progressViewModel: ProgressViewModel = viewModel(factory = progressViewModelFactory)
             ProgressScreen(
                 navController = navHostController,
                 viewModel = progressViewModel,
@@ -134,8 +130,7 @@ fun NavigationWrapper(
 
         composable(BottomNavItem.Inicio.route) {
             HomeScreen(
-                navController = navHostController,
-                userPercentage = progress.toFloat()
+                navController = navHostController
             )
         }
 
@@ -154,10 +149,11 @@ fun NavigationWrapper(
         }
 
         composable("categories") {
+            val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
             CategoriesScreen(
                 viewModel = achievementsViewModel,
                 navController = navHostController,
-                progress = progress.toFloat(),
+                progress = 22f,
                 navigateBack = { navHostController.navigateUp() }
             )
         }
