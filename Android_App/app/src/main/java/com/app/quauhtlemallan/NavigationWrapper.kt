@@ -1,6 +1,7 @@
 package com.app.quauhtlemallan
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
@@ -101,8 +102,11 @@ fun NavigationWrapper(
         }
 
         composable("home"){
+            val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
+            val progress by achievementsViewModel.discoveryPercentage
             HomeScreen(
-                navController = navHostController
+                navController = navHostController,
+                userPercentage = progress.toFloat()
             )
         }
 
@@ -129,8 +133,11 @@ fun NavigationWrapper(
         }
 
         composable(BottomNavItem.Inicio.route) {
+            val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
+            val progress by achievementsViewModel.discoveryPercentage
             HomeScreen(
-                navController = navHostController
+                navController = navHostController,
+                userPercentage = progress.toFloat()
             )
         }
 
@@ -150,10 +157,11 @@ fun NavigationWrapper(
 
         composable("categories") {
             val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
+            val progress by achievementsViewModel.discoveryPercentage
             CategoriesScreen(
                 viewModel = achievementsViewModel,
                 navController = navHostController,
-                progress = 22f,
+                progress = progress.toFloat(),
                 navigateBack = { navHostController.navigateUp() }
             )
         }

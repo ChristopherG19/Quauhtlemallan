@@ -134,4 +134,28 @@ class UserRepository(
         return badges
     }
 
+    suspend fun getUserDiscoveryPercentage(): Int {
+        return try {
+            val userId = getCurrentUserId() ?: return 0
+
+            database.getReference("usuarios/$userId/porcentajeDescubierto").get().await()
+                .getValue(Int::class.java) ?: 0
+        } catch (e: Exception) {
+            Log.e("UserRepository", "Error getting discovery percentage: ${e.message}", e)
+            0
+        }
+    }
+
+    suspend fun getUserBadgeProgress(badgeId: String): Int {
+        return try {
+            val userId = getCurrentUserId() ?: return 0
+
+            val badgeProgressSnapshot = database.getReference("usuarios/$userId/insignias/$badgeId").get().await()
+            badgeProgressSnapshot.getValue(Int::class.java) ?: 0
+        } catch (e: Exception) {
+            Log.e("UserRepository", "Error getting badge progress for $badgeId: ${e.message}", e)
+            0
+        }
+    }
+
 }
