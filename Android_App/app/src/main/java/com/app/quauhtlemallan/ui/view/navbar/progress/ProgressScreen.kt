@@ -54,6 +54,7 @@ fun ProgressScreen(
     val progressState by viewModel.progressState.collectAsState()
     val userProfile = viewModel.userProfile
     val users = viewModel.users
+    val userLevel = viewModel.userLevel
 
     Scaffold(
         bottomBar = { BottomNavigationBar(navController = navController) }
@@ -77,7 +78,7 @@ fun ProgressScreen(
                     val userRank = users.indexOfFirst { it.id == userProfile?.id } + 1
 
                     userProfile?.let {
-                        UserProfileSection(userProfile = it, rank = userRank)
+                        UserProfileSection(userProfile = it, rank = userRank, userLevel = userLevel)
                     }
 
                     // Botón para ver insignias
@@ -127,7 +128,7 @@ fun ProgressScreen(
 }
 
 @Composable
-fun UserProfileSection(userProfile: User, rank: Int) {
+fun UserProfileSection(userProfile: User, rank: Int, userLevel: Int) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center,
@@ -147,7 +148,7 @@ fun UserProfileSection(userProfile: User, rank: Int) {
 
         Column(modifier = Modifier.padding(start = 16.dp)) {
             Text(text = userProfile.username, fontSize = 18.sp, fontWeight = FontWeight.Bold, fontFamily = cinzelFontFamily)
-            Text(text = "Nivel 2", fontSize = 14.sp, fontWeight = FontWeight.Bold, fontFamily = cinzelFontFamily)
+            Text(text = "Nivel $userLevel", fontSize = 14.sp, fontWeight = FontWeight.Bold, fontFamily = cinzelFontFamily)
             Text(text = "Rank #$rank", fontSize = 14.sp, fontWeight = FontWeight.Bold, fontFamily = cinzelFontFamily)
         }
     }

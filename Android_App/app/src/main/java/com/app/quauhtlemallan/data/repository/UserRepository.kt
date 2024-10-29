@@ -8,6 +8,8 @@ import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.coroutines.tasks.await
 
@@ -146,6 +148,17 @@ class UserRepository(
         }
     }
 
+    suspend fun getUserTotalScore(): Int {
+        return try {
+            val userId = getCurrentUserId() ?: return 0
+            database.getReference("usuarios/$userId/score").get().await()
+                .getValue(Int::class.java) ?: 0
+        } catch (e: Exception) {
+            Log.e("UserRepository", "Error getting total score: ${e.message}", e)
+            0
+        }
+    }
+
     suspend fun getUserBadgeProgress(badgeId: String): Int {
         return try {
             val userId = getCurrentUserId() ?: return 0
@@ -186,4 +199,52 @@ class UserRepository(
             100
         }
     }
+
+    suspend fun calculateUserLevel(totalScore: Int): Triple<Int, Int, Int> {
+        val nivelesRef = Firebase.database.getReference("niveles")
+        val nivelesSnapshot = nivelesRef.get().await()
+
+        var currentLevel = 1
+        var pointsForCurrentLevel = 0
+        var pointsForNextLevel = 0
+
+        val nivelesOrdenados = nivelesSnapshot.children.sortedBy { it.key?.removePrefix("nivel")?.toIntOrNull() ?: 0 }
+
+        for ((index, nivel) in nivelesOrdenados.withIndex()) {
+            val levelPoints = nivel.value.toString().toInt()
+
+            if (totalScore < levelPoints) {
+                pointsForNextLevel = levelPoints
+                break
+            }
+
+            currentLevel = index + 1
+            pointsForCurrentLevel = levelPoints
+        }
+
+        val pointsToNextLevel = if (pointsForNextLevel > 0) pointsForNextLevel - totalScore else 0
+        val currentPointsWithinLevel = totalScore - pointsForCurrentLevel
+
+        return Triple(currentLevel, pointsToNextLevel, currentPointsWithinLevel)
+    }
+
+    suspend fun getUserLevel(totalScore: Int): Int {
+        val nivelesRef = Firebase.database.getReference("niveles")
+        val nivelesSnapshot = nivelesRef.get().await()
+
+        var currentLevel = 1
+
+        // Recorre los niveles ordenados por sus puntos
+        for (nivel in nivelesSnapshot.children.sortedBy { it.key?.removePrefix("nivel")?.toIntOrNull() ?: 0 }) {
+            val levelPoints = nivel.value.toString().toInt()
+            if (totalScore < levelPoints) {
+                break
+            }
+            currentLevel = nivel.key?.removePrefix("nivel")?.toInt() ?: currentLevel
+        }
+
+        return currentLevel
+    }
+
+
 }

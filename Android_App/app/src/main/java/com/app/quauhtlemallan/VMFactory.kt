@@ -8,6 +8,7 @@ import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
 import com.app.quauhtlemallan.ui.viewmodel.CategoryGameViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
 import com.app.quauhtlemallan.ui.viewmodel.DailyQuestionViewModel
+import com.app.quauhtlemallan.ui.viewmodel.HomeViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
@@ -35,6 +36,17 @@ class RegisterViewModelFactory(
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {
             return RegisterViewModel(auth, userRepository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}
+
+class HomeViewModelFactory(
+    private val userRepository: UserRepository
+) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
+            return HomeViewModel(userRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

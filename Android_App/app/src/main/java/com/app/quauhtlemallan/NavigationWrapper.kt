@@ -30,6 +30,7 @@ import com.app.quauhtlemallan.ui.viewmodel.AchievementsViewModel
 import com.app.quauhtlemallan.ui.viewmodel.CategoryGameViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
 import com.app.quauhtlemallan.ui.viewmodel.DailyQuestionViewModel
+import com.app.quauhtlemallan.ui.viewmodel.HomeViewModel
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.ui.viewmodel.ProgressViewModel
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
@@ -70,7 +71,7 @@ fun NavigationWrapper(
     val trueFalseGameViewModelFactory = TrueFalseGameViewModelFactory(QuestionRepository(),userRepository)
     val timeQuestionViewModelFactory = TimeQuestionViewModelFactory(QuestionRepository(), userRepository)
     val categoryGameViewModelFactory = CategoryGameViewModelFactory(QuestionRepository(), userRepository)
-
+    val homeViewModelFactory = HomeViewModelFactory(userRepository)
 
     NavHost(navController = navHostController, startDestination = "initial"){
         composable("initial"){
@@ -102,11 +103,13 @@ fun NavigationWrapper(
         }
 
         composable("home"){
+            val homeViewModel: HomeViewModel = viewModel(factory = homeViewModelFactory)
             val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
             val progress by achievementsViewModel.discoveryPercentage
             HomeScreen(
                 navController = navHostController,
-                userPercentage = progress.toFloat()
+                userPercentage = progress.toFloat(),
+                homeViewModel
             )
         }
 
@@ -133,11 +136,13 @@ fun NavigationWrapper(
         }
 
         composable(BottomNavItem.Inicio.route) {
+            val homeViewModel: HomeViewModel = viewModel(factory = homeViewModelFactory)
             val achievementsViewModel: AchievementsViewModel = viewModel(factory = achievementsViewModelFactory)
             val progress by achievementsViewModel.discoveryPercentage
             HomeScreen(
                 navController = navHostController,
-                userPercentage = progress.toFloat()
+                userPercentage = progress.toFloat(),
+                homeViewModel
             )
         }
 
