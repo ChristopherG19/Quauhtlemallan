@@ -51,7 +51,7 @@ class LoginViewModel(
         _loginState.value = LoginState.Loading
         viewModelScope.launch {
             try {
-                val result = auth.signInWithEmailAndPassword(email, password).await()
+                val result = auth.signInWithEmailAndPassword(email.trim(), password).await()
                 val firebaseUser = result.user
                 if (firebaseUser != null) {
                     val userProfile = userRepository.getUserProfile(firebaseUser.uid)

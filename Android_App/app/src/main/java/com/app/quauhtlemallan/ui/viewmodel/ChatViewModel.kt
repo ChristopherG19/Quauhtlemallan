@@ -82,18 +82,22 @@ class ChatViewModel() : ViewModel() {
                         Log.e("RESPONSE", decodedResponse)
                         val cleanResponse = decodedResponse.substringAfter("Respuesta:").trim()
 
-                        _chatResponse.value = cleanResponse
+                        if(cleanResponse.contains("Error")){
+                            _chatResponse.value = "Disculpa mano, no estoy encendido en este momento o estoy en mantenimiento"
+                        } else {
+                            _chatResponse.value = cleanResponse
+                        }
 
                     }
                 } else {
                     Log.e("OnResponse", "Fallo")
-                    _chatResponse.value = "Error: Response not successful"
+                    _chatResponse.value = "Algo salió mal, una disculpa"
                 }
             }
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 _loading.value = false
-                _chatResponse.value = "Error: ${t.message}"
+                _chatResponse.value = "Disculpa mano, no estoy encendido en este momento"
             }
         })
     }

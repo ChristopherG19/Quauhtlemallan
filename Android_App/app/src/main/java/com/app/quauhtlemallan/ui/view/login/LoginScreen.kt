@@ -55,6 +55,7 @@ import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.theme.crimsonRed
 import com.app.quauhtlemallan.ui.theme.mossGreen
 import com.app.quauhtlemallan.data.model.User
+import com.app.quauhtlemallan.ui.theme.rubikFontFamily
 import com.app.quauhtlemallan.ui.viewmodel.LoginViewModel
 import com.app.quauhtlemallan.util.LoginState
 import com.facebook.AccessToken
@@ -84,7 +85,6 @@ fun LoginScreen(
     var passwordVisible by remember { mutableStateOf(false) }
     var confirmPasswordVisible by remember { mutableStateOf(false) }
 
-    // Google Sign-In launcher
     val launcher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.StartActivityForResult(),
         onResult = { result ->
@@ -106,20 +106,6 @@ fun LoginScreen(
             }
         }
     )
-
-//    LaunchedEffect(Unit) {
-//        val accessToken = AccessToken.getCurrentAccessToken()
-//        val isLoggedIn = accessToken != null && !accessToken.isExpired
-//
-//        if (isLoggedIn) {
-//            Log.d("FacebookLogin", "Using existing Facebook access token")
-//            if (accessToken != null) {
-//                viewModel.signInWithFacebook(accessToken) { user ->
-//                    navigateToHome(user)
-//                }
-//            }
-//        }
-//    }
 
     LaunchedEffect(Unit) {
         LoginManager.getInstance().registerCallback(LoginScreen.callbackManager,
@@ -188,6 +174,8 @@ fun LoginScreen(
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
+                fontFamily = rubikFontFamily,
+                fontWeight = FontWeight.Normal,
                 fontSize = 16.sp,
                 color = Color.Black
             ),
@@ -211,6 +199,8 @@ fun LoginScreen(
             modifier = Modifier.fillMaxWidth(),
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
+                fontFamily = rubikFontFamily,
+                fontWeight = FontWeight.Normal,
                 fontSize = 16.sp,
                 color = Color.Black
             ),

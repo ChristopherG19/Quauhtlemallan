@@ -26,6 +26,7 @@ import com.app.quauhtlemallan.ui.theme.SelectedField
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.data.model.User
 import com.app.quauhtlemallan.ui.theme.mossGreen
+import com.app.quauhtlemallan.ui.theme.rubikFontFamily
 import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.util.RegisterState
 import com.hbb20.CountryCodePicker
@@ -84,7 +85,7 @@ fun SignUpScreen(
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
                 fontSize = 16.sp,
-                fontFamily = cinzelFontFamily,
+                fontFamily = rubikFontFamily,
                 fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),
@@ -105,7 +106,7 @@ fun SignUpScreen(
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
                 fontSize = 16.sp,
-                fontFamily = cinzelFontFamily,
+                fontFamily = rubikFontFamily,
                 fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),
@@ -127,7 +128,7 @@ fun SignUpScreen(
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
                 fontSize = 16.sp,
-                fontFamily = cinzelFontFamily,
+                fontFamily = rubikFontFamily,
                 fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),
@@ -163,7 +164,7 @@ fun SignUpScreen(
             textStyle = LocalTextStyle.current.copy(
                 textAlign = TextAlign.Start,
                 fontSize = 16.sp,
-                fontFamily = cinzelFontFamily,
+                fontFamily = rubikFontFamily,
                 fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),

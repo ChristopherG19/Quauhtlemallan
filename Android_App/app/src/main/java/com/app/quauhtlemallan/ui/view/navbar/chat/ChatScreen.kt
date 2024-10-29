@@ -12,10 +12,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -32,6 +34,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -42,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.app.quauhtlemallan.R
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
+import com.app.quauhtlemallan.ui.theme.deepBlue
 import com.app.quauhtlemallan.ui.theme.forestGreen
 import com.app.quauhtlemallan.ui.view.navbar.BottomNavigationBar
 import com.app.quauhtlemallan.ui.viewmodel.ChatViewModel
@@ -87,12 +91,18 @@ fun ChatScreen(
                 Button(
                     onClick = { navController.navigate("traducciones") },
                     modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
+                        .align(Alignment.End)
                         .padding(16.dp)
-                        .padding(top = 24.dp)
+                        .padding(top = 4.dp),
+                    elevation = ButtonDefaults.buttonElevation(
+                        defaultElevation = 8.dp,
+                        pressedElevation = 12.dp,
+                        disabledElevation = 0.dp
+                    ),
+                    colors = ButtonDefaults.buttonColors(containerColor = deepBlue)
                 ) {
                     Text(
-                        text = "Traducciones a lenguas mayas",
+                        text = "Ayuda con traducciones",
                         fontFamily = cinzelFontFamily,
                         fontWeight = FontWeight.Normal
                     )
@@ -127,7 +137,11 @@ fun ChatScreen(
                     TextField(
                         value = inputText,
                         onValueChange = { inputText = it },
-                        placeholder = { Text(text = "Escribe tu duda...", fontFamily = cinzelFontFamily, fontWeight = FontWeight.SemiBold) },
+                        placeholder = { Text(
+                            text = "¿Qué quisieras preguntar?",
+                            fontFamily = cinzelFontFamily,
+                            fontWeight = FontWeight.Normal
+                        )},
                         textStyle = TextStyle(color = Color.Black, fontFamily = cinzelFontFamily, fontWeight = FontWeight.SemiBold),
                         keyboardOptions = KeyboardOptions.Default.copy(capitalization = KeyboardCapitalization.None),
                         modifier = Modifier
