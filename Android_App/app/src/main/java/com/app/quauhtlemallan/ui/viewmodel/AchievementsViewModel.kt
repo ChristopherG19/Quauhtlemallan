@@ -1,5 +1,7 @@
 package com.app.quauhtlemallan.ui.viewmodel
 
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.quauhtlemallan.data.model.AchievementData
@@ -18,15 +20,30 @@ class AchievementsViewModel(
     private val _badgesState = MutableStateFlow<AchievementsState>(AchievementsState.Loading)
     val badgesState: StateFlow<AchievementsState> = _badgesState
 
+    private val _discoveryPercentage = mutableStateOf(0)
+    val discoveryPercentage: MutableState<Int> = _discoveryPercentage
+
     init {
-        loadAllBadges()
+        loadAllBadgesAndDiscovery()
     }
 
-    private fun loadAllBadges() {
+    private fun loadAllBadgesAndDiscovery() {
         viewModelScope.launch {
             _badgesState.value = AchievementsState.Loading
             try {
                 val badges = userRepository.getAllBadges()
+
+                val totalProgress = badges.sumOf { badge ->
+                    userRepository.getUserBadgeProgress(badge.id)
+                }
+                val maxPoints = badges.sumOf { it.maxPoints }
+                val percentage = if (maxPoints > 0) {
+                    (totalProgress * 100) / maxPoints
+                } else {
+                    0
+                }
+                _discoveryPercentage.value = percentage
+
                 _badgesState.value = AchievementsState.Success(badges)
             } catch (e: Exception) {
                 _badgesState.value = AchievementsState.Error("Error al cargar las insignias: ${e.message}")
@@ -34,21 +51,25 @@ class AchievementsViewModel(
         }
     }
 
+    suspend fun getBadgeProgress(badgeId: String): Int {
+        return userRepository.getUserBadgeProgress(badgeId)
+    }
+
     fun getBadgesByCategory(categoryId: String): StateFlow<AchievementsState> {
-        if (badgesCache.containsKey(categoryId)) {
-            _badgesState.value = AchievementsState.Success(badgesCache[categoryId]!!)
-        } else {
+        return badgesCache[categoryId]?.let { cachedBadges ->
+            MutableStateFlow(AchievementsState.Success(cachedBadges))
+        } ?: run {
+            val categoryStateFlow = MutableStateFlow<AchievementsState>(AchievementsState.Loading)
             viewModelScope.launch {
-                _badgesState.value = AchievementsState.Loading
                 try {
                     val badges = userRepository.getBadgesByCategory(categoryId)
                     badgesCache[categoryId] = badges
-                    _badgesState.value = AchievementsState.Success(badges)
+                    categoryStateFlow.value = AchievementsState.Success(badges)
                 } catch (e: Exception) {
-                    _badgesState.value = AchievementsState.Error("Error al cargar las insignias: ${e.message}")
+                    categoryStateFlow.value = AchievementsState.Error("Error al cargar las insignias de la categoría: ${e.message}")
                 }
             }
+            categoryStateFlow
         }
-        return _badgesState
     }
 }

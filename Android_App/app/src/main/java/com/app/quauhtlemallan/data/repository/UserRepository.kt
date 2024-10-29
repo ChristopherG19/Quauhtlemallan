@@ -8,6 +8,8 @@ import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.coroutines.tasks.await
 
@@ -17,17 +19,14 @@ class UserRepository(
     private val storage: FirebaseStorage
 ) {
 
-    // Obtén el ID del usuario actual si está autenticado
     fun getCurrentUserId(): String? {
         return firebaseAuth.currentUser?.uid
     }
 
-    // Verifica si el proveedor de autenticación es correo y contraseña
     fun isEmailProvider(): Boolean {
         return firebaseAuth.currentUser?.providerData?.any { it.providerId == EmailAuthProvider.PROVIDER_ID } ?: false
     }
 
-    // Obtiene el perfil del usuario desde Firebase Realtime Database
     suspend fun getUserProfile(userId: String): User? {
         return try {
             val snapshot = database.getReference("usuarios").child(userId).get().await()
@@ -37,7 +36,6 @@ class UserRepository(
         }
     }
 
-    // Crea un nuevo perfil de usuario en Firebase Realtime Database
     suspend fun createUserProfile(user: User): Boolean {
         return try {
             val userId = getCurrentUserId() ?: return false
@@ -137,5 +135,116 @@ class UserRepository(
         }
         return badges
     }
+
+    suspend fun getUserDiscoveryPercentage(): Int {
+        return try {
+            val userId = getCurrentUserId() ?: return 0
+
+            database.getReference("usuarios/$userId/porcentajeDescubierto").get().await()
+                .getValue(Int::class.java) ?: 0
+        } catch (e: Exception) {
+            Log.e("UserRepository", "Error getting discovery percentage: ${e.message}", e)
+            0
+        }
+    }
+
+    suspend fun getUserTotalScore(): Int {
+        return try {
+            val userId = getCurrentUserId() ?: return 0
+            database.getReference("usuarios/$userId/score").get().await()
+                .getValue(Int::class.java) ?: 0
+        } catch (e: Exception) {
+            Log.e("UserRepository", "Error getting total score: ${e.message}", e)
+            0
+        }
+    }
+
+    suspend fun getUserBadgeProgress(badgeId: String): Int {
+        return try {
+            val userId = getCurrentUserId() ?: return 0
+
+            val badgeProgressSnapshot = database.getReference("usuarios/$userId/insignias/$badgeId").get().await()
+            badgeProgressSnapshot.getValue(Int::class.java) ?: 0
+        } catch (e: Exception) {
+            Log.e("UserRepository", "Error getting badge progress for $badgeId: ${e.message}", e)
+            0
+        }
+    }
+
+    suspend fun addPointsToUserScore(points: Int) {
+        val userId = getCurrentUserId() ?: return
+        val userRef = database.getReference("usuarios").child(userId)
+
+        val currentScore = userRef.child("score").get().await().getValue(Int::class.java) ?: 0
+        userRef.child("score").setValue(currentScore + points)
+    }
+
+    suspend fun addPointsToBadge(badgeId: String, points: Int) {
+        val userId = getCurrentUserId() ?: return
+        val badgeRef = database.getReference("usuarios").child(userId).child("insignias").child(badgeId)
+
+        val currentPoints = badgeRef.get().await().getValue(Int::class.java) ?: 0
+        val maxPoints = getMaxPointsForBadge(badgeId)
+
+        val newPoints = minOf(currentPoints + points, maxPoints)
+        badgeRef.setValue(newPoints)
+    }
+
+    private suspend fun getMaxPointsForBadge(badgeId: String): Int {
+        return try {
+            val snapshot = database.getReference("insignias").child(badgeId).child("maxPoints").get().await()
+            snapshot.getValue(Int::class.java) ?: 100
+        } catch (e: Exception) {
+            Log.e("UserRepository", "Error getting maxPoints: ${e.message}", e)
+            100
+        }
+    }
+
+    suspend fun calculateUserLevel(totalScore: Int): Triple<Int, Int, Int> {
+        val nivelesRef = Firebase.database.getReference("niveles")
+        val nivelesSnapshot = nivelesRef.get().await()
+
+        var currentLevel = 1
+        var pointsForCurrentLevel = 0
+        var pointsForNextLevel = 0
+
+        val nivelesOrdenados = nivelesSnapshot.children.sortedBy { it.key?.removePrefix("nivel")?.toIntOrNull() ?: 0 }
+
+        for ((index, nivel) in nivelesOrdenados.withIndex()) {
+            val levelPoints = nivel.value.toString().toInt()
+
+            if (totalScore < levelPoints) {
+                pointsForNextLevel = levelPoints
+                break
+            }
+
+            currentLevel = index + 1
+            pointsForCurrentLevel = levelPoints
+        }
+
+        val pointsToNextLevel = if (pointsForNextLevel > 0) pointsForNextLevel - totalScore else 0
+        val currentPointsWithinLevel = totalScore - pointsForCurrentLevel
+
+        return Triple(currentLevel, pointsToNextLevel, currentPointsWithinLevel)
+    }
+
+    suspend fun getUserLevel(totalScore: Int): Int {
+        val nivelesRef = Firebase.database.getReference("niveles")
+        val nivelesSnapshot = nivelesRef.get().await()
+
+        var currentLevel = 1
+
+        // Recorre los niveles ordenados por sus puntos
+        for (nivel in nivelesSnapshot.children.sortedBy { it.key?.removePrefix("nivel")?.toIntOrNull() ?: 0 }) {
+            val levelPoints = nivel.value.toString().toInt()
+            if (totalScore < levelPoints) {
+                break
+            }
+            currentLevel = nivel.key?.removePrefix("nivel")?.toInt() ?: currentLevel
+        }
+
+        return currentLevel
+    }
+
 
 }

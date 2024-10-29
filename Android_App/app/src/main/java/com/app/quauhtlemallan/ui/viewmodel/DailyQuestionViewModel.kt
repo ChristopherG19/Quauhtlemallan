@@ -5,11 +5,16 @@ import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.app.quauhtlemallan.data.model.Question
+import com.app.quauhtlemallan.data.repository.UserRepository
 import com.google.firebase.database.FirebaseDatabase
 import com.google.gson.Gson
+import kotlinx.coroutines.launch
 
-class DailyQuestionViewModel : ViewModel() {
+class DailyQuestionViewModel(
+    private val userRepository: UserRepository
+) : ViewModel() {
 
     var dailyQuestion: MutableState<Question?> = mutableStateOf(null)
         private set
@@ -79,10 +84,24 @@ class DailyQuestionViewModel : ViewModel() {
 
         isCorrectAnswer.value = isCorrect
 
-        showDialog.value = true
+        if (isCorrect) {
+            dailyQuestion.value?.let { question ->
+                updateScoreForCorrectAnswer(question)
+            }
+        }
 
+        showDialog.value = true
         sharedPreferences.edit().remove("currentQuestion").apply()
         hasAnswered.value = true
+    }
+
+    private fun updateScoreForCorrectAnswer(question: Question) {
+        viewModelScope.launch {
+            userRepository.addPointsToUserScore(question.puntos)
+            question.insignias.forEach { badgeId ->
+                userRepository.addPointsToBadge(badgeId, question.puntos)
+            }
+        }
     }
 
     fun closeDialog() {

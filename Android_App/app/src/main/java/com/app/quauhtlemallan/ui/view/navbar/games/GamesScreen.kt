@@ -42,7 +42,7 @@ fun GamesScreen (
                         imageRes = R.drawable.ic_time,
                         text = "Pruebas contratiempo",
                         color = oceanBlue,
-                        onClick = { navController.navigate("dailyQuestionScreen") }
+                        onClick = { navController.navigate("timeScreen") }
                     )
                 }
                 item {
@@ -50,7 +50,7 @@ fun GamesScreen (
                         imageRes = R.drawable.ic_category,
                         text = "Preguntas por categoría",
                         color = paleGreen,
-                        onClick = { navController.navigate("dailyQuestionScreen") }
+                        onClick = { navController.navigate("categoryScreen") }
                     )
                 }
                 item {
@@ -58,7 +58,7 @@ fun GamesScreen (
                         imageRes = R.drawable.ic_vof,
                         text = "Casaca o no",
                         color = brickRed,
-                        onClick = { navController.navigate("dailyQuestionScreen") }
+                        onClick = { navController.navigate("tofScreen") }
                     )
                 }
                 item {

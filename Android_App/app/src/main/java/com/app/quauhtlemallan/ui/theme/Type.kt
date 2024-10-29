@@ -4,6 +4,7 @@ import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.app.quauhtlemallan.R
@@ -42,4 +43,21 @@ val cinzelFontFamily = FontFamily(
     Font(R.font.cinzel_bold, FontWeight.Bold),
     Font(R.font.cinzel_extrabold, FontWeight.ExtraBold),
     Font(R.font.cinzel_black, FontWeight.Black)
+)
+
+val rubikFontFamily = FontFamily(
+    Font(R.font.rubik_black, FontWeight.Black),
+    Font(R.font.rubik_blackitalic, FontWeight.Black, style = FontStyle.Italic),
+    Font(R.font.rubik_bold, FontWeight.Bold),
+    Font(R.font.rubik_bolditalic, FontWeight.Bold, style = FontStyle.Italic),
+    Font(R.font.rubik_extrabold, FontWeight.ExtraBold),
+    Font(R.font.rubik_extrabolditalic, FontWeight.ExtraBold, style = FontStyle.Italic),
+    Font(R.font.rubik_italic, style = FontStyle.Italic),
+    Font(R.font.rubik_light, FontWeight.Light),
+    Font(R.font.rubik_lightitalic, FontWeight.Light, style = FontStyle.Italic),
+    Font(R.font.rubik_medium, FontWeight.Medium),
+    Font(R.font.rubik_mediumitalic, FontWeight.Medium, style = FontStyle.Italic),
+    Font(R.font.rubik_regular, FontWeight.Normal),
+    Font(R.font.rubik_semibold, FontWeight.SemiBold),
+    Font(R.font.rubik_semibolditalic, FontWeight.SemiBold, style = FontStyle.Italic),
 )

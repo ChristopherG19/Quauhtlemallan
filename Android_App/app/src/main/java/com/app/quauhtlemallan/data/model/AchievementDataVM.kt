@@ -4,9 +4,10 @@ data class AchievementData(
     val id: String,
     val title: String,
     val description: String = "",
-    val imageUrl: String = ""
+    val imageUrl: String = "",
+    val maxPoints: Int = 0
 ) {
-    constructor() : this("", "", "", "")
+    constructor() : this("", "", "", "", 0)
 }
 
 data class Category(

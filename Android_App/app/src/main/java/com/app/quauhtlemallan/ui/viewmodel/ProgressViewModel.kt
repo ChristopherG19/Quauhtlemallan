@@ -23,6 +23,8 @@ class ProgressViewModel(
         private set
     private val _progressState = MutableStateFlow<ProgressState>(ProgressState.Idle)
     val progressState = _progressState.asStateFlow()
+    var userLevel by mutableStateOf(1)
+        private set
 
     init {
         loadUserProfile()
@@ -38,6 +40,7 @@ class ProgressViewModel(
                 val userProfile = userId?.let { userRepository.getUserProfile(it) }
                 if (userProfile != null) {
                     this@ProgressViewModel.userProfile = userProfile
+                    userLevel = userRepository.getUserLevel(userProfile.score)
                     _progressState.value = ProgressState.Idle
                 } else {
                     _progressState.value = ProgressState.Error("Error al cargar los datos del perfil")
@@ -60,6 +63,8 @@ class ProgressViewModel(
             }
         }
     }
+
+    private fun getUserLevel(){}
 
     fun resetState() {
         _progressState.value = ProgressState.Idle
