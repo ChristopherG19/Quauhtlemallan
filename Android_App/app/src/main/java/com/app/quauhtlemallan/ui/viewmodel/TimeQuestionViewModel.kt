@@ -41,8 +41,10 @@ class TimeQuestionViewModel(
     val answerColors: StateFlow<List<Color>> = _answerColors
 
     private var timerJob: Job? = null
+    private var isPaused = false
 
     init {
+        startTimer()
         loadQuestions()
     }
 
@@ -50,7 +52,6 @@ class TimeQuestionViewModel(
         viewModelScope.launch {
             val loadedQuestions = repository.getQuestionsTime()
             _questions.value = loadedQuestions
-            startTimer()
         }
     }
 
@@ -58,14 +59,25 @@ class TimeQuestionViewModel(
         timerJob?.cancel()
         timerJob = viewModelScope.launch {
             _timer.value = 15
-            while (_timer.value > 0) {
+            while (_timer.value > 0 && !isPaused) {
                 delay(1000)
-                _timer.value -= 1
+                if (!isPaused) {
+                    _timer.value -= 1
+                }
             }
-            if (_timer.value == 0) {
-                moveToNextQuestion() // Avanzar si el tiempo se acaba
+            if (_timer.value == 0 && !isPaused) {
+                moveToNextQuestion()
             }
         }
+    }
+
+    fun pauseTimer() {
+        isPaused = true
+    }
+
+    fun resumeTimer() {
+        isPaused = false
+        startTimer()
     }
 
     fun selectAnswer(answer: String): Boolean {
@@ -86,17 +98,14 @@ class TimeQuestionViewModel(
 
         if (isCorrect) {
             _correctAnswers.value += 1
-        }
-        viewModelScope.launch {
-            delay(1000)
-            moveToNextQuestion()
+        } else {
+            pauseTimer()
         }
 
         return isCorrect
-
     }
 
-    private fun moveToNextQuestion() {
+    fun moveToNextQuestion() {
         _selectedAnswer.value = null
         _isCorrectAnswer.value = false
         _answerColors.value = listOf(Color(0xFF29395E), Color(0xFF29395E), Color(0xFF29395E), Color(0xFF29395E))
@@ -106,7 +115,13 @@ class TimeQuestionViewModel(
             startTimer()
         } else {
             _gameEnded.value = true
-            timerJob?.cancel()
+        }
+    }
+
+    fun delayNextQuestion() {
+        viewModelScope.launch {
+            delay(1000)
+            moveToNextQuestion()
         }
     }
 

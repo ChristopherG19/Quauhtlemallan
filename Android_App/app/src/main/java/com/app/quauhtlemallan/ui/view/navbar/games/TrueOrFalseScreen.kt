@@ -59,6 +59,31 @@ fun TrueFalseGameScreen(
     var showInfoDialog by remember { mutableStateOf(false) }
     var extraInfo by remember { mutableStateOf("") }
 
+    val chapinismosAciertos = listOf(
+        "¡Buenísimo!",
+        "¡Sos pilas!",
+        "¡Chilerísimo!",
+        "¡Sos lo máximo!",
+        "¡Estuviste practicando eh!",
+        "¡Qué chilero!",
+        "¡Súper, sigue así!",
+        "¡Ahuevo que sí!",
+        "¡Sos la mera tos!",
+        "¡Qué maciz@!"
+    )
+
+    val chapinismosFallos = listOf(
+        "¡Chispudo, hay que practicar!",
+        "¡Aguas con esa!",
+        "¡No la hiciste!",
+        "¡Mmmm casi, sigue intentando!",
+        "¡No fregues, intenta de nuevo!",
+        "¡Dejate de babosadas, intentalo otra vez!",
+        "¡Púchica, ¿qué te pasó?!",
+        "¡Andás perdid@, mano!",
+        "¡Puchis, ¿qué pasó master?!"
+    )
+
     if (gameEnded) {
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -85,19 +110,20 @@ fun TrueFalseGameScreen(
                     onDismissRequest = {
                         showInfoDialog = false
                         viewModel.resumeTimer()
-                        viewModel.moveToNextQuestion() },
+                        viewModel.delayNextQuestion()
+                    },
                     title = {
-                        Text(text = "Respuesta correcta:")
+                        Text(text = chapinismosFallos.random())
                     },
                     text = {
-                        Text(text = "${currentQuestion.correcta}. $extraInfo")
+                        Text(text = "Respuesta correcta: ${currentQuestion.correcta}. $extraInfo")
                     },
                     confirmButton = {
                         Button(
                             onClick = {
                                 showInfoDialog = false
                                 viewModel.resumeTimer()
-                                viewModel.moveToNextQuestion()
+                                viewModel.delayNextQuestion()
                             }
                         ) {
                             Text("Cerrar")
@@ -242,6 +268,7 @@ fun handleAnswer(
 ) {
     val isCorrect = viewModel.selectAnswer(answer)
     if (!isCorrect) {
+        viewModel.pauseTimer()
         showExtraInfo(question.datoExtra)
     } else {
         viewModel.delayNextQuestion()

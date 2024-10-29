@@ -40,6 +40,7 @@ class CategoryGameViewModel(
     val answerColors: StateFlow<List<Color>> = _answerColors
 
     private var timerJob: Job? = null
+    private var isPaused = false
 
     fun loadQuestions(id:String) {
         viewModelScope.launch {
@@ -53,14 +54,24 @@ class CategoryGameViewModel(
         timerJob?.cancel()
         timerJob = viewModelScope.launch {
             _timer.value = 15
-            while (_timer.value > 0) {
+            while (_timer.value > 0 && !isPaused) {
                 delay(1000)
-                _timer.value -= 1
+                if (!isPaused) {
+                    _timer.value -= 1
+                }
             }
-            if (_timer.value == 0) {
+            if (_timer.value == 0 && !isPaused) {
                 moveToNextQuestion()
             }
         }
+    }
+    fun pauseTimer() {
+        isPaused = true
+    }
+
+    fun resumeTimer() {
+        isPaused = false
+        startTimer()
     }
 
     fun selectAnswer(answer: String): Boolean {
@@ -81,14 +92,11 @@ class CategoryGameViewModel(
 
         if (isCorrect) {
             _correctAnswers.value += 1
-        }
-        viewModelScope.launch {
-            delay(1000)
-            moveToNextQuestion()
+        } else {
+            pauseTimer()
         }
 
         return isCorrect
-
     }
 
     private fun moveToNextQuestion() {
@@ -101,8 +109,13 @@ class CategoryGameViewModel(
             startTimer()
         } else {
             _gameEnded.value = true
-            timerJob?.cancel()
         }
     }
 
+    fun delayNextQuestion() {
+        viewModelScope.launch {
+            delay(1000)
+            moveToNextQuestion()
+        }
+    }
 }

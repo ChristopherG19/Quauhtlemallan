@@ -85,9 +85,9 @@ class TrueFalseGameViewModel(
 
         if (isCorrect) {
             _correctAnswers.value += 1
+        } else {
+            pauseTimer()
         }
-
-        pauseTimer()
 
         return isCorrect
     }

@@ -12,10 +12,12 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -26,6 +28,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -39,8 +44,10 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import coil.compose.rememberImagePainter
 import com.app.quauhtlemallan.R
+import com.app.quauhtlemallan.data.model.Question
 import com.app.quauhtlemallan.ui.theme.cinzelFontFamily
 import com.app.quauhtlemallan.ui.viewmodel.CategoryGameViewModel
+import com.app.quauhtlemallan.ui.viewmodel.TimeQuestionViewModel
 
 @Composable
 fun CategoryGameScreen(
@@ -63,6 +70,34 @@ fun CategoryGameScreen(
 
     val question = questions.getOrNull(currentQuestionIndex)
 
+    var showInfoDialog by remember { mutableStateOf(false) }
+    var extraInfo by remember { mutableStateOf("") }
+
+    val chapinismosAciertos = listOf(
+        "¡Buenísimo!",
+        "¡Sos pilas!",
+        "¡Chilerísimo!",
+        "¡Sos lo máximo!",
+        "¡Estuviste practicando eh!",
+        "¡Qué chilero!",
+        "¡Súper, sigue así!",
+        "¡Ahuevo que sí!",
+        "¡Sos la mera tos!",
+        "¡Qué maciz@!"
+    )
+
+    val chapinismosFallos = listOf(
+        "¡Chispudo, hay que practicar!",
+        "¡Aguas con esa!",
+        "¡No la hiciste!",
+        "¡Mmmm casi, sigue intentando!",
+        "¡No fregues, intenta de nuevo!",
+        "¡Dejate de babosadas, intentalo otra vez!",
+        "¡Púchica, ¿qué te pasó?!",
+        "¡Andás perdid@, mano!",
+        "¡Puchis, ¿qué pasó master?!"
+    )
+
     if (gameEnded) {
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -82,6 +117,34 @@ fun CategoryGameScreen(
     } else {
         if (questions.isNotEmpty()) {
             val currentQuestion = questions[currentQuestionIndex]
+
+            if (showInfoDialog) {
+                viewModel.pauseTimer()
+                AlertDialog(
+                    onDismissRequest = {
+                        showInfoDialog = false
+                        viewModel.resumeTimer()
+                        viewModel.delayNextQuestion()
+                    },
+                    title = {
+                        Text(text = chapinismosFallos.random())
+                    },
+                    text = {
+                        Text(text = "Respuesta correcta: ${currentQuestion.correcta}. $extraInfo")
+                    },
+                    confirmButton = {
+                        Button(
+                            onClick = {
+                                showInfoDialog = false
+                                viewModel.resumeTimer()
+                                viewModel.delayNextQuestion()
+                            }
+                        ) {
+                            Text("Cerrar")
+                        }
+                    }
+                )
+            }
 
             Column(
                 modifier = Modifier
@@ -139,10 +202,11 @@ fun CategoryGameScreen(
                 if (currentQuestion.tieneImagen && currentQuestion.imagenUrl != null) {
                     Box(
                         modifier = Modifier
-                            .padding(bottom = 16.dp)
+                            .padding(bottom = 14.dp)
                             .border(2.5.dp, Color.Black, RoundedCornerShape(8.dp))
                             .clip(RoundedCornerShape(8.dp))
                             .aspectRatio(16f / 9f)
+                            .heightIn(max = 80.dp)
                     ) {
                         Image(
                             painter = rememberImagePainter(data = currentQuestion.imagenUrl),
@@ -171,7 +235,10 @@ fun CategoryGameScreen(
                             text = option,
                             backgroundColor = answerColors[index],
                             onClick = {
-                                viewModel.selectAnswer(option)
+                                handleAnswerTimeC(option, currentQuestion, viewModel) { info ->
+                                    extraInfo = info
+                                    showInfoDialog = true
+                                }
                             }
                         )
                         Spacer(modifier = Modifier.height(12.dp))
@@ -207,6 +274,21 @@ fun CategoryGameScreen(
                 CircularProgressIndicator()
             }
         }
+    }
+}
+
+fun handleAnswerTimeC(
+    answer: String,
+    question: Question,
+    viewModel: CategoryGameViewModel,
+    showExtraInfo: (String) -> Unit
+) {
+    val isCorrect = viewModel.selectAnswer(answer)
+    if (!isCorrect) {
+        viewModel.pauseTimer()
+        showExtraInfo(question.datoExtra)
+    } else {
+        viewModel.delayNextQuestion()
     }
 }
 

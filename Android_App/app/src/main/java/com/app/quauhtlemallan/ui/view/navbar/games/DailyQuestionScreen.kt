@@ -62,22 +62,44 @@ fun DailyQuestionScreen(
     val context = LocalContext.current
     var timeRemaining by remember { mutableLongStateOf(0L) }
 
+    val chapinismosAciertos = listOf(
+        "¡Buenísimo!",
+        "¡Sos pilas!",
+        "¡Chilerísimo!",
+        "¡Sos lo máximo!",
+        "¡Estuviste practicando eh!",
+        "¡Qué chilero!",
+        "¡Súper, sigue así!",
+        "¡Ahuevo que sí!",
+        "¡Sos la mera tos!",
+        "¡Qué maciz@!"
+    )
+
+    val chapinismosFallos = listOf(
+        "¡Chispudo, hay que practicar!",
+        "¡Aguas con esa!",
+        "¡No la hiciste!",
+        "¡Mmmm casi, sigue intentando!",
+        "¡No fregues, intenta de nuevo!",
+        "¡Dejate de babosadas, intentalo otra vez!",
+        "¡Púchica, ¿qué te pasó?!",
+        "¡Andás perdid@, mano!",
+        "¡Puchis, ¿qué pasó master?!"
+    )
+
     if (showDialog) {
-        // Colores del diálogo
         val backgroundColor = if (isCorrectAnswer) Color(0xFFCCFF99) else Color(0xFFFFCCCC)
         val buttonColor = if (isCorrectAnswer) mossGreen else crimsonRed
-        val messageText = if (isCorrectAnswer) "Sos muy pilas!" else "Uy, lo siento :("
+        val messageText = if (isCorrectAnswer) chapinismosAciertos.random() else chapinismosFallos.random()
         val messageColor = if (isCorrectAnswer) Color(0xFF4CAF50) else Color(0xFF8B0000)
         val buttonText = "Continuar"
 
-        // Mostrar la respuesta correcta si fue incorrecto
         val correctAnswerText = if (!isCorrectAnswer) {
-            "La respuesta correcta es: ${question?.correcta}"
+            "La respuesta correcta es: ${question?.correcta}. ${question?.datoExtra}"
         } else {
             ""
         }
 
-        // Mostrar el diálogo como un Popup en la parte inferior
         Box(
             modifier = Modifier
                 .fillMaxSize()
