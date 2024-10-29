@@ -178,7 +178,7 @@ fun CategoryGameScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         LinearProgressIndicator(
-                            progress = timer / 15f,
+                            progress = timer / 20f,
                             modifier = Modifier
                                 .weight(1f)
                                 .height(8.dp),
@@ -229,7 +229,6 @@ fun CategoryGameScreen(
                 Spacer(modifier = Modifier.height(24.dp))
 
                 question?.let {
-
                     it.respuestas.forEachIndexed { index, option ->
                         AnswerButtonCategoryTime(
                             text = option,

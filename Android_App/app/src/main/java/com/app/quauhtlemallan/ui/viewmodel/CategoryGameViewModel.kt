@@ -26,7 +26,7 @@ class CategoryGameViewModel(
     private val _correctAnswers = MutableStateFlow(0)
     val correctAnswers: StateFlow<Int> = _correctAnswers
 
-    private val _timer = MutableStateFlow(15)
+    private val _timer = MutableStateFlow(20)
     val timer: StateFlow<Int> = _timer
 
     private val _gameEnded = MutableStateFlow(false)
@@ -49,7 +49,10 @@ class CategoryGameViewModel(
     fun loadQuestions(id:String) {
         viewModelScope.launch {
             val loadedQuestions = repository.getQuestionsByCategory(id)
-            _questions.value = loadedQuestions
+            val shuffledQuestions = loadedQuestions.map { question ->
+                question.copy(respuestas = question.respuestas.shuffled())
+            }
+            _questions.value = shuffledQuestions
             startTimer()
         }
     }
@@ -57,7 +60,7 @@ class CategoryGameViewModel(
     private fun startTimer() {
         timerJob?.cancel()
         timerJob = viewModelScope.launch {
-            _timer.value = 15
+            _timer.value = 20
             while (_timer.value > 0 && !isPaused) {
                 delay(1000)
                 if (!isPaused) {

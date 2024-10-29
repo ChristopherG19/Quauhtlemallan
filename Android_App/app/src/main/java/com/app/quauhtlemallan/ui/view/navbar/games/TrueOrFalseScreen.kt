@@ -166,11 +166,11 @@ fun TrueFalseGameScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         LinearProgressIndicator(
-                            progress = timer / 15f,
+                            progress = timer / 20f,
                             modifier = Modifier
                                 .weight(1f)
                                 .height(8.dp),
-                            color = Color(0xFF4CAF50) // Verde
+                            color = Color(0xFF4CAF50)
                         )
 
                         Spacer(modifier = Modifier.width(12.dp))

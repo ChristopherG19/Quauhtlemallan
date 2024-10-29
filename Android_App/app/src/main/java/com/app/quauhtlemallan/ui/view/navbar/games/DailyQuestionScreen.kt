@@ -298,7 +298,6 @@ fun DailyQuestionScreen(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Opciones de respuesta
                 q.respuestas.forEach { option ->
                     AnswerButton(
                         text = option,
@@ -310,7 +309,6 @@ fun DailyQuestionScreen(
                     Spacer(modifier = Modifier.height(16.dp))
                 }
 
-                // Botón de enviar respuesta
                 Button(
                     onClick = {
                         viewModel.submitAnswer(context, selectedOption.value == q.correcta)

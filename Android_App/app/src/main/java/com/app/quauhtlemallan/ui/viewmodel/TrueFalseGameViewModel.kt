@@ -25,7 +25,7 @@ class TrueFalseGameViewModel(
     private val _correctAnswers = MutableStateFlow(0)
     val correctAnswers: StateFlow<Int> = _correctAnswers
 
-    private val _timer = MutableStateFlow(15)
+    private val _timer = MutableStateFlow(20)
     val timer: StateFlow<Int> = _timer
 
     private var _gameEnded = MutableStateFlow(false)
@@ -47,14 +47,17 @@ class TrueFalseGameViewModel(
     private fun loadQuestions() {
         viewModelScope.launch {
             val loadedQuestions = repository.getQuestionsToF()
-            _questions.value = loadedQuestions
+            val shuffledQuestions = loadedQuestions.map { question ->
+                question.copy(respuestas = question.respuestas.shuffled())
+            }
+            _questions.value = shuffledQuestions
         }
     }
 
     private fun startTimer() {
         timerJob?.cancel()
         timerJob = viewModelScope.launch {
-            _timer.value = 15
+            _timer.value = 20
             while (_timer.value > 0 && !isPaused) {
                 delay(1000)
                 if (!isPaused) {

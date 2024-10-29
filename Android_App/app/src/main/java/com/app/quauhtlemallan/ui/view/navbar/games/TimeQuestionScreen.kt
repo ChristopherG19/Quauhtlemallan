@@ -176,7 +176,7 @@ fun TimeQuestionScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         LinearProgressIndicator(
-                            progress = timer / 15f,
+                            progress = timer / 20f,
                             modifier = Modifier
                                 .weight(1f)
                                 .height(8.dp),
