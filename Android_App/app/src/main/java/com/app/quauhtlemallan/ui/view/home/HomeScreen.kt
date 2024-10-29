@@ -52,6 +52,12 @@ fun HomeScreen(
     val pointsToNextLevel by viewModel.pointsToNextLevel.collectAsState()
     val currentPointsWithinLevel by viewModel.currentPointsWithinLevel.collectAsState()
 
+    val progress = if (currentPointsWithinLevel + pointsToNextLevel > 0) {
+        currentPointsWithinLevel / (currentPointsWithinLevel + pointsToNextLevel).toFloat()
+    } else {
+        0f
+    }
+
     Scaffold(
         bottomBar = { BottomNavigationBar(navController = navController) }
     ) { innerPadding ->
@@ -103,17 +109,17 @@ fun HomeScreen(
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         LinearProgressIndicator(
-                            progress = currentPointsWithinLevel / (currentPointsWithinLevel + pointsToNextLevel).toFloat(),
+                            progress = progress,
                             modifier = Modifier
-                                .fillMaxWidth()
-                                .height(10.dp),
-                            color = Color(0xFFD2B48C)
-                        )
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = "$pointsToNextLevel puntos para el siguiente nivel",
-                            fontSize = 14.sp,
-                            color = Color.Gray
+                                    .fillMaxWidth()
+                                    .height(10.dp),
+                                color = Color(0xFFD2B48C)
+                            )
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text(
+                                text = "$pointsToNextLevel puntos para el siguiente nivel",
+                                fontSize = 14.sp,
+                                color = Color.Gray
                         )
                     }
                 }
