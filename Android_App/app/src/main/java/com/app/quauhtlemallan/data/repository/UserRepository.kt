@@ -204,11 +204,13 @@ class UserRepository(
         val nivelesRef = Firebase.database.getReference("niveles")
         val nivelesSnapshot = nivelesRef.get().await()
 
-        var currentLevel = 1
+        var currentLevel = 0
         var pointsForCurrentLevel = 0
         var pointsForNextLevel = 0
 
-        val nivelesOrdenados = nivelesSnapshot.children.sortedBy { it.key?.removePrefix("nivel")?.toIntOrNull() ?: 0 }
+        val nivelesOrdenados = nivelesSnapshot.children.sortedBy {
+            it.key?.removePrefix("nivel")?.toIntOrNull() ?: 0
+        }
 
         for ((index, nivel) in nivelesOrdenados.withIndex()) {
             val levelPoints = nivel.value.toString().toInt()
@@ -218,7 +220,7 @@ class UserRepository(
                 break
             }
 
-            currentLevel = index + 1
+            currentLevel = index
             pointsForCurrentLevel = levelPoints
         }
 
@@ -234,7 +236,6 @@ class UserRepository(
 
         var currentLevel = 1
 
-        // Recorre los niveles ordenados por sus puntos
         for (nivel in nivelesSnapshot.children.sortedBy { it.key?.removePrefix("nivel")?.toIntOrNull() ?: 0 }) {
             val levelPoints = nivel.value.toString().toInt()
             if (totalScore < levelPoints) {
