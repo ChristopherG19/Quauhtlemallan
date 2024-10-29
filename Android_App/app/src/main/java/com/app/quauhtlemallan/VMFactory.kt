@@ -82,44 +82,49 @@ class ChatViewModelFactory : ViewModelProvider.Factory {
     }
 }
 
-class DailyQuestionViewModelFactory : ViewModelProvider.Factory {
+class DailyQuestionViewModelFactory(
+    private val userRepository: UserRepository
+) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(DailyQuestionViewModel::class.java)) {
-            return DailyQuestionViewModel() as T
+            return DailyQuestionViewModel(userRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
 
 class TrueFalseGameViewModelFactory(
-    private val questionRepository: QuestionRepository
+    private val questionRepository: QuestionRepository,
+    private val userRepository: UserRepository
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(TrueFalseGameViewModel::class.java)) {
-            return TrueFalseGameViewModel(questionRepository) as T
+            return TrueFalseGameViewModel(questionRepository, userRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
 
 class TimeQuestionViewModelFactory(
-    private val repository: QuestionRepository
+    private val repository: QuestionRepository,
+    private val userRepository: UserRepository
 ) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(TimeQuestionViewModel::class.java)) {
-            return TimeQuestionViewModel(repository) as T
+            return TimeQuestionViewModel(repository, userRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
 
 class CategoryGameViewModelFactory(
-    private val repository: QuestionRepository
+    private val repository: QuestionRepository,
+    private val userRepository: UserRepository
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(CategoryGameViewModel::class.java)) {
-            return CategoryGameViewModel(repository) as T
+            return CategoryGameViewModel(repository, userRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

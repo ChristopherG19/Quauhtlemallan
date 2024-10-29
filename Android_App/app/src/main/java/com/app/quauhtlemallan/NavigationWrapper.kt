@@ -66,10 +66,10 @@ fun NavigationWrapper(
     val progressViewModelFactory = ProgressViewModelFactory(userRepository)
     val achievementsViewModelFactory = AchievementsViewModelFactory(userRepository)
     val chatViewModelFactory = ChatViewModelFactory()
-    val dailyQuestionViewModelFactory = DailyQuestionViewModelFactory()
-    val trueFalseGameViewModelFactory = TrueFalseGameViewModelFactory(QuestionRepository())
-    val timeQuestionViewModelFactory = TimeQuestionViewModelFactory(QuestionRepository())
-    val categoryGameViewModelFactory = CategoryGameViewModelFactory(QuestionRepository())
+    val dailyQuestionViewModelFactory = DailyQuestionViewModelFactory(userRepository)
+    val trueFalseGameViewModelFactory = TrueFalseGameViewModelFactory(QuestionRepository(),userRepository)
+    val timeQuestionViewModelFactory = TimeQuestionViewModelFactory(QuestionRepository(), userRepository)
+    val categoryGameViewModelFactory = CategoryGameViewModelFactory(QuestionRepository(), userRepository)
 
 
     NavHost(navController = navHostController, startDestination = "initial"){

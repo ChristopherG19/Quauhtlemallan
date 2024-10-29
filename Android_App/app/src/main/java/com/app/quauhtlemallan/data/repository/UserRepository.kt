@@ -158,4 +158,32 @@ class UserRepository(
         }
     }
 
+    suspend fun addPointsToUserScore(points: Int) {
+        val userId = getCurrentUserId() ?: return
+        val userRef = database.getReference("usuarios").child(userId)
+
+        val currentScore = userRef.child("score").get().await().getValue(Int::class.java) ?: 0
+        userRef.child("score").setValue(currentScore + points)
+    }
+
+    suspend fun addPointsToBadge(badgeId: String, points: Int) {
+        val userId = getCurrentUserId() ?: return
+        val badgeRef = database.getReference("usuarios").child(userId).child("insignias").child(badgeId)
+
+        val currentPoints = badgeRef.get().await().getValue(Int::class.java) ?: 0
+        val maxPoints = getMaxPointsForBadge(badgeId)
+
+        val newPoints = minOf(currentPoints + points, maxPoints)
+        badgeRef.setValue(newPoints)
+    }
+
+    private suspend fun getMaxPointsForBadge(badgeId: String): Int {
+        return try {
+            val snapshot = database.getReference("insignias").child(badgeId).child("maxPoints").get().await()
+            snapshot.getValue(Int::class.java) ?: 100
+        } catch (e: Exception) {
+            Log.e("UserRepository", "Error getting maxPoints: ${e.message}", e)
+            100
+        }
+    }
 }

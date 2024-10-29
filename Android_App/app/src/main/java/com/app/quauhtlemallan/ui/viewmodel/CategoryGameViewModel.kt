@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.quauhtlemallan.data.model.Question
 import com.app.quauhtlemallan.data.repository.QuestionRepository
+import com.app.quauhtlemallan.data.repository.UserRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -12,7 +13,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class CategoryGameViewModel(
-    private val repository: QuestionRepository
+    private val repository: QuestionRepository,
+    private val userRepository: UserRepository
 ) : ViewModel(){
 
     private val _questions = MutableStateFlow<List<Question>>(emptyList())
@@ -41,6 +43,8 @@ class CategoryGameViewModel(
 
     private var timerJob: Job? = null
     private var isPaused = false
+    private val _tempScore = MutableStateFlow(0)
+    private val _badgePoints = mutableMapOf<String, Int>()
 
     fun loadQuestions(id:String) {
         viewModelScope.launch {
@@ -92,6 +96,10 @@ class CategoryGameViewModel(
 
         if (isCorrect) {
             _correctAnswers.value += 1
+            _tempScore.value += currentQuestion.puntos
+            currentQuestion.insignias.forEach { badgeId ->
+                _badgePoints[badgeId] = (_badgePoints[badgeId] ?: 0) + currentQuestion.puntos
+            }
         } else {
             pauseTimer()
         }
@@ -109,6 +117,18 @@ class CategoryGameViewModel(
             startTimer()
         } else {
             _gameEnded.value = true
+            finalizeScore()
+        }
+    }
+
+    private fun finalizeScore() {
+        viewModelScope.launch {
+            userRepository.addPointsToUserScore(_tempScore.value)
+            _badgePoints.forEach { (badgeId, points) ->
+                userRepository.addPointsToBadge(badgeId, points)
+            }
+            _tempScore.value = 0
+            _badgePoints.clear()
         }
     }
 

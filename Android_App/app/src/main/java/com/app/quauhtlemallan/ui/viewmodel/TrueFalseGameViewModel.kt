@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.quauhtlemallan.data.model.Question
 import com.app.quauhtlemallan.data.repository.QuestionRepository
+import com.app.quauhtlemallan.data.repository.UserRepository
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -11,7 +12,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class TrueFalseGameViewModel(
-    private val repository: QuestionRepository
+    private val repository: QuestionRepository,
+    private val userRepository: UserRepository
 ) : ViewModel() {
 
     private val _questions = MutableStateFlow<List<Question>>(emptyList())
@@ -34,6 +36,8 @@ class TrueFalseGameViewModel(
 
     private var timerJob: Job? = null
     private var isPaused = false
+    private val _tempScore = MutableStateFlow(0)
+    private val _badgePoints = mutableMapOf<String, Int>()
 
     init {
         startTimer()
@@ -81,15 +85,31 @@ class TrueFalseGameViewModel(
 
     fun selectAnswer(answer: String): Boolean {
         _selectedAnswer.value = answer
-        val isCorrect = answer == questions.value[_currentQuestionIndex.value].correcta
+        val currentQuestion = questions.value[_currentQuestionIndex.value]
+        val isCorrect = answer == currentQuestion.correcta
 
         if (isCorrect) {
             _correctAnswers.value += 1
+            _tempScore.value += currentQuestion.puntos
+            currentQuestion.insignias.forEach { badgeId ->
+                val currentBadgeScore = _badgePoints[badgeId] ?: 0
+                _badgePoints[badgeId] = currentBadgeScore + currentQuestion.puntos
+            }
+
         } else {
             pauseTimer()
         }
 
         return isCorrect
+    }
+
+    private fun updateScoreForCorrectAnswer(question: Question) {
+        viewModelScope.launch {
+            userRepository.addPointsToUserScore(question.puntos)
+            question.insignias.forEach { badgeId ->
+                userRepository.addPointsToBadge(badgeId, question.puntos)
+            }
+        }
     }
 
     fun moveToNextQuestion() {
@@ -99,6 +119,18 @@ class TrueFalseGameViewModel(
             startTimer()
         } else {
             _gameEnded.value = true
+            finalizeScore()
+        }
+    }
+
+    private fun finalizeScore() {
+        viewModelScope.launch {
+            userRepository.addPointsToUserScore(_tempScore.value)
+            _badgePoints.forEach { (badgeId, points) ->
+                userRepository.addPointsToBadge(badgeId, points)
+            }
+            _tempScore.value = 0
+            _badgePoints.clear()
         }
     }
 
