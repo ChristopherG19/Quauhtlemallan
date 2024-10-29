@@ -184,7 +184,10 @@ fun TrueFalseGameScreen(
                             modifier = Modifier.weight(1f)
                                 .height(450.dp),
                             onClick = {
-                                viewModel.moveToNextQuestion()
+                                handleAnswer("Verdadero", currentQuestion, viewModel) { info ->
+                                    extraInfo = info
+                                    showInfoDialog = true
+                                }
                             }
                         )
 
@@ -240,6 +243,8 @@ fun handleAnswer(
     val isCorrect = viewModel.selectAnswer(answer)
     if (!isCorrect) {
         showExtraInfo(question.datoExtra)
+    } else {
+        viewModel.delayNextQuestion()
     }
 }
 

@@ -63,6 +63,13 @@ class TrueFalseGameViewModel(
         }
     }
 
+    fun delayNextQuestion() {
+        viewModelScope.launch {
+            delay(1000)
+            moveToNextQuestion()
+        }
+    }
+
     fun pauseTimer() {
         isPaused = true
     }
