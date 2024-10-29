@@ -1,7 +1,8 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.googleServices)
+    alias(libs.plugins.crashlytics)
 }
 
 android {
@@ -52,6 +53,20 @@ android {
 
 dependencies {
 
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.storage)
+    implementation(libs.firebase.realtime)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.config)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.crashlytics)
+
+    implementation(libs.coil)
+    implementation(libs.coil.gif)
+    implementation(libs.ccp)
+
+
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -60,28 +75,27 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.firebase.database)
-    implementation(platform(libs.firebase.bom.v3280))
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
-    implementation(platform(libs.firebase.bom.v3231))
-    implementation(libs.firebase.auth.ktx)
+
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.ui.text.google.fonts)
     implementation(libs.play.services.auth)
     implementation(libs.facebook.android.sdk.vlatestrelease)
-    implementation(libs.androidx.ui.text.google.fonts)
     implementation(libs.ccp)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.adapter.rxjava2)
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
+    androidTestImplementation(libs.ui.test.junit4)
+    implementation(libs.facebook.login)
+
 }

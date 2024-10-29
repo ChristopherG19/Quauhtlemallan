@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorSelected">#000000</color>
     <color name="colorUnselected">#9E9E9E</color>
+    <color name="ranks">#5A7DA4</color>
 </resources>
