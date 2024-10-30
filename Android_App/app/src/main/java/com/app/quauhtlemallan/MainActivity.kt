@@ -8,11 +8,13 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.app.quauhtlemallan.ui.theme.QuauhtlemallanTheme
 import com.app.quauhtlemallan.ui.view.login.LoginScreen
+import com.app.quauhtlemallan.util.SessionManager
 import com.facebook.appevents.AppEventsLogger
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -23,12 +25,15 @@ class MainActivity: ComponentActivity() {
 
     private lateinit var navHostController: NavHostController
     private lateinit var auth: FirebaseAuth
+    private lateinit var sessionManager: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppEventsLogger.activateApp(application)
 
         super.onCreate(savedInstanceState)
         auth = Firebase.auth
+        sessionManager = SessionManager(applicationContext)
+
         setContent {
             navHostController = rememberNavController()
             QuauhtlemallanTheme {
@@ -36,7 +41,19 @@ class MainActivity: ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ){
-                    NavigationWrapper(navHostController, auth)
+                    LaunchedEffect(Unit) {
+                        sessionManager.isLoggedIn.collect { isLoggedIn ->
+                            if (isLoggedIn) {
+                                navHostController.navigate("home") {
+                                    popUpTo("initial") { inclusive = true }
+                                }
+                            } else {
+                                navHostController.navigate("initial")
+                            }
+                        }
+                    }
+
+                    NavigationWrapper(navHostController, auth, sessionManager)
                 }
             }
         }

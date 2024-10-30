@@ -83,7 +83,7 @@ class ChatViewModel() : ViewModel() {
                         val cleanResponse = decodedResponse.substringAfter("Respuesta:").trim()
 
                         if(cleanResponse.contains("Error")){
-                            _chatResponse.value = "Disculpa mano, no estoy encendido en este momento o estoy en mantenimiento"
+                            _chatResponse.value = "Disculpa mano, no estoy activado en este momento o estoy en mantenimiento"
                         } else {
                             _chatResponse.value = cleanResponse
                         }
