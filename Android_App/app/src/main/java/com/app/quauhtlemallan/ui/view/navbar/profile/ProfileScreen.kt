@@ -58,11 +58,15 @@ import com.app.quauhtlemallan.ui.theme.forestGreen
 import com.app.quauhtlemallan.ui.theme.crimsonRed
 import com.app.quauhtlemallan.ui.theme.navyBlue
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
+import com.app.quauhtlemallan.util.SessionManager
 import com.app.quauhtlemallan.util.SettingsState
 import com.facebook.login.LoginManager
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.hbb20.CountryCodePicker
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.util.Locale
 
 @Composable
@@ -70,7 +74,8 @@ fun ProfileScreen(
     auth: FirebaseAuth,
     viewModel: SettingsViewModel,
     navController: NavHostController,
-    googleSignInClient: GoogleSignInClient
+    googleSignInClient: GoogleSignInClient,
+    sessionManager: SessionManager
 ) {
     val settingsState by viewModel.settingsStateFlow.collectAsState()
     var passwordVisible by remember { mutableStateOf(false) }
@@ -213,11 +218,14 @@ fun ProfileScreen(
             // Botón Cerrar Sesión
             Button(
                 onClick = {
-                    auth.signOut()
-                    googleSignInClient.signOut().addOnCompleteListener {
-                        LoginManager.getInstance().logOut()
-                        navController.navigate("initial") {
-                            popUpTo(0) { inclusive = true }
+                    CoroutineScope(Dispatchers.IO).launch {
+                        sessionManager.clearSession()
+                        auth.signOut()
+                        googleSignInClient.signOut().addOnCompleteListener {
+                            LoginManager.getInstance().logOut()
+                            navController.navigate("initial") {
+                                popUpTo(0) { inclusive = true }
+                            }
                         }
                     }
                 },
