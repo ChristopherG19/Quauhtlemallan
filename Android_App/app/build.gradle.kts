@@ -97,5 +97,5 @@ dependencies {
     annotationProcessor(libs.compiler)
     androidTestImplementation(libs.ui.test.junit4)
     implementation(libs.facebook.login)
-
+    implementation(libs.androidx.datastore.preferences)
 }

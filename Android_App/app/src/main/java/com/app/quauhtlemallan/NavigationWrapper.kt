@@ -38,6 +38,7 @@ import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
 import com.app.quauhtlemallan.ui.viewmodel.TimeQuestionViewModel
 import com.app.quauhtlemallan.ui.viewmodel.TraduccionesViewModel
 import com.app.quauhtlemallan.ui.viewmodel.TrueFalseGameViewModel
+import com.app.quauhtlemallan.util.SessionManager
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -47,7 +48,8 @@ import com.google.firebase.storage.FirebaseStorage
 @Composable
 fun NavigationWrapper(
     navHostController: NavHostController,
-    auth: FirebaseAuth
+    auth: FirebaseAuth,
+    sessionManager: SessionManager
 ) {
     val context = LocalContext.current
     val database = FirebaseDatabase.getInstance()
@@ -61,7 +63,7 @@ fun NavigationWrapper(
 
     val googleSignInClient = GoogleSignIn.getClient(context, googleSignInOptions)
 
-    val loginViewModelFactory = LoginViewModelFactory(auth, userRepository)
+    val loginViewModelFactory = LoginViewModelFactory(auth, userRepository, sessionManager)
     val registerViewModelFactory = RegisterViewModelFactory(auth, userRepository)
     val settingsViewModelFactory = SettingsViewModelFactory(userRepository)
     val progressViewModelFactory = ProgressViewModelFactory(userRepository)
@@ -156,7 +158,8 @@ fun NavigationWrapper(
                 auth = auth,
                 viewModel = settingsViewModel,
                 navController = navHostController,
-                googleSignInClient = googleSignInClient
+                googleSignInClient = googleSignInClient,
+                sessionManager
             )
         }
 

@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import com.app.quauhtlemallan.data.model.User
 import com.app.quauhtlemallan.data.repository.UserRepository
+import com.app.quauhtlemallan.util.SessionManager
 import com.facebook.AccessToken
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
@@ -21,7 +22,8 @@ import kotlinx.coroutines.tasks.await
 
 class LoginViewModel(
     private val auth: FirebaseAuth,
-    private val userRepository: UserRepository
+    private val userRepository: UserRepository,
+    private val sessionManager: SessionManager
 ) : ViewModel() {
 
     var email by mutableStateOf("")
@@ -57,6 +59,8 @@ class LoginViewModel(
                     val userProfile = userRepository.getUserProfile(firebaseUser.uid)
                     userProfile?.let {
                         _loginState.value = LoginState.Success(it)
+                        // Guardar la sesión para email/password
+                        sessionManager.saveSession(isLoggedIn = true, username = it.username, provider = "email")
                         onNavigate(it)
                     } ?: run {
                         _loginState.value = LoginState.Error("No se pudo obtener el perfil del usuario.")
@@ -88,6 +92,7 @@ class LoginViewModel(
                     val userProfile = userRepository.getUserProfile(firebaseUser.uid)
                     if (userProfile != null) {
                         _loginState.value = LoginState.Success(userProfile)
+                        sessionManager.saveSession(isLoggedIn = true, username = userProfile.username, provider = "google")
                         onNavigate(userProfile)
                     } else {
                         val newUser = User(
@@ -100,6 +105,8 @@ class LoginViewModel(
                         val success = userRepository.createUserProfile(newUser)
                         if (success) {
                             _loginState.value = LoginState.Success(newUser)
+                            sessionManager.saveSession(isLoggedIn = true, username = newUser.username, provider = "google")
+                            onNavigate(newUser)
                         } else {
                             _loginState.value = LoginState.Error("Error al crear perfil de usuario.")
                         }
@@ -121,14 +128,13 @@ class LoginViewModel(
 
         viewModelScope.launch {
             try {
-                Log.d("FacebookLogin", "Attempting Firebase signInWithCredential")
                 val result = auth.signInWithCredential(credential).await()
                 val firebaseUser = result.user
                 if (firebaseUser != null) {
-                    Log.d("FacebookLogin", "Firebase user: ${firebaseUser.uid}")
                     val userProfile = userRepository.getUserProfile(firebaseUser.uid)
                     if (userProfile != null) {
                         _loginState.value = LoginState.Success(userProfile)
+                        sessionManager.saveSession(isLoggedIn = true, username = userProfile.username, provider = "facebook")
                         onNavigate(userProfile)
                     } else {
                         val newUser = User(
@@ -140,22 +146,19 @@ class LoginViewModel(
 
                         val success = userRepository.createUserProfile(newUser)
                         if (success) {
-                            Log.d("FacebookLogin", "User profile created successfully")
                             _loginState.value = LoginState.Success(newUser)
+                            sessionManager.saveSession(isLoggedIn = true, username = newUser.username, provider = "facebook")
+                            onNavigate(newUser)
                         } else {
-                            Log.e("FacebookLogin", "Error creating user profile")
                             _loginState.value = LoginState.Error("Error al crear perfil de usuario.")
                         }
                     }
                 } else {
-                    Log.e("FacebookLogin", "Firebase user is null")
                     _loginState.value = LoginState.Error("Error al iniciar sesión con Facebook.")
                 }
             } catch (e: FirebaseAuthInvalidCredentialsException) {
-                Log.e("FacebookLogin", "Invalid Facebook credentials: ${e.message}")
                 _loginState.value = LoginState.Error("Credenciales de Facebook inválidas.")
             } catch (e: Exception) {
-                Log.e("FacebookLogin", "Error during Facebook sign-in: ${e.message}")
                 _loginState.value = LoginState.Error("Error al iniciar sesión. Correo asociado a cuenta de Google ya existente.")
             }
         }

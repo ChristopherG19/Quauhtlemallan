@@ -15,15 +15,17 @@ import com.app.quauhtlemallan.ui.viewmodel.RegisterViewModel
 import com.app.quauhtlemallan.ui.viewmodel.SettingsViewModel
 import com.app.quauhtlemallan.ui.viewmodel.TimeQuestionViewModel
 import com.app.quauhtlemallan.ui.viewmodel.TrueFalseGameViewModel
+import com.app.quauhtlemallan.util.SessionManager
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginViewModelFactory(
     private val auth: FirebaseAuth,
-    private val userRepository: UserRepository
+    private val userRepository: UserRepository,
+    private val sessionManager: SessionManager
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
-            return LoginViewModel(auth, userRepository) as T
+            return LoginViewModel(auth, userRepository, sessionManager) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
