@@ -45,25 +45,7 @@ class ChatViewModel() : ViewModel() {
     fun sendChatMessage(inputText: String) {
         _loading.value = true
 
-        var numToken = 9
-
-        numToken = when {
-            inputText.contains("capital", ignoreCase = true) || inputText.contains("cabecera", ignoreCase = true) -> {
-                9
-            }
-
-            inputText.contains("fecha", ignoreCase = true) || inputText.contains("información", ignoreCase = true) -> {
-                50
-            }
-
-            inputText.contains("historia", ignoreCase = true) || inputText.contains("origen", ignoreCase = true) -> {
-                30
-            }
-
-            else -> {
-                15
-            }
-        }
+        var numToken = 50
 
         val post = ChatModelRequest(numToken, inputText)
 
