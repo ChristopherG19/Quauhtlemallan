@@ -49,7 +49,7 @@ class ChatViewModel() : ViewModel() {
 
         val post = ChatModelRequest(numToken, inputText)
 
-        apiService.createPost(post).enqueue(object : Callback<ResponseBody> {
+        apiService.createPostAlternative(post).enqueue(object : Callback<ResponseBody> {
             override fun onResponse(
                 call: Call<ResponseBody>,
                 response: Response<ResponseBody>
