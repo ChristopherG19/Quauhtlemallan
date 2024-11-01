@@ -45,7 +45,7 @@ class ChatViewModel() : ViewModel() {
     fun sendChatMessage(inputText: String) {
         _loading.value = true
 
-        var numToken = 50
+        var numToken = 150
 
         val post = ChatModelRequest(numToken, inputText)
 
