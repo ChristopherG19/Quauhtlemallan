@@ -51,6 +51,7 @@ fun HomeScreen(
     val userLevel by viewModel.userLevel.collectAsState()
     val pointsToNextLevel by viewModel.pointsToNextLevel.collectAsState()
     val currentPointsWithinLevel by viewModel.currentPointsWithinLevel.collectAsState()
+    val score by viewModel.score.collectAsState()
 
     val progress = if (currentPointsWithinLevel + pointsToNextLevel > 0) {
         currentPointsWithinLevel / (currentPointsWithinLevel + pointsToNextLevel).toFloat()
@@ -92,7 +93,7 @@ fun HomeScreen(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(12.dp))
 
                 Box(
                     modifier = Modifier
@@ -120,7 +121,13 @@ fun HomeScreen(
                                 text = "$pointsToNextLevel puntos para el siguiente nivel",
                                 fontSize = 14.sp,
                                 color = Color.Gray
-                        )
+                            )
+                            Text(
+                                text = "Puntos totales: $score",
+                                fontSize = 14.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color.Gray
+                            )
                     }
                 }
 
@@ -130,7 +137,7 @@ fun HomeScreen(
                     model = ImageRequest.Builder(LocalContext.current)
                         .data(R.drawable.mapa)
                         .decoderFactory(GifDecoder.Factory())
-                        .size(360)
+                        .size(330)
                         .crossfade(true)
                         .build(),
                     contentDescription = "Mapa GIF",
