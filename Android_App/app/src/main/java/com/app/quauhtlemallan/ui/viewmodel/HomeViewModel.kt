@@ -20,6 +20,9 @@ class HomeViewModel(
     private val _currentPointsWithinLevel = MutableStateFlow(0)
     val currentPointsWithinLevel: StateFlow<Int> = _currentPointsWithinLevel
 
+    private val _score = MutableStateFlow(0)
+    val score: StateFlow<Int> = _score
+
     init {
         viewModelScope.launch {
             val totalScore = userRepository.getUserTotalScore()
@@ -28,6 +31,7 @@ class HomeViewModel(
             _userLevel.value = level
             _pointsToNextLevel.value = pointsToNext
             _currentPointsWithinLevel.value = pointsWithin
+            _score.value = totalScore
         }
     }
 }
