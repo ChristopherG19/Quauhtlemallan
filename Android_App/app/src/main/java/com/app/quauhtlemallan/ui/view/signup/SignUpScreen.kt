@@ -93,7 +93,12 @@ fun SignUpScreen(
                 unfocusedContainerColor = Color.LightGray,
                 focusedContainerColor = SelectedField
             ),
-            placeholder = { Text(text = "Usuario", color = Color.Black) }
+            placeholder = { Text(
+                text = "Usuario",
+                color = Color.Black,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Normal
+            )}
         )
 
         Spacer(Modifier.height(16.dp))
@@ -114,7 +119,12 @@ fun SignUpScreen(
                 unfocusedContainerColor = Color.LightGray,
                 focusedContainerColor = SelectedField
             ),
-            placeholder = { Text(text = "Correo", color = Color.Black) },
+            placeholder = { Text(
+                text = "Correo",
+                color = Color.Black,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Normal
+            )},
             keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Email)
         )
 
@@ -136,7 +146,12 @@ fun SignUpScreen(
                 unfocusedContainerColor = Color.LightGray,
                 focusedContainerColor = SelectedField
             ),
-            placeholder = { Text(text = "Contraseña", color = Color.Black) },
+            placeholder = { Text(
+                text = "Contraseña",
+                color = Color.Black,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Normal
+            ) },
             visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
             trailingIcon = {
                 val image = if (passwordVisible) {
@@ -172,7 +187,12 @@ fun SignUpScreen(
                 unfocusedContainerColor = Color.LightGray,
                 focusedContainerColor = SelectedField
             ),
-            placeholder = { Text(text = "Confirmar Contraseña", color = Color.Black) },
+            placeholder = { Text(
+                text = "Confirmar Contraseña",
+                color = Color.Black,
+                fontFamily = cinzelFontFamily,
+                fontWeight = FontWeight.Normal
+            )},
             visualTransformation = if (confirmPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
             trailingIcon = {
                 val image = if (confirmPasswordVisible) {

@@ -12,4 +12,8 @@ interface ApiService {
     @Headers("Content-Type: application/json")
     @POST("llm/generate_text")
     fun createPost(@Body post: ChatModelRequest): Call<ResponseBody>
+
+    @Headers("Content-Type: application/json")
+    @POST("llm/generate_text/alternative")
+    fun createPostAlternative(@Body post: ChatModelRequest): Call<ResponseBody>
 }
